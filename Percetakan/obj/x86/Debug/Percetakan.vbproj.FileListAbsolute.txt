@@ -1,0 +1,42 @@
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\bin\Debug\Percetakan.exe
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\bin\Debug\Percetakan.pdb
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\bin\Debug\Percetakan.xml
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\obj\x86\Debug\Percetakan.exe
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\obj\x86\Debug\Percetakan.xml
+C:\Users\sabun\AppData\Local\Temporary Projects\Percetakan\obj\x86\Debug\Percetakan.pdb
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.exe
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.xml
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.pdb
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\bin\Debug\Percetakan.exe.config
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\bin\Debug\Percetakan.exe
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\bin\Debug\Percetakan.pdb
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\bin\Debug\Percetakan.xml
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.Login.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormGudang.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormJobList.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormKaryawan.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormLaporan.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormPesanan.resources
+C:\Users\sabun\documents\visual studio 2010\Projects\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormConfig.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\bin\Debug\Percetakan.exe.config
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.exe
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.xml
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.pdb
+C:\Users\PC\Desktop\Percetakan\Percetakan\bin\Debug\Percetakan.exe
+C:\Users\PC\Desktop\Percetakan\Percetakan\bin\Debug\Percetakan.pdb
+C:\Users\PC\Desktop\Percetakan\Percetakan\bin\Debug\Percetakan.xml
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormConfig.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormGudang.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormJobList.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormKaryawan.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormLaporan.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.FormPesanan.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.Login.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
+C:\Users\PC\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
