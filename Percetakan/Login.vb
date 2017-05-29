@@ -20,7 +20,18 @@ Public Class Login
         Else
             lbl_constatus.Text = "Terputus"
             lbl_constatus.ForeColor = Color.Red
-            MsgBox("Pengaturan Gagal diterapkan, pastikan konfigurasi yang di masukkan telah benar", MsgBoxStyle.Critical, "Error")
+            MsgBox("Pengaturan Gagal diterapkan, pastikan server telah online dan konfigurasi yang di masukkan telah benar", MsgBoxStyle.Critical, "Error")
+        End If
+    End Sub
+    Sub ReconectDB()
+        Koneksi()
+        If str_status > 0 Then
+            lbl_constatus.Text = "Terhubung"
+            lbl_constatus.ForeColor = Color.Green
+        Else
+            lbl_constatus.Text = "Terputus"
+            lbl_constatus.ForeColor = Color.Red
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Error")
         End If
     End Sub
     Sub reset()
@@ -87,7 +98,7 @@ Public Class Login
     End Sub
 
     Private Sub BtnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReset.Click
-        Connect()
+        ReconectDB()
     End Sub
 
     Private Sub cb_saveuser_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cb_saveuser.CheckedChanged

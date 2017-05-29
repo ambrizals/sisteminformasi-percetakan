@@ -279,6 +279,9 @@ Partial Class FormKaryawan
         Me.Controls.Add(Me.BtnExit)
         Me.Controls.Add(Me.lbl_constatus)
         Me.Controls.Add(Me.Label3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormKaryawan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Karyawan"
