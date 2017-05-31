@@ -1,6 +1,7 @@
 ﻿'Import module
 Imports MySql.Data.MySqlClient
 Public Class Login
+    Dim proses As New ClsKoneksi
     Sub Connect()
         Koneksi()
         If str_status > 0 Then
@@ -53,12 +54,12 @@ Public Class Login
     Private Sub BtnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLogin.Click
         Try
             If str_status > 0 Then
-                conn.Open()
+                proses.OpenConn()
                 Dim myadapter As New MySqlDataAdapter
                 Dim sqlquery = "SELECT karyawanusername,karyawanpassword FROM karyawan where karyawanusername='" +
     Trim(txtusername.Text) + "' And karyawanpassword='" + Trim(txtpassword.Text) + "'"
                 Dim mycommand As New MySqlCommand
-                mycommand.Connection = conn
+                mycommand.Connection = proses.Cn
                 mycommand.CommandText = sqlquery
                 myadapter.SelectCommand = mycommand
                 Dim mydata As MySqlDataReader
@@ -80,7 +81,7 @@ Public Class Login
                         Me.Hide()
                     End If
                 End If
-                conn.Close()
+                proses.CloseConn()
             Else
                 MsgBox("Tidak dapat terhubung ke server, silahkan reset terlebih dahulu", MsgBoxStyle.Critical, "Connection Error")
 

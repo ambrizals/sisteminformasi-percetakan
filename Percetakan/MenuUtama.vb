@@ -1,4 +1,5 @@
 ﻿Public Class MenuUtama
+    Dim proses As New ClsKoneksi
     Sub Connect()
         Koneksi()
         If str_status > 0 Then
@@ -56,14 +57,12 @@
     Private Sub MenuUtama_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Connect()
     End Sub
-
-
-    Private Sub BtnKaryawan_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnKaryawan.Click
+    Private Sub BtnKaryawan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnKaryawan.Click
         Try
             If str_status > 0 Then
-                conn.Open()
+                proses.OpenConn()
                 FormKaryawan.ShowDialog()
-                conn.Close()
+                proses.CloseConn()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
                 str_status = 0
@@ -73,13 +72,12 @@
             Connect()
         End Try
     End Sub
-
-    Private Sub BtnGudang_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnGudang.Click
+    Private Sub BtnJobList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnJobList.Click
         Try
             If str_status > 0 Then
-                conn.Open()
-                FormGudang.ShowDialog()
-                conn.Close()
+                proses.OpenConn()
+                FormJobList.ShowDialog()
+                proses.CloseConn()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
                 str_status = 0
@@ -89,45 +87,44 @@
             Connect()
         End Try
     End Sub
-
-    Private Sub BtnJobList_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnJobList.Click
+    Private Sub BtnLaporan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLaporan.Click
         Try
             If str_status > 0 Then
-                conn.Open()
-                FormGudang.ShowDialog()
-                conn.Close()
-            Else
-                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-                str_status = 0
-            End If
-        Catch ex As Exception
-            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-            Connect()
-        End Try
-    End Sub
-
-    Private Sub BtnPesanan_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click
-        Try
-            If str_status > 0 Then
-                conn.Open()
-                FormPesanan.ShowDialog()
-                conn.Close()
-            Else
-                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-                str_status = 0
-            End If
-        Catch ex As Exception
-            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-            Connect()
-        End Try
-    End Sub
-
-    Private Sub BtnLaporan_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnLaporan.Click
-        Try
-            If str_status > 0 Then
-                conn.Open()
+                proses.OpenConn()
                 FormLaporan.ShowDialog()
-                conn.Close()
+                proses.CloseConn()
+            Else
+                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+                str_status = 0
+            End If
+        Catch ex As Exception
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            Connect()
+        End Try
+    End Sub
+
+    Private Sub BtnGudang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGudang.Click
+        Try
+            If str_status > 0 Then
+                proses.OpenConn()
+                FormGudang.ShowDialog()
+                proses.CloseConn()
+            Else
+                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+                str_status = 0
+            End If
+        Catch ex As Exception
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            Connect()
+        End Try
+    End Sub
+
+    Private Sub BtnPesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click
+        Try
+            If str_status > 0 Then
+                proses.OpenConn()
+                FormPesanan.ShowDialog()
+                proses.CloseConn()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
                 str_status = 0
