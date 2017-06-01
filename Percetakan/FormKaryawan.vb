@@ -50,6 +50,14 @@ Public Class FormKaryawan
         txt_idkaryawan.Text = "KRY-" + karyawan_kode
         proses.CloseConn()
     End Sub
+    Sub Search_Karyawan()
+        list_karyawan = proses.ExecuteQuery("SELECT karyawan.karyawanid AS 'ID Karyawan',jabatan.levelname AS 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan INNER JOIN jabatan ON (karyawan.levelid = jabatan.levelid) WHERE karyawan.karyawanname LIKE '%" + txt_carikaryawan.Text + "%'")
+        DG_ListKaryawan.DataSource = list_karyawan
+        DG_ListKaryawan.Columns(0).Width = 120
+        DG_ListKaryawan.Columns(1).Width = 100
+        DG_ListKaryawan.Columns(2).Width = 245
+        DG_ListKaryawan.Columns(3).Width = 200
+    End Sub
 
     Private Sub FormKaryawan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Connect()
@@ -147,4 +155,12 @@ Public Class FormKaryawan
         Connect()
     End Sub
 
+    Private Sub btn_carikaryawan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_carikaryawan.Click
+        Search_Karyawan()
+    End Sub
+
+
+    Private Sub DG_ListKaryawan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_ListKaryawan.DoubleClick
+        FormEditKaryawan.ShowDialog()
+    End Sub
 End Class

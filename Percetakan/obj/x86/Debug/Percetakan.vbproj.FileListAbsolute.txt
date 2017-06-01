@@ -76,3 +76,4 @@ C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.Login.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
+C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormEditKaryawan.resources

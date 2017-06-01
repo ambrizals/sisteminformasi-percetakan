@@ -74,7 +74,7 @@
         Try
             If str_status > 0 Then
                 proses.OpenConn()
-                FormKaryawan.Show()
+                FormKaryawan.ShowDialog()
                 proses.CloseConn()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
