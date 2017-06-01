@@ -3,4 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Users\PC\percetakan\include\mysql\</ReferencePath>
+  </PropertyGroup>
 </Project>
