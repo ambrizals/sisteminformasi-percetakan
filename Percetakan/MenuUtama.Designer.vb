@@ -349,6 +349,7 @@ Partial Class MenuUtama
         Me.Name = "MenuUtama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MenuUtama"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
