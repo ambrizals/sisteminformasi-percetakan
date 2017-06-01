@@ -1,5 +1,4 @@
-﻿'Import module
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 Public Class Login
     Dim proses As New ClsKoneksi
     Sub Connect()
@@ -56,7 +55,7 @@ Public Class Login
             If str_status > 0 Then
                 proses.OpenConn()
                 Dim myadapter As New MySqlDataAdapter
-                Dim sqlquery = "SELECT karyawanusername,karyawanpassword FROM karyawan where karyawanusername='" +
+                Dim sqlquery = "SELECT * FROM karyawan where karyawanusername='" +
     Trim(txtusername.Text) + "' And karyawanpassword='" + Trim(txtpassword.Text) + "'"
                 Dim mycommand As New MySqlCommand
                 mycommand.Connection = proses.Cn
@@ -75,6 +74,14 @@ Public Class Login
                         Call reset()
 
                     Else
+                        mydata.Read()
+                        kry_id = mydata("KARYAWANID")
+                        kry_lvl = mydata("LEVELID")
+                        kry_name = mydata("KARYAWANNAME")
+                        kry_username = mydata("KARYAWANUSERNAME")
+                        kry_password = mydata("KARYAWANPASSWORD")
+                        kry_alamat = mydata("KARYAWANALAMAT")
+                        kry_telp = mydata("KARYAWANTELP")
                         MsgBox("Login Berhasil", MsgBoxStyle.Information, "Info")
                         Call save_info()
                         MenuUtama.Show()

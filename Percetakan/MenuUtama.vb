@@ -34,12 +34,30 @@
         End If
     End Sub
 
+    Sub Privilage_User()
+        If kry_lvl = "JBT-002" Then
+            BtnPesanan.Enabled = False
+            BtnKaryawan.Enabled = False
+            BtnLaporan.Enabled = False
+        ElseIf kry_lvl = "JBT-003" Then
+            BtnKaryawan.Enabled = False
+            BtnGudang.Enabled = False
+        End If
+    End Sub
+
     Private Sub BtnKeluar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnKeluar.Click
         Me.Hide()
         Login.Close()
     End Sub
 
     Private Sub BtnLogout_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnLogout.Click
+        kry_id = ""
+        kry_lvl = ""
+        kry_name = ""
+        kry_username = ""
+        kry_password = ""
+        kry_alamat = ""
+        kry_telp = ""
         Me.Hide()
         Login.Show()
     End Sub
@@ -55,6 +73,7 @@
     End Sub
 
     Private Sub MenuUtama_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Privilage_User()
         Connect()
     End Sub
     Private Sub BtnKaryawan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnKaryawan.Click
