@@ -4,6 +4,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <PropertyGroup>
-    <ReferencePath>C:\Users\PC\percetakan\include\mysql\</ReferencePath>
+    <ReferencePath>C:\Users\sabun\percetakan\include\mysql\</ReferencePath>
   </PropertyGroup>
 </Project>
