@@ -35,4 +35,13 @@ Module Globals
     'User Information
     Public kry_id, kry_lvl, kry_name, kry_username, kry_password, kry_alamat, kry_telp As String
 
+    Sub Logout()
+        kry_id = ""
+        kry_lvl = ""
+        kry_name = ""
+        kry_username = ""
+        kry_password = ""
+        kry_alamat = ""
+        kry_telp = ""
+    End Sub
 End Module

@@ -51,13 +51,7 @@
     End Sub
 
     Private Sub BtnLogout_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnLogout.Click
-        kry_id = ""
-        kry_lvl = ""
-        kry_name = ""
-        kry_username = ""
-        kry_password = ""
-        kry_alamat = ""
-        kry_telp = ""
+        Logout()
         Me.Hide()
         Login.Show()
     End Sub
@@ -80,7 +74,7 @@
         Try
             If str_status > 0 Then
                 proses.OpenConn()
-                FormKaryawan.ShowDialog()
+                FormKaryawan.Show()
                 proses.CloseConn()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")

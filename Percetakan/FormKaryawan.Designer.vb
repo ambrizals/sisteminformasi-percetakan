@@ -28,6 +28,14 @@ Partial Class FormKaryawan
         Me.BtnReconnect = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.cb_rulesconfirm = New System.Windows.Forms.CheckBox()
+        Me.cb_interviewcheck = New System.Windows.Forms.CheckBox()
+        Me.cb_validdata = New System.Windows.Forms.CheckBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.rtf_deskripsi = New System.Windows.Forms.RichTextBox()
+        Me.cb_jabatan = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.BtnReset = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txt_telepon = New System.Windows.Forms.TextBox()
@@ -45,10 +53,26 @@ Partial Class FormKaryawan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.DG_ListKaryawan = New System.Windows.Forms.DataGridView()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txt_carikaryawan = New System.Windows.Forms.TextBox()
+        Me.btn_carikaryawan = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lbl_karyawancount = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.DG_ListKaryawan, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lbl_constatus
@@ -100,6 +124,8 @@ Partial Class FormKaryawan
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.GroupBox4)
+        Me.TabPage1.Controls.Add(Me.GroupBox3)
         Me.TabPage1.Controls.Add(Me.BtnReset)
         Me.TabPage1.Controls.Add(Me.GroupBox2)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
@@ -111,6 +137,90 @@ Partial Class FormKaryawan
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Tambah Karyawan"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.cb_rulesconfirm)
+        Me.GroupBox4.Controls.Add(Me.cb_interviewcheck)
+        Me.GroupBox4.Controls.Add(Me.cb_validdata)
+        Me.GroupBox4.Location = New System.Drawing.Point(366, 179)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(298, 138)
+        Me.GroupBox4.TabIndex = 32
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Kualifikasi"
+        '
+        'cb_rulesconfirm
+        '
+        Me.cb_rulesconfirm.AutoSize = True
+        Me.cb_rulesconfirm.Location = New System.Drawing.Point(15, 70)
+        Me.cb_rulesconfirm.Name = "cb_rulesconfirm"
+        Me.cb_rulesconfirm.Size = New System.Drawing.Size(189, 17)
+        Me.cb_rulesconfirm.TabIndex = 2
+        Me.cb_rulesconfirm.Text = "Menyetujui peraturan yang berlaku"
+        Me.cb_rulesconfirm.UseVisualStyleBackColor = True
+        '
+        'cb_interviewcheck
+        '
+        Me.cb_interviewcheck.AutoSize = True
+        Me.cb_interviewcheck.Location = New System.Drawing.Point(15, 47)
+        Me.cb_interviewcheck.Name = "cb_interviewcheck"
+        Me.cb_interviewcheck.Size = New System.Drawing.Size(191, 17)
+        Me.cb_interviewcheck.TabIndex = 1
+        Me.cb_interviewcheck.Text = "Telah mengikuti interview dan lulus"
+        Me.cb_interviewcheck.UseVisualStyleBackColor = True
+        '
+        'cb_validdata
+        '
+        Me.cb_validdata.AutoSize = True
+        Me.cb_validdata.Location = New System.Drawing.Point(15, 24)
+        Me.cb_validdata.Name = "cb_validdata"
+        Me.cb_validdata.Size = New System.Drawing.Size(172, 17)
+        Me.cb_validdata.TabIndex = 0
+        Me.cb_validdata.Text = "Data yang diberikan telah valid"
+        Me.cb_validdata.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.rtf_deskripsi)
+        Me.GroupBox3.Controls.Add(Me.cb_jabatan)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Location = New System.Drawing.Point(366, 6)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(298, 167)
+        Me.GroupBox3.TabIndex = 31
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "User Privilage"
+        '
+        'rtf_deskripsi
+        '
+        Me.rtf_deskripsi.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.rtf_deskripsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.rtf_deskripsi.Location = New System.Drawing.Point(15, 61)
+        Me.rtf_deskripsi.Name = "rtf_deskripsi"
+        Me.rtf_deskripsi.ReadOnly = True
+        Me.rtf_deskripsi.Size = New System.Drawing.Size(270, 88)
+        Me.rtf_deskripsi.TabIndex = 35
+        Me.rtf_deskripsi.Text = ""
+        '
+        'cb_jabatan
+        '
+        Me.cb_jabatan.FormattingEnabled = True
+        Me.cb_jabatan.Items.AddRange(New Object() {"Admin", "Operator", "Kasir"})
+        Me.cb_jabatan.Location = New System.Drawing.Point(116, 25)
+        Me.cb_jabatan.Name = "cb_jabatan"
+        Me.cb_jabatan.Size = New System.Drawing.Size(169, 21)
+        Me.cb_jabatan.TabIndex = 34
+        Me.cb_jabatan.Text = "Pilih Jabatan"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(12, 28)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(101, 13)
+        Me.Label8.TabIndex = 32
+        Me.Label8.Text = "Jabatan Karyawan :"
         '
         'BtnReset
         '
@@ -252,6 +362,7 @@ Partial Class FormKaryawan
         '
         'BtnSave
         '
+        Me.BtnSave.Enabled = False
         Me.BtnSave.Location = New System.Drawing.Point(366, 323)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(141, 23)
@@ -261,13 +372,123 @@ Partial Class FormKaryawan
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage2.Controls.Add(Me.TableLayoutPanel1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(681, 366)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Daftar Karyawan"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.DG_ListKaryawan, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 2)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.21672!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.78328!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(675, 360)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'DG_ListKaryawan
+        '
+        Me.DG_ListKaryawan.AllowUserToAddRows = False
+        Me.DG_ListKaryawan.AllowUserToDeleteRows = False
+        Me.DG_ListKaryawan.AllowUserToResizeColumns = False
+        Me.DG_ListKaryawan.AllowUserToResizeRows = False
+        Me.DG_ListKaryawan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DG_ListKaryawan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DG_ListKaryawan.Location = New System.Drawing.Point(3, 36)
+        Me.DG_ListKaryawan.Name = "DG_ListKaryawan"
+        Me.DG_ListKaryawan.ReadOnly = True
+        Me.DG_ListKaryawan.RowHeadersVisible = False
+        Me.DG_ListKaryawan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DG_ListKaryawan.Size = New System.Drawing.Size(669, 284)
+        Me.DG_ListKaryawan.TabIndex = 0
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 3
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.98148!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.01852!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.txt_carikaryawan, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btn_carikaryawan, 2, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(669, 27)
+        Me.TableLayoutPanel2.TabIndex = 1
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label9.Location = New System.Drawing.Point(3, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(94, 27)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Cari Karyawan :"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txt_carikaryawan
+        '
+        Me.txt_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txt_carikaryawan.Location = New System.Drawing.Point(103, 3)
+        Me.txt_carikaryawan.Name = "txt_carikaryawan"
+        Me.txt_carikaryawan.Size = New System.Drawing.Size(423, 20)
+        Me.txt_carikaryawan.TabIndex = 1
+        '
+        'btn_carikaryawan
+        '
+        Me.btn_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btn_carikaryawan.Location = New System.Drawing.Point(532, 3)
+        Me.btn_carikaryawan.Name = "btn_carikaryawan"
+        Me.btn_carikaryawan.Size = New System.Drawing.Size(134, 21)
+        Me.btn_carikaryawan.TabIndex = 2
+        Me.btn_carikaryawan.Text = "Cari"
+        Me.btn_carikaryawan.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.lbl_karyawancount)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 326)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(669, 31)
+        Me.Panel1.TabIndex = 2
+        '
+        'lbl_karyawancount
+        '
+        Me.lbl_karyawancount.AutoSize = True
+        Me.lbl_karyawancount.ForeColor = System.Drawing.Color.Black
+        Me.lbl_karyawancount.Location = New System.Drawing.Point(118, 10)
+        Me.lbl_karyawancount.Name = "lbl_karyawancount"
+        Me.lbl_karyawancount.Size = New System.Drawing.Size(25, 13)
+        Me.lbl_karyawancount.TabIndex = 14
+        Me.lbl_karyawancount.Text = "Null"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(13, 9)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(96, 13)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "Jumlah Karyawan :"
         '
         'FormKaryawan
         '
@@ -287,10 +508,21 @@ Partial Class FormKaryawan
         Me.Text = "Karyawan"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.DG_ListKaryawan, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -318,4 +550,21 @@ Partial Class FormKaryawan
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BtnSave As System.Windows.Forms.Button
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents rtf_deskripsi As System.Windows.Forms.RichTextBox
+    Friend WithEvents cb_jabatan As System.Windows.Forms.ComboBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents cb_rulesconfirm As System.Windows.Forms.CheckBox
+    Friend WithEvents cb_interviewcheck As System.Windows.Forms.CheckBox
+    Friend WithEvents cb_validdata As System.Windows.Forms.CheckBox
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents DG_ListKaryawan As System.Windows.Forms.DataGridView
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txt_carikaryawan As System.Windows.Forms.TextBox
+    Friend WithEvents btn_carikaryawan As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents lbl_karyawancount As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class
