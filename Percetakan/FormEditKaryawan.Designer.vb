@@ -275,6 +275,7 @@ Partial Class FormEditKaryawan
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormEditKaryawan"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Karyawan"
         Me.GroupBox4.ResumeLayout(False)

@@ -161,6 +161,7 @@ Partial Class FormAddstockGudang
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormAddstockGudang"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Stock"
         CType(Me.nm_stock, System.ComponentModel.ISupportInitialize).EndInit()

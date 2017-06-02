@@ -22,6 +22,7 @@ Partial Class FormGudang
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnCari = New System.Windows.Forms.Button()
         Me.txt_namabahan = New System.Windows.Forms.TextBox()
@@ -33,9 +34,13 @@ Partial Class FormGudang
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_bahancount = New System.Windows.Forms.Label()
+        Me.cms_dgbahan = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.TambahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UbahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DG_Bahan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
+        Me.cms_dgbahan.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -44,7 +49,7 @@ Partial Class FormGudang
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.36893!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.63107!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -62,9 +67,9 @@ Partial Class FormGudang
         Me.BtnCari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCari.Location = New System.Drawing.Point(582, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(580, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(137, 28)
+        Me.BtnCari.Size = New System.Drawing.Size(139, 28)
         Me.BtnCari.TabIndex = 4
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = True
@@ -76,7 +81,7 @@ Partial Class FormGudang
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_namabahan.Location = New System.Drawing.Point(124, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
-        Me.txt_namabahan.Size = New System.Drawing.Size(287, 26)
+        Me.txt_namabahan.Size = New System.Drawing.Size(285, 26)
         Me.txt_namabahan.TabIndex = 0
         '
         'Label1
@@ -98,7 +103,7 @@ Partial Class FormGudang
         Me.cb_condition.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_condition.FormattingEnabled = True
         Me.cb_condition.Items.AddRange(New Object() {"Tersedia", "Tidak Tersedia"})
-        Me.cb_condition.Location = New System.Drawing.Point(417, 3)
+        Me.cb_condition.Location = New System.Drawing.Point(415, 3)
         Me.cb_condition.Name = "cb_condition"
         Me.cb_condition.Size = New System.Drawing.Size(159, 26)
         Me.cb_condition.TabIndex = 3
@@ -182,6 +187,24 @@ Partial Class FormGudang
         Me.lbl_bahancount.Text = "Null Count"
         Me.lbl_bahancount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'cms_dgbahan
+        '
+        Me.cms_dgbahan.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahToolStripMenuItem, Me.UbahToolStripMenuItem})
+        Me.cms_dgbahan.Name = "ContextMenuStrip1"
+        Me.cms_dgbahan.Size = New System.Drawing.Size(118, 48)
+        '
+        'TambahToolStripMenuItem
+        '
+        Me.TambahToolStripMenuItem.Name = "TambahToolStripMenuItem"
+        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TambahToolStripMenuItem.Text = "Tambah"
+        '
+        'UbahToolStripMenuItem
+        '
+        Me.UbahToolStripMenuItem.Name = "UbahToolStripMenuItem"
+        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UbahToolStripMenuItem.Text = "Ubah"
+        '
         'FormGudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -194,6 +217,7 @@ Partial Class FormGudang
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormGudang"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gudang"
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -201,6 +225,7 @@ Partial Class FormGudang
         CType(Me.DG_Bahan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
+        Me.cms_dgbahan.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -215,4 +240,7 @@ Partial Class FormGudang
     Friend WithEvents lbl_bahancount As System.Windows.Forms.Label
     Friend WithEvents BtnCari As System.Windows.Forms.Button
     Friend WithEvents cb_condition As System.Windows.Forms.ComboBox
+    Friend WithEvents cms_dgbahan As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents TambahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UbahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

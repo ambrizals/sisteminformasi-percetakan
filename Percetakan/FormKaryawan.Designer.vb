@@ -420,7 +420,7 @@ Partial Class FormKaryawan
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.98148!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.01852!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txt_carikaryawan, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btn_carikaryawan, 2, 0)
@@ -448,15 +448,15 @@ Partial Class FormKaryawan
         Me.txt_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_carikaryawan.Location = New System.Drawing.Point(102, 3)
         Me.txt_carikaryawan.Name = "txt_carikaryawan"
-        Me.txt_carikaryawan.Size = New System.Drawing.Size(420, 20)
+        Me.txt_carikaryawan.Size = New System.Drawing.Size(419, 20)
         Me.txt_carikaryawan.TabIndex = 1
         '
         'btn_carikaryawan
         '
         Me.btn_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_carikaryawan.Location = New System.Drawing.Point(528, 3)
+        Me.btn_carikaryawan.Location = New System.Drawing.Point(527, 3)
         Me.btn_carikaryawan.Name = "btn_carikaryawan"
-        Me.btn_carikaryawan.Size = New System.Drawing.Size(138, 21)
+        Me.btn_carikaryawan.Size = New System.Drawing.Size(139, 21)
         Me.btn_carikaryawan.TabIndex = 2
         Me.btn_carikaryawan.Text = "Cari"
         Me.btn_carikaryawan.UseVisualStyleBackColor = True
@@ -504,6 +504,7 @@ Partial Class FormKaryawan
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormKaryawan"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Karyawan"
         Me.TabControl1.ResumeLayout(False)

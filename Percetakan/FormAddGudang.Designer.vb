@@ -157,6 +157,7 @@ Partial Class FormAddGudang
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "FormAddGudang"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Bahan"
         CType(Me.nm_stock, System.ComponentModel.ISupportInitialize).EndInit()

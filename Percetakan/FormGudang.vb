@@ -69,4 +69,16 @@ Public Class FormGudang
     Public Sub DG_Bahan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Bahan.DoubleClick
         FormAddstockGudang.ShowDialog()
     End Sub
+
+    Private Sub DG_Bahan_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_Bahan.CellClick
+        Me.ContextMenuStrip = cms_dgbahan
+    End Sub
+
+    Private Sub TambahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TambahToolStripMenuItem.Click
+        MsgBox("Sedang dipersiapkan")
+    End Sub
+
+    Private Sub UbahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UbahToolStripMenuItem.Click
+        MsgBox("Sedang dipersiapkan")
+    End Sub
 End Class
