@@ -2,8 +2,9 @@
 Imports System.Data.SqlClient
 Imports System.Data
 
+
 Public Class FormGudang
-    Public kode_bahan As String
+    Dim kode_bahan, search_name, search_condition, search_d As String
     Dim proses As New ClsKoneksi
     Dim list_bahan As DataTable
     Sub Load_DataBahan()
@@ -34,6 +35,17 @@ Public Class FormGudang
         lbl_bahancount.Text = Val(bahancount)
         proses.CloseConn()
     End Sub
+    Sub Kondisi_Pencarian()
+        If txt_namabahan.TextLength > 0 Then
+            search_name = "(bahanname like '%" + txt_namabahan.Text + "%') and"
+        End If
+
+        If cb_condition.SelectedIndex = 0 Then
+            search_condition = "(bahanstock > 0)"
+        ElseIf cb_condition.SelectedIndex = 1 Then
+            search_condition = "(bahanstock = 0)"
+        End If
+    End Sub
 
     Private Sub FormGudang_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Load_DataBahan()
@@ -41,5 +53,20 @@ Public Class FormGudang
 
     Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnTambah.Click
         FormAddGudang.ShowDialog()
+    End Sub
+
+    Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
+        Kondisi_Pencarian()
+        list_bahan = proses.ExecuteQuery("SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan where " + search_name + search_d + search_condition + "")
+        DG_Bahan.DataSource = list_bahan
+        DG_Bahan.Columns(0).Width = 100
+        DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_Bahan.Columns(2).Width = 150
+        DG_Bahan.Columns(3).Width = 150
+    End Sub
+
+
+    Public Sub DG_Bahan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Bahan.DoubleClick
+        FormAddstockGudang.ShowDialog()
     End Sub
 End Class

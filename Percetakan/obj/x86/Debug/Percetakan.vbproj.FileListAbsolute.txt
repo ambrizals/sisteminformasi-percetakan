@@ -83,3 +83,5 @@ C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssem
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormEditKaryawan.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAddGudang.resources
+C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAddGudang.resources
+C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAddstockGudang.resources
