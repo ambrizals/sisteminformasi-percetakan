@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormGudang
+Partial Class FormCaribahanPesanan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,11 +27,10 @@ Partial Class FormGudang
         Me.BtnCari = New System.Windows.Forms.Button()
         Me.txt_namabahan = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cb_condition = New System.Windows.Forms.ComboBox()
         Me.DG_Bahan = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnExit = New System.Windows.Forms.Button()
         Me.BtnRefresh = New System.Windows.Forms.Button()
-        Me.BtnTambah = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_bahancount = New System.Windows.Forms.Label()
         Me.cms_dgbahan = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -45,15 +44,13 @@ Partial Class FormGudang
         '
         'TableLayoutPanel1
         '
-        Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.36893!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.63107!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 1, 0)
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.08633!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.91367!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cb_condition, 2, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -67,10 +64,10 @@ Partial Class FormGudang
         Me.BtnCari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCari.Location = New System.Drawing.Point(577, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(557, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(142, 28)
-        Me.BtnCari.TabIndex = 4
+        Me.BtnCari.Size = New System.Drawing.Size(162, 28)
+        Me.BtnCari.TabIndex = 6
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = True
         '
@@ -79,10 +76,10 @@ Partial Class FormGudang
         Me.txt_namabahan.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txt_namabahan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_namabahan.Location = New System.Drawing.Point(123, 3)
+        Me.txt_namabahan.Location = New System.Drawing.Point(97, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
-        Me.txt_namabahan.Size = New System.Drawing.Size(283, 26)
-        Me.txt_namabahan.TabIndex = 0
+        Me.txt_namabahan.Size = New System.Drawing.Size(454, 26)
+        Me.txt_namabahan.TabIndex = 5
         '
         'Label1
         '
@@ -92,22 +89,10 @@ Partial Class FormGudang
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 34)
+        Me.Label1.Size = New System.Drawing.Size(88, 34)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Cari Bahan :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cb_condition
-        '
-        Me.cb_condition.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cb_condition.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cb_condition.FormattingEnabled = True
-        Me.cb_condition.Items.AddRange(New Object() {"Tersedia", "Tidak Tersedia"})
-        Me.cb_condition.Location = New System.Drawing.Point(412, 3)
-        Me.cb_condition.Name = "cb_condition"
-        Me.cb_condition.Size = New System.Drawing.Size(159, 26)
-        Me.cb_condition.TabIndex = 3
-        Me.cb_condition.Text = "<Pilih Ketersediaan>"
         '
         'DG_Bahan
         '
@@ -117,12 +102,11 @@ Partial Class FormGudang
         Me.DG_Bahan.AllowUserToResizeRows = False
         Me.DG_Bahan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DG_Bahan.Location = New System.Drawing.Point(0, 35)
-        Me.DG_Bahan.MultiSelect = False
         Me.DG_Bahan.Name = "DG_Bahan"
         Me.DG_Bahan.ReadOnly = True
         Me.DG_Bahan.RowHeadersVisible = False
         Me.DG_Bahan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DG_Bahan.Size = New System.Drawing.Size(722, 400)
+        Me.DG_Bahan.Size = New System.Drawing.Size(722, 222)
         Me.DG_Bahan.TabIndex = 2
         '
         'TableLayoutPanel2
@@ -132,39 +116,39 @@ Partial Class FormGudang
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.BtnRefresh, 3, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.BtnTambah, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnExit, 3, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.BtnRefresh, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.lbl_bahancount, 1, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 435)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 260)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(722, 40)
         Me.TableLayoutPanel2.TabIndex = 4
         '
+        'BtnExit
+        '
+        Me.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnExit.Location = New System.Drawing.Point(571, 8)
+        Me.BtnExit.Margin = New System.Windows.Forms.Padding(8)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.Size = New System.Drawing.Size(143, 24)
+        Me.BtnExit.TabIndex = 4
+        Me.BtnExit.Text = "Cancel"
+        Me.BtnExit.UseVisualStyleBackColor = True
+        '
         'BtnRefresh
         '
         Me.BtnRefresh.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnRefresh.Location = New System.Drawing.Point(571, 8)
+        Me.BtnRefresh.Location = New System.Drawing.Point(382, 8)
         Me.BtnRefresh.Margin = New System.Windows.Forms.Padding(8)
         Me.BtnRefresh.Name = "BtnRefresh"
-        Me.BtnRefresh.Size = New System.Drawing.Size(143, 24)
-        Me.BtnRefresh.TabIndex = 4
+        Me.BtnRefresh.Size = New System.Drawing.Size(173, 24)
+        Me.BtnRefresh.TabIndex = 3
         Me.BtnRefresh.Text = "Refresh"
         Me.BtnRefresh.UseVisualStyleBackColor = True
-        '
-        'BtnTambah
-        '
-        Me.BtnTambah.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnTambah.Location = New System.Drawing.Point(382, 8)
-        Me.BtnTambah.Margin = New System.Windows.Forms.Padding(8)
-        Me.BtnTambah.Name = "BtnTambah"
-        Me.BtnTambah.Size = New System.Drawing.Size(173, 24)
-        Me.BtnTambah.TabIndex = 3
-        Me.BtnTambah.Text = "Tambah Bahan"
-        Me.BtnTambah.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -206,18 +190,18 @@ Partial Class FormGudang
         Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.UbahToolStripMenuItem.Text = "Ubah Item"
         '
-        'FormGudang
+        'FormCaribahanPesanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(722, 475)
+        Me.ClientSize = New System.Drawing.Size(722, 300)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.DG_Bahan)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "FormGudang"
+        Me.Name = "FormCaribahanPesanan"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gudang"
@@ -231,17 +215,16 @@ Partial Class FormGudang
 
     End Sub
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents txt_namabahan As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents DG_Bahan As System.Windows.Forms.DataGridView
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents BtnRefresh As System.Windows.Forms.Button
-    Friend WithEvents BtnTambah As System.Windows.Forms.Button
+    Friend WithEvents BtnExit As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lbl_bahancount As System.Windows.Forms.Label
-    Friend WithEvents BtnCari As System.Windows.Forms.Button
-    Friend WithEvents cb_condition As System.Windows.Forms.ComboBox
     Friend WithEvents cms_dgbahan As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents TambahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UbahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BtnRefresh As System.Windows.Forms.Button
+    Friend WithEvents BtnCari As System.Windows.Forms.Button
+    Friend WithEvents txt_namabahan As System.Windows.Forms.TextBox
 End Class

@@ -1,5 +1,5 @@
 ﻿Public Class FormPesanan
-    Public kode_pesan As String
+    Public kode_pesan, kode_bahan As String
     Public row_pesan, prefix_kode_pesan As Integer
     Public ord_qty, ord_harga, ord_total As Integer
 
@@ -28,5 +28,13 @@
         ord_harga = Val(txt_harga.Text)
         ord_total = ord_qty * ord_harga
         txt_total.Text = ord_total.ToString
+    End Sub
+
+    Private Sub BtnBahanSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBahanSearch.Click
+        FormCaribahanPesanan.ShowDialog()
+    End Sub
+
+    Private Sub DG_ListBuatPesan_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_ListBuatPesan.CellClick
+        Me.ContextMenuStrip = Me.ContextMenuStrip1
     End Sub
 End Class

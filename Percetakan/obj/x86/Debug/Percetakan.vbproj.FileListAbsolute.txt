@@ -79,9 +79,10 @@ C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResour
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormEditKaryawan.resources
 C:\Users\sabun\percetakan\Percetakan\bin\Debug\MySql.Data.dll
 C:\Users\sabun\percetakan\Percetakan\bin\Debug\MySql.Data.xml
-C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormEditKaryawan.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAddGudang.resources
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAddGudang.resources
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAddstockGudang.resources
+C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormCaribahanPesanan.resources
+C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormEditbahanGudang.resources

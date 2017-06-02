@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `percetakan` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `percetakan`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: percetakan
@@ -39,6 +37,7 @@ CREATE TABLE `bahan` (
 
 LOCK TABLES `bahan` WRITE;
 /*!40000 ALTER TABLE `bahan` DISABLE KEYS */;
+INSERT INTO `bahan` VALUES ('BHN - 1','Spanduk Standard',102,'Meter'),('BHN - 2','Spanduk Jerman',20,'Meter'),('BHN - 3','Stiker Vinly',3,'Unit'),('BHN - 4','Stiker Bontak',0,'Meter'),('BHN - 5','Box Kartu Nama',30,'Unit'),('BHN - 6','Bahan satu',30,'Unit'),('BHN - 7','Bahan Dua',2,'Meter'),('BHN - 8','Bahan Tiga',3,'Meter'),('BHN - 9','Bahan Empat',20,'Meter');
 /*!40000 ALTER TABLE `bahan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,37 +92,37 @@ CREATE TABLE `karyawan` (
 
 LOCK TABLES `karyawan` WRITE;
 /*!40000 ALTER TABLE `karyawan` DISABLE KEYS */;
-INSERT INTO `karyawan` VALUES ('KRY-001','JBT-001','Ambrizal Suryadinata','ambrizals','radiohead4403','Jl. Letda Made Putra','08115349997');
+INSERT INTO `karyawan` VALUES ('KRY-1','JBT-001','Ambrizal Suryadinata','ambrizals','radiohead4403','Jl. Letda Made Putra','08115349997');
 /*!40000 ALTER TABLE `karyawan` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `memasukkan`
+-- Table structure for table `log_bahan`
 --
 
-DROP TABLE IF EXISTS `memasukkan`;
+DROP TABLE IF EXISTS `log_bahan`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `memasukkan` (
-  `MEMASUKKANID` int(11) NOT NULL,
+CREATE TABLE `log_bahan` (
+  `MEMASUKKANID` int(11) NOT NULL AUTO_INCREMENT,
   `KARYAWANID` varchar(10) NOT NULL,
   `BAHANID` varchar(10) NOT NULL,
-  `MEMASUKKANDATE` datetime NOT NULL,
+  `MEMASUKKANDATE` date NOT NULL,
   PRIMARY KEY (`MEMASUKKANID`),
   KEY `FK_RELATIONSHIP_8` (`KARYAWANID`),
   KEY `FK_RELATIONSHIP_9` (`BAHANID`),
   CONSTRAINT `FK_RELATIONSHIP_8` FOREIGN KEY (`KARYAWANID`) REFERENCES `karyawan` (`KARYAWANID`),
   CONSTRAINT `FK_RELATIONSHIP_9` FOREIGN KEY (`BAHANID`) REFERENCES `bahan` (`BAHANID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `memasukkan`
+-- Dumping data for table `log_bahan`
 --
 
-LOCK TABLES `memasukkan` WRITE;
-/*!40000 ALTER TABLE `memasukkan` DISABLE KEYS */;
-/*!40000 ALTER TABLE `memasukkan` ENABLE KEYS */;
+LOCK TABLES `log_bahan` WRITE;
+/*!40000 ALTER TABLE `log_bahan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_bahan` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -233,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-20 19:38:13
+-- Dump completed on 2017-06-02 23:28:22

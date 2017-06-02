@@ -76,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
+    <Compile Include="FormCaribahanPesanan.Designer.vb">
+      <DependentUpon>FormCaribahanPesanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCaribahanPesanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormAddGudang.Designer.vb">
       <DependentUpon>FormAddGudang.vb</DependentUpon>
     </Compile>
@@ -86,6 +92,12 @@
       <DependentUpon>FormAddstockGudang.vb</DependentUpon>
     </Compile>
     <Compile Include="FormAddstockGudang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditbahanGudang.Designer.vb">
+      <DependentUpon>FormEditbahanGudang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditbahanGudang.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEditKaryawan.Designer.vb">
@@ -167,11 +179,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormCaribahanPesanan.resx">
+      <DependentUpon>FormCaribahanPesanan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddGudang.resx">
       <DependentUpon>FormAddGudang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddstockGudang.resx">
       <DependentUpon>FormAddstockGudang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditbahanGudang.resx">
+      <DependentUpon>FormEditbahanGudang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditKaryawan.resx">
       <DependentUpon>FormEditKaryawan.vb</DependentUpon>

@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Imports System.Data
 
 
-Public Class FormGudang
+Public Class FormCaribahanPesanan
     Dim kode_bahan, search_name, search_condition, search_d As String
     Dim proses As New ClsKoneksi
     Dim list_bahan As DataTable
@@ -37,13 +37,7 @@ Public Class FormGudang
     End Sub
     Sub Kondisi_Pencarian()
         If txt_namabahan.TextLength > 0 Then
-            search_name = "(bahanname like '%" + txt_namabahan.Text + "%') and"
-        End If
-
-        If cb_condition.SelectedIndex = 0 Then
-            search_condition = "(bahanstock > 0)"
-        ElseIf cb_condition.SelectedIndex = 1 Then
-            search_condition = "(bahanstock = 0)"
+            search_name = "(bahanname like '%" + txt_namabahan.Text + "%')"
         End If
     End Sub
 
@@ -51,13 +45,13 @@ Public Class FormGudang
         Load_DataBahan()
     End Sub
 
-    Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnTambah.Click
+    Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
         FormAddGudang.ShowDialog()
     End Sub
 
-    Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
+    Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Kondisi_Pencarian()
-        list_bahan = proses.ExecuteQuery("SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan where " + search_name + search_d + search_condition + "")
+        list_bahan = proses.ExecuteQuery("SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan where " + search_name + "")
         DG_Bahan.DataSource = list_bahan
         DG_Bahan.Columns(0).Width = 100
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -67,24 +61,12 @@ Public Class FormGudang
 
 
     Public Sub DG_Bahan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Bahan.DoubleClick
-        FormAddstockGudang.ShowDialog()
+        FormPesanan.kode_pesan = DG_Bahan.SelectedCells(0).Value
+        FormPesanan.txt_bahan.Text = DG_Bahan.SelectedCells(1).Value
+        Me.Close()
     End Sub
 
-    Private Sub DG_Bahan_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_Bahan.CellClick
-        Me.ContextMenuStrip = cms_dgbahan
-    End Sub
-
-    Private Sub TambahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TambahToolStripMenuItem.Click
-        FormAddstockGudang.ShowDialog()
-    End Sub
-
-    Private Sub UbahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UbahToolStripMenuItem.Click
-        FormEditbahanGudang.ShowDialog()
-    End Sub
-
-    Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
+    Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExit.Click
         Load_DataBahan()
-        cb_condition.SelectedIndex = -1
-        cb_condition.Text = "<Pilih Ketersediaan>"
     End Sub
 End Class

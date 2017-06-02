@@ -2,8 +2,7 @@
 
 Public Class FormAddGudang
     Dim proses As New ClsKoneksi
-    Dim kd_bahan, sql, tgl As String
-    Dim tanggal As Date = Today
+    Dim kd_bahan, sql As String
 
     Sub load_adddata()
         proses.OpenConn()
@@ -34,23 +33,15 @@ Public Class FormAddGudang
         cb_unit.SelectedIndex = -1
     End Sub
 
-    Sub Tanggal_Load()
-        tgl = Format(tanggal, "yyyy-MM-dd")
-    End Sub
-
     Private Sub FormAddGudang_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        tanggal = Date.Now
-        Tanggal_Load()
         load_adddata()
     End Sub
 
     Private Sub BtnSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpan.Click
         Try
             sql = "INSERT INTO bahan (BAHANID, BAHANNAME, BAHANSTOCK, BAHANUNIT) VALUES ('" + txt_kodebahan.Text + "', '" + txt_namabahan.Text + "', '" + nm_stock.Value.ToString + "', '" + cb_unit.SelectedItem.ToString + "')"
-            proses.ExecuteNonQuery(sql)
+            proses.ExecuteNonQuery(Sql)
             MsgBox("Data tersimpan", MsgBoxStyle.Information, "Sukses")
-            sql = "INSERT INTO log_bahan (KARYAWANID, BAHANID, MEMASUKKANDATE) VALUES ('" + kry_id + "', '" + txt_kodebahan.Text + "', '" + tgl + "')"
-            proses.ExecuteNonQuery(sql)
             Clear()
             FormGudang.Load_DataBahan()
             Me.Close()
