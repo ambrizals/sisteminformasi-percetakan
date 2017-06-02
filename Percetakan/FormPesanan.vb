@@ -29,5 +29,4 @@
         ord_total = ord_qty * ord_harga
         txt_total.Text = ord_total.ToString
     End Sub
-
 End Class

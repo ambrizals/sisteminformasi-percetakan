@@ -117,19 +117,19 @@
     End Sub
 
     Private Sub BtnGudang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGudang.Click
-        Try
-            If str_status > 0 Then
-                proses.OpenConn()
-                FormGudang.ShowDialog()
-                proses.CloseConn()
-            Else
-                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-                str_status = 0
-            End If
-        Catch ex As Exception
+        'Try
+        If str_status > 0 Then
+            proses.OpenConn()
+            FormGudang.ShowDialog()
+            proses.CloseConn()
+        Else
             MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-            Connect()
-        End Try
+            str_status = 0
+        End If
+        'Catch ex As Exception
+        'MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+        'Connect()
+        'End Try
     End Sub
 
     Private Sub BtnPesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click

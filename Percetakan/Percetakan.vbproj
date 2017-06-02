@@ -76,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
+    <Compile Include="FormAddGudang.Designer.vb">
+      <DependentUpon>FormAddGudang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddGudang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormEditKaryawan.Designer.vb">
       <DependentUpon>FormEditKaryawan.vb</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAddGudang.resx">
+      <DependentUpon>FormAddGudang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditKaryawan.resx">
       <DependentUpon>FormEditKaryawan.vb</DependentUpon>
     </EmbeddedResource>
