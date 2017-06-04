@@ -101,6 +101,54 @@ Namespace My
                 Me("dbName") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property opt_usersave() As Double
+            Get
+                Return CType(Me("opt_usersave"),Double)
+            End Get
+            Set
+                Me("opt_usersave") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property opt_passsave() As Double
+            Get
+                Return CType(Me("opt_passsave"),Double)
+            End Get
+            Set
+                Me("opt_passsave") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ambrizals")>  _
+        Public Property opte_usersave() As String
+            Get
+                Return CType(Me("opte_usersave"),String)
+            End Get
+            Set
+                Me("opte_usersave") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("radiohead4403")>  _
+        Public Property opte_passsave() As String
+            Get
+                Return CType(Me("opte_passsave"),String)
+            End Get
+            Set
+                Me("opte_passsave") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

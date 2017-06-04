@@ -71,7 +71,7 @@ Public Class FormGudang
     End Sub
 
     Private Sub DG_Bahan_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_Bahan.CellClick
-        Me.ContextMenuStrip = cms_dgbahan
+        ContextMenuStrip = cms_dgbahan
     End Sub
 
     Private Sub TambahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TambahToolStripMenuItem.Click

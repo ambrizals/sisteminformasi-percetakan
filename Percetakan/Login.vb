@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Login
     Dim proses As New ClsKoneksi
+    Dim opt_us, opt_ps As Integer
+    Dim opte_us, opte_ps As String
     Sub Connect()
         Koneksi()
         If str_status > 0 Then
@@ -50,6 +52,20 @@ Public Class Login
             txtpassword.Text = ""
         End If
     End Sub
+    Sub get_saveoption()
+        opt_us = My.Settings.opt_usersave
+        opt_ps = My.Settings.opt_passsave
+        opte_us = My.Settings.opte_usersave
+        opte_ps = My.Settings.opte_passsave
+        If opt_us > 0 Then
+            txtusername.Text = opte_us
+            cb_saveuser.Checked = True
+        End If
+        If opt_ps > 0 Then
+            txtpassword.Text = opte_ps
+            cb_saveuserpass.Checked = True
+        End If
+    End Sub
     Private Sub BtnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLogin.Click
         Try
             If str_status > 0 Then
@@ -83,11 +99,26 @@ Public Class Login
                         kry_alamat = mydata("KARYAWANALAMAT")
                         kry_telp = mydata("KARYAWANTELP")
                         MsgBox("Login Berhasil", MsgBoxStyle.Information, "Info")
+                        If cb_saveuser.Checked = True Then
+                            My.Settings.opt_usersave = 1
+                            My.Settings.opte_usersave = txtusername.Text
+                        Else
+                            My.Settings.opt_usersave = 0
+                            My.Settings.opte_passsave = ""
+                        End If
+                        If cb_saveuserpass.Checked = True Then
+                            My.Settings.opt_passsave = 1
+                            My.Settings.opte_passsave = txtpassword.Text
+                        Else
+                            My.Settings.opt_passsave = 0
+                            My.Settings.opte_passsave = ""
+                        End If
                         Call save_info()
                         MenuUtama.Show()
                         Me.Hide()
                     End If
                 End If
+
                 proses.CloseConn()
             Else
                 MsgBox("Tidak dapat terhubung ke server, silahkan reset terlebih dahulu", MsgBoxStyle.Critical, "Connection Error")
@@ -101,6 +132,7 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        get_saveoption()
         Connect()
 
     End Sub
@@ -112,6 +144,7 @@ Public Class Login
     Private Sub cb_saveuser_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cb_saveuser.CheckedChanged
         If cb_saveuser.Checked = False Then
             cb_saveuserpass.Enabled = False
+            cb_saveuserpass.Checked = False
         ElseIf cb_saveuser.Checked = True Then
             cb_saveuserpass.Enabled = True
         End If

@@ -14,5 +14,17 @@
     <Setting Name="dbName" Type="System.String" Scope="User">
       <Value Profile="(Default)">percetakan</Value>
     </Setting>
+    <Setting Name="opt_usersave" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="opt_passsave" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="opte_usersave" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ambrizals</Value>
+    </Setting>
+    <Setting Name="opte_passsave" Type="System.String" Scope="User">
+      <Value Profile="(Default)">radiohead4403</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
