@@ -60,10 +60,12 @@ Public Class Login
         If opt_us > 0 Then
             txtusername.Text = opte_us
             cb_saveuser.Checked = True
+            txtpassword.Focus()
         End If
         If opt_ps > 0 Then
             txtpassword.Text = opte_ps
             cb_saveuserpass.Checked = True
+            BtnLogin.Focus()
         End If
     End Sub
     Private Sub BtnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLogin.Click

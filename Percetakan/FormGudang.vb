@@ -8,17 +8,18 @@ Public Class FormGudang
     Dim proses As New ClsKoneksi
     Dim list_bahan As DataTable
     Sub Load_DataBahan()
-        list_bahan = proses.ExecuteQuery("SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan")
+        list_bahan = proses.ExecuteQuery("SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan INNER JOIN log_bahan ON (BAHAN.BAHANID = LOG_BAHAN.BAHANID) ORDER BY log_bahan.MEMASUKKANDATE")
         DG_Bahan.DataSource = list_bahan
-        DG_Bahan.Columns(0).Width = 100
+        DG_Bahan.Columns(0).Width = 60
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Bahan.Columns(2).Width = 150
-        DG_Bahan.Columns(3).Width = 150
+        DG_Bahan.Columns(2).Width = 120
+        DG_Bahan.Columns(3).Width = 120
+        DG_Bahan.Columns(4).Width = 100
 
         proses.OpenConn()
 
         Dim myadapter As New MySqlDataAdapter
-        Dim sqlquery = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan"
+        Dim sqlquery = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan INNER JOIN log_bahan ON (BAHAN.BAHANID = LOG_BAHAN.BAHANID) ORDER BY log_bahan.MEMASUKKANDATE"
         Dim mycommand As New MySqlCommand
         mycommand.Connection = proses.Cn
         mycommand.CommandText = sqlquery

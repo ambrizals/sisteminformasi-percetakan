@@ -33,6 +33,8 @@ Partial Class FormAddGudang
         Me.BtnSimpan = New System.Windows.Forms.Button()
         Me.BtnReset = New System.Windows.Forms.Button()
         Me.BtnBatal = New System.Windows.Forms.Button()
+        Me.txt_harga = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.nm_stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -70,21 +72,21 @@ Partial Class FormAddGudang
         Me.txt_kodebahan.Name = "txt_kodebahan"
         Me.txt_kodebahan.ReadOnly = True
         Me.txt_kodebahan.Size = New System.Drawing.Size(225, 20)
-        Me.txt_kodebahan.TabIndex = 4
+        Me.txt_kodebahan.TabIndex = 0
         '
         'txt_namabahan
         '
         Me.txt_namabahan.Location = New System.Drawing.Point(96, 46)
         Me.txt_namabahan.Name = "txt_namabahan"
         Me.txt_namabahan.Size = New System.Drawing.Size(225, 20)
-        Me.txt_namabahan.TabIndex = 5
+        Me.txt_namabahan.TabIndex = 1
         '
         'nm_stock
         '
         Me.nm_stock.Location = New System.Drawing.Point(96, 82)
         Me.nm_stock.Name = "nm_stock"
         Me.nm_stock.Size = New System.Drawing.Size(112, 20)
-        Me.nm_stock.TabIndex = 6
+        Me.nm_stock.TabIndex = 2
         '
         'cb_unit
         '
@@ -93,7 +95,7 @@ Partial Class FormAddGudang
         Me.cb_unit.Location = New System.Drawing.Point(214, 81)
         Me.cb_unit.Name = "cb_unit"
         Me.cb_unit.Size = New System.Drawing.Size(107, 21)
-        Me.cb_unit.TabIndex = 7
+        Me.cb_unit.TabIndex = 3
         Me.cb_unit.Text = "Pilih Satuan"
         '
         'TableLayoutPanel1
@@ -105,7 +107,7 @@ Partial Class FormAddGudang
         Me.TableLayoutPanel1.Controls.Add(Me.BtnSimpan, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnReset, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnBatal, 2, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(18, 118)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(18, 162)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -118,7 +120,7 @@ Partial Class FormAddGudang
         Me.BtnSimpan.Location = New System.Drawing.Point(3, 3)
         Me.BtnSimpan.Name = "BtnSimpan"
         Me.BtnSimpan.Size = New System.Drawing.Size(95, 22)
-        Me.BtnSimpan.TabIndex = 0
+        Me.BtnSimpan.TabIndex = 5
         Me.BtnSimpan.Text = "Simpan"
         Me.BtnSimpan.UseVisualStyleBackColor = True
         '
@@ -128,7 +130,7 @@ Partial Class FormAddGudang
         Me.BtnReset.Location = New System.Drawing.Point(104, 3)
         Me.BtnReset.Name = "BtnReset"
         Me.BtnReset.Size = New System.Drawing.Size(95, 22)
-        Me.BtnReset.TabIndex = 1
+        Me.BtnReset.TabIndex = 6
         Me.BtnReset.Text = "Reset"
         Me.BtnReset.UseVisualStyleBackColor = True
         '
@@ -138,15 +140,33 @@ Partial Class FormAddGudang
         Me.BtnBatal.Location = New System.Drawing.Point(205, 3)
         Me.BtnBatal.Name = "BtnBatal"
         Me.BtnBatal.Size = New System.Drawing.Size(95, 22)
-        Me.BtnBatal.TabIndex = 2
+        Me.BtnBatal.TabIndex = 7
         Me.BtnBatal.Text = "Batal"
         Me.BtnBatal.UseVisualStyleBackColor = True
+        '
+        'txt_harga
+        '
+        Me.txt_harga.Location = New System.Drawing.Point(96, 117)
+        Me.txt_harga.Name = "txt_harga"
+        Me.txt_harga.Size = New System.Drawing.Size(225, 20)
+        Me.txt_harga.TabIndex = 4
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(15, 120)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 13)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Harga Bahan :"
         '
         'FormAddGudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(341, 176)
+        Me.ClientSize = New System.Drawing.Size(341, 211)
+        Me.Controls.Add(Me.txt_harga)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.cb_unit)
         Me.Controls.Add(Me.nm_stock)
@@ -177,4 +197,6 @@ Partial Class FormAddGudang
     Friend WithEvents BtnSimpan As System.Windows.Forms.Button
     Friend WithEvents BtnReset As System.Windows.Forms.Button
     Friend WithEvents BtnBatal As System.Windows.Forms.Button
+    Friend WithEvents txt_harga As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

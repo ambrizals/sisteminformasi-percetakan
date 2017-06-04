@@ -3,7 +3,7 @@
 Public Class FormAddGudang
     Dim proses As New ClsKoneksi
     Dim kd_bahan, sql, tgl As String
-    Dim tanggal As Date = Today
+    Dim tanggal As Date
 
     Sub load_adddata()
         proses.OpenConn()
@@ -32,10 +32,11 @@ Public Class FormAddGudang
         txt_namabahan.Clear()
         nm_stock.Value = 0
         cb_unit.SelectedIndex = -1
+        txt_harga.Clear()
     End Sub
 
     Sub Tanggal_Load()
-        tgl = Format(tanggal, "yyyy-MM-dd")
+        tgl = Format(tanggal, "yyyy-MM-dd HH:mm:ss")
     End Sub
 
     Private Sub FormAddGudang_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -46,7 +47,7 @@ Public Class FormAddGudang
 
     Private Sub BtnSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpan.Click
         Try
-            sql = "INSERT INTO bahan (BAHANID, BAHANNAME, BAHANSTOCK, BAHANUNIT) VALUES ('" + txt_kodebahan.Text + "', '" + txt_namabahan.Text + "', '" + nm_stock.Value.ToString + "', '" + cb_unit.SelectedItem.ToString + "')"
+            sql = "INSERT INTO bahan (BAHANID, BAHANNAME, BAHANSTOCK, BAHANUNIT, BAHANHARGA) VALUES ('" + txt_kodebahan.Text + "', '" + txt_namabahan.Text + "', '" + nm_stock.Value.ToString + "', '" + cb_unit.SelectedItem.ToString + "', '" + txt_harga.Text + "')"
             proses.ExecuteNonQuery(sql)
             MsgBox("Data tersimpan", MsgBoxStyle.Information, "Sukses")
             sql = "INSERT INTO log_bahan (KARYAWANID, BAHANID, MEMASUKKANDATE) VALUES ('" + kry_id + "', '" + txt_kodebahan.Text + "', '" + tgl + "')"
@@ -55,7 +56,7 @@ Public Class FormAddGudang
             FormGudang.Load_DataBahan()
             Me.Close()
         Catch ex As Exception
-            MsgBox("Terjadi Kesalahan, silahkan periksa koneksi atau hubungi administrator", MsgBoxStyle.Critical, "Error")
+            MsgBox("Terjadi Kesalahan, silahkan periksa koneksi atau hubungi administrator" + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
     Private Sub BtnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReset.Click
@@ -65,5 +66,4 @@ Public Class FormAddGudang
         kd_bahan = ""
         Me.Hide()
     End Sub
-
 End Class

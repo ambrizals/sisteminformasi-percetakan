@@ -49,7 +49,7 @@ Partial Class FormGudang
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.36893!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.63107!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -67,9 +67,9 @@ Partial Class FormGudang
         Me.BtnCari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCari.Location = New System.Drawing.Point(574, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(573, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(145, 28)
+        Me.BtnCari.Size = New System.Drawing.Size(146, 28)
         Me.BtnCari.TabIndex = 4
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = True
@@ -81,7 +81,7 @@ Partial Class FormGudang
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_namabahan.Location = New System.Drawing.Point(122, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
-        Me.txt_namabahan.Size = New System.Drawing.Size(281, 26)
+        Me.txt_namabahan.Size = New System.Drawing.Size(280, 26)
         Me.txt_namabahan.TabIndex = 0
         '
         'Label1
@@ -103,7 +103,7 @@ Partial Class FormGudang
         Me.cb_condition.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_condition.FormattingEnabled = True
         Me.cb_condition.Items.AddRange(New Object() {"Tersedia", "Tidak Tersedia"})
-        Me.cb_condition.Location = New System.Drawing.Point(409, 3)
+        Me.cb_condition.Location = New System.Drawing.Point(408, 3)
         Me.cb_condition.Name = "cb_condition"
         Me.cb_condition.Size = New System.Drawing.Size(159, 26)
         Me.cb_condition.TabIndex = 3
@@ -192,18 +192,18 @@ Partial Class FormGudang
         '
         Me.cms_dgbahan.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahToolStripMenuItem, Me.UbahToolStripMenuItem})
         Me.cms_dgbahan.Name = "ContextMenuStrip1"
-        Me.cms_dgbahan.Size = New System.Drawing.Size(150, 48)
+        Me.cms_dgbahan.Size = New System.Drawing.Size(151, 48)
         '
         'TambahToolStripMenuItem
         '
         Me.TambahToolStripMenuItem.Name = "TambahToolStripMenuItem"
-        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TambahToolStripMenuItem.Text = "Tambah Stock"
         '
         'UbahToolStripMenuItem
         '
         Me.UbahToolStripMenuItem.Name = "UbahToolStripMenuItem"
-        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.UbahToolStripMenuItem.Text = "Ubah Item"
         '
         'FormGudang
