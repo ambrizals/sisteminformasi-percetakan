@@ -32,6 +32,8 @@ Partial Class FormEditbahanGudang
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_harga = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.nm_stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -43,7 +45,7 @@ Partial Class FormEditbahanGudang
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnBatal, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.BtnSimpan, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(14, 118)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(14, 162)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -56,7 +58,7 @@ Partial Class FormEditbahanGudang
         Me.BtnBatal.Location = New System.Drawing.Point(154, 3)
         Me.BtnBatal.Name = "BtnBatal"
         Me.BtnBatal.Size = New System.Drawing.Size(146, 22)
-        Me.BtnBatal.TabIndex = 3
+        Me.BtnBatal.TabIndex = 6
         Me.BtnBatal.Text = "Batal"
         Me.BtnBatal.UseVisualStyleBackColor = True
         '
@@ -66,7 +68,7 @@ Partial Class FormEditbahanGudang
         Me.BtnSimpan.Location = New System.Drawing.Point(3, 3)
         Me.BtnSimpan.Name = "BtnSimpan"
         Me.BtnSimpan.Size = New System.Drawing.Size(145, 22)
-        Me.BtnSimpan.TabIndex = 0
+        Me.BtnSimpan.TabIndex = 5
         Me.BtnSimpan.Text = "Simpan"
         Me.BtnSimpan.UseVisualStyleBackColor = True
         '
@@ -77,7 +79,7 @@ Partial Class FormEditbahanGudang
         Me.cb_unit.Location = New System.Drawing.Point(210, 81)
         Me.cb_unit.Name = "cb_unit"
         Me.cb_unit.Size = New System.Drawing.Size(107, 21)
-        Me.cb_unit.TabIndex = 15
+        Me.cb_unit.TabIndex = 3
         Me.cb_unit.Text = "Pilih Satuan"
         '
         'nm_stock
@@ -93,7 +95,7 @@ Partial Class FormEditbahanGudang
         Me.txt_namabahan.Location = New System.Drawing.Point(92, 46)
         Me.txt_namabahan.Name = "txt_namabahan"
         Me.txt_namabahan.Size = New System.Drawing.Size(225, 20)
-        Me.txt_namabahan.TabIndex = 13
+        Me.txt_namabahan.TabIndex = 2
         '
         'txt_kodebahan
         '
@@ -101,7 +103,7 @@ Partial Class FormEditbahanGudang
         Me.txt_kodebahan.Name = "txt_kodebahan"
         Me.txt_kodebahan.ReadOnly = True
         Me.txt_kodebahan.Size = New System.Drawing.Size(225, 20)
-        Me.txt_kodebahan.TabIndex = 12
+        Me.txt_kodebahan.TabIndex = 1
         '
         'Label3
         '
@@ -130,11 +132,29 @@ Partial Class FormEditbahanGudang
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Kode Bahan :"
         '
+        'txt_harga
+        '
+        Me.txt_harga.Location = New System.Drawing.Point(92, 117)
+        Me.txt_harga.Name = "txt_harga"
+        Me.txt_harga.Size = New System.Drawing.Size(225, 20)
+        Me.txt_harga.TabIndex = 4
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(11, 120)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 13)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Harga Bahan :"
+        '
         'FormEditbahanGudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(331, 154)
+        Me.ClientSize = New System.Drawing.Size(331, 202)
+        Me.Controls.Add(Me.txt_harga)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.cb_unit)
         Me.Controls.Add(Me.nm_stock)
@@ -165,4 +185,6 @@ Partial Class FormEditbahanGudang
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txt_harga As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

@@ -44,4 +44,11 @@ Module Globals
         kry_alamat = ""
         kry_telp = ""
     End Sub
+    Public tanggal As String
+
+    Sub Tanggal_Load()
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd") + " " + Format(tm, "HH:mm:ss")
+    End Sub
 End Module

@@ -2,8 +2,7 @@
 
 Public Class FormAddGudang
     Dim proses As New ClsKoneksi
-    Dim kd_bahan, sql, tgl As String
-    Dim tanggal As Date
+    Dim kd_bahan, sql As String
 
     Sub load_adddata()
         proses.OpenConn()
@@ -35,13 +34,7 @@ Public Class FormAddGudang
         txt_harga.Clear()
     End Sub
 
-    Sub Tanggal_Load()
-        tgl = Format(tanggal, "yyyy-MM-dd HH:mm:ss")
-    End Sub
-
     Private Sub FormAddGudang_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        tanggal = Date.Now
-        Tanggal_Load()
         load_adddata()
     End Sub
 
@@ -50,7 +43,7 @@ Public Class FormAddGudang
             sql = "INSERT INTO bahan (BAHANID, BAHANNAME, BAHANSTOCK, BAHANUNIT, BAHANHARGA) VALUES ('" + txt_kodebahan.Text + "', '" + txt_namabahan.Text + "', '" + nm_stock.Value.ToString + "', '" + cb_unit.SelectedItem.ToString + "', '" + txt_harga.Text + "')"
             proses.ExecuteNonQuery(sql)
             MsgBox("Data tersimpan", MsgBoxStyle.Information, "Sukses")
-            sql = "INSERT INTO log_bahan (KARYAWANID, BAHANID, MEMASUKKANDATE) VALUES ('" + kry_id + "', '" + txt_kodebahan.Text + "', '" + tgl + "')"
+            sql = "INSERT INTO log_bahan (KARYAWANID, BAHANID, MEMASUKKANDATE, MEMASUKKANSTATUS) VALUES ('" + kry_id + "', '" + txt_kodebahan.Text + "', '" + tanggal + "', 'TAMBAH BAHAN')"
             proses.ExecuteNonQuery(sql)
             Clear()
             FormGudang.Load_DataBahan()

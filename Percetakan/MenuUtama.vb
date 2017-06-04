@@ -67,8 +67,10 @@
     End Sub
 
     Private Sub MenuUtama_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Tanggal_Load()
         Privilage_User()
         Connect()
+        lbl_tanggal.Text = tanggal
     End Sub
     Private Sub BtnKaryawan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnKaryawan.Click
         Try

@@ -50,6 +50,8 @@ Public Class FormAddstockGudang
         stockq = Val(stock)
         sql = "UPDATE bahan SET BAHANSTOCK ='" + stockq + "' WHERE BAHANID = '" + bahanid + "'"
         proses.ExecuteNonQuery(sql)
+        sql = "INSERT INTO log_bahan (KARYAWANID, BAHANID, MEMASUKKANDATE, MEMASUKKANSTATUS) VALUES ('" + kry_id + "', '" + txt_kodebahan.Text + "', '" + tanggal + "', 'TAMBAH STOCK')"
+        proses.ExecuteNonQuery(sql)
         MsgBox("Stock Telah ditambah", MsgBoxStyle.Information, "Sukses")
         clear()
         FormGudang.Load_DataBahan()

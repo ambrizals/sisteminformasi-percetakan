@@ -49,11 +49,17 @@ Public Class FormGudang
     End Sub
 
     Private Sub FormGudang_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Tanggal_Load()
         Load_DataBahan()
     End Sub
 
     Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnTambah.Click
-        FormAddGudang.ShowDialog()
+        If kry_lvl = "JBT-001" Then
+            FormAddGudang.ShowDialog()
+        Else
+            MsgBox("Anda tidak memiliki akses untuk menambah bahan", MsgBoxStyle.Critical, "Error Permission Denied")
+        End If
+
     End Sub
 
     Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
@@ -80,7 +86,11 @@ Public Class FormGudang
     End Sub
 
     Private Sub UbahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UbahToolStripMenuItem.Click
-        FormEditbahanGudang.ShowDialog()
+        If kry_lvl = "JBT-001" Then
+            FormEditbahanGudang.ShowDialog()
+        Else
+            MsgBox("Anda tidak memiliki akses untuk mengubah data bahan", MsgBoxStyle.Critical, "Error Permission Denied")
+        End If
     End Sub
 
     Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
