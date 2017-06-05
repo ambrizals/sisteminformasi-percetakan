@@ -22,6 +22,7 @@ Partial Class FormKaryawan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormKaryawan))
         Me.BtnExit = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -59,6 +60,9 @@ Partial Class FormKaryawan
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lbl_karyawancount = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -70,22 +74,27 @@ Partial Class FormKaryawan
         CType(Me.DG_ListKaryawan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnExit
         '
-        Me.BtnExit.Location = New System.Drawing.Point(625, 410)
+        Me.BtnExit.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnExit.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnExit.Location = New System.Drawing.Point(595, 473)
         Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(75, 23)
+        Me.BtnExit.Size = New System.Drawing.Size(106, 35)
         Me.BtnExit.TabIndex = 13
         Me.BtnExit.Text = "Kembali"
-        Me.BtnExit.UseVisualStyleBackColor = True
+        Me.BtnExit.UseVisualStyleBackColor = False
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(13, 75)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(689, 392)
@@ -193,12 +202,16 @@ Partial Class FormKaryawan
         '
         'BtnReset
         '
+        Me.BtnReset.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnReset.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnReset.Location = New System.Drawing.Point(514, 323)
         Me.BtnReset.Name = "BtnReset"
         Me.BtnReset.Size = New System.Drawing.Size(150, 23)
         Me.BtnReset.TabIndex = 27
         Me.BtnReset.Text = "Reset"
-        Me.BtnReset.UseVisualStyleBackColor = True
+        Me.BtnReset.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
@@ -331,13 +344,17 @@ Partial Class FormKaryawan
         '
         'BtnSave
         '
+        Me.BtnSave.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.BtnSave.Enabled = False
+        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnSave.Font = New System.Drawing.Font("Trebuchet MS", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnSave.Location = New System.Drawing.Point(366, 323)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(141, 23)
         Me.BtnSave.TabIndex = 30
         Me.BtnSave.Text = "Save"
-        Me.BtnSave.UseVisualStyleBackColor = True
+        Me.BtnSave.UseVisualStyleBackColor = False
         '
         'TabPage2
         '
@@ -390,7 +407,7 @@ Partial Class FormKaryawan
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.98148!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.01852!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txt_carikaryawan, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btn_carikaryawan, 2, 0)
@@ -408,7 +425,7 @@ Partial Class FormKaryawan
         Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label9.Location = New System.Drawing.Point(3, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(93, 27)
+        Me.Label9.Size = New System.Drawing.Size(92, 27)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Cari Karyawan :"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -416,17 +433,17 @@ Partial Class FormKaryawan
         'txt_carikaryawan
         '
         Me.txt_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_carikaryawan.Location = New System.Drawing.Point(102, 3)
+        Me.txt_carikaryawan.Location = New System.Drawing.Point(101, 3)
         Me.txt_carikaryawan.Name = "txt_carikaryawan"
-        Me.txt_carikaryawan.Size = New System.Drawing.Size(416, 20)
+        Me.txt_carikaryawan.Size = New System.Drawing.Size(415, 20)
         Me.txt_carikaryawan.TabIndex = 1
         '
         'btn_carikaryawan
         '
         Me.btn_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_carikaryawan.Location = New System.Drawing.Point(524, 3)
+        Me.btn_carikaryawan.Location = New System.Drawing.Point(522, 3)
         Me.btn_carikaryawan.Name = "btn_carikaryawan"
-        Me.btn_carikaryawan.Size = New System.Drawing.Size(142, 21)
+        Me.btn_carikaryawan.Size = New System.Drawing.Size(144, 21)
         Me.btn_carikaryawan.TabIndex = 2
         Me.btn_carikaryawan.Text = "Cari"
         Me.btn_carikaryawan.UseVisualStyleBackColor = True
@@ -460,14 +477,52 @@ Partial Class FormKaryawan
         Me.Label11.TabIndex = 13
         Me.Label11.Text = "Jumlah Karyawan :"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.Location = New System.Drawing.Point(78, 22)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(176, 40)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "KARYAWAN"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label10.Location = New System.Drawing.Point(686, 3)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(24, 27)
+        Me.Label10.TabIndex = 18
+        Me.Label10.Text = "X"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(15, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(57, 58)
+        Me.PictureBox1.TabIndex = 19
+        Me.PictureBox1.TabStop = False
+        '
         'FormKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(713, 442)
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ClientSize = New System.Drawing.Size(713, 531)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.BtnExit)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormKaryawan"
@@ -491,7 +546,9 @@ Partial Class FormKaryawan
         Me.TableLayoutPanel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents BtnExit As System.Windows.Forms.Button
@@ -531,4 +588,7 @@ Partial Class FormKaryawan
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents lbl_karyawancount As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

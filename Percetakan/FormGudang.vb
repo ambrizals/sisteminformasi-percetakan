@@ -109,4 +109,8 @@ Public Class FormGudang
             DG_Bahan.ContextMenuStrip = cms_dgbahan
         End If
     End Sub
+
+    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.Click
+        Me.Close()
+    End Sub
 End Class

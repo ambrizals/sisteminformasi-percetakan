@@ -70,7 +70,6 @@
         Tanggal_Load()
         Privilage_User()
         Connect()
-        lbl_tanggal.Text = tanggal
     End Sub
     Private Sub BtnKaryawan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnKaryawan.Click
         Try
@@ -148,5 +147,9 @@
         'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
         'Connect()
         'End Try
+    End Sub
+
+    Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label2.Click
+        Me.Close()
     End Sub
 End Class

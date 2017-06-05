@@ -34,12 +34,14 @@ Partial Class Login
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_constatus = New System.Windows.Forms.Label()
         Me.BtnConfig = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Location = New System.Drawing.Point(9, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 13)
         Me.Label1.TabIndex = 0
@@ -48,7 +50,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 41)
+        Me.Label2.Location = New System.Drawing.Point(9, 128)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 13)
         Me.Label2.TabIndex = 1
@@ -56,14 +58,14 @@ Partial Class Login
         '
         'txtusername
         '
-        Me.txtusername.Location = New System.Drawing.Point(92, 13)
+        Me.txtusername.Location = New System.Drawing.Point(88, 100)
         Me.txtusername.Name = "txtusername"
         Me.txtusername.Size = New System.Drawing.Size(180, 20)
         Me.txtusername.TabIndex = 2
         '
         'txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(92, 37)
+        Me.txtpassword.Location = New System.Drawing.Point(88, 124)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtpassword.Size = New System.Drawing.Size(180, 20)
@@ -71,35 +73,46 @@ Partial Class Login
         '
         'BtnLogin
         '
-        Me.BtnLogin.Location = New System.Drawing.Point(16, 107)
+        Me.BtnLogin.BackColor = System.Drawing.SystemColors.Menu
+        Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnLogin.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnLogin.Location = New System.Drawing.Point(12, 194)
         Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.Size = New System.Drawing.Size(256, 23)
+        Me.BtnLogin.Size = New System.Drawing.Size(256, 60)
         Me.BtnLogin.TabIndex = 4
         Me.BtnLogin.Text = "Login"
-        Me.BtnLogin.UseVisualStyleBackColor = True
+        Me.BtnLogin.UseVisualStyleBackColor = False
         '
         'BtnReset
         '
-        Me.BtnReset.Location = New System.Drawing.Point(16, 137)
+        Me.BtnReset.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnReset.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnReset.Location = New System.Drawing.Point(12, 277)
         Me.BtnReset.Name = "BtnReset"
         Me.BtnReset.Size = New System.Drawing.Size(81, 23)
         Me.BtnReset.TabIndex = 5
         Me.BtnReset.Text = "Reconnect"
-        Me.BtnReset.UseVisualStyleBackColor = True
+        Me.BtnReset.UseVisualStyleBackColor = False
         '
         'BtnCancel
         '
-        Me.BtnCancel.Location = New System.Drawing.Point(103, 137)
+        Me.BtnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCancel.Location = New System.Drawing.Point(236, 12)
         Me.BtnCancel.Name = "BtnCancel"
-        Me.BtnCancel.Size = New System.Drawing.Size(80, 23)
+        Me.BtnCancel.Size = New System.Drawing.Size(39, 23)
         Me.BtnCancel.TabIndex = 6
-        Me.BtnCancel.Text = "Cancel"
-        Me.BtnCancel.UseVisualStyleBackColor = True
+        Me.BtnCancel.Text = "X"
+        Me.BtnCancel.UseVisualStyleBackColor = False
         '
         'cb_saveuser
         '
         Me.cb_saveuser.AutoSize = True
-        Me.cb_saveuser.Location = New System.Drawing.Point(16, 63)
+        Me.cb_saveuser.Location = New System.Drawing.Point(12, 150)
         Me.cb_saveuser.Name = "cb_saveuser"
         Me.cb_saveuser.Size = New System.Drawing.Size(112, 17)
         Me.cb_saveuser.TabIndex = 7
@@ -110,7 +123,7 @@ Partial Class Login
         '
         Me.cb_saveuserpass.AutoSize = True
         Me.cb_saveuserpass.Enabled = False
-        Me.cb_saveuserpass.Location = New System.Drawing.Point(16, 84)
+        Me.cb_saveuserpass.Location = New System.Drawing.Point(12, 171)
         Me.cb_saveuserpass.Name = "cb_saveuserpass"
         Me.cb_saveuserpass.Size = New System.Drawing.Size(110, 17)
         Me.cb_saveuserpass.TabIndex = 8
@@ -120,7 +133,7 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 172)
+        Me.Label3.Location = New System.Drawing.Point(8, 312)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 13)
         Me.Label3.TabIndex = 9
@@ -130,7 +143,7 @@ Partial Class Login
         '
         Me.lbl_constatus.AutoSize = True
         Me.lbl_constatus.ForeColor = System.Drawing.Color.Red
-        Me.lbl_constatus.Location = New System.Drawing.Point(100, 173)
+        Me.lbl_constatus.Location = New System.Drawing.Point(96, 313)
         Me.lbl_constatus.Name = "lbl_constatus"
         Me.lbl_constatus.Size = New System.Drawing.Size(25, 13)
         Me.lbl_constatus.TabIndex = 10
@@ -138,18 +151,46 @@ Partial Class Login
         '
         'BtnConfig
         '
-        Me.BtnConfig.Location = New System.Drawing.Point(189, 136)
+        Me.BtnConfig.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnConfig.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnConfig.Location = New System.Drawing.Point(185, 277)
         Me.BtnConfig.Name = "BtnConfig"
         Me.BtnConfig.Size = New System.Drawing.Size(83, 23)
         Me.BtnConfig.TabIndex = 11
         Me.BtnConfig.Text = "Config"
-        Me.BtnConfig.UseVisualStyleBackColor = True
+        Me.BtnConfig.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel1.Location = New System.Drawing.Point(0, 358)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(293, 49)
+        Me.Panel1.TabIndex = 12
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label4.Location = New System.Drawing.Point(83, 33)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(106, 40)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "LOGIN"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 202)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(289, 405)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnConfig)
         Me.Controls.Add(Me.lbl_constatus)
         Me.Controls.Add(Me.Label3)
@@ -162,7 +203,7 @@ Partial Class Login
         Me.Controls.Add(Me.txtusername)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
@@ -182,5 +223,7 @@ Partial Class Login
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents lbl_constatus As System.Windows.Forms.Label
     Friend WithEvents BtnConfig As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 
 End Class

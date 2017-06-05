@@ -44,10 +44,11 @@ Partial Class FormCaribahanPesanan
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.08633!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.91367!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -64,12 +65,16 @@ Partial Class FormCaribahanPesanan
         Me.BtnCari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCari.Location = New System.Drawing.Point(552, 3)
+        Me.BtnCari.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnCari.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnCari.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCari.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.BtnCari.Location = New System.Drawing.Point(551, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(167, 28)
+        Me.BtnCari.Size = New System.Drawing.Size(168, 28)
         Me.BtnCari.TabIndex = 6
         Me.BtnCari.Text = "Cari"
-        Me.BtnCari.UseVisualStyleBackColor = True
+        Me.BtnCari.UseVisualStyleBackColor = False
         '
         'txt_namabahan
         '
@@ -78,7 +83,7 @@ Partial Class FormCaribahanPesanan
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_namabahan.Location = New System.Drawing.Point(96, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
-        Me.txt_namabahan.Size = New System.Drawing.Size(450, 26)
+        Me.txt_namabahan.Size = New System.Drawing.Size(449, 26)
         Me.txt_namabahan.TabIndex = 5
         '
         'Label1
@@ -87,6 +92,7 @@ Partial Class FormCaribahanPesanan
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 34)
@@ -130,30 +136,40 @@ Partial Class FormCaribahanPesanan
         '
         'BtnExit
         '
+        Me.BtnExit.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnExit.Location = New System.Drawing.Point(571, 8)
-        Me.BtnExit.Margin = New System.Windows.Forms.Padding(8)
+        Me.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnExit.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnExit.Location = New System.Drawing.Point(568, 5)
+        Me.BtnExit.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnExit.Name = "BtnExit"
-        Me.BtnExit.Size = New System.Drawing.Size(143, 24)
+        Me.BtnExit.Size = New System.Drawing.Size(149, 30)
         Me.BtnExit.TabIndex = 4
         Me.BtnExit.Text = "Cancel"
-        Me.BtnExit.UseVisualStyleBackColor = True
+        Me.BtnExit.UseVisualStyleBackColor = False
         '
         'BtnRefresh
         '
+        Me.BtnRefresh.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.BtnRefresh.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnRefresh.Location = New System.Drawing.Point(382, 8)
-        Me.BtnRefresh.Margin = New System.Windows.Forms.Padding(8)
+        Me.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnRefresh.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRefresh.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnRefresh.Location = New System.Drawing.Point(379, 5)
+        Me.BtnRefresh.Margin = New System.Windows.Forms.Padding(5)
         Me.BtnRefresh.Name = "BtnRefresh"
-        Me.BtnRefresh.Size = New System.Drawing.Size(173, 24)
+        Me.BtnRefresh.Size = New System.Drawing.Size(179, 30)
         Me.BtnRefresh.TabIndex = 3
         Me.BtnRefresh.Text = "Refresh"
-        Me.BtnRefresh.UseVisualStyleBackColor = True
+        Me.BtnRefresh.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label2.ForeColor = System.Drawing.SystemColors.GrayText
         Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(181, 40)
@@ -164,7 +180,9 @@ Partial Class FormCaribahanPesanan
         'lbl_bahancount
         '
         Me.lbl_bahancount.AutoSize = True
+        Me.lbl_bahancount.BackColor = System.Drawing.Color.Transparent
         Me.lbl_bahancount.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbl_bahancount.ForeColor = System.Drawing.SystemColors.GrayText
         Me.lbl_bahancount.Location = New System.Drawing.Point(190, 0)
         Me.lbl_bahancount.Name = "lbl_bahancount"
         Me.lbl_bahancount.Size = New System.Drawing.Size(181, 40)
@@ -176,18 +194,18 @@ Partial Class FormCaribahanPesanan
         '
         Me.cms_dgbahan.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahToolStripMenuItem, Me.UbahToolStripMenuItem})
         Me.cms_dgbahan.Name = "ContextMenuStrip1"
-        Me.cms_dgbahan.Size = New System.Drawing.Size(150, 48)
+        Me.cms_dgbahan.Size = New System.Drawing.Size(151, 48)
         '
         'TambahToolStripMenuItem
         '
         Me.TambahToolStripMenuItem.Name = "TambahToolStripMenuItem"
-        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TambahToolStripMenuItem.Text = "Tambah Stock"
         '
         'UbahToolStripMenuItem
         '
         Me.UbahToolStripMenuItem.Name = "UbahToolStripMenuItem"
-        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.UbahToolStripMenuItem.Text = "Ubah Item"
         '
         'FormCaribahanPesanan
@@ -198,7 +216,7 @@ Partial Class FormCaribahanPesanan
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.DG_Bahan)
         Me.Controls.Add(Me.TableLayoutPanel2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormCaribahanPesanan"

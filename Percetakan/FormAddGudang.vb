@@ -59,4 +59,8 @@ Public Class FormAddGudang
         kd_bahan = ""
         Me.Hide()
     End Sub
+
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click
+        Me.Close()
+    End Sub
 End Class

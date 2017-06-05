@@ -149,4 +149,9 @@ Public Class FormKaryawan
     Private Sub DG_ListKaryawan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_ListKaryawan.DoubleClick
         FormEditKaryawan.ShowDialog()
     End Sub
+
+    Private Sub Label10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label10.Click
+        Me.Close()
+
+    End Sub
 End Class
