@@ -9,16 +9,7 @@ Public Class FormKaryawan
 
     Public jabatan As String
     Public sql As String
-    Sub Connect()
-        Koneksi()
-        If str_status > 0 Then
-            lbl_constatus.Text = "Terhubung"
-            lbl_constatus.ForeColor = Color.Green
-        Else
-            lbl_constatus.Text = "Terputus"
-            lbl_constatus.ForeColor = Color.Red
-        End If
-    End Sub
+
     Sub Load_DataKaryawan()
         list_karyawan = proses.ExecuteQuery("SELECT karyawan.karyawanid AS 'ID Karyawan',jabatan.levelname AS 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan INNER JOIN jabatan ON (karyawan.levelid = jabatan.levelid)")
         DG_ListKaryawan.DataSource = list_karyawan
@@ -60,7 +51,6 @@ Public Class FormKaryawan
     End Sub
 
     Private Sub FormKaryawan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Connect()
         Load_DataKaryawan()
     End Sub
 
@@ -149,10 +139,6 @@ Public Class FormKaryawan
         Else
             MsgBox("Koneksi terputus, silahkan lakukan reconnect terlebih dahulu", MsgBoxStyle.Critical, "Connection Error")
         End If
-    End Sub
-
-    Private Sub BtnReconnect_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReconnect.Click
-        Connect()
     End Sub
 
     Private Sub btn_carikaryawan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_carikaryawan.Click

@@ -47,7 +47,7 @@ Partial Class FormCaribahanPesanan
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.08633!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.91367!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -64,9 +64,9 @@ Partial Class FormCaribahanPesanan
         Me.BtnCari.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCari.Location = New System.Drawing.Point(553, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(552, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(166, 28)
+        Me.BtnCari.Size = New System.Drawing.Size(167, 28)
         Me.BtnCari.TabIndex = 6
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = True
@@ -76,7 +76,7 @@ Partial Class FormCaribahanPesanan
         Me.txt_namabahan.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txt_namabahan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_namabahan.Location = New System.Drawing.Point(97, 3)
+        Me.txt_namabahan.Location = New System.Drawing.Point(96, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
         Me.txt_namabahan.Size = New System.Drawing.Size(450, 26)
         Me.txt_namabahan.TabIndex = 5
@@ -89,7 +89,7 @@ Partial Class FormCaribahanPesanan
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 34)
+        Me.Label1.Size = New System.Drawing.Size(87, 34)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Cari Bahan :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

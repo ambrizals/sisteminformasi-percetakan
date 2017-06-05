@@ -22,10 +22,7 @@ Partial Class FormKaryawan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lbl_constatus = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnExit = New System.Windows.Forms.Button()
-        Me.BtnReconnect = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -75,25 +72,6 @@ Partial Class FormKaryawan
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'lbl_constatus
-        '
-        Me.lbl_constatus.AutoSize = True
-        Me.lbl_constatus.ForeColor = System.Drawing.Color.Red
-        Me.lbl_constatus.Location = New System.Drawing.Point(99, 416)
-        Me.lbl_constatus.Name = "lbl_constatus"
-        Me.lbl_constatus.Size = New System.Drawing.Size(25, 13)
-        Me.lbl_constatus.TabIndex = 12
-        Me.lbl_constatus.Text = "Null"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 415)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 13)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Status Koneksi :"
-        '
         'BtnExit
         '
         Me.BtnExit.Location = New System.Drawing.Point(625, 410)
@@ -102,15 +80,6 @@ Partial Class FormKaryawan
         Me.BtnExit.TabIndex = 13
         Me.BtnExit.Text = "Kembali"
         Me.BtnExit.UseVisualStyleBackColor = True
-        '
-        'BtnReconnect
-        '
-        Me.BtnReconnect.Location = New System.Drawing.Point(526, 411)
-        Me.BtnReconnect.Name = "BtnReconnect"
-        Me.BtnReconnect.Size = New System.Drawing.Size(93, 23)
-        Me.BtnReconnect.TabIndex = 15
-        Me.BtnReconnect.Text = "Reconnect"
-        Me.BtnReconnect.UseVisualStyleBackColor = True
         '
         'TabControl1
         '
@@ -421,7 +390,7 @@ Partial Class FormKaryawan
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.98148!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.01852!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txt_carikaryawan, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btn_carikaryawan, 2, 0)
@@ -449,15 +418,15 @@ Partial Class FormKaryawan
         Me.txt_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_carikaryawan.Location = New System.Drawing.Point(102, 3)
         Me.txt_carikaryawan.Name = "txt_carikaryawan"
-        Me.txt_carikaryawan.Size = New System.Drawing.Size(417, 20)
+        Me.txt_carikaryawan.Size = New System.Drawing.Size(416, 20)
         Me.txt_carikaryawan.TabIndex = 1
         '
         'btn_carikaryawan
         '
         Me.btn_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_carikaryawan.Location = New System.Drawing.Point(525, 3)
+        Me.btn_carikaryawan.Location = New System.Drawing.Point(524, 3)
         Me.btn_carikaryawan.Name = "btn_carikaryawan"
-        Me.btn_carikaryawan.Size = New System.Drawing.Size(141, 21)
+        Me.btn_carikaryawan.Size = New System.Drawing.Size(142, 21)
         Me.btn_carikaryawan.TabIndex = 2
         Me.btn_carikaryawan.Text = "Cari"
         Me.btn_carikaryawan.UseVisualStyleBackColor = True
@@ -497,10 +466,7 @@ Partial Class FormKaryawan
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(713, 442)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.BtnReconnect)
         Me.Controls.Add(Me.BtnExit)
-        Me.Controls.Add(Me.lbl_constatus)
-        Me.Controls.Add(Me.Label3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -526,13 +492,9 @@ Partial Class FormKaryawan
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lbl_constatus As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents BtnExit As System.Windows.Forms.Button
-    Friend WithEvents BtnReconnect As System.Windows.Forms.Button
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents BtnReset As System.Windows.Forms.Button
