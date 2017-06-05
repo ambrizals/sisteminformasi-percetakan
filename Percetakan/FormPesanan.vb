@@ -9,15 +9,23 @@
     End Sub
 
     Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnTambah.Click
-        ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
-        With DG_ListBuatPesan
-            .Rows.Insert(.NewRowIndex, txt_bahan.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
-        End With
-        lbl_grandtotal.Text = Val(lbl_grandtotal.Text) + ord_total
-        txt_bahan.Clear()
-        txt_deskripsi.Clear()
-        txt_qty.Clear()
-        txt_harga.Clear()
+        If txt_bahan.TextLength = 0 Then
+            MsgBox("Bahan belum dipilih", MsgBoxStyle.Information, "Error Missing Required Data")
+        Else
+            If txt_qty.TextLength = 0 Then
+                MsgBox("Qty belum terisi", MsgBoxStyle.Information, "Error Missing Required Data")
+            Else
+                ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
+                With DG_ListBuatPesan
+                    .Rows.Insert(.NewRowIndex, txt_bahan.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
+                End With
+                lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text) + ord_total).ToString
+                txt_bahan.Clear()
+                txt_deskripsi.Clear()
+                txt_qty.Clear()
+                txt_harga.Clear()
+            End If
+        End If
     End Sub
 
 
