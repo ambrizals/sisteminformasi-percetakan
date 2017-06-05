@@ -77,10 +77,6 @@ Public Class FormGudang
         FormAddstockGudang.ShowDialog()
     End Sub
 
-    Private Sub DG_Bahan_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_Bahan.CellClick
-        ContextMenuStrip = cms_dgbahan
-    End Sub
-
     Private Sub TambahToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TambahToolStripMenuItem.Click
         FormAddstockGudang.ShowDialog()
     End Sub
@@ -97,5 +93,11 @@ Public Class FormGudang
         Load_DataBahan()
         cb_condition.SelectedIndex = -1
         cb_condition.Text = "<Pilih Ketersediaan>"
+    End Sub
+
+    Private Sub DG_Bahan_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles DG_Bahan.MouseDown
+        If e.Button = Windows.Forms.MouseButtons.Right Then
+            DG_Bahan.ContextMenuStrip = cms_dgbahan
+        End If
     End Sub
 End Class
