@@ -1,77 +1,72 @@
--- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
---
--- Host: localhost    Database: percetakan
--- ------------------------------------------------------
--- Server version	5.7.11-log
+/*
+SQLyog Ultimate v11.11 (64 bit)
+MySQL - 5.5.5-10.1.21-MariaDB : Database - percetakan
+*********************************************************************
+*/
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
+
+/*!40101 SET SQL_MODE=''*/;
+
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`percetakan` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
---
--- Table structure for table `bahan`
---
+USE `percetakan`;
+
+/*Table structure for table `absensi` */
+
+DROP TABLE IF EXISTS `absensi`;
+
+CREATE TABLE `absensi` (
+  `absensiID` int(11) NOT NULL AUTO_INCREMENT,
+  `karyawanID` varchar(10) NOT NULL,
+  `absensiDATE` datetime NOT NULL,
+  `absensiTIME` time NOT NULL,
+  PRIMARY KEY (`absensiID`),
+  KEY `FK_Absensi` (`karyawanID`),
+  CONSTRAINT `FK_Absensi` FOREIGN KEY (`karyawanID`) REFERENCES `karyawan` (`KARYAWANID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `absensi` */
+
+/*Table structure for table `bahan` */
 
 DROP TABLE IF EXISTS `bahan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `bahan` (
   `BAHANID` varchar(10) NOT NULL,
   `BAHANNAME` varchar(30) NOT NULL,
   `BAHANSTOCK` int(11) NOT NULL,
   `BAHANUNIT` varchar(10) NOT NULL,
+  `BAHANHARGA` double DEFAULT NULL,
   PRIMARY KEY (`BAHANID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `bahan`
---
+/*Data for the table `bahan` */
 
-LOCK TABLES `bahan` WRITE;
-/*!40000 ALTER TABLE `bahan` DISABLE KEYS */;
-INSERT INTO `bahan` VALUES ('BHN - 1','Spanduk Standard',102,'Meter'),('BHN - 2','Spanduk Jerman',20,'Meter'),('BHN - 3','Stiker Vinly',3,'Unit'),('BHN - 4','Stiker Bontak',0,'Meter'),('BHN - 5','Box Kartu Nama',30,'Unit'),('BHN - 6','Bahan satu',30,'Unit'),('BHN - 7','Bahan Dua',2,'Meter'),('BHN - 8','Bahan Tiga',3,'Meter'),('BHN - 9','Bahan Empat',20,'Meter');
-/*!40000 ALTER TABLE `bahan` ENABLE KEYS */;
-UNLOCK TABLES;
+insert  into `bahan`(`BAHANID`,`BAHANNAME`,`BAHANSTOCK`,`BAHANUNIT`,`BAHANHARGA`) values ('BHN - 1','Bahan satu',3,'Meter',2000),('BHN - 10','Stiker Vinly (Kertas)',100,'Meter',10000),('BHN - 11','Stiker Bontak (Kertas)',100,'Unit',10000),('BHN - 12','Stiker Vinly Dop',20,'Unit',10000),('BHN - 13','Stiker Vinly (Outdoor)',7,'Meter',40000),('BHN - 14','Stiker Oneway',20,'Meter',50000),('BHN - 15','Mata Ayam',100,'Meter',500),('BHN - 2','Bahan Dua',20,'Meter',2000),('BHN - 3','Bahan Tiga',30,'Meter',2000),('BHN - 4','Bahan empat',4,'Meter',2000),('BHN - 5','Bahan lima',4,'Meter',1000),('BHN - 6','Bahan enam',3,'Meter',15000),('BHN - 7','Spanduk Standard',100,'Meter',14000),('BHN - 8','Spanduk Ritrama',20,'Meter',20000),('BHN - 9','Spanduk Backlit',110,'Meter',40000);
 
---
--- Table structure for table `jabatan`
---
+/*Table structure for table `jabatan` */
 
 DROP TABLE IF EXISTS `jabatan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `jabatan` (
   `LEVELID` varchar(10) NOT NULL,
   `LEVELNAME` varchar(30) NOT NULL,
   PRIMARY KEY (`LEVELID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `jabatan`
---
+/*Data for the table `jabatan` */
 
-LOCK TABLES `jabatan` WRITE;
-/*!40000 ALTER TABLE `jabatan` DISABLE KEYS */;
-INSERT INTO `jabatan` VALUES ('JBT-001','Admin');
-/*!40000 ALTER TABLE `jabatan` ENABLE KEYS */;
-UNLOCK TABLES;
+insert  into `jabatan`(`LEVELID`,`LEVELNAME`) values ('JBT-001','Admin'),('JBT-002','Operator'),('JBT-003','Kasir');
 
---
--- Table structure for table `karyawan`
---
+/*Table structure for table `karyawan` */
 
 DROP TABLE IF EXISTS `karyawan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `karyawan` (
   `KARYAWANID` varchar(10) NOT NULL,
   `LEVELID` varchar(10) NOT NULL,
@@ -84,83 +79,55 @@ CREATE TABLE `karyawan` (
   KEY `FK_DIMILIKI_KARYAWAN` (`LEVELID`),
   CONSTRAINT `FK_DIMILIKI_KARYAWAN` FOREIGN KEY (`LEVELID`) REFERENCES `jabatan` (`LEVELID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `karyawan`
---
+/*Data for the table `karyawan` */
 
-LOCK TABLES `karyawan` WRITE;
-/*!40000 ALTER TABLE `karyawan` DISABLE KEYS */;
-INSERT INTO `karyawan` VALUES ('KRY-1','JBT-001','Ambrizal Suryadinata','ambrizals','radiohead4403','Jl. Letda Made Putra','08115349997');
-/*!40000 ALTER TABLE `karyawan` ENABLE KEYS */;
-UNLOCK TABLES;
+insert  into `karyawan`(`KARYAWANID`,`LEVELID`,`KARYAWANNAME`,`KARYAWANUSERNAME`,`KARYAWANPASSWORD`,`KARYAWANALAMAT`,`KARYAWANTELP`) values ('KRY-1','JBT-001','Ambrizal Suryadinata','ambrizals','radiohead4403','Jl. Letda Made Putra','08115349997'),('KRY-2','JBT-003','Yasir Alamsyah','yasir','radiohead4403','Null bang','08112345678'),('KRY-3','JBT-002','Anggita','anggi','radiohead4403','Null bang','08112345677'),('KRY-4','JBT-002','Muhammad Ramadhan','Rama','radiohead4403','Wkwkwkwk woo','0811242141'),('KRY-5','JBT-003','Oconk','sabun','radiohead4403','asdjasdjqioj','08112345667');
 
---
--- Table structure for table `log_bahan`
---
+/*Table structure for table `log_bahan` */
 
 DROP TABLE IF EXISTS `log_bahan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `log_bahan` (
   `MEMASUKKANID` int(11) NOT NULL AUTO_INCREMENT,
   `KARYAWANID` varchar(10) NOT NULL,
   `BAHANID` varchar(10) NOT NULL,
-  `MEMASUKKANDATE` date NOT NULL,
+  `MEMASUKKANDATE` datetime NOT NULL,
+  `MEMASUKKANSTATUS` varchar(30) NOT NULL,
   PRIMARY KEY (`MEMASUKKANID`),
   KEY `FK_RELATIONSHIP_8` (`KARYAWANID`),
   KEY `FK_RELATIONSHIP_9` (`BAHANID`),
   CONSTRAINT `FK_RELATIONSHIP_8` FOREIGN KEY (`KARYAWANID`) REFERENCES `karyawan` (`KARYAWANID`),
   CONSTRAINT `FK_RELATIONSHIP_9` FOREIGN KEY (`BAHANID`) REFERENCES `bahan` (`BAHANID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `log_bahan`
---
+/*Data for the table `log_bahan` */
 
-LOCK TABLES `log_bahan` WRITE;
-/*!40000 ALTER TABLE `log_bahan` DISABLE KEYS */;
-/*!40000 ALTER TABLE `log_bahan` ENABLE KEYS */;
-UNLOCK TABLES;
+insert  into `log_bahan`(`MEMASUKKANID`,`KARYAWANID`,`BAHANID`,`MEMASUKKANDATE`,`MEMASUKKANSTATUS`) values (3,'KRY-1','BHN - 1','2017-06-04 00:12:12','TAMBAH BAHAN'),(4,'KRY-1','BHN - 2','2017-06-04 00:12:14','TAMBAH BAHAN'),(5,'KRY-1','BHN - 3','2017-06-04 00:12:20','TAMBAH BAHAN'),(6,'KRY-1','BHN - 4','2017-06-04 16:01:46','TAMBAH BAHAN'),(7,'KRY-1','BHN - 5','2017-06-04 16:04:32','TAMBAH BAHAN'),(8,'KRY-1','BHN - 6','2017-06-04 16:04:41','TAMBAH BAHAN'),(9,'KRY-1','BHN - 7','2017-06-04 16:05:00','TAMBAH BAHAN'),(10,'KRY-1','BHN - 8','2017-06-04 16:05:21','TAMBAH BAHAN'),(11,'KRY-1','BHN - 9','2017-06-04 16:05:36','TAMBAH BAHAN'),(12,'KRY-1','BHN - 10','2017-06-04 16:05:49','TAMBAH BAHAN'),(13,'KRY-1','BHN - 11','2017-06-04 16:06:08','TAMBAH BAHAN'),(14,'KRY-1','BHN - 12','2017-06-04 16:30:25','TAMBAH BAHAN'),(15,'KRY-1','BHN - 13','2017-06-04 16:48:10','TAMBAH BAHAN'),(16,'KRY-1','BHN - 14','2017-06-04 16:48:20','TAMBAH BAHAN'),(17,'KRY-1','BHN - 15','2017-06-04 16:48:30','TAMBAH BAHAN'),(18,'KRY-1','BHN - 6','2017-06-04 16:52:58','UBAH BAHAN'),(19,'KRY-1','BHN - 9','2017-06-04 16:52:58','TAMBAH STOCK');
 
---
--- Table structure for table `mengatur_task`
---
+/*Table structure for table `log_joblist` */
 
-DROP TABLE IF EXISTS `mengatur_task`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `mengatur_task` (
+DROP TABLE IF EXISTS `log_joblist`;
+
+CREATE TABLE `log_joblist` (
   `PROSESID` int(11) NOT NULL,
   `KARYAWANID` varchar(10) NOT NULL,
   `TASKID` varchar(10) NOT NULL,
   `PROSESDATE` datetime DEFAULT NULL,
+  `PROSESSTATUS` varchar(30) NOT NULL,
   PRIMARY KEY (`PROSESID`),
   KEY `FK_DAPAT` (`KARYAWANID`),
   KEY `FK_MENGATUR` (`TASKID`),
   CONSTRAINT `FK_DAPAT` FOREIGN KEY (`KARYAWANID`) REFERENCES `karyawan` (`KARYAWANID`),
   CONSTRAINT `FK_MENGATUR` FOREIGN KEY (`TASKID`) REFERENCES `tasklist` (`TASKID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `mengatur_task`
---
+/*Data for the table `log_joblist` */
 
-LOCK TABLES `mengatur_task` WRITE;
-/*!40000 ALTER TABLE `mengatur_task` DISABLE KEYS */;
-/*!40000 ALTER TABLE `mengatur_task` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pesanan`
---
+/*Table structure for table `pesanan` */
 
 DROP TABLE IF EXISTS `pesanan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `pesanan` (
   `ORDERID` varchar(10) NOT NULL,
   `KARYAWANID` varchar(10) NOT NULL,
@@ -172,24 +139,13 @@ CREATE TABLE `pesanan` (
   KEY `FK_MELAKUKAN` (`KARYAWANID`),
   CONSTRAINT `FK_MELAKUKAN` FOREIGN KEY (`KARYAWANID`) REFERENCES `karyawan` (`KARYAWANID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `pesanan`
---
+/*Data for the table `pesanan` */
 
-LOCK TABLES `pesanan` WRITE;
-/*!40000 ALTER TABLE `pesanan` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pesanan` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tasklist`
---
+/*Table structure for table `tasklist` */
 
 DROP TABLE IF EXISTS `tasklist`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `tasklist` (
   `TASKID` varchar(10) NOT NULL,
   `BAHANID` varchar(10) NOT NULL,
@@ -204,32 +160,10 @@ CREATE TABLE `tasklist` (
   CONSTRAINT `FK_TERDAPAT_DI_TASK` FOREIGN KEY (`BAHANID`) REFERENCES `bahan` (`BAHANID`),
   CONSTRAINT `FK_TERDAPAT_PADA` FOREIGN KEY (`ORDERID`) REFERENCES `pesanan` (`ORDERID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `tasklist`
---
-
-LOCK TABLES `tasklist` WRITE;
-/*!40000 ALTER TABLE `tasklist` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tasklist` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping events for database 'percetakan'
---
-
---
--- Dumping routines for database 'percetakan'
---
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+/*Data for the table `tasklist` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2017-06-02 23:28:22
