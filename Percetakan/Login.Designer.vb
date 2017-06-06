@@ -36,6 +36,8 @@ Partial Class Login
         Me.BtnConfig = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lvl_versi = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -166,6 +168,8 @@ Partial Class Login
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel1.Controls.Add(Me.lvl_versi)
+        Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.lbl_constatus)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlLight
@@ -185,6 +189,26 @@ Partial Class Login
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "LOGIN"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(198, 18)
+        Me.Label5.Name = "Label5"
+        Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label5.Size = New System.Drawing.Size(36, 13)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "Versi :"
+        '
+        'lvl_versi
+        '
+        Me.lvl_versi.AutoSize = True
+        Me.lvl_versi.Location = New System.Drawing.Point(236, 18)
+        Me.lvl_versi.Name = "lvl_versi"
+        Me.lvl_versi.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lvl_versi.Size = New System.Drawing.Size(31, 13)
+        Me.lvl_versi.TabIndex = 12
+        Me.lvl_versi.Text = "0.0.0"
         '
         'Login
         '
@@ -228,5 +252,7 @@ Partial Class Login
     Friend WithEvents BtnConfig As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lvl_versi As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

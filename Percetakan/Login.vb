@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports System
+Imports MySql.Data.MySqlClient
 Public Class Login
     Dim proses As New ClsKoneksi
     Dim opt_us, opt_ps As Integer
@@ -134,6 +136,7 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        lvl_versi.Text = InfoAplikasi.Default.Versi.ToString
         get_saveoption()
         Connect()
 
