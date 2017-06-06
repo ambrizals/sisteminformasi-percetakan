@@ -3,12 +3,12 @@ Imports System.Data.OleDb
 Imports System.Data
 
 Public Class FormPesanan
-    Public kode_pesan, kode_bahan As String
-    Public prefix_kode_pesan As Integer
-    Public ord_qty, ord_harga, ord_total As Double
+    Dim kode_pesan, kode_bahan, sql As String
+    Dim prefix_kode_pesan, row_total As Integer
+    Dim ord_qty, ord_harga, ord_total As Double
     Dim proses As New ClsKoneksi
 
-    Sub Ambil_Kode()
+    Private Sub Ambil_Kode()
         proses.OpenConn()
         Dim myadapter As New MySqlDataAdapter
         Dim sqlquery = "select * from pesanan"
@@ -18,16 +18,16 @@ Public Class FormPesanan
         myadapter.SelectCommand = mycommand
         Dim mydata As MySqlDataReader
         mydata = mycommand.ExecuteReader()
-        Dim bahancount As Integer
+        Dim pesanancount As Integer
         Dim bk As String
-        bahancount = 0
+        pesanancount = 0
         If (mydata.HasRows) Then
             While (mydata.Read)
-                bahancount = bahancount + 1
+                pesanancount = pesanancount + 1
             End While
         End If
-        bk = Val(bahancount)
-        bk = Val(bahancount + 1)
+        bk = Val(pesanancount)
+        bk = Val(pesanancount + 1)
         txt_kodepesanan.Text = "ORD-" + bk
         txt_kodepesanan.ReadOnly = True
         proses.CloseConn()
@@ -41,6 +41,53 @@ Public Class FormPesanan
         txt_harga.Clear()
         DG_ListBuatPesan.Rows.Clear()
         lbl_grandtotal.Text = "Rp. 0"
+    End Sub
+    Sub proses_pesanan()
+        Dim bhn, desc, qty, hrg As String
+        Dim loncat As Integer
+        'Try
+        'sql = "INSERT INTO pesanan (ORDERID, KARYAWANID, ORDERCONSUMER, ORDERCONSUMERTELP, ORDERSTATUS, ORDERTOTAL) VALUES ('" + txt_kodepesanan.Text + "', '" + kry_id + "', '" + txt_namacustomer.Text + "', '" + txt_nomorteleponcust.Text + "', 'PENDING', '" + lbl_grandtotal.Text.Remove(0, 3) + "')"
+        'proses.ExecuteNonQuery(sql)
+        'Catch ex As Exception
+        'MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+        'End Try
+
+        Try
+            row_total = DG_ListBuatPesan.Rows.Count
+            Dim kode_tasklist As String
+            loncat = 0
+            Do
+                Try
+                    proses.OpenConn()
+                    Dim myadapter As New MySqlDataAdapter
+                    Dim sqlquery = "select * from tasklist"
+                    Dim mycommand As New MySqlCommand
+                    mycommand.Connection = proses.Cn
+                    mycommand.CommandText = sqlquery
+                    myadapter.SelectCommand = mycommand
+                    Dim mydata As MySqlDataReader
+                    mydata = mycommand.ExecuteReader()
+                    Dim pesananrincicount As Integer
+                    Dim bk As String
+                    pesananrincicount = 0
+                    If (mydata.HasRows) Then
+                        While (mydata.Read)
+                            pesananrincicount = pesananrincicount + 1
+                        End While
+                    End If
+                    bk = Val(pesananrincicount)
+                    bk = Val(pesananrincicount + 1)
+                    kode_tasklist = "TLT-" + bk
+                    proses.CloseConn()
+                    MsgBox(kode_tasklist)
+                    loncat = loncat + 1
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            Loop While (row_total < loncat)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub FormPesanan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

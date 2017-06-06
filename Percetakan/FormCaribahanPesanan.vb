@@ -49,7 +49,6 @@ Public Class FormCaribahanPesanan
 
 
     Public Sub DG_Bahan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Bahan.DoubleClick
-        FormPesanan.kode_pesan = DG_Bahan.SelectedCells(0).Value
         FormPesanan.txt_bahan.Text = DG_Bahan.SelectedCells(1).Value
         FormPesanan.txt_harga.Text = DG_Bahan.SelectedCells(4).Value
         Me.Close()

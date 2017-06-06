@@ -35,9 +35,9 @@ Partial Class Login
         Me.lbl_constatus = New System.Windows.Forms.Label()
         Me.BtnConfig = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.lvl_versi = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -178,17 +178,15 @@ Partial Class Login
         Me.Panel1.Size = New System.Drawing.Size(293, 49)
         Me.Panel1.TabIndex = 12
         '
-        'Label4
+        'lvl_versi
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label4.Location = New System.Drawing.Point(88, 33)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(106, 40)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "LOGIN"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lvl_versi.AutoSize = True
+        Me.lvl_versi.Location = New System.Drawing.Point(236, 18)
+        Me.lvl_versi.Name = "lvl_versi"
+        Me.lvl_versi.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lvl_versi.Size = New System.Drawing.Size(31, 13)
+        Me.lvl_versi.TabIndex = 12
+        Me.lvl_versi.Text = "0.0.0"
         '
         'Label5
         '
@@ -200,15 +198,17 @@ Partial Class Login
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Versi :"
         '
-        'lvl_versi
+        'Label4
         '
-        Me.lvl_versi.AutoSize = True
-        Me.lvl_versi.Location = New System.Drawing.Point(236, 18)
-        Me.lvl_versi.Name = "lvl_versi"
-        Me.lvl_versi.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lvl_versi.Size = New System.Drawing.Size(31, 13)
-        Me.lvl_versi.TabIndex = 12
-        Me.lvl_versi.Text = "0.0.0"
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label4.Location = New System.Drawing.Point(94, 33)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(106, 40)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "LOGIN"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Login
         '
@@ -231,7 +231,7 @@ Partial Class Login
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
+        Me.Text = "`"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
