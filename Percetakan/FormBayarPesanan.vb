@@ -15,20 +15,13 @@
         If cb_metode.SelectedIndex = 1 Then
             downpayment = Val(txt_totalpesanan.Text * 0.5)
             txt_jumlahbayar.Text = Val(downpayment)
-            sisa = Val(txt_totalpesanan.Text - txt_jumlahbayar.Text)
-            txt_sisabayar.Text = Val(sisa)
         End If
     End Sub
 
     Private Sub txt_jumlahbayar_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_jumlahbayar.KeyPress
         If e.KeyChar = Chr(13) Then
-            If cb_metode.SelectedIndex = 0 Then
-                sisa = Val(txt_totalpesanan.Text - txt_jumlahbayar.Text)
-                txt_sisabayar.Text = Val(sisa)
-            Else
-                sisa = Val(txt_totalpesanan.Text - txt_jumlahbayar.Text)
-                txt_sisabayar.Text = Val(sisa)
-            End If
+            sisa = Val(txt_totalpesanan.Text - txt_jumlahbayar.Text)
+            txt_sisabayar.Text = Val(sisa)
         End If
     End Sub
 
@@ -38,6 +31,8 @@
     End Sub
 
     Private Sub BtnBayar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBayar.Click
+        sisa = Val(txt_totalpesanan.Text - txt_jumlahbayar.Text)
+        txt_sisabayar.Text = Val(sisa)
         If cb_metode.SelectedIndex = 0 Then
             If sisa > 0 Then
                 MsgBox("Sisa pembayaran harus bernilai 0 jika ingin menggunakan metode pembayaran ini", MsgBoxStyle.Information, "Info")
@@ -45,10 +40,12 @@
                 ''Query taruh disini
             End If
         Else
-            If sisa > 0 Then
-                ''Query taruh disini
-            Else
+            If sisa > downpayment Then
+                MsgBox("Sisa pembayaran harus bernilai kurang 50% dari total pembayaran jika ingin menggunakan metode pembayaran ini", MsgBoxStyle.Information, "Info")
+            ElseIf sisa = 0 Then
                 MsgBox("Sisa pembayaran harus bernilai lebih dari 0 jika ingin menggunakan metode pembayaran ini", MsgBoxStyle.Information, "Info")
+            Else
+                ''Query taruh disini
             End If
         End If
     End Sub

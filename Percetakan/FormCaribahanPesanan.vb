@@ -46,10 +46,6 @@ Public Class FormCaribahanPesanan
         Load_DataBahan()
     End Sub
 
-    Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
-        FormAddGudang.ShowDialog()
-    End Sub
-
 
 
     Public Sub DG_Bahan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Bahan.DoubleClick
@@ -57,10 +53,6 @@ Public Class FormCaribahanPesanan
         FormPesanan.txt_bahan.Text = DG_Bahan.SelectedCells(1).Value
         FormPesanan.txt_harga.Text = DG_Bahan.SelectedCells(4).Value
         Me.Close()
-    End Sub
-
-    Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExit.Click
-        Load_DataBahan()
     End Sub
 
     Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
@@ -71,5 +63,13 @@ Public Class FormCaribahanPesanan
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DG_Bahan.Columns(2).Width = 150
         DG_Bahan.Columns(3).Width = 150
+    End Sub
+
+    Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
+        Load_DataBahan()
+    End Sub
+
+    Private Sub BtnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnExit.Click
+        Me.Close()
     End Sub
 End Class

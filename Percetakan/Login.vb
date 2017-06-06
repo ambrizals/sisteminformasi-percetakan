@@ -7,7 +7,7 @@ Public Class Login
         Koneksi()
         If str_status > 0 Then
             lbl_constatus.Text = "Terhubung"
-            lbl_constatus.ForeColor = Color.Green
+            lbl_constatus.ForeColor = Color.WhiteSmoke
         Else
             lbl_constatus.Text = "Terputus"
             lbl_constatus.ForeColor = Color.Red
@@ -17,7 +17,7 @@ Public Class Login
         Koneksi()
         If str_status > 0 Then
             lbl_constatus.Text = "Terhubung"
-            lbl_constatus.ForeColor = Color.Green
+            lbl_constatus.ForeColor = Color.WhiteSmoke
             MsgBox("Pengaturan berhasil diterapkan", MsgBoxStyle.Information, "Info")
         Else
             lbl_constatus.Text = "Terputus"
@@ -29,7 +29,7 @@ Public Class Login
         Koneksi()
         If str_status > 0 Then
             lbl_constatus.Text = "Terhubung"
-            lbl_constatus.ForeColor = Color.Green
+            lbl_constatus.ForeColor = Color.WhiteSmoke
         Else
             lbl_constatus.Text = "Terputus"
             lbl_constatus.ForeColor = Color.Red

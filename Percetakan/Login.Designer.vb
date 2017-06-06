@@ -36,6 +36,7 @@ Partial Class Login
         Me.BtnConfig = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -89,9 +90,9 @@ Partial Class Login
         Me.BtnReset.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnReset.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.BtnReset.Location = New System.Drawing.Point(12, 277)
+        Me.BtnReset.Location = New System.Drawing.Point(12, 260)
         Me.BtnReset.Name = "BtnReset"
-        Me.BtnReset.Size = New System.Drawing.Size(81, 23)
+        Me.BtnReset.Size = New System.Drawing.Size(123, 40)
         Me.BtnReset.TabIndex = 5
         Me.BtnReset.Text = "Reconnect"
         Me.BtnReset.UseVisualStyleBackColor = False
@@ -133,7 +134,7 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 312)
+        Me.Label3.Location = New System.Drawing.Point(13, 17)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 13)
         Me.Label3.TabIndex = 9
@@ -143,7 +144,7 @@ Partial Class Login
         '
         Me.lbl_constatus.AutoSize = True
         Me.lbl_constatus.ForeColor = System.Drawing.Color.Red
-        Me.lbl_constatus.Location = New System.Drawing.Point(96, 313)
+        Me.lbl_constatus.Location = New System.Drawing.Point(101, 18)
         Me.lbl_constatus.Name = "lbl_constatus"
         Me.lbl_constatus.Size = New System.Drawing.Size(25, 13)
         Me.lbl_constatus.TabIndex = 10
@@ -154,9 +155,9 @@ Partial Class Login
         Me.BtnConfig.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnConfig.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.BtnConfig.Location = New System.Drawing.Point(185, 277)
+        Me.BtnConfig.Location = New System.Drawing.Point(141, 260)
         Me.BtnConfig.Name = "BtnConfig"
-        Me.BtnConfig.Size = New System.Drawing.Size(83, 23)
+        Me.BtnConfig.Size = New System.Drawing.Size(127, 40)
         Me.BtnConfig.TabIndex = 11
         Me.BtnConfig.Text = "Config"
         Me.BtnConfig.UseVisualStyleBackColor = False
@@ -165,8 +166,10 @@ Partial Class Login
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.lbl_constatus)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Panel1.Location = New System.Drawing.Point(0, 358)
+        Me.Panel1.Location = New System.Drawing.Point(0, 313)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(293, 49)
         Me.Panel1.TabIndex = 12
@@ -176,7 +179,7 @@ Partial Class Login
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label4.Location = New System.Drawing.Point(83, 33)
+        Me.Label4.Location = New System.Drawing.Point(88, 33)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(106, 40)
         Me.Label4.TabIndex = 13
@@ -188,12 +191,10 @@ Partial Class Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(289, 405)
+        Me.ClientSize = New System.Drawing.Size(289, 360)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnConfig)
-        Me.Controls.Add(Me.lbl_constatus)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cb_saveuserpass)
         Me.Controls.Add(Me.cb_saveuser)
         Me.Controls.Add(Me.BtnCancel)
@@ -207,6 +208,8 @@ Partial Class Login
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

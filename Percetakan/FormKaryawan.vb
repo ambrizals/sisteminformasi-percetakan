@@ -50,6 +50,10 @@ Public Class FormKaryawan
         DG_ListKaryawan.Columns(3).Width = 200
     End Sub
 
+    Private Sub FormKaryawan_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        reset()
+    End Sub
+
     Private Sub FormKaryawan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Load_DataKaryawan()
     End Sub

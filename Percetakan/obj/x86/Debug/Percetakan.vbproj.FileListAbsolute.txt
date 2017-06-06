@@ -89,7 +89,6 @@ C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormCaribahanPesanan.
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAddstockGudang.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormEditbahanGudang.resources
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
-C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormBayarPesanan.resources
 D:\percetakan\projek new\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\Percetakan\bin\Debug\Percetakan.exe.config
 D:\percetakan\projek new\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\Percetakan\obj\x86\Debug\Percetakan.exe

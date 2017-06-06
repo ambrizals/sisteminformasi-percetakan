@@ -36,18 +36,23 @@ Partial Class MenuUtama
         Me.Sidebar_Row = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnKaryawan = New System.Windows.Forms.Button()
         Me.BtnJobList = New System.Windows.Forms.Button()
         Me.BtnLaporan = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnPesanan = New System.Windows.Forms.Button()
         Me.BtnGudang = New System.Windows.Forms.Button()
-        Me.BtnKaryawan = New System.Windows.Forms.Button()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.AbsensiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PengaturanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GajiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -61,6 +66,7 @@ Partial Class MenuUtama
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -243,6 +249,22 @@ Partial Class MenuUtama
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(207, 166)
         Me.TableLayoutPanel3.TabIndex = 0
         '
+        'BtnKaryawan
+        '
+        Me.BtnKaryawan.BackColor = System.Drawing.Color.OrangeRed
+        Me.BtnKaryawan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnKaryawan.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnKaryawan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnKaryawan.Image = CType(resources.GetObject("BtnKaryawan.Image"), System.Drawing.Image)
+        Me.BtnKaryawan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnKaryawan.Location = New System.Drawing.Point(3, 3)
+        Me.BtnKaryawan.Name = "BtnKaryawan"
+        Me.BtnKaryawan.Size = New System.Drawing.Size(201, 49)
+        Me.BtnKaryawan.TabIndex = 0
+        Me.BtnKaryawan.Text = "Karyawan"
+        Me.BtnKaryawan.UseVisualStyleBackColor = False
+        '
         'BtnJobList
         '
         Me.BtnJobList.AutoEllipsis = True
@@ -335,22 +357,6 @@ Partial Class MenuUtama
         Me.BtnGudang.Text = "Gudang"
         Me.BtnGudang.UseVisualStyleBackColor = False
         '
-        'BtnKaryawan
-        '
-        Me.BtnKaryawan.BackColor = System.Drawing.Color.OrangeRed
-        Me.BtnKaryawan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnKaryawan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnKaryawan.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnKaryawan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnKaryawan.Image = CType(resources.GetObject("BtnKaryawan.Image"), System.Drawing.Image)
-        Me.BtnKaryawan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnKaryawan.Location = New System.Drawing.Point(3, 3)
-        Me.BtnKaryawan.Name = "BtnKaryawan"
-        Me.BtnKaryawan.Size = New System.Drawing.Size(201, 49)
-        Me.BtnKaryawan.TabIndex = 0
-        Me.BtnKaryawan.Text = "Karyawan"
-        Me.BtnKaryawan.UseVisualStyleBackColor = False
-        '
         'TableLayoutPanel5
         '
         Me.TableLayoutPanel5.ColumnCount = 1
@@ -368,7 +374,9 @@ Partial Class MenuUtama
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AbsensiToolStripMenuItem, Me.PengaturanToolStripMenuItem, Me.AboutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 54)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(645, 41)
@@ -386,16 +394,6 @@ Partial Class MenuUtama
         Me.Panel2.Size = New System.Drawing.Size(639, 48)
         Me.Panel2.TabIndex = 4
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.Label2.Location = New System.Drawing.Point(625, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(14, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "X"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -407,6 +405,47 @@ Partial Class MenuUtama
         Me.Label3.Size = New System.Drawing.Size(102, 40)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "MENU"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.Label2.Location = New System.Drawing.Point(625, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(14, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "X"
+        '
+        'AbsensiToolStripMenuItem
+        '
+        Me.AbsensiToolStripMenuItem.Name = "AbsensiToolStripMenuItem"
+        Me.AbsensiToolStripMenuItem.Size = New System.Drawing.Size(60, 37)
+        Me.AbsensiToolStripMenuItem.Text = "Absensi"
+        '
+        'PengaturanToolStripMenuItem
+        '
+        Me.PengaturanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GajiToolStripMenuItem, Me.ServerToolStripMenuItem})
+        Me.PengaturanToolStripMenuItem.Name = "PengaturanToolStripMenuItem"
+        Me.PengaturanToolStripMenuItem.Size = New System.Drawing.Size(80, 37)
+        Me.PengaturanToolStripMenuItem.Text = "Pengaturan"
+        '
+        'GajiToolStripMenuItem
+        '
+        Me.GajiToolStripMenuItem.Name = "GajiToolStripMenuItem"
+        Me.GajiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GajiToolStripMenuItem.Text = "Gaji"
+        '
+        'ServerToolStripMenuItem
+        '
+        Me.ServerToolStripMenuItem.Name = "ServerToolStripMenuItem"
+        Me.ServerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ServerToolStripMenuItem.Text = "Server"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 37)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'MenuUtama
         '
@@ -436,6 +475,8 @@ Partial Class MenuUtama
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -466,4 +507,9 @@ Partial Class MenuUtama
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents AbsensiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PengaturanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GajiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ServerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

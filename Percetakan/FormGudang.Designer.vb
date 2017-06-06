@@ -54,7 +54,7 @@ Partial Class FormGudang
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.36893!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.63107!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -73,9 +73,9 @@ Partial Class FormGudang
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCari.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnCari.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnCari.Location = New System.Drawing.Point(566, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(565, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(153, 23)
+        Me.BtnCari.Size = New System.Drawing.Size(154, 23)
         Me.BtnCari.TabIndex = 4
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = False
@@ -85,7 +85,7 @@ Partial Class FormGudang
         Me.txt_namabahan.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txt_namabahan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_namabahan.Location = New System.Drawing.Point(120, 3)
+        Me.txt_namabahan.Location = New System.Drawing.Point(119, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
         Me.txt_namabahan.Size = New System.Drawing.Size(275, 26)
         Me.txt_namabahan.TabIndex = 0
@@ -99,7 +99,7 @@ Partial Class FormGudang
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(111, 29)
+        Me.Label1.Size = New System.Drawing.Size(110, 29)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Cari Bahan :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -110,7 +110,7 @@ Partial Class FormGudang
         Me.cb_condition.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_condition.FormattingEnabled = True
         Me.cb_condition.Items.AddRange(New Object() {"Tersedia", "Tidak Tersedia"})
-        Me.cb_condition.Location = New System.Drawing.Point(401, 3)
+        Me.cb_condition.Location = New System.Drawing.Point(400, 3)
         Me.cb_condition.Name = "cb_condition"
         Me.cb_condition.Size = New System.Drawing.Size(159, 26)
         Me.cb_condition.TabIndex = 3

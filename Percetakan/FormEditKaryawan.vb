@@ -39,6 +39,7 @@ Public Class FormEditKaryawan
 
     Private Sub FormEditKaryawan_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         kode_karyawan = ""
+        reset()
     End Sub
     Private Sub FormKaryawan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ambil_data()

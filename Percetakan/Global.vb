@@ -36,13 +36,13 @@ Module Globals
     Public kry_id, kry_lvl, kry_name, kry_username, kry_password, kry_alamat, kry_telp As String
 
     Sub Logout()
-        kry_id = ""
-        kry_lvl = ""
-        kry_name = ""
-        kry_username = ""
-        kry_password = ""
-        kry_alamat = ""
-        kry_telp = ""
+        kry_id = "null"
+        kry_lvl = "null"
+        kry_name = "null"
+        kry_username = "null"
+        kry_password = "null"
+        kry_alamat = "null"
+        kry_telp = "null"
     End Sub
     Public tanggal As String
 
