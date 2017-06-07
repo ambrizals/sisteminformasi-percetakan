@@ -135,6 +135,7 @@ CREATE TABLE `pesanan` (
   `ORDERCONSUMERTELP` varchar(13) NOT NULL,
   `ORDERSTATUS` varchar(20) NOT NULL,
   `ORDERTOTAL` int(11) NOT NULL,
+  `ORDERBAYAR` int(11) NOT NULL,
   PRIMARY KEY (`ORDERID`),
   KEY `FK_MELAKUKAN` (`KARYAWANID`),
   CONSTRAINT `FK_MELAKUKAN` FOREIGN KEY (`KARYAWANID`) REFERENCES `karyawan` (`KARYAWANID`)
@@ -142,12 +143,14 @@ CREATE TABLE `pesanan` (
 
 /*Data for the table `pesanan` */
 
+insert  into `pesanan`(`ORDERID`,`KARYAWANID`,`ORDERCONSUMER`,`ORDERCONSUMERTELP`,`ORDERSTATUS`,`ORDERTOTAL`,`ORDERBAYAR`) values ('ORD-1','KRY-1','Anggun','0812345678','PENDING',650000,325000);
+
 /*Table structure for table `tasklist` */
 
 DROP TABLE IF EXISTS `tasklist`;
 
 CREATE TABLE `tasklist` (
-  `TASKID` varchar(10) NOT NULL,
+  `TASKID` varchar(30) NOT NULL,
   `BAHANID` varchar(10) NOT NULL,
   `ORDERID` varchar(10) NOT NULL,
   `TASKNAME` varchar(30) NOT NULL,
@@ -162,6 +165,8 @@ CREATE TABLE `tasklist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `tasklist` */
+
+insert  into `tasklist`(`TASKID`,`BAHANID`,`ORDERID`,`TASKNAME`,`TASKQTY`,`TASKPRICE`,`TASKSTATUS`) values ('ORD-1-TLT-0','BHN - 10','ORD-1','Nama File : ituitu.png',10,100000,'Pending'),('ORD-1-TLT-1','BHN - 8','ORD-1','Nama File : iniitu,png; udah',20,400000,'Pending'),('ORD-1-TLT-2','BHN - 6','ORD-1','Coba aja ya',10,150000,'Pending');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

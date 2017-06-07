@@ -37,7 +37,9 @@
             If sisa > 0 Then
                 MsgBox("Sisa pembayaran harus bernilai 0 jika ingin menggunakan metode pembayaran ini", MsgBoxStyle.Information, "Info")
             Else
+                FormPesanan.ord_bayar = txt_jumlahbayar.Text
                 FormPesanan.proses_pesanan()
+                Me.Close()
                 ''Query taruh disini
             End If
         Else
@@ -46,6 +48,9 @@
             ElseIf sisa = 0 Then
                 MsgBox("Sisa pembayaran harus bernilai lebih dari 0 jika ingin menggunakan metode pembayaran ini", MsgBoxStyle.Information, "Info")
             Else
+                FormPesanan.ord_bayar = txt_jumlahbayar.Text
+                FormPesanan.proses_pesanan()
+                Me.Close()
                 ''Query taruh disini
             End If
         End If
