@@ -58,12 +58,13 @@ Public Class FormPesanan
                 kd_tsk = txt_kodepesanan.Text + "-TLT-" + loncat.ToString
                 sql = "INSERT INTO tasklist (TASKID, BAHANID, ORDERID, TASKNAME, TASKQTY, TASKPRICE, TASKSTATUS) VALUES ('" + kd_tsk + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "', '" + txt_kodepesanan.Text + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(2).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(3).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(5).Value.ToString + "', 'Pending')"
                 proses.ExecuteNonQuery(sql)
+
             Next
-            MsgBox("Transaksi Sukses", MsgBoxStyle.Information, "Info")
-            reset()
         Catch ex As Exception
             MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
         End Try
+        MsgBox("Transaksi Sukses", MsgBoxStyle.Information, "Info")
+        reset()
     End Sub
 
     Private Sub FormPesanan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -162,19 +163,23 @@ Public Class FormPesanan
     End Sub
 
     Private Sub BtnBayar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBayar.Click
-        If txt_bahan.TextLength > 0 Then
-            MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-            If txt_deskripsi.TextLength > 0 Then
+        If DG_ListBuatPesan.RowCount = 0 Then
+            MsgBox("Tidak dapat melakukan proses pada pesanan kosong", MsgBoxStyle.Critical, "Error")
+            If txt_bahan.TextLength > 0 Then
                 MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-                If txt_qty.TextLength > 0 Then
+                If txt_deskripsi.TextLength > 0 Then
                     MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-                    If txt_harga.TextLength > 0 Then
+                    If txt_qty.TextLength > 0 Then
                         MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
+                        If txt_harga.TextLength > 0 Then
+                            MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
+                        End If
                     End If
                 End If
             End If
         Else
             FormBayarPesanan.ShowDialog()
         End If
+
     End Sub
 End Class
