@@ -4,7 +4,7 @@ Imports MySql.Data.MySqlClient
 Public Class Login
     Dim proses As New ClsKoneksi
     Dim opt_us, opt_ps As Integer
-    Dim opte_us, opte_ps As String
+    Dim opte_us, opte_ps, query As String
     Sub Connect()
         Koneksi()
         If str_status > 0 Then
@@ -75,33 +75,30 @@ Public Class Login
             If str_status > 0 Then
                 proses.OpenConn()
                 Dim myadapter As New MySqlDataAdapter
-                Dim sqlquery = "SELECT * FROM karyawan where karyawanusername='" +
-    Trim(txtusername.Text) + "' And karyawanpassword='" + Trim(txtpassword.Text) + "'"
-                Dim mycommand As New MySqlCommand
-                mycommand.Connection = proses.Cn
-                mycommand.CommandText = sqlquery
-                myadapter.SelectCommand = mycommand
-                Dim mydata As MySqlDataReader
-                mydata = mycommand.ExecuteReader()
+                query = ("SELECT * FROM karyawan where karyawanusername='" + Trim(txtusername.Text) + "' And karyawanpassword='" + Trim(txtpassword.Text) + "'")
+                proses.Cmd.Connection = proses.Cn
+                proses.Cmd.CommandText = query
+                proses.Da.SelectCommand = proses.Cmd
+                proses.read = proses.Cmd.ExecuteReader()
                 If txtusername.Text.Count = 0 Then
                     MsgBox("Masukkan Username !", MsgBoxStyle.Information, "Info")
                 ElseIf txtpassword.Text.Count = 0 Then
                     MsgBox("Masukkan Password !", MsgBoxStyle.Information, "Info")
                 Else
-                    If mydata.HasRows = 0 Then
+                    If proses.read.HasRows = 0 Then
                         MsgBox("Username atau password ada yang salah!", MsgBoxStyle.Exclamation,
                     "Error Login")
                         Call reset()
 
                     Else
-                        mydata.Read()
-                        kry_id = mydata("KARYAWANID")
-                        kry_lvl = mydata("LEVELID")
-                        kry_name = mydata("KARYAWANNAME")
-                        kry_username = mydata("KARYAWANUSERNAME")
-                        kry_password = mydata("KARYAWANPASSWORD")
-                        kry_alamat = mydata("KARYAWANALAMAT")
-                        kry_telp = mydata("KARYAWANTELP")
+                        proses.read.Read()
+                        kry_id = proses.read("KARYAWANID")
+                        kry_lvl = proses.read("LEVELID")
+                        kry_name = proses.read("KARYAWANNAME")
+                        kry_username = proses.read("KARYAWANUSERNAME")
+                        kry_password = proses.read("KARYAWANPASSWORD")
+                        kry_alamat = proses.read("KARYAWANALAMAT")
+                        kry_telp = proses.read("KARYAWANTELP")
                         MsgBox("Login Berhasil", MsgBoxStyle.Information, "Info")
                         If cb_saveuser.Checked = True Then
                             My.Settings.opt_usersave = 1

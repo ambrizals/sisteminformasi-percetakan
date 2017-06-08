@@ -6,6 +6,7 @@ Public Class ClsKoneksi
     Public Da As New MySql.Data.MySqlClient.MySqlDataAdapter
     Public Ds As New DataSet
     Public Dt As DataTable
+    Public read As MySql.Data.MySqlClient.MySqlDataReader
 
     Public Function OpenConn() As Boolean
         alamat()

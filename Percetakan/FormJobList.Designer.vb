@@ -22,59 +22,94 @@ Partial Class FormJobList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.DG_JobList = New System.Windows.Forms.DataGridView()
-        Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.DG_JobList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.job_pending = New System.Windows.Forms.TabPage()
+        Me.job_process = New System.Windows.Forms.TabPage()
+        Me.job_finish = New System.Windows.Forms.TabPage()
+        Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'Panel1
         '
-        Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.DG_JobList, 0, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.22605!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.77395!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(752, 446)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(752, 63)
+        Me.Panel1.TabIndex = 0
         '
-        'DG_JobList
+        'Panel2
         '
-        Me.DG_JobList.AllowUserToAddRows = False
-        Me.DG_JobList.AllowUserToDeleteRows = False
-        Me.DG_JobList.AllowUserToResizeColumns = False
-        Me.DG_JobList.AllowUserToResizeRows = False
-        Me.DG_JobList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DG_JobList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DG_JobList.Location = New System.Drawing.Point(3, 3)
-        Me.DG_JobList.Name = "DG_JobList"
-        Me.DG_JobList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.DG_JobList.RowHeadersVisible = False
-        Me.DG_JobList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DG_JobList.Size = New System.Drawing.Size(746, 356)
-        Me.DG_JobList.TabIndex = 0
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 496)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(752, 48)
+        Me.Panel2.TabIndex = 1
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.job_pending)
+        Me.TabControl1.Controls.Add(Me.job_process)
+        Me.TabControl1.Controls.Add(Me.job_finish)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 63)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(752, 433)
+        Me.TabControl1.TabIndex = 2
+        '
+        'job_pending
+        '
+        Me.job_pending.Location = New System.Drawing.Point(4, 22)
+        Me.job_pending.Name = "job_pending"
+        Me.job_pending.Padding = New System.Windows.Forms.Padding(3)
+        Me.job_pending.Size = New System.Drawing.Size(744, 309)
+        Me.job_pending.TabIndex = 0
+        Me.job_pending.Text = "Pending (0)"
+        Me.job_pending.UseVisualStyleBackColor = True
+        '
+        'job_process
+        '
+        Me.job_process.Location = New System.Drawing.Point(4, 22)
+        Me.job_process.Name = "job_process"
+        Me.job_process.Padding = New System.Windows.Forms.Padding(3)
+        Me.job_process.Size = New System.Drawing.Size(744, 309)
+        Me.job_process.TabIndex = 1
+        Me.job_process.Text = "Process (0)"
+        Me.job_process.UseVisualStyleBackColor = True
+        '
+        'job_finish
+        '
+        Me.job_finish.Location = New System.Drawing.Point(4, 22)
+        Me.job_finish.Name = "job_finish"
+        Me.job_finish.Size = New System.Drawing.Size(744, 407)
+        Me.job_finish.TabIndex = 2
+        Me.job_finish.Text = "Finish (0)"
+        Me.job_finish.UseVisualStyleBackColor = True
         '
         'FormJobList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(752, 446)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.ClientSize = New System.Drawing.Size(752, 544)
+        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormJobList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Job List"
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        CType(Me.DG_JobList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents DG_JobList As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents job_pending As System.Windows.Forms.TabPage
+    Friend WithEvents job_process As System.Windows.Forms.TabPage
+    Friend WithEvents job_finish As System.Windows.Forms.TabPage
 End Class

@@ -28,7 +28,7 @@ Partial Friend NotInheritable Class InfoAplikasi
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("0.2.1")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("0.2.4")>  _
     Public Property Versi() As String
         Get
             Return CType(Me("Versi"),String)
