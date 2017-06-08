@@ -161,11 +161,11 @@
             Connect()
         End Try
     End Sub
-    Private Sub BtnLaporan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAbsensi.Click
+    Private Sub BtnAbsensi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAbsensi.Click
         Try
             If str_status > 0 Then
                 proses.OpenConn()
-                FormLaporan.ShowDialog()
+                FormAbsensi.ShowDialog()
                 proses.CloseConn()
             Else
                 MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
@@ -208,11 +208,6 @@
             Connect()
         End Try
     End Sub
-
-    Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label2.Click
-        Me.Close()
-    End Sub
-
     Private Sub BtnSimpanPengumuman_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpanPengumuman.Click
         Try
             query = "UPDATE pengaturan SET pengaturanIsi = '" + rtf_pengumuman.Text + "' WHERE pengaturanName = 'pengumuman'"
@@ -221,5 +216,9 @@
         Catch ex As Exception
             MsgBox("Terjadi kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
+    End Sub
+
+    Private Sub lbl_close_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lbl_close.Click
+        Me.Close()
     End Sub
 End Class

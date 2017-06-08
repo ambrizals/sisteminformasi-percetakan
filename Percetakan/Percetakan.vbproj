@@ -77,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
+    <Compile Include="FormAbsenTambahcuti.Designer.vb">
+      <DependentUpon>FormAbsenTambahcuti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbsenTambahcuti.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormBayarPesanan.Designer.vb">
       <DependentUpon>FormBayarPesanan.vb</DependentUpon>
     </Compile>
@@ -143,10 +149,10 @@
     <Compile Include="FormKaryawan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLaporan.Designer.vb">
-      <DependentUpon>FormLaporan.vb</DependentUpon>
+    <Compile Include="FormAbsensi.Designer.vb">
+      <DependentUpon>FormAbsensi.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormLaporan.vb">
+    <Compile Include="FormAbsensi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPesanan.Designer.vb">
@@ -191,6 +197,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAbsenTambahcuti.resx">
+      <DependentUpon>FormAbsenTambahcuti.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBayarPesanan.resx">
       <DependentUpon>FormBayarPesanan.vb</DependentUpon>
     </EmbeddedResource>
@@ -224,8 +233,8 @@
     <EmbeddedResource Include="FormKaryawan.resx">
       <DependentUpon>FormKaryawan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLaporan.resx">
-      <DependentUpon>FormLaporan.vb</DependentUpon>
+    <EmbeddedResource Include="FormAbsensi.resx">
+      <DependentUpon>FormAbsensi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesanan.resx">
       <DependentUpon>FormPesanan.vb</DependentUpon>

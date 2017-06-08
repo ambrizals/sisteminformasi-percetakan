@@ -4,9 +4,8 @@ Kalau gak ngerti buka file CONTRIBUTING.md
 
 # Catatan Penting
 
-- Kesalahan : terdapat dua row dengan data yang sama karena inner join
-- Kekurangan : Belum dapat mengurangi stock saat pesanan di proses
-- Kekurangan : Tab cari pesanan pada form pesanan belum selesai
+- Kekurangan : Form Laporan belum tersedia
+- Kekurangan : Form absensi belum sepenuhnya berfungsi
 
 # Persiapan
 

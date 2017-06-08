@@ -70,7 +70,6 @@ C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormConfig.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormGudang.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormJobList.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormKaryawan.resources
-C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormLaporan.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormPesanan.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.Login.resources
 C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
@@ -114,3 +113,5 @@ D:\percetakan\projek new\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba3
 D:\percetakan\projek new\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
 D:\percetakan\projek new\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
 D:\percetakan\projek new\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\percetakan-master-743d06c3a59489f30fb9e976b588e14bb7ba35f4\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
+C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAbsenTambahcuti.resources
+C:\Users\PC\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAbsensi.resources

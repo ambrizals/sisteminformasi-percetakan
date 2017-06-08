@@ -21,16 +21,17 @@ USE `percetakan`;
 DROP TABLE IF EXISTS `absensi`;
 
 CREATE TABLE `absensi` (
-  `absensiID` int(11) NOT NULL AUTO_INCREMENT,
   `karyawanID` varchar(10) NOT NULL,
-  `absensiDATE` datetime NOT NULL,
+  `absensiDATE` date NOT NULL,
   `absensiTIME` time NOT NULL,
-  PRIMARY KEY (`absensiID`),
+  `absensiSTATUS` varchar(10) NOT NULL,
   KEY `FK_Absensi` (`karyawanID`),
   CONSTRAINT `FK_Absensi` FOREIGN KEY (`karyawanID`) REFERENCES `karyawan` (`KARYAWANID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `absensi` */
+
+insert  into `absensi`(`karyawanID`,`absensiDATE`,`absensiTIME`,`absensiSTATUS`) values ('KRY-1','2017-06-08','14:05:09','Masuk');
 
 /*Table structure for table `bahan` */
 
@@ -124,6 +125,20 @@ CREATE TABLE `log_joblist` (
 
 /*Data for the table `log_joblist` */
 
+/*Table structure for table `pengaturan` */
+
+DROP TABLE IF EXISTS `pengaturan`;
+
+CREATE TABLE `pengaturan` (
+  `pengaturanName` varchar(30) NOT NULL,
+  `pengaturanIsi` text NOT NULL,
+  PRIMARY KEY (`pengaturanName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `pengaturan` */
+
+insert  into `pengaturan`(`pengaturanName`,`pengaturanIsi`) values ('pengumuman','Aplikasi ini sedang dalam pengembangan :)\nVersi : 0.2.5\n\n----------------------------------\n\nKekurangan : Form absensi belum tersedia\nKekurangan  : Form Laporan belum tersedia');
+
 /*Table structure for table `pesanan` */
 
 DROP TABLE IF EXISTS `pesanan`;
@@ -143,7 +158,7 @@ CREATE TABLE `pesanan` (
 
 /*Data for the table `pesanan` */
 
-insert  into `pesanan`(`ORDERID`,`KARYAWANID`,`ORDERCONSUMER`,`ORDERCONSUMERTELP`,`ORDERSTATUS`,`ORDERTOTAL`,`ORDERBAYAR`) values ('ORD-1','KRY-1','Anggun','0812345678','PENDING',650000,325000);
+insert  into `pesanan`(`ORDERID`,`KARYAWANID`,`ORDERCONSUMER`,`ORDERCONSUMERTELP`,`ORDERSTATUS`,`ORDERTOTAL`,`ORDERBAYAR`) values ('ORD-1','KRY-1','Anggun','0812345678','PENDING',650000,325000),('ORD-2','KRY-1','Agus','08112345','PENDING',56000,56000),('ORD-3','KRY-1','Rafli','081234221','PENDING',68000,34000);
 
 /*Table structure for table `tasklist` */
 
@@ -153,7 +168,7 @@ CREATE TABLE `tasklist` (
   `TASKID` varchar(30) NOT NULL,
   `BAHANID` varchar(10) NOT NULL,
   `ORDERID` varchar(10) NOT NULL,
-  `TASKNAME` varchar(30) NOT NULL,
+  `TASKNAME` text NOT NULL,
   `TASKQTY` int(11) NOT NULL,
   `TASKPRICE` int(11) NOT NULL,
   `TASKSTATUS` varchar(16) NOT NULL,
@@ -166,7 +181,7 @@ CREATE TABLE `tasklist` (
 
 /*Data for the table `tasklist` */
 
-insert  into `tasklist`(`TASKID`,`BAHANID`,`ORDERID`,`TASKNAME`,`TASKQTY`,`TASKPRICE`,`TASKSTATUS`) values ('ORD-1-TLT-0','BHN - 10','ORD-1','Nama File : ituitu.png',10,100000,'Pending'),('ORD-1-TLT-1','BHN - 8','ORD-1','Nama File : iniitu,png; udah',20,400000,'Pending'),('ORD-1-TLT-2','BHN - 6','ORD-1','Coba aja ya',10,150000,'Pending');
+insert  into `tasklist`(`TASKID`,`BAHANID`,`ORDERID`,`TASKNAME`,`TASKQTY`,`TASKPRICE`,`TASKSTATUS`) values ('ORD-1-TLT-0','BHN - 10','ORD-1','Nama File : ituitu.png',10,100000,'Finish'),('ORD-1-TLT-1','BHN - 8','ORD-1','Nama File : iniitu,png; udah',20,400000,'Proses'),('ORD-1-TLT-2','BHN - 6','ORD-1','Coba aja ya',10,150000,'Pending'),('ORD-2-TLT-0','BHN - 7','ORD-2','Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok',4,56000,'Finish'),('ORD-3-TLT-0','BHN - 8','ORD-3','Mata ayam fojok fojok',2,40000,'Pending'),('ORD-3-TLT-1','BHN - 7','ORD-3','Mata ayam fojok - fojok',2,28000,'Pending');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

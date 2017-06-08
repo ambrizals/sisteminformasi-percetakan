@@ -54,16 +54,17 @@ Partial Class MenuUtama
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.BtnSimpanPengumuman = New System.Windows.Forms.Button()
         Me.rtf_pengumuman = New System.Windows.Forms.RichTextBox()
+        Me.lbl_tanggal = New System.Windows.Forms.Label()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PengaturanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GajiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lbl_tanggal = New System.Windows.Forms.Label()
+        Me.lbl_close = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -84,7 +85,7 @@ Partial Class MenuUtama
         Me.GroupBox4.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.TableLayoutPanel9.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel2
@@ -502,8 +503,8 @@ Partial Class MenuUtama
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.BtnSimpanPengumuman)
         Me.GroupBox4.Controls.Add(Me.rtf_pengumuman)
+        Me.GroupBox4.Controls.Add(Me.BtnSimpanPengumuman)
         Me.GroupBox4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox4.Location = New System.Drawing.Point(3, 159)
         Me.GroupBox4.Name = "GroupBox4"
@@ -527,16 +528,25 @@ Partial Class MenuUtama
         Me.rtf_pengumuman.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtf_pengumuman.Location = New System.Drawing.Point(3, 16)
         Me.rtf_pengumuman.Name = "rtf_pengumuman"
-        Me.rtf_pengumuman.Size = New System.Drawing.Size(205, 150)
+        Me.rtf_pengumuman.Size = New System.Drawing.Size(205, 117)
         Me.rtf_pengumuman.TabIndex = 0
         Me.rtf_pengumuman.Text = ""
+        '
+        'lbl_tanggal
+        '
+        Me.lbl_tanggal.AutoSize = True
+        Me.lbl_tanggal.Location = New System.Drawing.Point(3, 0)
+        Me.lbl_tanggal.Name = "lbl_tanggal"
+        Me.lbl_tanggal.Size = New System.Drawing.Size(39, 13)
+        Me.lbl_tanggal.TabIndex = 1
+        Me.lbl_tanggal.Text = "Label4"
         '
         'TableLayoutPanel5
         '
         Me.TableLayoutPanel5.ColumnCount = 1
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.20155!))
         Me.TableLayoutPanel5.Controls.Add(Me.MenuStrip1, 0, 1)
-        Me.TableLayoutPanel5.Controls.Add(Me.Panel2, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.TableLayoutPanel9, 0, 0)
         Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
@@ -567,13 +577,13 @@ Partial Class MenuUtama
         'GajiToolStripMenuItem
         '
         Me.GajiToolStripMenuItem.Name = "GajiToolStripMenuItem"
-        Me.GajiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GajiToolStripMenuItem.Size = New System.Drawing.Size(106, 22)
         Me.GajiToolStripMenuItem.Text = "Gaji"
         '
         'ServerToolStripMenuItem
         '
         Me.ServerToolStripMenuItem.Name = "ServerToolStripMenuItem"
-        Me.ServerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ServerToolStripMenuItem.Size = New System.Drawing.Size(106, 22)
         Me.ServerToolStripMenuItem.Text = "Server"
         '
         'AboutToolStripMenuItem
@@ -582,47 +592,54 @@ Partial Class MenuUtama
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 37)
         Me.AboutToolStripMenuItem.Text = "About"
         '
+        'TableLayoutPanel9
+        '
+        Me.TableLayoutPanel9.ColumnCount = 3
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel9.Controls.Add(Me.Label3, 1, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.lbl_close, 2, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.Panel2, 0, 0)
+        Me.TableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel9.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
+        Me.TableLayoutPanel9.RowCount = 1
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel9.Size = New System.Drawing.Size(639, 48)
+        Me.TableLayoutPanel9.TabIndex = 4
+        '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(639, 48)
-        Me.Panel2.TabIndex = 4
+        Me.Panel2.Size = New System.Drawing.Size(200, 42)
+        Me.Panel2.TabIndex = 0
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Maroon
-        Me.Label3.Location = New System.Drawing.Point(258, 4)
+        Me.Label3.Location = New System.Drawing.Point(216, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 40)
-        Me.Label3.TabIndex = 1
+        Me.Label3.Size = New System.Drawing.Size(207, 48)
+        Me.Label3.TabIndex = 3
         Me.Label3.Text = "MENU"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'lbl_close
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.Label2.Location = New System.Drawing.Point(625, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(14, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "X"
-        '
-        'lbl_tanggal
-        '
-        Me.lbl_tanggal.AutoSize = True
-        Me.lbl_tanggal.Location = New System.Drawing.Point(3, 0)
-        Me.lbl_tanggal.Name = "lbl_tanggal"
-        Me.lbl_tanggal.Size = New System.Drawing.Size(39, 13)
-        Me.lbl_tanggal.TabIndex = 1
-        Me.lbl_tanggal.Text = "Label4"
+        Me.lbl_close.AutoSize = True
+        Me.lbl_close.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lbl_close.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lbl_close.Location = New System.Drawing.Point(622, 0)
+        Me.lbl_close.Name = "lbl_close"
+        Me.lbl_close.Size = New System.Drawing.Size(14, 48)
+        Me.lbl_close.TabIndex = 2
+        Me.lbl_close.Text = "X"
         '
         'MenuUtama
         '
@@ -662,8 +679,8 @@ Partial Class MenuUtama
         Me.TableLayoutPanel5.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.TableLayoutPanel9.ResumeLayout(False)
+        Me.TableLayoutPanel9.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -684,9 +701,6 @@ Partial Class MenuUtama
     Friend WithEvents BtnGudang As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel5 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents PengaturanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GajiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ServerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -708,4 +722,8 @@ Partial Class MenuUtama
     Friend WithEvents BtnSimpanPengumuman As System.Windows.Forms.Button
     Friend WithEvents rtf_pengumuman As System.Windows.Forms.RichTextBox
     Friend WithEvents lbl_tanggal As System.Windows.Forms.Label
+    Friend WithEvents TableLayoutPanel9 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lbl_close As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class
