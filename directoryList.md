@@ -1,6 +1,7 @@
 |-- percetakan
     |-- CONTRIBUTING.md
     |-- Database.sql
+    |-- directoryList.md
     |-- Percetakan.sln
     |-- Percetakan.suo
     |-- privilage_user.MD
@@ -26,6 +27,12 @@
         |-- FormAbout.Designer.vb
         |-- FormAbout.resx
         |-- FormAbout.vb
+        |-- FormAbsensi.Designer.vb
+        |-- FormAbsensi.resx
+        |-- FormAbsensi.vb
+        |-- FormAbsenTambahcuti.Designer.vb
+        |-- FormAbsenTambahcuti.resx
+        |-- FormAbsenTambahcuti.vb
         |-- FormAddGudang.Designer.vb
         |-- FormAddGudang.resx
         |-- FormAddGudang.vb
@@ -59,9 +66,6 @@
         |-- FormKaryawan.Designer.vb
         |-- FormKaryawan.resx
         |-- FormKaryawan.vb
-        |-- FormLaporan.Designer.vb
-        |-- FormLaporan.resx
-        |-- FormLaporan.vb
         |-- FormPesanan.Designer.vb
         |-- FormPesanan.resx
         |-- FormPesanan.vb
@@ -86,7 +90,6 @@
         |   |   |-- Percetakan.pdb
         |   |   |-- Percetakan.vshost.exe
         |   |   |-- Percetakan.vshost.exe.config
-        |   |   |-- Percetakan.vshost.exe.manifest
         |   |   |-- Percetakan.xml
         |   |-- Release
         |       |-- Percetakan.exe.config
@@ -108,6 +111,8 @@
                 |   |-- DesignTimeResolveAssemblyReferencesInput.cache
                 |   |-- Percetakan.exe
                 |   |-- Percetakan.FormAbout.resources
+                |   |-- Percetakan.FormAbsensi.resources
+                |   |-- Percetakan.FormAbsenTambahcuti.resources
                 |   |-- Percetakan.FormAddGudang.resources
                 |   |-- Percetakan.FormAddstockGudang.resources
                 |   |-- Percetakan.FormBayarPesanan.resources
@@ -118,7 +123,6 @@
                 |   |-- Percetakan.FormGudang.resources
                 |   |-- Percetakan.FormJobList.resources
                 |   |-- Percetakan.FormKaryawan.resources
-                |   |-- Percetakan.FormLaporan.resources
                 |   |-- Percetakan.FormPesanan.resources
                 |   |-- Percetakan.Login.resources
                 |   |-- Percetakan.MenuUtama.resources
