@@ -52,8 +52,8 @@ Partial Class MenuUtama
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.BtnSimpanPengumuman = New System.Windows.Forms.Button()
         Me.rtf_pengumuman = New System.Windows.Forms.RichTextBox()
+        Me.BtnSimpanPengumuman = New System.Windows.Forms.Button()
         Me.lbl_tanggal = New System.Windows.Forms.Label()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -62,9 +62,9 @@ Partial Class MenuUtama
         Me.ServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_close = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -513,6 +513,15 @@ Partial Class MenuUtama
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Pengumuman :"
         '
+        'rtf_pengumuman
+        '
+        Me.rtf_pengumuman.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rtf_pengumuman.Location = New System.Drawing.Point(3, 16)
+        Me.rtf_pengumuman.Name = "rtf_pengumuman"
+        Me.rtf_pengumuman.Size = New System.Drawing.Size(205, 117)
+        Me.rtf_pengumuman.TabIndex = 0
+        Me.rtf_pengumuman.Text = ""
+        '
         'BtnSimpanPengumuman
         '
         Me.BtnSimpanPengumuman.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -522,15 +531,6 @@ Partial Class MenuUtama
         Me.BtnSimpanPengumuman.TabIndex = 1
         Me.BtnSimpanPengumuman.Text = "Simpan Pengumuman"
         Me.BtnSimpanPengumuman.UseVisualStyleBackColor = True
-        '
-        'rtf_pengumuman
-        '
-        Me.rtf_pengumuman.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtf_pengumuman.Location = New System.Drawing.Point(3, 16)
-        Me.rtf_pengumuman.Name = "rtf_pengumuman"
-        Me.rtf_pengumuman.Size = New System.Drawing.Size(205, 117)
-        Me.rtf_pengumuman.TabIndex = 0
-        Me.rtf_pengumuman.Text = ""
         '
         'lbl_tanggal
         '
@@ -577,13 +577,13 @@ Partial Class MenuUtama
         'GajiToolStripMenuItem
         '
         Me.GajiToolStripMenuItem.Name = "GajiToolStripMenuItem"
-        Me.GajiToolStripMenuItem.Size = New System.Drawing.Size(106, 22)
+        Me.GajiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GajiToolStripMenuItem.Text = "Gaji"
         '
         'ServerToolStripMenuItem
         '
         Me.ServerToolStripMenuItem.Name = "ServerToolStripMenuItem"
-        Me.ServerToolStripMenuItem.Size = New System.Drawing.Size(106, 22)
+        Me.ServerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ServerToolStripMenuItem.Text = "Server"
         '
         'AboutToolStripMenuItem
@@ -609,13 +609,6 @@ Partial Class MenuUtama
         Me.TableLayoutPanel9.Size = New System.Drawing.Size(639, 48)
         Me.TableLayoutPanel9.TabIndex = 4
         '
-        'Panel2
-        '
-        Me.Panel2.Location = New System.Drawing.Point(3, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 42)
-        Me.Panel2.TabIndex = 0
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -640,6 +633,13 @@ Partial Class MenuUtama
         Me.lbl_close.Size = New System.Drawing.Size(14, 48)
         Me.lbl_close.TabIndex = 2
         Me.lbl_close.Text = "X"
+        '
+        'Panel2
+        '
+        Me.Panel2.Location = New System.Drawing.Point(3, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(200, 42)
+        Me.Panel2.TabIndex = 0
         '
         'MenuUtama
         '

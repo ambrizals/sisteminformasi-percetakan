@@ -24,10 +24,12 @@ Partial Class FormAbsenTambahcuti
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dt_mulai = New System.Windows.Forms.DateTimePicker()
+        Me.dt_akhir = New System.Windows.Forms.DateTimePicker()
         Me.BtnSimpan = New System.Windows.Forms.Button()
         Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_alasancuti = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,19 +50,21 @@ Partial Class FormAbsenTambahcuti
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Sampai Tanggal :"
         '
-        'DateTimePicker1
+        'dt_mulai
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(131, 60)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 2
+        Me.dt_mulai.Location = New System.Drawing.Point(131, 60)
+        Me.dt_mulai.Name = "dt_mulai"
+        Me.dt_mulai.Size = New System.Drawing.Size(200, 20)
+        Me.dt_mulai.TabIndex = 2
+        Me.dt_mulai.Value = New Date(2017, 6, 10, 0, 0, 0, 0)
         '
-        'DateTimePicker2
+        'dt_akhir
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(131, 97)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker2.TabIndex = 3
+        Me.dt_akhir.Location = New System.Drawing.Point(131, 97)
+        Me.dt_akhir.Name = "dt_akhir"
+        Me.dt_akhir.Size = New System.Drawing.Size(200, 20)
+        Me.dt_akhir.TabIndex = 3
+        Me.dt_akhir.Value = New Date(2017, 6, 10, 0, 0, 0, 0)
         '
         'BtnSimpan
         '
@@ -80,18 +84,38 @@ Partial Class FormAbsenTambahcuti
         Me.BtnCancel.Text = "Batal"
         Me.BtnCancel.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(23, 27)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(66, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Alasan Cuti :"
+        '
+        'txt_alasancuti
+        '
+        Me.txt_alasancuti.Location = New System.Drawing.Point(131, 24)
+        Me.txt_alasancuti.Name = "txt_alasancuti"
+        Me.txt_alasancuti.Size = New System.Drawing.Size(200, 20)
+        Me.txt_alasancuti.TabIndex = 7
+        '
         'FormAbsenTambahcuti
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(355, 174)
+        Me.Controls.Add(Me.txt_alasancuti)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.BtnSimpan)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dt_akhir)
+        Me.Controls.Add(Me.dt_mulai)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "FormAbsenTambahcuti"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Buat Rencana Cuti"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -99,8 +123,10 @@ Partial Class FormAbsenTambahcuti
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dt_mulai As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dt_akhir As System.Windows.Forms.DateTimePicker
     Friend WithEvents BtnSimpan As System.Windows.Forms.Button
     Friend WithEvents BtnCancel As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txt_alasancuti As System.Windows.Forms.TextBox
 End Class

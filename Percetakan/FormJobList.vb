@@ -64,6 +64,12 @@ Public Class FormJobList
             Try
                 query = "UPDATE tasklist SET TASKSTATUS = 'Proses' WHERE TASKID = '" + DG_Pending.SelectedCells(0).Value.ToString + "'"
                 proses.ExecuteNonQuery(query)
+                Try
+                    query = "INSERT INTO log_joblist (KARYAWANID, TASKID, PROSESDATE, PROSESSTATUS) VALUES ('" + kry_id + "', '" + DG_Pending.SelectedCells(0).Value.ToString + "', '" + tanggal + "', 'Memproses Pesanan')"
+                    proses.ExecuteNonQuery(query)
+                Catch ex As Exception
+                    MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
+                End Try
                 MsgBox("Status pesanan dirubah", MsgBoxStyle.Information, "Info")
                 load_tabel()
                 job_process.Focus()
@@ -80,6 +86,12 @@ Public Class FormJobList
             Try
                 query = "UPDATE tasklist SET TASKSTATUS = 'Finish' WHERE TASKID = '" + DG_Proses.SelectedCells(0).Value.ToString + "'"
                 proses.ExecuteNonQuery(query)
+                Try
+                    query = "INSERT INTO log_joblist (KARYAWANID, TASKID, PROSESDATE, PROSESSTATUS) VALUES ('" + kry_id + "', '" + DG_Pending.SelectedCells(0).Value.ToString + "', '" + tanggal + "', 'Pesanan diselesaikan')"
+                    proses.ExecuteNonQuery(query)
+                Catch ex As Exception
+                    MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
+                End Try
                 MsgBox("Status pesanan dirubah", MsgBoxStyle.Information, "Info")
                 load_tabel()
                 job_finish.Focus()

@@ -1,7 +1,7 @@
 ﻿Public Class MenuUtama
     Dim proses As New ClsKoneksi
     Dim query As String
-
+    Dim absen_date, absen_status As String
     Sub Connect()
         Koneksi()
         If str_status > 0 Then
@@ -71,34 +71,40 @@
     End Sub
 
     Sub absensi()
-        Dim absen_date, absen_status As String
+        proses.OpenConn()
         Try
-            proses.OpenConn()
-            query = ("SELECT * FROM absensi WHERE (absensiDATE = CURDATE()) AND (karyawanID = '" + kry_id + "')")
+            query = ("SELECT * FROM cuti WHERE ((CURDATE() >= cutiMulai) & (CURDATE() <= cutiAkhir)) AND (karyawanID = 'KRY-1')")
             proses.Cmd.Connection = proses.Cn
             proses.Cmd.CommandText = query
             proses.Da.SelectCommand = proses.Cmd
             proses.read = proses.Cmd.ExecuteReader()
             If proses.read.HasRows Then
-                proses.read.Read()
-                absen_date = proses.read("absensiDATE").ToString
-                absen_status = proses.read("absensiSTATUS")
-                If absen_status = "Cuti" Then
-                    MsgBox("Anda sedang mengambil cuti", MsgBoxStyle.Information, "Info")
-                End If
+                MsgBox("Anda sedang cuti. program akan keluar secara otomatis", MsgBoxStyle.Information, "Info")
+                Me.Close()
             Else
-                Try
-                    query = ("INSERT INTO absensi (karyawanID, absensiDATE, absensiTIME, absensiSTATUS) VALUES ('" + kry_id + "', '" + tanggal_now + "', '" + time_now + "', 'Masuk')")
-                    proses.ExecuteNonQuery(query)
-                    MsgBox("Absen otomatis telah dilakukan")
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
+                proses.OpenConn()
+                query = ("SELECT * FROM absensi WHERE (absensiDATE = CURDATE()) AND (karyawanID = '" + kry_id + "')")
+                proses.Cmd.Connection = proses.Cn
+                proses.Cmd.CommandText = query
+                proses.Da.SelectCommand = proses.Cmd
+                proses.read = proses.Cmd.ExecuteReader()
+                If proses.read.HasRows Then
+                    'Nothing here
+                Else
+                    Try
+                        query = ("INSERT INTO absensi (karyawanID, absensiDATE, absensiTIME, absensiSTATUS) VALUES ('" + kry_id + "', '" + tanggal_now + "', '" + time_now + "', 'Masuk')")
+                        proses.ExecuteNonQuery(query)
+                        MsgBox("Absen otomatis telah dilakukan")
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                End If
+                proses.CloseConn()
             End If
         Catch ex As Exception
             MsgBox("Terjadi kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
-
+        proses.CloseConn()
     End Sub
 
     Private Sub BtnKeluar_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnKeluar.Click
@@ -220,5 +226,9 @@
 
     Private Sub lbl_close_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lbl_close.Click
         Me.Close()
+    End Sub
+
+    Private Sub ServerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ServerToolStripMenuItem.Click
+        FormConfig.ShowDialog()
     End Sub
 End Class

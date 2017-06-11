@@ -3,7 +3,7 @@ Imports System.Data.OleDb
 Imports System.Data
 
 Public Class FormPesanan
-    Public kode_pesan, kode_bahan, sql As String
+    Public kode_pesan, kode_bahan, qty_sisa, sql As String
     Public prefix_kode_pesan, row_total As Integer
     Public ord_qty, ord_harga, ord_total, ord_bayar As Double
     Dim proses As New ClsKoneksi
@@ -56,9 +56,15 @@ Public Class FormPesanan
             loncat = 0
             For loncat = 0 To DG_ListBuatPesan.RowCount - 1
                 kd_tsk = txt_kodepesanan.Text + "-TLT-" + loncat.ToString
-                sql = "INSERT INTO tasklist (TASKID, BAHANID, ORDERID, TASKNAME, TASKQTY, TASKPRICE, TASKSTATUS) VALUES ('" + kd_tsk + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "', '" + txt_kodepesanan.Text + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(2).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(3).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(5).Value.ToString + "', 'Pending')"
+                sql = "INSERT INTO tasklist (TASKID, BAHANID, ORDERID, TASKNAME, TASKQTY, TASKPRICE, TASKSTATUS) VALUES ('" + kd_tsk + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "', '" + txt_kodepesanan.Text + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(3).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(4).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(6).Value.ToString + "', 'Pending')"
                 proses.ExecuteNonQuery(sql)
-
+                Try
+                    qty_sisa = Val(DG_ListBuatPesan.Rows(loncat).Cells(2).Value - DG_ListBuatPesan.Rows(loncat).Cells(4).Value)
+                    sql = "UPDATE bahan SET BAHANSTOCK='" + qty_sisa + "' WHERE BAHANID='" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "'"
+                    proses.ExecuteNonQuery(sql)
+                Catch ex As Exception
+                    MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+                End Try
             Next
         Catch ex As Exception
             MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
@@ -68,6 +74,8 @@ Public Class FormPesanan
     End Sub
 
     Private Sub FormPesanan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        DG_ListBuatPesan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DG_ListBuatPesan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         Ambil_Kode()
         lbl_karyawanname.Text = kry_name
         lbl_tanggal.Text = Date.Now
@@ -83,13 +91,19 @@ Public Class FormPesanan
                 If txt_qty.TextLength = 0 Then
                     MsgBox("Qty belum terisi", MsgBoxStyle.Information, "Error Missing Required Data")
                 Else
-                    ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
-                    DG_ListBuatPesan.Rows.Add(kode_bahan, txt_bahan.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
-                    lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) + ord_total).ToString
-                    txt_bahan.Clear()
-                    txt_deskripsi.Clear()
-                    txt_qty.Clear()
-                    txt_harga.Clear()
+                    If (Val(txt_stock.Text - txt_qty.Text) < 0) = True Then
+                        MsgBox("Stok Barang Kurang", MsgBoxStyle.Information, "Error")
+                    Else
+                        ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
+                        DG_ListBuatPesan.Rows.Add(kode_bahan, txt_bahan.Text, txt_stock.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
+                        lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) + ord_total).ToString
+                        txt_bahan.Clear()
+                        txt_deskripsi.Clear()
+                        txt_qty.Clear()
+                        txt_harga.Clear()
+                        txt_stock.Clear()
+                        lbl_qty.Text = "Qty ()"
+                    End If
                 End If
             End If
         End If
@@ -117,7 +131,7 @@ Public Class FormPesanan
     End Sub
     Private Sub HapusPesananToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HapusPesananToolStripMenuItem.Click
         Dim row As DataGridViewRow
-        lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(4).Value).ToString
+        lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(6).Value).ToString
         For Each row In DG_ListBuatPesan.SelectedRows
             DG_ListBuatPesan.Rows.Remove(row)
         Next
@@ -127,21 +141,21 @@ Public Class FormPesanan
     Private Sub UbahDaftarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UbahDaftarToolStripMenuItem.Click
         If txt_bahan.TextLength > 0 Then
             MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-            If txt_deskripsi.TextLength > 0 Then
-                MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-                If txt_qty.TextLength > 0 Then
-                    MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-                    If txt_harga.TextLength > 0 Then
-                        MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-                    End If
-                End If
-            End If
+        ElseIf txt_stock.TextLength > 0 Then
+            MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
+        ElseIf txt_deskripsi.TextLength > 0 Then
+            MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
+        ElseIf txt_qty.TextLength > 0 Then
+            MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
+        ElseIf txt_harga.TextLength > 0 Then
+            MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
         Else
-            lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(4).Value).ToString
+            lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(6).Value).ToString
             txt_bahan.Text = DG_ListBuatPesan.SelectedCells(0).Value
-            txt_deskripsi.Text = DG_ListBuatPesan.SelectedCells(1).Value
-            txt_qty.Text = DG_ListBuatPesan.SelectedCells(2).Value
-            txt_harga.Text = DG_ListBuatPesan.SelectedCells(3).Value
+            txt_stock.Text = DG_ListBuatPesan.SelectedCells(2).Value
+            txt_deskripsi.Text = DG_ListBuatPesan.SelectedCells(3).Value
+            txt_qty.Text = DG_ListBuatPesan.SelectedCells(4).Value
+            txt_harga.Text = DG_ListBuatPesan.SelectedCells(5).Value
             Dim row As DataGridViewRow
             For Each row In DG_ListBuatPesan.SelectedRows
                 DG_ListBuatPesan.Rows.Remove(row)

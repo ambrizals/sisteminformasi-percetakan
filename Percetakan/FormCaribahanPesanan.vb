@@ -8,7 +8,7 @@ Public Class FormCaribahanPesanan
     Dim proses As New ClsKoneksi
     Dim list_bahan As DataTable
     Sub Load_DataBahan()
-        list_bahan = proses.ExecuteQuery("SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan INNER JOIN log_bahan ON (BAHAN.BAHANID = LOG_BAHAN.BAHANID) ORDER BY log_bahan.MEMASUKKANDATE")
+        list_bahan = proses.ExecuteQuery("SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan where bahanstock > 0")
         DG_Bahan.DataSource = list_bahan
         DG_Bahan.Columns(0).Width = 60
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -19,7 +19,7 @@ Public Class FormCaribahanPesanan
         proses.OpenConn()
 
         Dim myadapter As New MySqlDataAdapter
-        Dim sqlquery = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan INNER JOIN log_bahan ON (BAHAN.BAHANID = LOG_BAHAN.BAHANID) ORDER BY log_bahan.MEMASUKKANDATE"
+        Dim sqlquery = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan where bahanstock > 0"
         Dim mycommand As New MySqlCommand
         mycommand.Connection = proses.Cn
         mycommand.CommandText = sqlquery
@@ -52,6 +52,8 @@ Public Class FormCaribahanPesanan
         FormPesanan.txt_bahan.Text = DG_Bahan.SelectedCells(1).Value
         FormPesanan.txt_harga.Text = DG_Bahan.SelectedCells(4).Value
         FormPesanan.kode_bahan = DG_Bahan.SelectedCells(0).Value
+        FormPesanan.txt_stock.Text = DG_Bahan.SelectedCells(2).Value
+        FormPesanan.lbl_qty.Text = "Qty (" + DG_Bahan.SelectedCells(3).Value + ")"
         Me.Close()
     End Sub
 
