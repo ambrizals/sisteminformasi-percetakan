@@ -47,8 +47,14 @@ Public Class FormPesanan
         Dim kd_tsk As String
         Dim loncat As Integer
         Try
-            sql = "INSERT INTO pesanan (ORDERID, KARYAWANID, ORDERCONSUMER, ORDERCONSUMERTELP, ORDERSTATUS, ORDERTOTAL, ORDERBAYAR) VALUES ('" + txt_kodepesanan.Text + "', '" + kry_id + "', '" + txt_namacustomer.Text + "', '" + txt_nomorteleponcust.Text + "', 'PENDING', '" + lbl_grandtotal.Text.Remove(0, 3) + "', '" + ord_bayar.ToString + "')"
+            sql = "INSERT INTO pesanan (ORDERID, ORDERCONSUMER, ORDERCONSUMERTELP, ORDERSTATUS, ORDERTOTAL, ORDERBAYAR) VALUES ('" + txt_kodepesanan.Text + "', '" + txt_namacustomer.Text + "', '" + txt_nomorteleponcust.Text + "', 'PENDING', '" + lbl_grandtotal.Text.Remove(0, 3) + "', '" + ord_bayar.ToString + "')"
             proses.ExecuteNonQuery(sql)
+            Try
+                sql = "insert into log_pesanan values ('" + kry_id + "','" + txt_kodepesanan.Text + "','" + tanggal + "','Membuat Pesanan')"
+                proses.ExecuteNonQuery(sql)
+            Catch ex As Exception
+                MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+            End Try
         Catch ex As Exception
             MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
         End Try

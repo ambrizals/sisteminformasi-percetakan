@@ -116,3 +116,5 @@ C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateRes
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.exe
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.xml
 C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.pdb
+C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormJobpendingPanel.resources
+C:\Users\sabun\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormProsesjobPanel.resources

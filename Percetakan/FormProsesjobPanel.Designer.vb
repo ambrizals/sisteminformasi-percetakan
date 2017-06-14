@@ -25,9 +25,9 @@ Partial Class FormProsesjobPanel
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.BtnPending = New System.Windows.Forms.Button()
+        Me.BtnSelesai = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -85,9 +85,9 @@ Partial Class FormProsesjobPanel
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34445!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34445!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.3111!))
-        Me.TableLayoutPanel3.Controls.Add(Me.Button3, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Button2, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Button1, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnCancel, 2, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnPending, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnSelesai, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(396, 0)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
@@ -96,35 +96,35 @@ Partial Class FormProsesjobPanel
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(328, 49)
         Me.TableLayoutPanel3.TabIndex = 0
         '
-        'Button3
+        'BtnCancel
         '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.Location = New System.Drawing.Point(221, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(104, 43)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Cancel"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnCancel.Location = New System.Drawing.Point(221, 3)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(104, 43)
+        Me.BtnCancel.TabIndex = 2
+        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BtnPending
         '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.Location = New System.Drawing.Point(112, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 43)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Pending"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnPending.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnPending.Location = New System.Drawing.Point(112, 3)
+        Me.BtnPending.Name = "BtnPending"
+        Me.BtnPending.Size = New System.Drawing.Size(103, 43)
+        Me.BtnPending.TabIndex = 1
+        Me.BtnPending.Text = "Pending"
+        Me.BtnPending.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BtnSelesai
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(103, 43)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Selesai"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnSelesai.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnSelesai.Location = New System.Drawing.Point(3, 3)
+        Me.BtnSelesai.Name = "BtnSelesai"
+        Me.BtnSelesai.Size = New System.Drawing.Size(103, 43)
+        Me.BtnSelesai.TabIndex = 0
+        Me.BtnSelesai.Text = "Selesai"
+        Me.BtnSelesai.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel1
         '
@@ -470,7 +470,7 @@ Partial Class FormProsesjobPanel
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents lbl_pesananstatus As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents BtnCancel As System.Windows.Forms.Button
+    Friend WithEvents BtnPending As System.Windows.Forms.Button
+    Friend WithEvents BtnSelesai As System.Windows.Forms.Button
 End Class

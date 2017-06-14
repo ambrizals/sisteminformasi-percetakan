@@ -73,4 +73,37 @@ Public Class FormProsesjobPanel
             End If
         End If
     End Sub
+
+
+    Private Sub BtnSelesai_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSelesai.Click
+        Dim loncat, maks_loncat, nilai_loncat As Integer
+        If MsgBox("Apakah pesanan telah selesai ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
+            Try
+                maks_loncat = DG_DaftarJob.RowCount - 1
+                nilai_loncat = -1
+                For loncat = 0 To maks_loncat
+                    If DG_DaftarJob.Rows(loncat).Cells(4).Value.ToString = "FINISH" Then
+                        nilai_loncat = nilai_loncat + 1
+                    Else
+                        nilai_loncat = nilai_loncat
+                    End If
+                Next
+                If nilai_loncat = maks_loncat Then
+                    Try
+                        sql = "UPDATE pesanan SET ORDERSTATUS='FINISH' WHERE ORDERID='" + kode_order + "'"
+                        proses.ExecuteNonQuery(sql)
+                        MsgBox("Pesanan telah diselesaikan, harap hubungi costumer untuk pengambilan barang", MsgBoxStyle.Information, "Info")
+                        FormJobList.load_tabel()
+                        Me.Close()
+                    Catch ex As Exception
+                        MsgBox("Terjadi Kesalahan " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
+                    End Try
+                Else
+                    MsgBox("Terdapat pesanan yang belum diselesaikan", MsgBoxStyle.Critical, "Error")
+                End If
+            Catch ex As Exception
+                MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+            End Try
+        End If
+    End Sub
 End Class

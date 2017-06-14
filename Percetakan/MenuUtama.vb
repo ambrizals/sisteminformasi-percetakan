@@ -138,34 +138,34 @@
         Connect()
     End Sub
     Private Sub BtnKaryawan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnKaryawan.Click
-        Try
-            If str_status > 0 Then
-                proses.OpenConn()
-                FormKaryawan.ShowDialog()
-                proses.CloseConn()
-            Else
-                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-                str_status = 0
-            End If
-        Catch ex As Exception
-            MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut \n" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
-            Connect()
-        End Try
+        'Try
+        If str_status > 0 Then
+            proses.OpenConn()
+            FormKaryawan.ShowDialog()
+            proses.CloseConn()
+        Else
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            str_status = 0
+        End If
+        'Catch ex As Exception
+        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut \n" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+        'Connect()
+        'End Try
     End Sub
     Private Sub BtnJobList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnJobList.Click
-        Try
-            If str_status > 0 Then
-                proses.OpenConn()
-                FormJobList.ShowDialog()
-                proses.CloseConn()
-            Else
-                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-                str_status = 0
-            End If
-        Catch ex As Exception
-            MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
-            Connect()
-        End Try
+        'Try
+        If str_status > 0 Then
+            proses.OpenConn()
+            FormJobList.ShowDialog()
+            proses.CloseConn()
+        Else
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            str_status = 0
+        End If
+        'Catch ex As Exception
+        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+        'Connect()
+        'End Try
     End Sub
     Private Sub BtnAbsensi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAbsensi.Click
         Try

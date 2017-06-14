@@ -6,48 +6,39 @@ Public Class FormJobList
     Dim query As String
 
     Sub load_tblpending()
-        tbl_pending = proses.ExecuteQuery("SELECT tasklist.taskid AS 'ID Task', bahan.bahanname AS 'Bahan', tasklist.orderid AS 'ID Order', tasklist.taskname AS 'Deskripsi', tasklist.taskqty AS 'Qty', tasklist.taskstatus AS 'Status' FROM tasklist INNER JOIN bahan ON (tasklist.bahanid = bahan.bahanid) WHERE tasklist.taskstatus = 'Pending'")
+        tbl_pending = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where orderstatus = 'PENDING'")
         DG_Pending.DataSource = tbl_pending
         DG_Pending.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
         DG_Pending.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DG_Pending.Columns(0).Width = 80
-        DG_Pending.Columns(1).Width = 100
-        DG_Pending.Columns(2).Width = 80
-        DG_Pending.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Pending.Columns(4).Width = 50
-        DG_Pending.Columns(5).Width = 100
+        DG_Pending.Columns(0).Width = 100
+        DG_Pending.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_Pending.Columns(2).Width = 100
 
         job_pending.Text = "Pending (" + DG_Pending.RowCount.ToString + ")"
     End Sub
 
     Sub load_tblproses()
-        tbl_proses = proses.ExecuteQuery("SELECT tasklist.taskid AS 'ID Task', bahan.bahanname AS 'Bahan', tasklist.orderid AS 'ID Order', tasklist.taskname AS 'Deskripsi', tasklist.taskqty AS 'Qty', tasklist.taskstatus AS 'Status' FROM tasklist INNER JOIN bahan ON (tasklist.bahanid = bahan.bahanid) WHERE tasklist.taskstatus = 'Proses'")
+        tbl_proses = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where orderstatus = 'PROSES'")
         DG_Proses.DataSource = tbl_proses
         DG_Proses.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
         DG_Proses.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DG_Proses.Columns(0).Width = 80
-        DG_Proses.Columns(1).Width = 100
-        DG_Proses.Columns(2).Width = 80
-        DG_Proses.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Proses.Columns(4).Width = 50
-        DG_Proses.Columns(5).Width = 100
+        DG_Proses.Columns(0).Width = 100
+        DG_Proses.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_Proses.Columns(2).Width = 100
 
         job_process.Text = "Proses (" + DG_Proses.RowCount.ToString + ")"
     End Sub
 
     Sub load_tblfinish()
-        tbl_finish = proses.ExecuteQuery("SELECT tasklist.taskid AS 'ID Task', bahan.bahanname AS 'Bahan', tasklist.orderid AS 'ID Order', tasklist.taskname AS 'Deskripsi', tasklist.taskqty AS 'Qty', tasklist.taskstatus AS 'Status' FROM tasklist INNER JOIN bahan ON (tasklist.bahanid = bahan.bahanid) WHERE tasklist.taskstatus = 'Finish'")
+        tbl_finish = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where orderstatus = 'FINISH'")
         DG_Finish.DataSource = tbl_finish
         DG_Finish.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
         DG_Finish.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DG_Finish.Columns(0).Width = 80
-        DG_Finish.Columns(1).Width = 100
-        DG_Finish.Columns(2).Width = 80
-        DG_Finish.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Finish.Columns(4).Width = 50
-        DG_Finish.Columns(5).Width = 100
+        DG_Finish.Columns(0).Width = 100
+        DG_Finish.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_Finish.Columns(2).Width = 100
 
-        job_finish.Text = "Proses (" + DG_Finish.RowCount.ToString + ")"
+        job_finish.Text = "Finish (" + DG_Finish.RowCount.ToString + ")"
     End Sub
     Sub load_tabel()
         load_tblpending()
@@ -60,47 +51,11 @@ Public Class FormJobList
     End Sub
 
     Private Sub DG_Pending_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Pending.DoubleClick
-        If MsgBox("Ingin melakukan proses pada pesanan ini ?", MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
-            Try
-                query = "UPDATE tasklist SET TASKSTATUS = 'Proses' WHERE TASKID = '" + DG_Pending.SelectedCells(0).Value.ToString + "'"
-                proses.ExecuteNonQuery(query)
-                Try
-                    query = "INSERT INTO log_joblist (KARYAWANID, TASKID, PROSESDATE, PROSESSTATUS) VALUES ('" + kry_id + "', '" + DG_Pending.SelectedCells(0).Value.ToString + "', '" + tanggal + "', 'Memproses Pesanan')"
-                    proses.ExecuteNonQuery(query)
-                Catch ex As Exception
-                    MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
-                End Try
-                MsgBox("Status pesanan dirubah", MsgBoxStyle.Information, "Info")
-                load_tabel()
-                job_process.Focus()
-            Catch ex As Exception
-                MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
-            End Try
-        Else
-            MsgBox("Pesanan tidak diproses", MsgBoxStyle.Information, "Info")
-        End If
+        FormJobpendingPanel.ShowDialog()
     End Sub
 
     Private Sub DG_Proses_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Proses.DoubleClick
-        If MsgBox("Apakah pesanan ini telah diproses ?", MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
-            Try
-                query = "UPDATE tasklist SET TASKSTATUS = 'Finish' WHERE TASKID = '" + DG_Proses.SelectedCells(0).Value.ToString + "'"
-                proses.ExecuteNonQuery(query)
-                Try
-                    query = "INSERT INTO log_joblist (KARYAWANID, TASKID, PROSESDATE, PROSESSTATUS) VALUES ('" + kry_id + "', '" + DG_Pending.SelectedCells(0).Value.ToString + "', '" + tanggal + "', 'Pesanan diselesaikan')"
-                    proses.ExecuteNonQuery(query)
-                Catch ex As Exception
-                    MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
-                End Try
-                MsgBox("Status pesanan dirubah", MsgBoxStyle.Information, "Info")
-                load_tabel()
-                job_finish.Focus()
-            Catch ex As Exception
-                MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
-            End Try
-        Else
-            MsgBox("Pesanan tidak diproses", MsgBoxStyle.Information, "Info")
-        End If
+        FormProsesjobPanel.ShowDialog()
     End Sub
 
     Private Sub Btn_CariPending_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_CariPending.Click
@@ -151,5 +106,9 @@ Public Class FormJobList
 
     Private Sub btn_refresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_refresh.Click
         load_tabel()
+    End Sub
+
+    Private Sub DG_Pending_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_Pending.CellContentClick
+
     End Sub
 End Class

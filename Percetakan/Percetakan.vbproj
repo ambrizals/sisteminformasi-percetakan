@@ -143,6 +143,12 @@
     <Compile Include="FormJobList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormJobpendingPanel.Designer.vb">
+      <DependentUpon>FormJobpendingPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormJobpendingPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormKaryawan.Designer.vb">
       <DependentUpon>FormKaryawan.vb</DependentUpon>
     </Compile>
@@ -159,6 +165,12 @@
       <DependentUpon>FormPesanan.vb</DependentUpon>
     </Compile>
     <Compile Include="FormPesanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProsesjobPanel.Designer.vb">
+      <DependentUpon>FormProsesjobPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormProsesjobPanel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global.vb" />
@@ -230,6 +242,9 @@
     <EmbeddedResource Include="FormJobList.resx">
       <DependentUpon>FormJobList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormJobpendingPanel.resx">
+      <DependentUpon>FormJobpendingPanel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKaryawan.resx">
       <DependentUpon>FormKaryawan.vb</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesanan.resx">
       <DependentUpon>FormPesanan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProsesjobPanel.resx">
+      <DependentUpon>FormProsesjobPanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
