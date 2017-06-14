@@ -31,7 +31,7 @@ CREATE TABLE `absensi` (
 
 /*Data for the table `absensi` */
 
-insert  into `absensi`(`karyawanID`,`absensiDATE`,`absensiTIME`,`absensiSTATUS`) values ('KRY-1','2017-06-08','14:05:09','Masuk'),('KRY-1','2017-06-10','18:36:04','Masuk'),('KRY-2','2017-06-10','19:07:09','Masuk'),('KRY-1','2017-06-11','22:48:48','Masuk');
+insert  into `absensi`(`karyawanID`,`absensiDATE`,`absensiTIME`,`absensiSTATUS`) values ('KRY-1','2017-06-08','14:05:09','Masuk'),('KRY-1','2017-06-10','18:36:04','Masuk'),('KRY-2','2017-06-10','19:07:09','Masuk'),('KRY-1','2017-06-11','22:48:48','Masuk'),('KRY-1','2017-06-14','08:31:06','Masuk');
 
 /*Table structure for table `bahan` */
 
@@ -48,7 +48,7 @@ CREATE TABLE `bahan` (
 
 /*Data for the table `bahan` */
 
-insert  into `bahan`(`BAHANID`,`BAHANNAME`,`BAHANSTOCK`,`BAHANUNIT`,`BAHANHARGA`) values ('BHN - 1','Bahan satu',3,'Meter',2000),('BHN - 10','Stiker Vinly (Kertas)',100,'Meter',10000),('BHN - 11','Stiker Bontak (Kertas)',100,'Unit',10000),('BHN - 12','Stiker Vinly Dop',20,'Unit',10000),('BHN - 13','Stiker Vinly (Outdoor)',7,'Meter',40000),('BHN - 14','Stiker Oneway',20,'Meter',50000),('BHN - 15','Mata Ayam',100,'Meter',500),('BHN - 2','Bahan Dua',20,'Meter',2000),('BHN - 3','Bahan Tiga',30,'Meter',2000),('BHN - 4','Bahan empat',4,'Meter',2000),('BHN - 5','Bahan lima',4,'Meter',1000),('BHN - 6','Bahan enam',-2,'Meter',15000),('BHN - 7','Spanduk Standard',100,'Meter',14000),('BHN - 8','Spanduk Ritrama',20,'Meter',20000),('BHN - 9','Spanduk Backlit',110,'Meter',40000);
+insert  into `bahan`(`BAHANID`,`BAHANNAME`,`BAHANSTOCK`,`BAHANUNIT`,`BAHANHARGA`) values ('BHN - 1','Bahan satu',3,'Meter',2000),('BHN - 10','Stiker Vinly (Kertas)',56,'Meter',10000),('BHN - 11','Stiker Bontak (Kertas)',90,'Unit',10000),('BHN - 12','Stiker Vinly Dop',20,'Unit',10000),('BHN - 13','Stiker Vinly (Outdoor)',2,'Meter',40000),('BHN - 14','Stiker Oneway',6,'Meter',50000),('BHN - 15','Mata Ayam',100,'Meter',500),('BHN - 2','Bahan Dua',16,'Meter',2000),('BHN - 3','Bahan Tiga',30,'Meter',2000),('BHN - 4','Bahan empat',4,'Meter',2000),('BHN - 5','Bahan lima',4,'Meter',1000),('BHN - 6','Bahan enam',-2,'Meter',15000),('BHN - 7','Spanduk Standard',100,'Meter',14000),('BHN - 8','Spanduk Ritrama',20,'Meter',20000),('BHN - 9','Spanduk Backlit',110,'Meter',40000);
 
 /*Table structure for table `cuti` */
 
@@ -158,7 +158,7 @@ CREATE TABLE `pengaturan` (
 
 /*Data for the table `pengaturan` */
 
-insert  into `pengaturan`(`pengaturanName`,`pengaturanIsi`) values ('pengumuman','Aplikasi ini sedang dalam pengembangan :)\nVersi : 0.2.6\n\n----------------------------------\n\nKekurangan  : Form Laporan belum tersedia');
+insert  into `pengaturan`(`pengaturanName`,`pengaturanIsi`) values ('pengumuman','Aplikasi ini sedang dalam pengembangan :)\nVersi : 0.2.7\n\n----------------------------------\n\nKekurangan  : Form Laporan belum tersedia');
 
 /*Table structure for table `pesanan` */
 
@@ -179,7 +179,7 @@ CREATE TABLE `pesanan` (
 
 /*Data for the table `pesanan` */
 
-insert  into `pesanan`(`ORDERID`,`KARYAWANID`,`ORDERCONSUMER`,`ORDERCONSUMERTELP`,`ORDERSTATUS`,`ORDERTOTAL`,`ORDERBAYAR`) values ('ORD-1','KRY-1','Anggun','0812345678','PENDING',650000,325000),('ORD-2','KRY-1','Agus','08112345','PENDING',56000,56000),('ORD-3','KRY-1','Rafli','081234221','PENDING',68000,34000),('ORD-4','KRY-1','Agus','0811234569','PENDING',75000,37500);
+insert  into `pesanan`(`ORDERID`,`KARYAWANID`,`ORDERCONSUMER`,`ORDERCONSUMERTELP`,`ORDERSTATUS`,`ORDERTOTAL`,`ORDERBAYAR`) values ('ORD-1','KRY-1','Anggun','0812345678','PENDING',650000,325000),('ORD-2','KRY-1','Agus','08112345','PENDING',56000,56000),('ORD-3','KRY-1','Rafli','081234221','PENDING',68000,34000),('ORD-4','KRY-1','Agus','0811234569','PENDING',75000,37500),('ORD-5','KRY-1','Agus Sudana','0811234901','PENDING',800000,400000),('ORD-6','KRY-1','asdas','123412','PENDING',448000,224000);
 
 /*Table structure for table `tasklist` */
 
@@ -202,7 +202,7 @@ CREATE TABLE `tasklist` (
 
 /*Data for the table `tasklist` */
 
-insert  into `tasklist`(`TASKID`,`BAHANID`,`ORDERID`,`TASKNAME`,`TASKQTY`,`TASKPRICE`,`TASKSTATUS`) values ('ORD-1-TLT-0','BHN - 10','ORD-1','Nama File : ituitu.png',10,100000,'Pending'),('ORD-1-TLT-1','BHN - 8','ORD-1','Nama File : iniitu,png; udah',20,400000,'Finish'),('ORD-1-TLT-2','BHN - 6','ORD-1','Coba aja ya',10,150000,'Proses'),('ORD-2-TLT-0','BHN - 7','ORD-2','Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok',4,56000,'Proses'),('ORD-3-TLT-0','BHN - 8','ORD-3','Mata ayam fojok fojok',2,40000,'Proses'),('ORD-3-TLT-1','BHN - 7','ORD-3','Mata ayam fojok - fojok',2,28000,'Pending'),('ORD-4-TLT-0','BHN - 6','ORD-4','Ini itu aja',5,75000,'Pending');
+insert  into `tasklist`(`TASKID`,`BAHANID`,`ORDERID`,`TASKNAME`,`TASKQTY`,`TASKPRICE`,`TASKSTATUS`) values ('ORD-1-TLT-0','BHN - 10','ORD-1','Nama File : ituitu.png',10,100000,'Pending'),('ORD-1-TLT-1','BHN - 8','ORD-1','Nama File : iniitu,png; udah',20,400000,'Finish'),('ORD-1-TLT-2','BHN - 6','ORD-1','Coba aja ya',10,150000,'Proses'),('ORD-2-TLT-0','BHN - 7','ORD-2','Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok',4,56000,'Proses'),('ORD-3-TLT-0','BHN - 8','ORD-3','Mata ayam fojok fojok',2,40000,'Proses'),('ORD-3-TLT-1','BHN - 7','ORD-3','Mata ayam fojok - fojok',2,28000,'Pending'),('ORD-4-TLT-0','BHN - 6','ORD-4','Ini itu aja',5,75000,'Pending'),('ORD-5-TLT-0','BHN - 10','ORD-5','Oke oce gan.',40,400000,'Pending'),('ORD-6-TLT-0','BHN - 14','ORD-6','Begini satu',4,200000,'Pending'),('ORD-6-TLT-1','BHN - 13','ORD-6','Begini dua',5,200000,'Pending'),('ORD-6-TLT-2','BHN - 10','ORD-6','Begini - begini',4,40000,'Pending'),('ORD-6-TLT-3','BHN - 2','ORD-6','Ayoo',4,8000,'Pending');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

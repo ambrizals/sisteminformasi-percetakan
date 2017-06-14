@@ -200,19 +200,19 @@
     End Sub
 
     Private Sub BtnPesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click
-        Try
-            If str_status > 0 Then
-                proses.OpenConn()
-                FormPesanan.ShowDialog()
-                proses.CloseConn()
-            Else
-                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-                str_status = 0
-            End If
-        Catch ex As Exception
-            MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
-            Connect()
-        End Try
+        'Try
+        If str_status > 0 Then
+            proses.OpenConn()
+            FormPesanan.ShowDialog()
+            proses.CloseConn()
+        Else
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            str_status = 0
+        End If
+        'Catch ex As Exception
+        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+        'Connect()
+        'End Try
     End Sub
     Private Sub BtnSimpanPengumuman_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpanPengumuman.Click
         Try

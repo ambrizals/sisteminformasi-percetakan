@@ -4,7 +4,7 @@ Imports System.Data
 
 Public Class FormPesanan
     Public kode_pesan, kode_bahan, qty_sisa, sql As String
-    Public prefix_kode_pesan, row_total As Integer
+    Public prefix_kode_pesan, row_total, stock_bahan As Integer
     Public ord_qty, ord_harga, ord_total, ord_bayar As Double
     Dim proses As New ClsKoneksi
 
@@ -72,6 +72,34 @@ Public Class FormPesanan
         MsgBox("Transaksi Sukses", MsgBoxStyle.Information, "Info")
         reset()
     End Sub
+    Private Sub baca_stock()
+        proses.OpenConn()
+        sql = "SELECT BAHANSTOCK FROM BAHAN WHERE BAHANID = '" + DG_ListBuatPesan.SelectedCells(0).Value.ToString + "'"
+        proses.command.Connection = proses.Cn
+        proses.command.CommandText = sql
+        proses.Da.SelectCommand = proses.command
+        proses.read = proses.command.ExecuteReader()
+        If proses.read.HasRows = True Then
+            'Kode disini.
+            proses.read.Read()
+            stock_bahan = proses.read("BAHANSTOCK")
+        End If
+        proses.CloseConn()
+    End Sub
+    Private Sub baca_stock_1()
+        proses.OpenConn()
+        sql = "SELECT BAHANSTOCK FROM BAHAN WHERE BAHANID = '" + kode_bahan + "'"
+        proses.command.Connection = proses.Cn
+        proses.command.CommandText = sql
+        proses.Da.SelectCommand = proses.command
+        proses.read = proses.command.ExecuteReader()
+        If proses.read.HasRows = True Then
+            'Kode disini.
+            proses.read.Read()
+            stock_bahan = proses.read("BAHANSTOCK")
+        End If
+        proses.CloseConn()
+    End Sub
 
     Private Sub FormPesanan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         DG_ListBuatPesan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
@@ -94,6 +122,15 @@ Public Class FormPesanan
                     If (Val(txt_stock.Text - txt_qty.Text) < 0) = True Then
                         MsgBox("Stok Barang Kurang", MsgBoxStyle.Information, "Error")
                     Else
+                        Try
+                            Dim stck As Double
+                            baca_stock_1()
+                            stck = Val(stock_bahan - txt_qty.Text)
+                            sql = "UPDATE BAHAN SET BAHANSTOCK='" + stck.ToString + "' WHERE BAHANID='" + kode_bahan + "'"
+                            proses.ExecuteNonQuery(sql)
+                        Catch ex As Exception
+                            MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
+                        End Try
                         ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
                         DG_ListBuatPesan.Rows.Add(kode_bahan, txt_bahan.Text, txt_stock.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
                         lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) + ord_total).ToString
@@ -132,6 +169,14 @@ Public Class FormPesanan
     Private Sub HapusPesananToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HapusPesananToolStripMenuItem.Click
         Dim row As DataGridViewRow
         lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(6).Value).ToString
+        Try
+            baca_stock()
+            Dim stck = Val(stock_bahan + DG_ListBuatPesan.SelectedCells(4).Value.ToString)
+            sql = "UPDATE BAHAN SET BAHANSTOCK='" + stck.ToString + "' WHERE BAHANID='" + DG_ListBuatPesan.SelectedCells(0).Value.ToString + "'"
+            proses.ExecuteNonQuery(sql)
+        Catch ex As Exception
+            MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
         For Each row In DG_ListBuatPesan.SelectedRows
             DG_ListBuatPesan.Rows.Remove(row)
         Next
@@ -151,8 +196,16 @@ Public Class FormPesanan
             MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
         Else
             lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(6).Value).ToString
-            txt_bahan.Text = DG_ListBuatPesan.SelectedCells(0).Value
-            txt_stock.Text = DG_ListBuatPesan.SelectedCells(2).Value
+            txt_bahan.Text = DG_ListBuatPesan.SelectedCells(1).Value
+            kode_bahan = DG_ListBuatPesan.SelectedCells(0).Value
+            Try
+                baca_stock()
+                txt_stock.Text = Val(stock_bahan + DG_ListBuatPesan.SelectedCells(4).Value.ToString)
+                sql = "UPDATE BAHAN SET BAHANSTOCK='" + txt_stock.Text + "' WHERE BAHANID='" + DG_ListBuatPesan.SelectedCells(0).Value.ToString + "'"
+                proses.ExecuteNonQuery(sql)
+            Catch ex As Exception
+                MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
+            End Try
             txt_deskripsi.Text = DG_ListBuatPesan.SelectedCells(3).Value
             txt_qty.Text = DG_ListBuatPesan.SelectedCells(4).Value
             txt_harga.Text = DG_ListBuatPesan.SelectedCells(5).Value
