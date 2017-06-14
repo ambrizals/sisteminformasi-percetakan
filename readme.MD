@@ -22,7 +22,8 @@ Download Repository
 
 # Catatan Penting
 
-- WIP : Absensi pada form login
+- Kekurangan : Form Laporan belum tersedia
+- Kekurangan : Form absensi belum sepenuhnya berfungsi
 
 # Persiapan
 
