@@ -48,7 +48,7 @@ CREATE TABLE `bahan` (
 
 /*Data for the table `bahan` */
 
-insert  into `bahan`(`BAHANID`,`BAHANNAME`,`BAHANSTOCK`,`BAHANUNIT`,`BAHANHARGA`) values ('BHN - 1','Bahan satu',3,'Meter',2000),('BHN - 10','Stiker Vinly (Kertas)',56,'Meter',10000),('BHN - 11','Stiker Bontak (Kertas)',90,'Unit',10000),('BHN - 12','Stiker Vinly Dop',20,'Unit',10000),('BHN - 13','Stiker Vinly (Outdoor)',2,'Meter',40000),('BHN - 14','Stiker Oneway',6,'Meter',50000),('BHN - 15','Mata Ayam',100,'Meter',500),('BHN - 2','Bahan Dua',16,'Meter',2000),('BHN - 3','Bahan Tiga',30,'Meter',2000),('BHN - 4','Bahan empat',4,'Meter',2000),('BHN - 5','Bahan lima',4,'Meter',1000),('BHN - 6','Bahan enam',-2,'Meter',15000),('BHN - 7','Spanduk Standard',100,'Meter',14000),('BHN - 8','Spanduk Ritrama',20,'Meter',20000),('BHN - 9','Spanduk Backlit',110,'Meter',40000);
+insert  into `bahan`(`BAHANID`,`BAHANNAME`,`BAHANSTOCK`,`BAHANUNIT`,`BAHANHARGA`) values ('BHN - 1','Bahan satu',3,'Meter',2000),('BHN - 10','Stiker Vinly (Kertas)',56,'Meter',10000),('BHN - 11','Stiker Bontak (Kertas)',70,'Unit',10000),('BHN - 12','Stiker Vinly Dop',0,'Unit',10000),('BHN - 13','Stiker Vinly (Outdoor)',2,'Meter',40000),('BHN - 14','Stiker Oneway',6,'Meter',50000),('BHN - 15','Mata Ayam',100,'Meter',500),('BHN - 2','Bahan Dua',16,'Meter',2000),('BHN - 3','Bahan Tiga',30,'Meter',2000),('BHN - 4','Bahan empat',4,'Meter',2000),('BHN - 5','Bahan lima',4,'Meter',1000),('BHN - 6','Bahan enam',-2,'Meter',15000),('BHN - 7','Spanduk Standard',100,'Meter',14000),('BHN - 8','Spanduk Ritrama',20,'Meter',20000),('BHN - 9','Spanduk Backlit',110,'Meter',40000);
 
 /*Table structure for table `cuti` */
 
@@ -130,21 +130,36 @@ insert  into `log_bahan`(`MEMASUKKANID`,`KARYAWANID`,`BAHANID`,`MEMASUKKANDATE`,
 DROP TABLE IF EXISTS `log_joblist`;
 
 CREATE TABLE `log_joblist` (
-  `PROSESID` int(11) NOT NULL AUTO_INCREMENT,
   `KARYAWANID` varchar(10) NOT NULL,
   `TASKID` varchar(30) NOT NULL,
   `PROSESDATE` datetime NOT NULL,
   `PROSESSTATUS` varchar(30) NOT NULL,
-  PRIMARY KEY (`PROSESID`),
   KEY `FK_DAPAT` (`KARYAWANID`),
   KEY `FK_MENGATUR` (`TASKID`),
   CONSTRAINT `FK_DAPAT` FOREIGN KEY (`KARYAWANID`) REFERENCES `karyawan` (`KARYAWANID`),
   CONSTRAINT `FK_MENGATUR` FOREIGN KEY (`TASKID`) REFERENCES `tasklist` (`TASKID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `log_joblist` */
 
-insert  into `log_joblist`(`PROSESID`,`KARYAWANID`,`TASKID`,`PROSESDATE`,`PROSESSTATUS`) values (1,'KRY-2','ORD-1-TLT-2','2017-06-10 19:14:13','Memproses Pesanan'),(2,'KRY-2','ORD-3-TLT-0','2017-06-10 19:14:13','Memproses Pesanan'),(3,'KRY-2','ORD-1-TLT-1','2017-06-10 19:14:13','Memproses Pesanan'),(4,'KRY-2','ORD-1-TLT-0','2017-06-10 19:14:13','Pesanan diselesaikan');
+/*Table structure for table `log_pesanan` */
+
+DROP TABLE IF EXISTS `log_pesanan`;
+
+CREATE TABLE `log_pesanan` (
+  `karyawanID` varchar(10) NOT NULL,
+  `orderID` varchar(10) NOT NULL,
+  `logDate` datetime NOT NULL,
+  `logStatus` varchar(30) NOT NULL,
+  KEY `FK_Log_OrderID` (`orderID`),
+  KEY `FK_Log_KaryawanID` (`karyawanID`),
+  CONSTRAINT `FK_Log_KaryawanID` FOREIGN KEY (`karyawanID`) REFERENCES `karyawan` (`KARYAWANID`),
+  CONSTRAINT `FK_Log_OrderID` FOREIGN KEY (`orderID`) REFERENCES `pesanan` (`ORDERID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `log_pesanan` */
+
+insert  into `log_pesanan`(`karyawanID`,`orderID`,`logDate`,`logStatus`) values ('KRY-1','ORD-1','2017-06-14 20:25:20','Membuat Pesanan');
 
 /*Table structure for table `pengaturan` */
 
@@ -158,7 +173,7 @@ CREATE TABLE `pengaturan` (
 
 /*Data for the table `pengaturan` */
 
-insert  into `pengaturan`(`pengaturanName`,`pengaturanIsi`) values ('pengumuman','Aplikasi ini sedang dalam pengembangan :)\nVersi : 0.2.7\n\n----------------------------------\n\nKekurangan  : Form Laporan belum tersedia');
+insert  into `pengaturan`(`pengaturanName`,`pengaturanIsi`) values ('pengumuman','Aplikasi ini sedang dalam pengembangan :)\nVersi : 0.2.8\n\n----------------------------------\n\nKekurangan  : Form Laporan belum tersedia\nKekurangan : Form JobList belum Fix');
 
 /*Table structure for table `pesanan` */
 
@@ -166,20 +181,17 @@ DROP TABLE IF EXISTS `pesanan`;
 
 CREATE TABLE `pesanan` (
   `ORDERID` varchar(10) NOT NULL,
-  `KARYAWANID` varchar(10) NOT NULL,
   `ORDERCONSUMER` varchar(30) NOT NULL,
   `ORDERCONSUMERTELP` varchar(13) NOT NULL,
   `ORDERSTATUS` varchar(20) NOT NULL,
   `ORDERTOTAL` int(11) NOT NULL,
   `ORDERBAYAR` int(11) NOT NULL,
-  PRIMARY KEY (`ORDERID`),
-  KEY `FK_MELAKUKAN` (`KARYAWANID`),
-  CONSTRAINT `FK_MELAKUKAN` FOREIGN KEY (`KARYAWANID`) REFERENCES `karyawan` (`KARYAWANID`)
+  PRIMARY KEY (`ORDERID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `pesanan` */
 
-insert  into `pesanan`(`ORDERID`,`KARYAWANID`,`ORDERCONSUMER`,`ORDERCONSUMERTELP`,`ORDERSTATUS`,`ORDERTOTAL`,`ORDERBAYAR`) values ('ORD-1','KRY-1','Anggun','0812345678','PENDING',650000,325000),('ORD-2','KRY-1','Agus','08112345','PENDING',56000,56000),('ORD-3','KRY-1','Rafli','081234221','PENDING',68000,34000),('ORD-4','KRY-1','Agus','0811234569','PENDING',75000,37500),('ORD-5','KRY-1','Agus Sudana','0811234901','PENDING',800000,400000),('ORD-6','KRY-1','asdas','123412','PENDING',448000,224000);
+insert  into `pesanan`(`ORDERID`,`ORDERCONSUMER`,`ORDERCONSUMERTELP`,`ORDERSTATUS`,`ORDERTOTAL`,`ORDERBAYAR`) values ('ORD-1','Agus','081123456','PROSES',400000,400000);
 
 /*Table structure for table `tasklist` */
 
@@ -202,7 +214,7 @@ CREATE TABLE `tasklist` (
 
 /*Data for the table `tasklist` */
 
-insert  into `tasklist`(`TASKID`,`BAHANID`,`ORDERID`,`TASKNAME`,`TASKQTY`,`TASKPRICE`,`TASKSTATUS`) values ('ORD-1-TLT-0','BHN - 10','ORD-1','Nama File : ituitu.png',10,100000,'Pending'),('ORD-1-TLT-1','BHN - 8','ORD-1','Nama File : iniitu,png; udah',20,400000,'Finish'),('ORD-1-TLT-2','BHN - 6','ORD-1','Coba aja ya',10,150000,'Proses'),('ORD-2-TLT-0','BHN - 7','ORD-2','Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok, Finising Mata Ayam Pojok - Pojok',4,56000,'Proses'),('ORD-3-TLT-0','BHN - 8','ORD-3','Mata ayam fojok fojok',2,40000,'Proses'),('ORD-3-TLT-1','BHN - 7','ORD-3','Mata ayam fojok - fojok',2,28000,'Pending'),('ORD-4-TLT-0','BHN - 6','ORD-4','Ini itu aja',5,75000,'Pending'),('ORD-5-TLT-0','BHN - 10','ORD-5','Oke oce gan.',40,400000,'Pending'),('ORD-6-TLT-0','BHN - 14','ORD-6','Begini satu',4,200000,'Pending'),('ORD-6-TLT-1','BHN - 13','ORD-6','Begini dua',5,200000,'Pending'),('ORD-6-TLT-2','BHN - 10','ORD-6','Begini - begini',4,40000,'Pending'),('ORD-6-TLT-3','BHN - 2','ORD-6','Ayoo',4,8000,'Pending');
+insert  into `tasklist`(`TASKID`,`BAHANID`,`ORDERID`,`TASKNAME`,`TASKQTY`,`TASKPRICE`,`TASKSTATUS`) values ('ORD-1-TLT-0','BHN - 11','ORD-1','Stiker ini itu',20,200000,'FINISH'),('ORD-1-TLT-1','BHN - 12','ORD-1','Stiker ini itu',20,200000,'Pending');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
