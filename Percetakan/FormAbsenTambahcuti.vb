@@ -26,4 +26,8 @@
             End If
         End If
     End Sub
+
+    Private Sub FormAbsenTambahcuti_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        dt_mulai.Value = Today.Date.ToString
+    End Sub
 End Class

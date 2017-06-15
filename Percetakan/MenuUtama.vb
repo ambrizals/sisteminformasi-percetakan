@@ -73,7 +73,7 @@
     Sub absensi()
         proses.OpenConn()
         Try
-            query = ("SELECT * FROM cuti WHERE ((CURDATE() >= cutiMulai) & (CURDATE() <= cutiAkhir)) AND (karyawanID = 'KRY-1')")
+            query = ("SELECT * FROM cuti WHERE ((CURDATE() >= cutiMulai) & (CURDATE() <= cutiAkhir)) AND (karyawanID = '" + kry_id + "')")
             proses.Cmd.Connection = proses.Cn
             proses.Cmd.CommandText = query
             proses.Da.SelectCommand = proses.Cmd

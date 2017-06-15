@@ -77,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
+    <Compile Include="FormPesananDetail.Designer.vb">
+      <DependentUpon>FormPesananDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPesananDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormAbsenTambahcuti.Designer.vb">
       <DependentUpon>FormAbsenTambahcuti.vb</DependentUpon>
     </Compile>
@@ -209,6 +215,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormPesananDetail.resx">
+      <DependentUpon>FormPesananDetail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAbsenTambahcuti.resx">
       <DependentUpon>FormAbsenTambahcuti.vb</DependentUpon>
     </EmbeddedResource>

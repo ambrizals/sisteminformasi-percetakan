@@ -23,10 +23,10 @@ Partial Class FormPesanan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
@@ -82,6 +82,8 @@ Partial Class FormPesanan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnCari = New System.Windows.Forms.Button()
         Me.txt_ordersearch = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnRefresh = New System.Windows.Forms.Button()
         Me.cms_editpesannow = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.UbahDaftarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HapusPesananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -103,6 +105,7 @@ Partial Class FormPesanan
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DG_ListPesanan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.cms_editpesannow.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -358,15 +361,15 @@ Partial Class FormPesanan
         Me.DG_ListBuatPesan.MultiSelect = False
         Me.DG_ListBuatPesan.Name = "DG_ListBuatPesan"
         Me.DG_ListBuatPesan.ReadOnly = True
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        Me.DG_ListBuatPesan.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        Me.DG_ListBuatPesan.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.DG_ListBuatPesan.RowHeadersVisible = False
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DG_ListBuatPesan.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DG_ListBuatPesan.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.DG_ListBuatPesan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DG_ListBuatPesan.Size = New System.Drawing.Size(918, 209)
         Me.DG_ListBuatPesan.TabIndex = 2
@@ -388,8 +391,8 @@ Partial Class FormPesanan
         '
         'Stock
         '
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Stock.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Stock.DefaultCellStyle = DataGridViewCellStyle9
         Me.Stock.HeaderText = "Stock"
         Me.Stock.Name = "Stock"
         Me.Stock.ReadOnly = True
@@ -398,8 +401,8 @@ Partial Class FormPesanan
         'Deskripsi
         '
         Me.Deskripsi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Deskripsi.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Deskripsi.DefaultCellStyle = DataGridViewCellStyle10
         Me.Deskripsi.FillWeight = 15.46391!
         Me.Deskripsi.HeaderText = "Deskripsi"
         Me.Deskripsi.Name = "Deskripsi"
@@ -459,7 +462,7 @@ Partial Class FormPesanan
         Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 464.0!))
         Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111.0!))
-        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148.0!))
         Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel11.Controls.Add(Me.Label5, 1, 0)
         Me.TableLayoutPanel11.Controls.Add(Me.Label8, 0, 0)
@@ -484,7 +487,7 @@ Partial Class FormPesanan
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(142, 1)
+        Me.Label5.Location = New System.Drawing.Point(138, 1)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 22)
         Me.Label5.TabIndex = 12
@@ -497,7 +500,7 @@ Partial Class FormPesanan
         Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label8.Location = New System.Drawing.Point(4, 1)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(131, 22)
+        Me.Label8.Size = New System.Drawing.Size(127, 22)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Bahan"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -515,13 +518,13 @@ Partial Class FormPesanan
         Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
         Me.TableLayoutPanel12.RowCount = 1
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.65217!))
-        Me.TableLayoutPanel12.Size = New System.Drawing.Size(137, 27)
+        Me.TableLayoutPanel12.Size = New System.Drawing.Size(133, 27)
         Me.TableLayoutPanel12.TabIndex = 7
         '
         'BtnBahanSearch
         '
         Me.BtnBahanSearch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnBahanSearch.Location = New System.Drawing.Point(112, 3)
+        Me.BtnBahanSearch.Location = New System.Drawing.Point(108, 3)
         Me.BtnBahanSearch.Name = "BtnBahanSearch"
         Me.BtnBahanSearch.Size = New System.Drawing.Size(22, 21)
         Me.BtnBahanSearch.TabIndex = 2
@@ -534,13 +537,13 @@ Partial Class FormPesanan
         Me.txt_bahan.Location = New System.Drawing.Point(3, 3)
         Me.txt_bahan.Name = "txt_bahan"
         Me.txt_bahan.ReadOnly = True
-        Me.txt_bahan.Size = New System.Drawing.Size(103, 20)
+        Me.txt_bahan.Size = New System.Drawing.Size(99, 20)
         Me.txt_bahan.TabIndex = 1
         '
         'txt_stock
         '
         Me.txt_stock.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_stock.Location = New System.Drawing.Point(142, 27)
+        Me.txt_stock.Location = New System.Drawing.Point(138, 27)
         Me.txt_stock.Name = "txt_stock"
         Me.txt_stock.ReadOnly = True
         Me.txt_stock.Size = New System.Drawing.Size(44, 20)
@@ -549,7 +552,7 @@ Partial Class FormPesanan
         'txt_deskripsi
         '
         Me.txt_deskripsi.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_deskripsi.Location = New System.Drawing.Point(193, 27)
+        Me.txt_deskripsi.Location = New System.Drawing.Point(189, 27)
         Me.txt_deskripsi.Name = "txt_deskripsi"
         Me.txt_deskripsi.Size = New System.Drawing.Size(458, 20)
         Me.txt_deskripsi.TabIndex = 13
@@ -558,7 +561,7 @@ Partial Class FormPesanan
         '
         Me.Label9.AutoSize = True
         Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label9.Location = New System.Drawing.Point(193, 1)
+        Me.Label9.Location = New System.Drawing.Point(189, 1)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(458, 22)
         Me.Label9.TabIndex = 14
@@ -568,7 +571,7 @@ Partial Class FormPesanan
         'txt_qty
         '
         Me.txt_qty.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_qty.Location = New System.Drawing.Point(658, 27)
+        Me.txt_qty.Location = New System.Drawing.Point(654, 27)
         Me.txt_qty.Name = "txt_qty"
         Me.txt_qty.Size = New System.Drawing.Size(105, 20)
         Me.txt_qty.TabIndex = 15
@@ -577,7 +580,7 @@ Partial Class FormPesanan
         '
         Me.lbl_qty.AutoSize = True
         Me.lbl_qty.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbl_qty.Location = New System.Drawing.Point(658, 1)
+        Me.lbl_qty.Location = New System.Drawing.Point(654, 1)
         Me.lbl_qty.Name = "lbl_qty"
         Me.lbl_qty.Size = New System.Drawing.Size(105, 22)
         Me.lbl_qty.TabIndex = 16
@@ -588,18 +591,18 @@ Partial Class FormPesanan
         'txt_harga
         '
         Me.txt_harga.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_harga.Location = New System.Drawing.Point(770, 27)
+        Me.txt_harga.Location = New System.Drawing.Point(766, 27)
         Me.txt_harga.Name = "txt_harga"
-        Me.txt_harga.Size = New System.Drawing.Size(138, 20)
+        Me.txt_harga.Size = New System.Drawing.Size(142, 20)
         Me.txt_harga.TabIndex = 17
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label11.Location = New System.Drawing.Point(770, 1)
+        Me.Label11.Location = New System.Drawing.Point(766, 1)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(138, 22)
+        Me.Label11.Size = New System.Drawing.Size(142, 22)
         Me.Label11.TabIndex = 18
         Me.Label11.Text = "Harga"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -611,7 +614,7 @@ Partial Class FormPesanan
         Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.63889!))
         Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159.0!))
         Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173.0!))
-        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 216.0!))
+        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220.0!))
         Me.TableLayoutPanel13.Controls.Add(Me.BtnBayar, 2, 0)
         Me.TableLayoutPanel13.Controls.Add(Me.BtnCancel, 3, 0)
         Me.TableLayoutPanel13.Controls.Add(Me.BtnKembali, 4, 0)
@@ -628,7 +631,7 @@ Partial Class FormPesanan
         'BtnBayar
         '
         Me.BtnBayar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnBayar.Location = New System.Drawing.Point(372, 3)
+        Me.BtnBayar.Location = New System.Drawing.Point(368, 3)
         Me.BtnBayar.Name = "BtnBayar"
         Me.BtnBayar.Size = New System.Drawing.Size(153, 64)
         Me.BtnBayar.TabIndex = 0
@@ -638,7 +641,7 @@ Partial Class FormPesanan
         'BtnCancel
         '
         Me.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnCancel.Location = New System.Drawing.Point(531, 3)
+        Me.BtnCancel.Location = New System.Drawing.Point(527, 3)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(167, 64)
         Me.BtnCancel.TabIndex = 1
@@ -648,9 +651,9 @@ Partial Class FormPesanan
         'BtnKembali
         '
         Me.BtnKembali.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnKembali.Location = New System.Drawing.Point(704, 3)
+        Me.BtnKembali.Location = New System.Drawing.Point(700, 3)
         Me.BtnKembali.Name = "BtnKembali"
-        Me.BtnKembali.Size = New System.Drawing.Size(211, 64)
+        Me.BtnKembali.Size = New System.Drawing.Size(215, 64)
         Me.BtnKembali.TabIndex = 2
         Me.BtnKembali.Text = "Kembali"
         Me.BtnKembali.UseVisualStyleBackColor = True
@@ -662,7 +665,7 @@ Partial Class FormPesanan
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(3, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(150, 70)
+        Me.Label13.Size = New System.Drawing.Size(149, 70)
         Me.Label13.TabIndex = 3
         Me.Label13.Text = "Grand Total"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -672,9 +675,9 @@ Partial Class FormPesanan
         Me.lbl_grandtotal.AutoSize = True
         Me.lbl_grandtotal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbl_grandtotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_grandtotal.Location = New System.Drawing.Point(159, 0)
+        Me.lbl_grandtotal.Location = New System.Drawing.Point(158, 0)
         Me.lbl_grandtotal.Name = "lbl_grandtotal"
-        Me.lbl_grandtotal.Size = New System.Drawing.Size(207, 70)
+        Me.lbl_grandtotal.Size = New System.Drawing.Size(204, 70)
         Me.lbl_grandtotal.TabIndex = 4
         Me.lbl_grandtotal.Text = "Rp. 0"
         Me.lbl_grandtotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -696,12 +699,14 @@ Partial Class FormPesanan
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.DG_ListPesanan, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.5!))
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.255079!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.74492!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(924, 489)
         Me.TableLayoutPanel1.TabIndex = 0
         '
@@ -709,12 +714,17 @@ Partial Class FormPesanan
         '
         Me.DG_ListPesanan.AllowUserToAddRows = False
         Me.DG_ListPesanan.AllowUserToDeleteRows = False
+        Me.DG_ListPesanan.AllowUserToResizeColumns = False
+        Me.DG_ListPesanan.AllowUserToResizeRows = False
         Me.DG_ListPesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DG_ListPesanan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DG_ListPesanan.Location = New System.Drawing.Point(3, 64)
+        Me.DG_ListPesanan.Location = New System.Drawing.Point(3, 44)
+        Me.DG_ListPesanan.MultiSelect = False
         Me.DG_ListPesanan.Name = "DG_ListPesanan"
         Me.DG_ListPesanan.ReadOnly = True
-        Me.DG_ListPesanan.Size = New System.Drawing.Size(918, 422)
+        Me.DG_ListPesanan.RowHeadersVisible = False
+        Me.DG_ListPesanan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DG_ListPesanan.Size = New System.Drawing.Size(918, 396)
         Me.DG_ListPesanan.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -722,7 +732,7 @@ Partial Class FormPesanan
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.49689!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.50311!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.BtnCari, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txt_ordersearch, 1, 0)
@@ -731,9 +741,9 @@ Partial Class FormPesanan
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(918, 55)
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(918, 35)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'Label1
@@ -742,17 +752,17 @@ Partial Class FormPesanan
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(146, 55)
+        Me.Label1.Size = New System.Drawing.Size(145, 35)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Cari Kode Pesanan :"
+        Me.Label1.Text = "Cari Nama Pemesan :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BtnCari
         '
         Me.BtnCari.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnCari.Location = New System.Drawing.Point(744, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(740, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(171, 49)
+        Me.BtnCari.Size = New System.Drawing.Size(175, 29)
         Me.BtnCari.TabIndex = 2
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = True
@@ -763,10 +773,29 @@ Partial Class FormPesanan
         Me.txt_ordersearch.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txt_ordersearch.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_ordersearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
-        Me.txt_ordersearch.Location = New System.Drawing.Point(155, 3)
+        Me.txt_ordersearch.Location = New System.Drawing.Point(154, 3)
         Me.txt_ordersearch.Name = "txt_ordersearch"
-        Me.txt_ordersearch.Size = New System.Drawing.Size(583, 32)
+        Me.txt_ordersearch.Size = New System.Drawing.Size(580, 32)
         Me.txt_ordersearch.TabIndex = 1
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.BtnRefresh)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 446)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(918, 40)
+        Me.Panel1.TabIndex = 2
+        '
+        'BtnRefresh
+        '
+        Me.BtnRefresh.Dock = System.Windows.Forms.DockStyle.Right
+        Me.BtnRefresh.Location = New System.Drawing.Point(843, 0)
+        Me.BtnRefresh.Name = "BtnRefresh"
+        Me.BtnRefresh.Size = New System.Drawing.Size(75, 40)
+        Me.BtnRefresh.TabIndex = 0
+        Me.BtnRefresh.Text = "Refresh"
+        Me.BtnRefresh.UseVisualStyleBackColor = True
         '
         'cms_editpesannow
         '
@@ -824,6 +853,7 @@ Partial Class FormPesanan
         CType(Me.DG_ListPesanan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.cms_editpesannow.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -886,4 +916,6 @@ Partial Class FormPesanan
     Friend WithEvents lbl_qty As System.Windows.Forms.Label
     Friend WithEvents txt_harga As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents BtnRefresh As System.Windows.Forms.Button
 End Class

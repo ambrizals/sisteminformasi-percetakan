@@ -106,6 +106,16 @@ Public Class FormPesanan
         End If
         proses.CloseConn()
     End Sub
+    Sub baca_pesanan()
+        Dim tbl_pesanan As DataTable
+        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan")
+        DG_ListPesanan.DataSource = tbl_pesanan
+        DG_ListPesanan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DG_ListPesanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DG_ListPesanan.Columns(0).Width = 100
+        DG_ListPesanan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_ListPesanan.Columns(2).Width = 100
+    End Sub
 
     Private Sub FormPesanan_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         DG_ListBuatPesan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
@@ -113,6 +123,8 @@ Public Class FormPesanan
         Ambil_Kode()
         lbl_karyawanname.Text = kry_name
         lbl_tanggal.Text = Date.Now
+        baca_pesanan()
+
     End Sub
 
     Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnTambah.Click
@@ -254,5 +266,24 @@ Public Class FormPesanan
             FormBayarPesanan.ShowDialog()
         End If
 
+    End Sub
+
+    Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
+        baca_pesanan()
+    End Sub
+
+    Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
+        Dim tbl_pesanan As DataTable
+        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where orderconsumer like '%" + txt_ordersearch.Text + "%'")
+        DG_ListPesanan.DataSource = tbl_pesanan
+        DG_ListPesanan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DG_ListPesanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DG_ListPesanan.Columns(0).Width = 100
+        DG_ListPesanan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_ListPesanan.Columns(2).Width = 100
+    End Sub
+
+    Private Sub DG_ListPesanan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_ListPesanan.DoubleClick
+        FormPesananDetail.ShowDialog()
     End Sub
 End Class
