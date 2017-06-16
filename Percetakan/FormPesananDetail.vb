@@ -59,7 +59,7 @@ Public Class FormPesananDetail
             MsgBox("Pesanan yang sudah selesai tidak bisa dibatalkan", MsgBoxStyle.Information, "Info")
         Else
             If MsgBox("Pastikan customer telah mengkonfirmasi pembatalan pesanan ini, ingin membatalkan pesanan ?", MsgBoxStyle.Information + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
-                For loncat = 0 To DG_DaftarJob.Rows.Count - 1
+                For Me.loncat = 0 To DG_DaftarJob.Rows.Count - 1
                     sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID='" + DG_DaftarJob.Rows(loncat).Cells(0).Value.ToString + "'"
                     proses.ExecuteNonQuery(sql)
                 Next
@@ -71,6 +71,28 @@ Public Class FormPesananDetail
             Else
                 MsgBox("Aksi dibatalkan", MsgBoxStyle.Information, "Info")
             End If
+        End If
+    End Sub
+
+    Private Sub DG_DaftarJob_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles DG_DaftarJob.MouseDown
+        If e.Button = Windows.Forms.MouseButtons.Right Then
+            DG_DaftarJob.ContextMenuStrip = ContextMenuStrip1
+        End If
+    End Sub
+
+    Private Sub BatalkanPesananToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BatalkanPesananToolStripMenuItem.Click
+        If MsgBox("Batalkan item dari pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
+            sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID = '" + DG_DaftarJob.SelectedCells(0).Value.ToString + "'"
+            proses.ExecuteNonQuery(sql)
+            Try
+                sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','Membatalkan item : " + DG_DaftarJob.SelectedCells(0).Value.ToString + "')"
+                proses.ExecuteNonQuery(sql)
+            Catch ex As Exception
+                MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+            End Try
+            MsgBox("Berhasil membatalkan item dari pesanan", MsgBoxStyle.Information, "Info")
+        Else
+            MsgBox("Aksi dibatalkan", MsgBoxStyle.Information, "Info")
         End If
     End Sub
 End Class

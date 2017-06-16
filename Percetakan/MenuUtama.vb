@@ -112,7 +112,7 @@
         Login.Close()
     End Sub
 
-    Private Sub BtnLogout_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnLogout.Click
+    Private Sub BtnLogout_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         Logout()
         Me.Hide()
         Login.Show()
@@ -133,6 +133,7 @@
         ambil_pengumuman()
         absensi()
         lbl_tanggal.Text = tanggal
+        lbl_username.Text = kry_username
         Tanggal_Load()
         Privilage_User()
         Connect()

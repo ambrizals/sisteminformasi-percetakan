@@ -47,7 +47,7 @@ Public Class FormPesanan
         Dim kd_tsk As String
         Dim loncat As Integer
         Try
-            sql = "INSERT INTO pesanan (ORDERID, ORDERCONSUMER, ORDERCONSUMERTELP, ORDERSTATUS, ORDERTOTAL, ORDERBAYAR) VALUES ('" + txt_kodepesanan.Text + "', '" + txt_namacustomer.Text + "', '" + txt_nomorteleponcust.Text + "', 'PENDING', '" + lbl_grandtotal.Text.Remove(0, 3) + "', '" + ord_bayar.ToString + "')"
+            sql = "INSERT INTO pesanan (ORDERID, ORDERCONSUMER, ORDERCONSUMERTELP, ORDERSTATUS, ORDERTOTAL, ORDERBAYAR, ORDERTANGGAL) VALUES ('" + txt_kodepesanan.Text + "', '" + txt_namacustomer.Text + "', '" + txt_nomorteleponcust.Text + "', 'PENDING', '" + lbl_grandtotal.Text.Remove(0, 3) + "', '" + ord_bayar.ToString + "', '" + tanggal.ToString + "')"
             proses.ExecuteNonQuery(sql)
             Try
                 sql = "insert into log_pesanan values ('" + kry_id + "','" + txt_kodepesanan.Text + "','" + tanggal + "','Membuat Pesanan')"
@@ -108,7 +108,7 @@ Public Class FormPesanan
     End Sub
     Sub baca_pesanan()
         Dim tbl_pesanan As DataTable
-        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan")
+        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan WHERE ordertanggal = CURDATE()")
         DG_ListPesanan.DataSource = tbl_pesanan
         DG_ListPesanan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
         DG_ListPesanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
@@ -268,7 +268,7 @@ Public Class FormPesanan
 
     End Sub
 
-    Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
+    Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         baca_pesanan()
     End Sub
 
@@ -285,5 +285,49 @@ Public Class FormPesanan
 
     Private Sub DG_ListPesanan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_ListPesanan.DoubleClick
         FormPesananDetail.ShowDialog()
+    End Sub
+
+    Private Sub BtnToday_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnToday.Click
+        Dim tbl_pesanan As DataTable
+        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan WHERE ordertanggal = CURDATE()")
+        DG_ListPesanan.DataSource = tbl_pesanan
+        DG_ListPesanan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DG_ListPesanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DG_ListPesanan.Columns(0).Width = 100
+        DG_ListPesanan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_ListPesanan.Columns(2).Width = 100
+    End Sub
+
+    Private Sub BtnAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAll.Click
+        Dim tbl_pesanan As DataTable
+        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan")
+        DG_ListPesanan.DataSource = tbl_pesanan
+        DG_ListPesanan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DG_ListPesanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DG_ListPesanan.Columns(0).Width = 100
+        DG_ListPesanan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_ListPesanan.Columns(2).Width = 100
+    End Sub
+
+    Private Sub BtnFinish_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnFinish.Click
+        Dim tbl_pesanan As DataTable
+        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where orderstatus = 'FINISH'")
+        DG_ListPesanan.DataSource = tbl_pesanan
+        DG_ListPesanan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DG_ListPesanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DG_ListPesanan.Columns(0).Width = 100
+        DG_ListPesanan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_ListPesanan.Columns(2).Width = 100
+    End Sub
+
+    Private Sub BtnDibatalkan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnDibatalkan.Click
+        Dim tbl_pesanan As DataTable
+        tbl_pesanan = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where orderstatus = 'PESANAN DIBATALKAN'")
+        DG_ListPesanan.DataSource = tbl_pesanan
+        DG_ListPesanan.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
+        DG_ListPesanan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        DG_ListPesanan.Columns(0).Width = 100
+        DG_ListPesanan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_ListPesanan.Columns(2).Width = 100
     End Sub
 End Class

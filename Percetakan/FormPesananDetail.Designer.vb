@@ -22,6 +22,7 @@ Partial Class FormPesananDetail
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
@@ -50,6 +51,8 @@ Partial Class FormPesananDetail
         Me.lbl_nomorpesanan = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DG_DaftarJob = New System.Windows.Forms.DataGridView()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.BatalkanPesananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -59,6 +62,7 @@ Partial Class FormPesananDetail
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         CType(Me.DG_DaftarJob, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -396,6 +400,7 @@ Partial Class FormPesananDetail
         Me.DG_DaftarJob.AllowUserToResizeColumns = False
         Me.DG_DaftarJob.AllowUserToResizeRows = False
         Me.DG_DaftarJob.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DG_DaftarJob.ContextMenuStrip = Me.ContextMenuStrip1
         Me.DG_DaftarJob.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DG_DaftarJob.Location = New System.Drawing.Point(3, 138)
         Me.DG_DaftarJob.MultiSelect = False
@@ -405,6 +410,18 @@ Partial Class FormPesananDetail
         Me.DG_DaftarJob.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DG_DaftarJob.Size = New System.Drawing.Size(718, 263)
         Me.DG_DaftarJob.TabIndex = 1
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BatalkanPesananToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(167, 48)
+        '
+        'BatalkanPesananToolStripMenuItem
+        '
+        Me.BatalkanPesananToolStripMenuItem.Name = "BatalkanPesananToolStripMenuItem"
+        Me.BatalkanPesananToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.BatalkanPesananToolStripMenuItem.Text = "Batalkan Pesanan"
         '
         'FormPesananDetail
         '
@@ -428,6 +445,7 @@ Partial Class FormPesananDetail
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
         CType(Me.DG_DaftarJob, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -459,4 +477,6 @@ Partial Class FormPesananDetail
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents BtnBack As System.Windows.Forms.Button
     Friend WithEvents BtnCancel As System.Windows.Forms.Button
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents BatalkanPesananToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

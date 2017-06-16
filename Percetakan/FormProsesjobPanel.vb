@@ -8,7 +8,7 @@ Public Class FormProsesjobPanel
     Dim list_job As DataTable
     Private Sub ambil_data()
         kode_order = FormJobList.DG_Proses.SelectedCells(0).Value.ToString
-        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where orderid = '" + kode_order + "' "
+        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where (orderid = '" + kode_order + "') & (NOT taskstatus = 'CANCEL') "
         list_job = proses.ExecuteQuery(sql)
         DG_DaftarJob.DataSource = list_job
         DG_DaftarJob.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
@@ -92,6 +92,12 @@ Public Class FormProsesjobPanel
                     Try
                         sql = "UPDATE pesanan SET ORDERSTATUS='FINISH' WHERE ORDERID='" + kode_order + "'"
                         proses.ExecuteNonQuery(sql)
+                        Try
+                            sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','Pesanan Diselesaikan')"
+                            proses.ExecuteNonQuery(sql)
+                        Catch ex As Exception
+                            MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+                        End Try
                         MsgBox("Pesanan telah diselesaikan, harap hubungi costumer untuk pengambilan barang", MsgBoxStyle.Information, "Info")
                         FormJobList.load_tabel()
                         Me.Close()
@@ -105,5 +111,30 @@ Public Class FormProsesjobPanel
                 MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
             End Try
         End If
+    End Sub
+
+    Private Sub BtnPending_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPending.Click
+        If lbl_pesananstatus.Text = "PROSES" Then
+            If MsgBox("Pesanan ini akan dipending, ingin melanjutkan ?", MsgBoxStyle.Information + MsgBoxStyle.OkCancel, "Info") = MsgBoxResult.Ok Then
+                sql = "UPDATE pesanan SET ORDERSTATUS='PENDING' WHERE ORDERID='" + kode_order + "'"
+                proses.ExecuteNonQuery(sql)
+                Try
+                    sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','Membuat Pesanan')"
+                    proses.ExecuteNonQuery(sql)
+                Catch ex As Exception
+                    MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+                End Try
+                MsgBox("Pesanan telah dipending", MsgBoxStyle.Information, "Info")
+                Me.Close()
+                FormJobList.load_tabel()
+            End If
+        Else
+            MsgBox("Pesanan yang telah selesai tidak dapat dipending.", MsgBoxStyle.Information, "Error")
+        End If
+
+    End Sub
+
+    Private Sub BtnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancel.Click
+        Me.Close()
     End Sub
 End Class
