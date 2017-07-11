@@ -59,49 +59,40 @@ Public Class FormJobList
     End Sub
 
     Private Sub Btn_CariPending_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_CariPending.Click
-        tbl_pending = proses.ExecuteQuery("SELECT tasklist.taskid AS 'ID Task', bahan.bahanname AS 'Bahan', tasklist.orderid AS 'ID Order', tasklist.taskname AS 'Deskripsi', tasklist.taskqty AS 'Qty', tasklist.taskstatus AS 'Status' FROM tasklist INNER JOIN bahan ON (tasklist.bahanid = bahan.bahanid) WHERE (tasklist.taskstatus = 'Pending') and (tasklist.taskid = '" + txt_pendingcari.Text + "')")
+        tbl_pending = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where (orderstatus = 'PENDING') & (orderconsumer like '%" + txt_pendingcari.Text + "%')")
         DG_Pending.DataSource = tbl_pending
         DG_Pending.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
         DG_Pending.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DG_Pending.Columns(0).Width = 80
-        DG_Pending.Columns(1).Width = 100
-        DG_Pending.Columns(2).Width = 80
-        DG_Pending.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Pending.Columns(4).Width = 50
-        DG_Pending.Columns(5).Width = 100
+        DG_Pending.Columns(0).Width = 100
+        DG_Pending.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_Pending.Columns(2).Width = 100
 
         job_pending.Text = "Pending (" + DG_Pending.RowCount.ToString + ")"
     End Sub
 
     Private Sub Btn_ProsesCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_ProsesCari.Click
-        tbl_proses = proses.ExecuteQuery("SELECT tasklist.taskid AS 'ID Task', bahan.bahanname AS 'Bahan', tasklist.orderid AS 'ID Order', tasklist.taskname AS 'Deskripsi', tasklist.taskqty AS 'Qty', tasklist.taskstatus AS 'Status' FROM tasklist INNER JOIN bahan ON (tasklist.bahanid = bahan.bahanid) WHERE (tasklist.taskstatus = 'Proses') AND (tasklist.taskid = '" + txt_prosescari.Text + "')")
+        tbl_proses = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where (orderstatus = 'PROSES') & (orderconsumer like '%" + txt_prosescari.Text + "%')")
         DG_Proses.DataSource = tbl_proses
         DG_Proses.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
         DG_Proses.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DG_Proses.Columns(0).Width = 80
-        DG_Proses.Columns(1).Width = 100
-        DG_Proses.Columns(2).Width = 80
-        DG_Proses.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Proses.Columns(4).Width = 50
-        DG_Proses.Columns(5).Width = 100
+        DG_Proses.Columns(0).Width = 100
+        DG_Proses.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_Proses.Columns(2).Width = 100
 
         job_process.Text = "Proses (" + DG_Proses.RowCount.ToString + ")"
     End Sub
 
 
     Private Sub Btn_FinishCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_FinishCari.Click
-        tbl_finish = proses.ExecuteQuery("SELECT tasklist.taskid AS 'ID Task', bahan.bahanname AS 'Bahan', tasklist.orderid AS 'ID Order', tasklist.taskname AS 'Deskripsi', tasklist.taskqty AS 'Qty', tasklist.taskstatus AS 'Status' FROM tasklist INNER JOIN bahan ON (tasklist.bahanid = bahan.bahanid) WHERE (tasklist.taskstatus = 'Finish') and (tasklist.taskid = '" + txt_finishcari.Text + "')")
+        tbl_finish = proses.ExecuteQuery("select orderid as 'ID Order', orderconsumer as 'Nama Customer', orderstatus as 'Status' from pesanan where (orderstatus = 'FINISH') & (orderconsumer like '%" + txt_finishcari.Text + "%')")
         DG_Finish.DataSource = tbl_finish
         DG_Finish.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
         DG_Finish.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DG_Finish.Columns(0).Width = 80
-        DG_Finish.Columns(1).Width = 100
-        DG_Finish.Columns(2).Width = 80
-        DG_Finish.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Finish.Columns(4).Width = 50
-        DG_Finish.Columns(5).Width = 100
+        DG_Finish.Columns(0).Width = 100
+        DG_Finish.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        DG_Finish.Columns(2).Width = 100
 
-        job_finish.Text = "Proses (" + DG_Finish.RowCount.ToString + ")"
+        job_finish.Text = "Finish (" + DG_Finish.RowCount.ToString + ")"
     End Sub
 
     Private Sub btn_refresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_refresh.Click
@@ -110,5 +101,9 @@ Public Class FormJobList
 
     Private Sub DG_Pending_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_Pending.CellContentClick
 
+    End Sub
+
+    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
+        Me.Close()
     End Sub
 End Class

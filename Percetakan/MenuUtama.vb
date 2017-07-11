@@ -112,7 +112,7 @@
         Login.Close()
     End Sub
 
-    Private Sub BtnLogout_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub BtnLogout_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnLogout.Click
         Logout()
         Me.Hide()
         Login.Show()
@@ -133,7 +133,6 @@
         ambil_pengumuman()
         absensi()
         lbl_tanggal.Text = tanggal
-        lbl_username.Text = kry_username
         Tanggal_Load()
         Privilage_User()
         Connect()
@@ -150,6 +149,21 @@
         End If
         'Catch ex As Exception
         'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut \n" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+        'Connect()
+        'End Try
+    End Sub
+    Private Sub BtnPesanan_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click
+        'Try
+        If str_status > 0 Then
+            proses.OpenConn()
+            FormPesanan.ShowDialog()
+            proses.CloseConn()
+        Else
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            str_status = 0
+        End If
+        'Catch ex As Exception
+        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
         'Connect()
         'End Try
     End Sub
@@ -200,21 +214,7 @@
         End Try
     End Sub
 
-    Private Sub BtnPesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click
-        'Try
-        If str_status > 0 Then
-            proses.OpenConn()
-            FormPesanan.ShowDialog()
-            proses.CloseConn()
-        Else
-            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-            str_status = 0
-        End If
-        'Catch ex As Exception
-        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
-        'Connect()
-        'End Try
-    End Sub
+
     Private Sub BtnSimpanPengumuman_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpanPengumuman.Click
         Try
             query = "UPDATE pengaturan SET pengaturanIsi = '" + rtf_pengumuman.Text + "' WHERE pengaturanName = 'pengumuman'"
@@ -225,11 +225,17 @@
         End Try
     End Sub
 
-    Private Sub lbl_close_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lbl_close.Click
-        Me.Close()
-    End Sub
-
     Private Sub ServerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ServerToolStripMenuItem.Click
         FormConfig.ShowDialog()
     End Sub
+
+    Private Sub BtnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BtnMin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnMin.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+
 End Class

@@ -30,4 +30,8 @@
     Private Sub FormAbsenTambahcuti_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         dt_mulai.Value = Today.Date.ToString
     End Sub
+
+    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
+        Me.Close()
+    End Sub
 End Class

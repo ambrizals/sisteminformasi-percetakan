@@ -4,9 +4,10 @@ Imports System.Data
 
 Public Class FormPesananDetail
     Dim proses As New ClsKoneksi
-    Dim kode_order, sql As String
+    Dim kode_order, sql, bahan_name As String
     Dim list_job As DataTable
-    Dim loncat As Integer
+    Dim hitung_stock As Integer
+
     Private Sub ambil_data()
         kode_order = FormPesanan.DG_ListPesanan.SelectedCells(0).Value.ToString
         sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where orderid = '" + kode_order + "' "
@@ -46,51 +47,90 @@ Public Class FormPesananDetail
         End If
         proses.CloseConn()
     End Sub
-
+    Private Sub count_stock()
+        proses.OpenConn()
+        sql = "select * from bahan where bahanname = '" + bahan_name + "'"
+        proses.command.Connection = proses.Cn
+        proses.command.CommandText = sql
+        proses.Da.SelectCommand = proses.command
+        proses.read = proses.command.ExecuteReader
+        If proses.read.HasRows Then
+            proses.read.Read()
+            hitung_stock = proses.read("BAHANSTOCK")
+        End If
+        proses.CloseConn()
+    End Sub
     Private Sub FormProsesjobPanel_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ambil_data()
         ambil_info_pesanan()
     End Sub
 
     Private Sub BtnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancel.Click
+        Dim loncat, itemstatus As Integer
         If lbl_pesananstatus.Text = "PESANAN DIBATALKAN" Then
             MsgBox("Pesanan sudah dibatalkan", MsgBoxStyle.Information, "Info")
         ElseIf lbl_pesananstatus.Text = "FINISH" Then
             MsgBox("Pesanan yang sudah selesai tidak bisa dibatalkan", MsgBoxStyle.Information, "Info")
         Else
             If MsgBox("Pastikan customer telah mengkonfirmasi pembatalan pesanan ini, ingin membatalkan pesanan ?", MsgBoxStyle.Information + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
-                For Me.loncat = 0 To DG_DaftarJob.Rows.Count - 1
-                    sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID='" + DG_DaftarJob.Rows(loncat).Cells(0).Value.ToString + "'"
-                    proses.ExecuteNonQuery(sql)
+                For loncat = 0 To DG_DaftarJob.Rows.Count - 1
+                    itemstatus = 0
+                    If DG_DaftarJob.Rows(loncat).Cells(4).Value.ToString = "FINISH" Then
+                        itemstatus = itemstatus
+                    ElseIf DG_DaftarJob.Rows(loncat).Cells(4).Value.ToString = "PROSES" Then
+                        itemstatus = itemstatus
+                    Else
+                        itemstatus = itemstatus + 1
+                    End If
                 Next
-                sql = "UPDATE PESANAN SET ORDERSTATUS = 'PESANAN DIBATALKAN' WHERE ORDERID = '" + kode_order + "' "
-                proses.ExecuteNonQuery(sql)
-                MsgBox("Pesanan berhasil dibatalkan", MsgBoxStyle.Information, "Info")
-                FormPesanan.baca_pesanan()
-                Me.Close()
+                If itemstatus = DG_DaftarJob.Rows.Count Then
+                    For loncat = 0 To DG_DaftarJob.Rows.Count - 1
+                        sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID='" + DG_DaftarJob.Rows(loncat).Cells(0).Value.ToString + "'"
+                        proses.ExecuteNonQuery(sql)
+                    Next
+                    sql = "UPDATE PESANAN SET ORDERSTATUS = 'PESANAN DIBATALKAN' WHERE ORDERID = '" + kode_order + "' "
+                    proses.ExecuteNonQuery(sql)
+                    MsgBox("Pesanan berhasil dibatalkan", MsgBoxStyle.Information, "Info")
+                    FormPesanan.baca_pesanan()
+                    Me.Close()
+                Else
+                    MsgBox("Terdapat pesanan yang telah selesai", MsgBoxStyle.Information, "Info")
+                End If
             Else
                 MsgBox("Aksi dibatalkan", MsgBoxStyle.Information, "Info")
             End If
         End If
     End Sub
 
-    Private Sub DG_DaftarJob_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles DG_DaftarJob.MouseDown
-        If e.Button = Windows.Forms.MouseButtons.Right Then
-            DG_DaftarJob.ContextMenuStrip = ContextMenuStrip1
-        End If
-    End Sub
 
-    Private Sub BatalkanPesananToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BatalkanPesananToolStripMenuItem.Click
-        If MsgBox("Batalkan item dari pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
-            sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID = '" + DG_DaftarJob.SelectedCells(0).Value.ToString + "'"
-            proses.ExecuteNonQuery(sql)
-            Try
-                sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','Membatalkan item : " + DG_DaftarJob.SelectedCells(0).Value.ToString + "')"
-                proses.ExecuteNonQuery(sql)
-            Catch ex As Exception
-                MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
-            End Try
-            MsgBox("Berhasil membatalkan item dari pesanan", MsgBoxStyle.Information, "Info")
+    Private Sub PesananDibatalkanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PesananDibatalkanToolStripMenuItem.Click
+        If MsgBox("Ingin membatalkan item dari pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkOnly, "Konfirmasi") = MsgBoxResult.Ok Then
+            If DG_DaftarJob.SelectedCells(4).Value.ToString = "CANCEL" Then
+                MsgBox("Pesanan telah dibatalkan", MsgBoxStyle.Information, "Info")
+            ElseIf DG_DaftarJob.SelectedCells(4).Value.ToString = "FINISH" Then
+                MsgBox("Pesanan telah diselesaikan", MsgBoxStyle.Information, "Info")
+            ElseIf DG_DaftarJob.SelectedCells(4).Value.ToString = "PROSES" Then
+                Dim tambah_stock As Integer
+                bahan_name = DG_DaftarJob.SelectedCells(1).Value.ToString
+                count_stock()
+                tambah_stock = hitung_stock + Val(DG_DaftarJob.SelectedCells(3).Value.ToString)
+                Try
+                    sql = "UPDATE BAHAN SET BAHANSTOCK = '" + tambah_stock.ToString + "' where bahanname = '" + DG_DaftarJob.SelectedCells(1).Value.ToString + "' "
+                    proses.ExecuteNonQuery(sql)
+                    Try
+                        sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID = '" + DG_DaftarJob.SelectedCells(0).Value.ToString + "'"
+                        proses.ExecuteNonQuery(sql)
+                    Catch ex As Exception
+                        MsgBox("Terdapat kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Exclamation, "Error")
+                    End Try
+                Catch ex As Exception
+                    MsgBox("Terdapat kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Exclamation, "Error")
+                End Try
+                MsgBox("Pesanan telah dibatalkan", MsgBoxStyle.Information, "Info")
+                ambil_data()
+            Else
+                MsgBox("Terjadi kesalahan, harap hubungi administrator", MsgBoxStyle.Information, "Error")
+            End If
         Else
             MsgBox("Aksi dibatalkan", MsgBoxStyle.Information, "Info")
         End If

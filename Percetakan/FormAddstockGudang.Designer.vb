@@ -34,19 +34,21 @@ Partial Class FormAddstockGudang
         Me.lbl_unit2 = New System.Windows.Forms.Label()
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.nm_stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'nm_stock
         '
-        Me.nm_stock.Location = New System.Drawing.Point(108, 115)
+        Me.nm_stock.Location = New System.Drawing.Point(108, 162)
         Me.nm_stock.Name = "nm_stock"
         Me.nm_stock.Size = New System.Drawing.Size(125, 20)
         Me.nm_stock.TabIndex = 13
         '
         'txt_namabahan
         '
-        Me.txt_namabahan.Location = New System.Drawing.Point(108, 46)
+        Me.txt_namabahan.Location = New System.Drawing.Point(108, 93)
         Me.txt_namabahan.Name = "txt_namabahan"
         Me.txt_namabahan.ReadOnly = True
         Me.txt_namabahan.Size = New System.Drawing.Size(207, 20)
@@ -54,7 +56,7 @@ Partial Class FormAddstockGudang
         '
         'txt_kodebahan
         '
-        Me.txt_kodebahan.Location = New System.Drawing.Point(108, 12)
+        Me.txt_kodebahan.Location = New System.Drawing.Point(108, 59)
         Me.txt_kodebahan.Name = "txt_kodebahan"
         Me.txt_kodebahan.ReadOnly = True
         Me.txt_kodebahan.Size = New System.Drawing.Size(207, 20)
@@ -63,7 +65,7 @@ Partial Class FormAddstockGudang
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 117)
+        Me.Label3.Location = New System.Drawing.Point(9, 164)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 13)
         Me.Label3.TabIndex = 10
@@ -72,7 +74,7 @@ Partial Class FormAddstockGudang
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 49)
+        Me.Label2.Location = New System.Drawing.Point(9, 96)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 13)
         Me.Label2.TabIndex = 9
@@ -81,7 +83,7 @@ Partial Class FormAddstockGudang
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 15)
+        Me.Label1.Location = New System.Drawing.Point(9, 62)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 13)
         Me.Label1.TabIndex = 8
@@ -89,7 +91,7 @@ Partial Class FormAddstockGudang
         '
         'txt_stoksekarang
         '
-        Me.txt_stoksekarang.Location = New System.Drawing.Point(108, 79)
+        Me.txt_stoksekarang.Location = New System.Drawing.Point(108, 126)
         Me.txt_stoksekarang.Name = "txt_stoksekarang"
         Me.txt_stoksekarang.ReadOnly = True
         Me.txt_stoksekarang.Size = New System.Drawing.Size(125, 20)
@@ -98,7 +100,7 @@ Partial Class FormAddstockGudang
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 82)
+        Me.Label4.Location = New System.Drawing.Point(9, 129)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(84, 13)
         Me.Label4.TabIndex = 14
@@ -107,7 +109,7 @@ Partial Class FormAddstockGudang
         'lbl_unit1
         '
         Me.lbl_unit1.AutoSize = True
-        Me.lbl_unit1.Location = New System.Drawing.Point(240, 83)
+        Me.lbl_unit1.Location = New System.Drawing.Point(240, 130)
         Me.lbl_unit1.Name = "lbl_unit1"
         Me.lbl_unit1.Size = New System.Drawing.Size(55, 13)
         Me.lbl_unit1.TabIndex = 16
@@ -116,7 +118,7 @@ Partial Class FormAddstockGudang
         'lbl_unit2
         '
         Me.lbl_unit2.AutoSize = True
-        Me.lbl_unit2.Location = New System.Drawing.Point(241, 119)
+        Me.lbl_unit2.Location = New System.Drawing.Point(241, 166)
         Me.lbl_unit2.Name = "lbl_unit2"
         Me.lbl_unit2.Size = New System.Drawing.Size(55, 13)
         Me.lbl_unit2.TabIndex = 17
@@ -124,28 +126,55 @@ Partial Class FormAddstockGudang
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(12, 148)
+        Me.BtnTambah.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnTambah.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnTambah.Location = New System.Drawing.Point(12, 195)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(142, 23)
         Me.BtnTambah.TabIndex = 18
         Me.BtnTambah.Text = "Tambah Stock"
-        Me.BtnTambah.UseVisualStyleBackColor = True
+        Me.BtnTambah.UseVisualStyleBackColor = False
         '
         'BtnCancel
         '
-        Me.BtnCancel.Location = New System.Drawing.Point(173, 148)
+        Me.BtnCancel.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnCancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCancel.Location = New System.Drawing.Point(173, 195)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(142, 23)
         Me.BtnCancel.TabIndex = 19
         Me.BtnCancel.Text = "Kembali"
-        Me.BtnCancel.UseVisualStyleBackColor = True
+        Me.BtnCancel.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(43, 18)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(248, 29)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "INPUT STOK GUDANG"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(307, 3)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(14, 13)
+        Me.Label6.TabIndex = 21
+        Me.Label6.Text = "X"
         '
         'FormAddstockGudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(323, 183)
+        Me.ClientSize = New System.Drawing.Size(323, 236)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.lbl_unit2)
@@ -159,7 +188,7 @@ Partial Class FormAddstockGudang
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormAddstockGudang"
@@ -183,4 +212,6 @@ Partial Class FormAddstockGudang
     Friend WithEvents lbl_unit2 As System.Windows.Forms.Label
     Friend WithEvents BtnTambah As System.Windows.Forms.Button
     Friend WithEvents BtnCancel As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

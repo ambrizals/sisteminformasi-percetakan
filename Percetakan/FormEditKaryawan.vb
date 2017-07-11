@@ -122,4 +122,7 @@ Public Class FormEditKaryawan
         reset()
     End Sub
 
+    Private Sub BtnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancel.Click
+        Me.Close()
+    End Sub
 End Class

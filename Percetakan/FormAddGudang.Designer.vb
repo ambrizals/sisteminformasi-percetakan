@@ -175,7 +175,7 @@ Partial Class FormAddGudang
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Trebuchet MS", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(48, 23)
+        Me.Label5.Location = New System.Drawing.Point(44, 23)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(252, 35)
         Me.Label5.TabIndex = 10

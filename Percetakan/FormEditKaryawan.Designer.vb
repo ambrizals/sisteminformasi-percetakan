@@ -22,6 +22,7 @@ Partial Class FormEditKaryawan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormEditKaryawan))
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.cb_validdata = New System.Windows.Forms.CheckBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -44,16 +45,21 @@ Partial Class FormEditKaryawan
         Me.txt_idkaryawan = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnSave = New System.Windows.Forms.Button()
+        Me.FORM = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnCancel = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.cb_validdata)
-        Me.GroupBox4.Location = New System.Drawing.Point(374, 185)
+        Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox4.Location = New System.Drawing.Point(374, 227)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(298, 138)
         Me.GroupBox4.TabIndex = 38
@@ -75,7 +81,8 @@ Partial Class FormEditKaryawan
         Me.GroupBox3.Controls.Add(Me.rtf_deskripsi)
         Me.GroupBox3.Controls.Add(Me.cb_jabatan)
         Me.GroupBox3.Controls.Add(Me.Label8)
-        Me.GroupBox3.Location = New System.Drawing.Point(374, 12)
+        Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox3.Location = New System.Drawing.Point(374, 54)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(298, 167)
         Me.GroupBox3.TabIndex = 37
@@ -114,12 +121,14 @@ Partial Class FormEditKaryawan
         '
         'BtnReset
         '
-        Me.BtnReset.Location = New System.Drawing.Point(522, 329)
+        Me.BtnReset.BackColor = System.Drawing.SystemColors.Control
+        Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnReset.Location = New System.Drawing.Point(472, 371)
         Me.BtnReset.Name = "BtnReset"
-        Me.BtnReset.Size = New System.Drawing.Size(150, 23)
+        Me.BtnReset.Size = New System.Drawing.Size(98, 23)
         Me.BtnReset.TabIndex = 33
         Me.BtnReset.Text = "Reset"
-        Me.BtnReset.UseVisualStyleBackColor = True
+        Me.BtnReset.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
@@ -127,7 +136,8 @@ Partial Class FormEditKaryawan
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.rtf_alamat)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Location = New System.Drawing.Point(14, 185)
+        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox2.Location = New System.Drawing.Point(14, 227)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(339, 167)
         Me.GroupBox2.TabIndex = 35
@@ -177,7 +187,8 @@ Partial Class FormEditKaryawan
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txt_idkaryawan)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 12)
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 54)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(339, 167)
         Me.GroupBox1.TabIndex = 34
@@ -252,26 +263,63 @@ Partial Class FormEditKaryawan
         '
         'BtnSave
         '
+        Me.BtnSave.BackColor = System.Drawing.SystemColors.Control
         Me.BtnSave.Enabled = False
-        Me.BtnSave.Location = New System.Drawing.Point(374, 329)
+        Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnSave.Location = New System.Drawing.Point(374, 371)
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(141, 23)
+        Me.BtnSave.Size = New System.Drawing.Size(93, 23)
         Me.BtnSave.TabIndex = 36
         Me.BtnSave.Text = "Save"
-        Me.BtnSave.UseVisualStyleBackColor = True
+        Me.BtnSave.UseVisualStyleBackColor = False
+        '
+        'FORM
+        '
+        Me.FORM.AutoSize = True
+        Me.FORM.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FORM.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.FORM.Location = New System.Drawing.Point(268, 12)
+        Me.FORM.Name = "FORM"
+        Me.FORM.Size = New System.Drawing.Size(212, 29)
+        Me.FORM.TabIndex = 39
+        Me.FORM.Text = "FORM KARYAWAN"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(220, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(50, 45)
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
+        'BtnCancel
+        '
+        Me.BtnCancel.BackColor = System.Drawing.SystemColors.Control
+        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnCancel.Location = New System.Drawing.Point(574, 371)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(98, 23)
+        Me.BtnCancel.TabIndex = 41
+        Me.BtnCancel.Text = "Cancel"
+        Me.BtnCancel.UseVisualStyleBackColor = False
         '
         'FormEditKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(683, 361)
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ClientSize = New System.Drawing.Size(683, 412)
+        Me.Controls.Add(Me.BtnCancel)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.FORM)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.BtnReset)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnSave)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormEditKaryawan"
@@ -286,7 +334,9 @@ Partial Class FormEditKaryawan
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
@@ -311,4 +361,7 @@ Partial Class FormEditKaryawan
     Friend WithEvents txt_idkaryawan As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BtnSave As System.Windows.Forms.Button
+    Friend WithEvents FORM As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents BtnCancel As System.Windows.Forms.Button
 End Class

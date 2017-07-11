@@ -3,12 +3,13 @@ Imports System.Data.OleDb
 Imports System.Data
 Public Class FormJobpendingPanel
     Dim proses As New ClsKoneksi
-    Dim kode_order, sql As String
+    Dim kode_order, sql, kode_bahan As String
     Dim list_job As DataTable
+    Dim loncat As Integer
 
     Private Sub ambil_data()
         kode_order = FormJobList.DG_Pending.SelectedCells(0).Value.ToString
-        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where (orderid = '" + kode_order + "') & (NOT taskstatus = 'CANCEL') "
+        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where orderid = '" + kode_order + "' "
         list_job = proses.ExecuteQuery(sql)
         DG_DaftarJob.DataSource = list_job
         DG_DaftarJob.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
@@ -22,7 +23,7 @@ Public Class FormJobpendingPanel
 
     Private Sub ambil_info_pesanan()
         proses.OpenConn()
-        sql = "SELECT pesanan.orderid,karyawan.karyawanname,pesanan.orderconsumer,pesanan.orderconsumertelp,pesanan.orderstatus,pesanan.ordertotal,pesanan.orderbayar FROM PESANAN INNER JOIN log_pesanan ON (log_pesanan.orderID = pesanan.orderID) INNER JOIN karyawan ON (log_pesanan.karyawanID = karyawan.karyawanID) WHERE pesanan.orderid = '" + kode_order + "'"
+        sql = "SELECT pesanan.orderid,karyawan.karyawanname,pesanan.orderconsumer,pesanan.orderconsumertelp,pesanan.orderstatus,pesanan.ordertotal,pesanan.orderbayar FROM PESANAN INNER JOIN log_pesanan ON (log_pesanan.orderID = pesanan.orderID) AND log_pesanan.logStatus = 'Membuat Pesanan' INNER JOIN karyawan ON (log_pesanan.karyawanID = karyawan.karyawanID) WHERE pesanan.orderid = '" + kode_order + "'"
         proses.command.Connection = proses.Cn
         proses.command.CommandText = sql
         proses.Da.SelectCommand = proses.command
@@ -58,15 +59,18 @@ Public Class FormJobpendingPanel
     Private Sub BtnProses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnProses.Click
         If MsgBox("Apakah ingin memproses pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
             ''Kode disini
+            For Me.loncat = 0 To DG_DaftarJob.Rows.Count - 1
+                Try
+                    sql = "UPDATE TASKLIST SET TASKSTATUS = 'PROSES' WHERE TASKID = '" + DG_DaftarJob.Rows(loncat).Cells(0).Value.ToString + "'"
+                    proses.ExecuteNonQuery(sql)
+                Catch ex As Exception
+                    MsgBox("Terjadi Kesalahan " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
+                End Try
+            Next
+
             Try
                 sql = "UPDATE pesanan SET ORDERSTATUS='PROSES' WHERE ORDERID='" + kode_order + "'"
                 proses.ExecuteNonQuery(sql)
-                Try
-                    sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','Memproses Pesanan')"
-                    proses.ExecuteNonQuery(sql)
-                Catch ex As Exception
-                    MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
-                End Try
                 MsgBox("Pesanan telah diproses, pastikan proses telah berjalan", MsgBoxStyle.Information, "Info")
                 FormJobList.load_tabel()
                 Me.Close()

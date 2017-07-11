@@ -102,7 +102,7 @@ Partial Class FormBayarPesanan
         Me.BtnBayar.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BtnBayar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBayar.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBayar.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.BtnBayar.ForeColor = System.Drawing.SystemColors.ControlText
         Me.BtnBayar.Location = New System.Drawing.Point(21, 278)
         Me.BtnBayar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BtnBayar.Name = "BtnBayar"
@@ -116,7 +116,7 @@ Partial Class FormBayarPesanan
         Me.BtnKembali.BackColor = System.Drawing.SystemColors.ControlLight
         Me.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnKembali.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnKembali.ForeColor = System.Drawing.SystemColors.GrayText
+        Me.BtnKembali.ForeColor = System.Drawing.SystemColors.ControlText
         Me.BtnKembali.Location = New System.Drawing.Point(207, 278)
         Me.BtnKembali.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.BtnKembali.Name = "BtnKembali"

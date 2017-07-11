@@ -57,4 +57,8 @@ Public Class FormAddstockGudang
         FormGudang.Load_DataBahan()
         Me.Close()
     End Sub
+
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click
+        Me.Close()
+    End Sub
 End Class

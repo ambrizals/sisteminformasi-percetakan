@@ -22,7 +22,11 @@ Partial Class FormJobList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormJobList))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.tab_job = New System.Windows.Forms.TabControl()
         Me.job_pending = New System.Windows.Forms.TabPage()
         Me.DG_Pending = New System.Windows.Forms.DataGridView()
@@ -44,6 +48,8 @@ Partial Class FormJobList
         Me.Btn_FinishCari = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btn_refresh = New System.Windows.Forms.Button()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tab_job.SuspendLayout()
         Me.job_pending.SuspendLayout()
         CType(Me.DG_Pending, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,11 +65,45 @@ Partial Class FormJobList
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(752, 63)
         Me.Panel1.TabIndex = 0
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.Location = New System.Drawing.Point(732, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(20, 20)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "X"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(300, 9)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(51, 51)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label4.Location = New System.Drawing.Point(352, 21)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(126, 35)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "JOB LIST"
         '
         'tab_job
         '
@@ -110,7 +150,7 @@ Partial Class FormJobList
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.99163!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.00837!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_pendingcari, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Btn_CariPending, 2, 0)
@@ -128,7 +168,7 @@ Partial Class FormJobList
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 27)
+        Me.Label1.Size = New System.Drawing.Size(98, 27)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cari ID Job :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -136,17 +176,17 @@ Partial Class FormJobList
         'txt_pendingcari
         '
         Me.txt_pendingcari.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_pendingcari.Location = New System.Drawing.Point(108, 3)
+        Me.txt_pendingcari.Location = New System.Drawing.Point(107, 3)
         Me.txt_pendingcari.Name = "txt_pendingcari"
-        Me.txt_pendingcari.Size = New System.Drawing.Size(472, 20)
+        Me.txt_pendingcari.Size = New System.Drawing.Size(471, 20)
         Me.txt_pendingcari.TabIndex = 1
         '
         'Btn_CariPending
         '
         Me.Btn_CariPending.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn_CariPending.Location = New System.Drawing.Point(586, 3)
+        Me.Btn_CariPending.Location = New System.Drawing.Point(584, 3)
         Me.Btn_CariPending.Name = "Btn_CariPending"
-        Me.Btn_CariPending.Size = New System.Drawing.Size(149, 21)
+        Me.Btn_CariPending.Size = New System.Drawing.Size(151, 21)
         Me.Btn_CariPending.TabIndex = 2
         Me.Btn_CariPending.Text = "Cari"
         Me.Btn_CariPending.UseVisualStyleBackColor = True
@@ -184,7 +224,7 @@ Partial Class FormJobList
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.41004!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.58996!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txt_prosescari, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Btn_ProsesCari, 2, 0)
@@ -212,15 +252,15 @@ Partial Class FormJobList
         Me.txt_prosescari.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_prosescari.Location = New System.Drawing.Point(114, 3)
         Me.txt_prosescari.Name = "txt_prosescari"
-        Me.txt_prosescari.Size = New System.Drawing.Size(487, 20)
+        Me.txt_prosescari.Size = New System.Drawing.Size(485, 20)
         Me.txt_prosescari.TabIndex = 1
         '
         'Btn_ProsesCari
         '
         Me.Btn_ProsesCari.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn_ProsesCari.Location = New System.Drawing.Point(607, 3)
+        Me.Btn_ProsesCari.Location = New System.Drawing.Point(605, 3)
         Me.Btn_ProsesCari.Name = "Btn_ProsesCari"
-        Me.Btn_ProsesCari.Size = New System.Drawing.Size(128, 22)
+        Me.Btn_ProsesCari.Size = New System.Drawing.Size(130, 22)
         Me.Btn_ProsesCari.TabIndex = 2
         Me.Btn_ProsesCari.Text = "Cari"
         Me.Btn_ProsesCari.UseVisualStyleBackColor = True
@@ -257,7 +297,7 @@ Partial Class FormJobList
         Me.TableLayoutPanel3.ColumnCount = 3
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.3527!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.6473!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label3, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.txt_finishcari, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Btn_FinishCari, 2, 0)
@@ -275,7 +315,7 @@ Partial Class FormJobList
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 29)
+        Me.Label3.Size = New System.Drawing.Size(87, 29)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Cari ID Job :"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -283,17 +323,17 @@ Partial Class FormJobList
         'txt_finishcari
         '
         Me.txt_finishcari.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txt_finishcari.Location = New System.Drawing.Point(97, 3)
+        Me.txt_finishcari.Location = New System.Drawing.Point(96, 3)
         Me.txt_finishcari.Name = "txt_finishcari"
-        Me.txt_finishcari.Size = New System.Drawing.Size(513, 20)
+        Me.txt_finishcari.Size = New System.Drawing.Size(512, 20)
         Me.txt_finishcari.TabIndex = 1
         '
         'Btn_FinishCari
         '
         Me.Btn_FinishCari.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Btn_FinishCari.Location = New System.Drawing.Point(616, 3)
+        Me.Btn_FinishCari.Location = New System.Drawing.Point(614, 3)
         Me.Btn_FinishCari.Name = "Btn_FinishCari"
-        Me.Btn_FinishCari.Size = New System.Drawing.Size(125, 23)
+        Me.Btn_FinishCari.Size = New System.Drawing.Size(127, 23)
         Me.Btn_FinishCari.TabIndex = 2
         Me.Btn_FinishCari.Text = "Cari"
         Me.Btn_FinishCari.UseVisualStyleBackColor = True
@@ -320,16 +360,20 @@ Partial Class FormJobList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.ClientSize = New System.Drawing.Size(752, 544)
         Me.Controls.Add(Me.tab_job)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormJobList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Job List"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tab_job.ResumeLayout(False)
         Me.job_pending.ResumeLayout(False)
         CType(Me.DG_Pending, System.ComponentModel.ISupportInitialize).EndInit()
@@ -369,4 +413,7 @@ Partial Class FormJobList
     Friend WithEvents Btn_FinishCari As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents btn_refresh As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

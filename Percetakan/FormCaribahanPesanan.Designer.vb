@@ -48,7 +48,7 @@ Partial Class FormCaribahanPesanan
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.08633!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.91367!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -69,9 +69,9 @@ Partial Class FormCaribahanPesanan
         Me.BtnCari.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnCari.Font = New System.Drawing.Font("Trebuchet MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCari.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.BtnCari.Location = New System.Drawing.Point(542, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(541, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(177, 28)
+        Me.BtnCari.Size = New System.Drawing.Size(178, 28)
         Me.BtnCari.TabIndex = 6
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = False
@@ -83,7 +83,7 @@ Partial Class FormCaribahanPesanan
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_namabahan.Location = New System.Drawing.Point(95, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
-        Me.txt_namabahan.Size = New System.Drawing.Size(441, 26)
+        Me.txt_namabahan.Size = New System.Drawing.Size(440, 26)
         Me.txt_namabahan.TabIndex = 5
         '
         'Label1
@@ -194,18 +194,18 @@ Partial Class FormCaribahanPesanan
         '
         Me.cms_dgbahan.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahToolStripMenuItem, Me.UbahToolStripMenuItem})
         Me.cms_dgbahan.Name = "ContextMenuStrip1"
-        Me.cms_dgbahan.Size = New System.Drawing.Size(150, 48)
+        Me.cms_dgbahan.Size = New System.Drawing.Size(151, 48)
         '
         'TambahToolStripMenuItem
         '
         Me.TambahToolStripMenuItem.Name = "TambahToolStripMenuItem"
-        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.TambahToolStripMenuItem.Text = "Tambah Stock"
         '
         'UbahToolStripMenuItem
         '
         Me.UbahToolStripMenuItem.Name = "UbahToolStripMenuItem"
-        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.UbahToolStripMenuItem.Text = "Ubah Item"
         '
         'FormCaribahanPesanan

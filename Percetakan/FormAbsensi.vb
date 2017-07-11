@@ -23,4 +23,8 @@ Public Class FormAbsensi
     Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click
         ambil_data()
     End Sub
+
+    Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label2.Click
+        Me.Close()
+    End Sub
 End Class

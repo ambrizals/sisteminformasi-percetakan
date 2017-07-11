@@ -4,6 +4,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <PropertyGroup>
-    <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\;C:\Users\sabun\percetakan\include\mysql\</ReferencePath>
+    <ReferencePath>C:\Users\sabun\percetakan\include\mysql\</ReferencePath>
   </PropertyGroup>
 </Project>
