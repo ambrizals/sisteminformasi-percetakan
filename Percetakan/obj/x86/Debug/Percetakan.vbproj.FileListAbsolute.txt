@@ -155,10 +155,7 @@ C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.pdb
 C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\Percetakan.exe
 C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\Percetakan.pdb
 C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\Percetakan.xml
-C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\MySql.Data.dll
-C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\MySql.Data.xml
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
-C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormFinishing.resources
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormPesananDetail.resources
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAbsenTambahcuti.resources
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormBayarPesanan.resources

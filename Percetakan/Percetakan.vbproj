@@ -77,12 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
-    <Compile Include="FormFinishing.Designer.vb">
-      <DependentUpon>FormFinishing.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormFinishing.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormPesananDetail.Designer.vb">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </Compile>
@@ -221,9 +215,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormFinishing.resx">
-      <DependentUpon>FormFinishing.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPesananDetail.resx">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </EmbeddedResource>

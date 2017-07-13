@@ -28,7 +28,6 @@ Partial Class FormAddGudang
         Me.txt_kodebahan = New System.Windows.Forms.TextBox()
         Me.txt_namabahan = New System.Windows.Forms.TextBox()
         Me.nm_stock = New System.Windows.Forms.NumericUpDown()
-        Me.cb_unit = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnSimpan = New System.Windows.Forms.Button()
         Me.BtnReset = New System.Windows.Forms.Button()
@@ -87,18 +86,8 @@ Partial Class FormAddGudang
         '
         Me.nm_stock.Location = New System.Drawing.Point(96, 142)
         Me.nm_stock.Name = "nm_stock"
-        Me.nm_stock.Size = New System.Drawing.Size(112, 20)
+        Me.nm_stock.Size = New System.Drawing.Size(225, 20)
         Me.nm_stock.TabIndex = 2
-        '
-        'cb_unit
-        '
-        Me.cb_unit.FormattingEnabled = True
-        Me.cb_unit.Items.AddRange(New Object() {"Meter", "Unit"})
-        Me.cb_unit.Location = New System.Drawing.Point(214, 141)
-        Me.cb_unit.Name = "cb_unit"
-        Me.cb_unit.Size = New System.Drawing.Size(107, 21)
-        Me.cb_unit.TabIndex = 3
-        Me.cb_unit.Text = "Pilih Satuan"
         '
         'TableLayoutPanel1
         '
@@ -203,7 +192,6 @@ Partial Class FormAddGudang
         Me.Controls.Add(Me.txt_harga)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.cb_unit)
         Me.Controls.Add(Me.nm_stock)
         Me.Controls.Add(Me.txt_namabahan)
         Me.Controls.Add(Me.txt_kodebahan)
@@ -228,7 +216,6 @@ Partial Class FormAddGudang
     Friend WithEvents txt_kodebahan As System.Windows.Forms.TextBox
     Friend WithEvents txt_namabahan As System.Windows.Forms.TextBox
     Friend WithEvents nm_stock As System.Windows.Forms.NumericUpDown
-    Friend WithEvents cb_unit As System.Windows.Forms.ComboBox
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents BtnSimpan As System.Windows.Forms.Button
     Friend WithEvents BtnReset As System.Windows.Forms.Button

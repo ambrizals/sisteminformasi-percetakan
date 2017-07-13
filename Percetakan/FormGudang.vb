@@ -8,18 +8,17 @@ Public Class FormGudang
     Dim proses As New ClsKoneksi
     Dim list_bahan As DataTable
     Sub Load_DataBahan()
-        list_bahan = proses.ExecuteQuery("SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', concat('Rp.',bahan.BAHANHARGA) AS 'Harga Bahan' FROM bahan")
+        list_bahan = proses.ExecuteQuery("SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', concat('Rp.',bahan.BAHANHARGA) AS 'Harga Bahan' FROM bahan")
         DG_Bahan.DataSource = list_bahan
         DG_Bahan.Columns(0).Width = 60
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DG_Bahan.Columns(2).Width = 120
         DG_Bahan.Columns(3).Width = 120
-        DG_Bahan.Columns(4).Width = 100
 
         proses.OpenConn()
 
         Dim myadapter As New MySqlDataAdapter
-        Dim sqlquery = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan"
+        Dim sqlquery = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan"
         Dim mycommand As New MySqlCommand
         mycommand.Connection = proses.Cn
         mycommand.CommandText = sqlquery
@@ -65,20 +64,19 @@ Public Class FormGudang
     Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
         Kondisi_Pencarian()
         If (txt_namabahan.TextLength > 0) And (cb_condition.SelectedIndex > -1) Then
-            search_q = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan where (bahanname like '%" + txt_namabahan.Text + "%') and " + search_condition + ""
+            search_q = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan' FROM bahan where (bahanname like '%" + txt_namabahan.Text + "%') and " + search_condition + ""
         ElseIf (txt_namabahan.TextLength = 0) And (cb_condition.SelectedIndex > -1) Then
-            search_q = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan where " + search_condition + ""
+            search_q = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan' FROM bahan where " + search_condition + ""
         ElseIf (txt_namabahan.TextLength > 0) And (cb_condition.SelectedIndex = -1) Then
-            search_q = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan where (bahanname like '%" + txt_namabahan.Text + "%')"
+            search_q = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan' FROM bahan where (bahanname like '%" + txt_namabahan.Text + "%')"
         Else
-            search_q = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', concat('Rp.',bahan.BAHANHARGA) AS 'Harga Bahan' FROM bahan CROSS JOIN log_bahan ON (BAHAN.BAHANID = LOG_BAHAN.BAHANID) ORDER BY log_bahan.MEMASUKKANDATE"
+            search_q = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', concat('Rp.',bahan.BAHANHARGA) AS 'Harga Bahan' FROM bahan CROSS JOIN log_bahan ON (BAHAN.BAHANID = LOG_BAHAN.BAHANID) ORDER BY log_bahan.MEMASUKKANDATE"
         End If
         list_bahan = proses.ExecuteQuery(search_q)
         DG_Bahan.DataSource = list_bahan
         DG_Bahan.Columns(0).Width = 100
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DG_Bahan.Columns(2).Width = 150
-        DG_Bahan.Columns(3).Width = 150
     End Sub
 
 

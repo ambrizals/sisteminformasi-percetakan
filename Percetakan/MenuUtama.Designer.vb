@@ -41,6 +41,7 @@ Partial Class MenuUtama
         Me.BtnAbsensi = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BtnPesanan = New System.Windows.Forms.Button()
         Me.BtnGudang = New System.Windows.Forms.Button()
         Me.Sidebar_Kanan = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -74,8 +75,6 @@ Partial Class MenuUtama
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.BtnMin = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
-        Me.BtnPesanan = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -244,8 +243,8 @@ Partial Class MenuUtama
         Me.Sidebar_Row.Location = New System.Drawing.Point(0, 0)
         Me.Sidebar_Row.Name = "Sidebar_Row"
         Me.Sidebar_Row.RowCount = 2
-        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.45295!))
-        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.54705!))
+        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.54923!))
+        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.45077!))
         Me.Sidebar_Row.Size = New System.Drawing.Size(325, 457)
         Me.Sidebar_Row.TabIndex = 0
         '
@@ -255,7 +254,7 @@ Partial Class MenuUtama
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(319, 219)
+        Me.GroupBox1.Size = New System.Drawing.Size(319, 256)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Administrasi"
@@ -274,7 +273,7 @@ Partial Class MenuUtama
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(313, 200)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(313, 237)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'BtnKaryawan
@@ -288,7 +287,7 @@ Partial Class MenuUtama
         Me.BtnKaryawan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnKaryawan.Location = New System.Drawing.Point(3, 3)
         Me.BtnKaryawan.Name = "BtnKaryawan"
-        Me.BtnKaryawan.Size = New System.Drawing.Size(307, 60)
+        Me.BtnKaryawan.Size = New System.Drawing.Size(307, 73)
         Me.BtnKaryawan.TabIndex = 0
         Me.BtnKaryawan.Text = "Karyawan"
         Me.BtnKaryawan.UseVisualStyleBackColor = False
@@ -303,9 +302,9 @@ Partial Class MenuUtama
         Me.BtnJobList.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnJobList.Image = CType(resources.GetObject("BtnJobList.Image"), System.Drawing.Image)
         Me.BtnJobList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnJobList.Location = New System.Drawing.Point(3, 69)
+        Me.BtnJobList.Location = New System.Drawing.Point(3, 82)
         Me.BtnJobList.Name = "BtnJobList"
-        Me.BtnJobList.Size = New System.Drawing.Size(307, 60)
+        Me.BtnJobList.Size = New System.Drawing.Size(307, 73)
         Me.BtnJobList.TabIndex = 1
         Me.BtnJobList.Text = "Job List"
         Me.BtnJobList.UseVisualStyleBackColor = False
@@ -319,9 +318,9 @@ Partial Class MenuUtama
         Me.BtnAbsensi.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnAbsensi.Image = CType(resources.GetObject("BtnAbsensi.Image"), System.Drawing.Image)
         Me.BtnAbsensi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAbsensi.Location = New System.Drawing.Point(3, 135)
+        Me.BtnAbsensi.Location = New System.Drawing.Point(3, 161)
         Me.BtnAbsensi.Name = "BtnAbsensi"
-        Me.BtnAbsensi.Size = New System.Drawing.Size(307, 62)
+        Me.BtnAbsensi.Size = New System.Drawing.Size(307, 73)
         Me.BtnAbsensi.TabIndex = 2
         Me.BtnAbsensi.Text = "Absensi"
         Me.BtnAbsensi.UseVisualStyleBackColor = False
@@ -331,9 +330,9 @@ Partial Class MenuUtama
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel4)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 228)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 265)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(319, 226)
+        Me.GroupBox2.Size = New System.Drawing.Size(319, 189)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Transaction"
@@ -342,18 +341,32 @@ Partial Class MenuUtama
         '
         Me.TableLayoutPanel4.ColumnCount = 1
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.Button1, 0, 1)
-        Me.TableLayoutPanel4.Controls.Add(Me.BtnPesanan, 0, 2)
+        Me.TableLayoutPanel4.Controls.Add(Me.BtnPesanan, 0, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.BtnGudang, 0, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 3
+        Me.TableLayoutPanel4.RowCount = 2
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(313, 207)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(313, 170)
         Me.TableLayoutPanel4.TabIndex = 0
+        '
+        'BtnPesanan
+        '
+        Me.BtnPesanan.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnPesanan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BtnPesanan.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPesanan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnPesanan.Image = CType(resources.GetObject("BtnPesanan.Image"), System.Drawing.Image)
+        Me.BtnPesanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnPesanan.Location = New System.Drawing.Point(3, 88)
+        Me.BtnPesanan.Name = "BtnPesanan"
+        Me.BtnPesanan.Size = New System.Drawing.Size(307, 79)
+        Me.BtnPesanan.TabIndex = 2
+        Me.BtnPesanan.Text = "Pesanan"
+        Me.BtnPesanan.UseVisualStyleBackColor = False
         '
         'BtnGudang
         '
@@ -366,7 +379,7 @@ Partial Class MenuUtama
         Me.BtnGudang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnGudang.Location = New System.Drawing.Point(3, 3)
         Me.BtnGudang.Name = "BtnGudang"
-        Me.BtnGudang.Size = New System.Drawing.Size(307, 63)
+        Me.BtnGudang.Size = New System.Drawing.Size(307, 79)
         Me.BtnGudang.TabIndex = 0
         Me.BtnGudang.Text = "Gudang"
         Me.BtnGudang.UseVisualStyleBackColor = False
@@ -647,32 +660,6 @@ Partial Class MenuUtama
         Me.BtnClose.Text = "X"
         Me.BtnClose.UseVisualStyleBackColor = False
         '
-        'BtnPesanan
-        '
-        Me.BtnPesanan.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnPesanan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnPesanan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnPesanan.Font = New System.Drawing.Font("Trebuchet MS", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnPesanan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BtnPesanan.Image = CType(resources.GetObject("BtnPesanan.Image"), System.Drawing.Image)
-        Me.BtnPesanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnPesanan.Location = New System.Drawing.Point(3, 141)
-        Me.BtnPesanan.Name = "BtnPesanan"
-        Me.BtnPesanan.Size = New System.Drawing.Size(307, 63)
-        Me.BtnPesanan.TabIndex = 2
-        Me.BtnPesanan.Text = "Pesanan"
-        Me.BtnPesanan.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(3, 72)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(307, 63)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Finishing"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'MenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -765,5 +752,4 @@ Partial Class MenuUtama
     Friend WithEvents BtnClose As System.Windows.Forms.Button
     Friend WithEvents BtnMin As System.Windows.Forms.Button
     Friend WithEvents BtnPesanan As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
