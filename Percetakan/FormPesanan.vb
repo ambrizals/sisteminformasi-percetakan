@@ -4,7 +4,7 @@ Imports System.Data
 
 Public Class FormPesanan
     Public kode_pesan, kode_bahan, qty_sisa, sql As String
-    Public prefix_kode_pesan, row_total, stock_bahan As Integer
+    Public prefix_kode_pesan, row_total As Integer
     Public ord_qty, ord_harga, ord_total, ord_bayar As Double
     Dim proses As New ClsKoneksi
 
@@ -33,34 +33,6 @@ Public Class FormPesanan
         proses.CloseConn()
     End Sub
     Sub reset()
-        'Atur ulang stock yang tidak jadi dipesan
-        Dim loncat, stck_rst, stock_reset As Integer
-        If DG_ListBuatPesan.Rows.Count > 0 Then
-            For loncat = 0 To DG_ListBuatPesan.Rows.Count - 1
-                Try
-                    proses.OpenConn()
-                    sql = "SELECT * FROM BAHAN WHERE BAHANID='" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "'"
-                    proses.command.Connection = proses.Cn
-                    proses.command.CommandText = sql
-                    proses.Da.SelectCommand = proses.command
-                    proses.read = proses.command.ExecuteReader
-                    If proses.read.HasRows Then
-                        proses.read.Read()
-                        stck_rst = proses.read("BAHANSTOCK")
-                        Try
-                            stock_reset = stck_rst + Val(DG_ListBuatPesan.Rows(loncat).Cells(4).Value.ToString)
-                            sql = "UPDATE BAHAN SET BAHANSTOCK = '" + stock_reset.ToString + "' WHERE BAHANID = '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "' "
-                            proses.ExecuteNonQuery(sql)
-                        Catch ex As Exception
-                            MsgBox("Terjadi kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Exclamation, "Error")
-                        End Try
-                    End If
-                    proses.CloseConn()
-                Catch ex As Exception
-                    MsgBox("Terjadi kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Exclamation, "Error")
-                End Try
-            Next
-        End If
         'Hapus semua data di form
         txt_namacustomer.Clear()
         txt_nomorteleponcust.Clear()
@@ -87,53 +59,18 @@ Public Class FormPesanan
         Catch ex As Exception
             MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
         End Try
-        Try
-            loncat = 0
-            For loncat = 0 To DG_ListBuatPesan.RowCount - 1
-                kd_tsk = txt_kodepesanan.Text + "-TLT-" + loncat.ToString
-                sql = "INSERT INTO tasklist (TASKID, BAHANID, ORDERID, TASKNAME, TASKQTY, TASKPRICE, TASKSTATUS) VALUES ('" + kd_tsk + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "', '" + txt_kodepesanan.Text + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(3).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(4).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(6).Value.ToString + "', 'Pending')"
-                proses.ExecuteNonQuery(sql)
-                Try
-                    qty_sisa = Val(DG_ListBuatPesan.Rows(loncat).Cells(2).Value - DG_ListBuatPesan.Rows(loncat).Cells(4).Value)
-                    sql = "UPDATE bahan SET BAHANSTOCK='" + qty_sisa + "' WHERE BAHANID='" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "'"
-                    proses.ExecuteNonQuery(sql)
-                Catch ex As Exception
-                    MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
-                End Try
-            Next
-        Catch ex As Exception
-            MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
-        End Try
+        'Try
+        loncat = 0
+        For loncat = 0 To DG_ListBuatPesan.RowCount - 1
+            kd_tsk = txt_kodepesanan.Text + "-TLT-" + loncat.ToString
+            sql = "INSERT INTO tasklist (TASKID, BAHANID, ORDERID, TASKNAME, TASKQTY, TASKPRICE, TASKSTATUS) VALUES ('" + kd_tsk + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "', '" + txt_kodepesanan.Text + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(2).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(3).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(5).Value.ToString + "', 'PENDING')"
+            proses.ExecuteNonQuery(sql)
+        Next
+        'Catch ex As Exception
+        'MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+        'End Try
         MsgBox("Transaksi Sukses", MsgBoxStyle.Information, "Info")
         reset()
-    End Sub
-    Private Sub baca_stock()
-        proses.OpenConn()
-        sql = "SELECT BAHANSTOCK FROM BAHAN WHERE BAHANID = '" + DG_ListBuatPesan.SelectedCells(0).Value.ToString + "'"
-        proses.command.Connection = proses.Cn
-        proses.command.CommandText = sql
-        proses.Da.SelectCommand = proses.command
-        proses.read = proses.command.ExecuteReader()
-        If proses.read.HasRows = True Then
-            'Kode disini.
-            proses.read.Read()
-            stock_bahan = proses.read("BAHANSTOCK")
-        End If
-        proses.CloseConn()
-    End Sub
-    Private Sub baca_stock_1()
-        proses.OpenConn()
-        sql = "SELECT BAHANSTOCK FROM BAHAN WHERE BAHANID = '" + kode_bahan + "'"
-        proses.command.Connection = proses.Cn
-        proses.command.CommandText = sql
-        proses.Da.SelectCommand = proses.command
-        proses.read = proses.command.ExecuteReader()
-        If proses.read.HasRows = True Then
-            'Kode disini.
-            proses.read.Read()
-            stock_bahan = proses.read("BAHANSTOCK")
-        End If
-        proses.CloseConn()
     End Sub
     Sub baca_pesanan()
         Dim tbl_pesanan As DataTable
@@ -166,31 +103,16 @@ Public Class FormPesanan
                 If txt_qty.TextLength = 0 Then
                     MsgBox("Qty belum terisi", MsgBoxStyle.Information, "Error Missing Required Data")
                 Else
-                    If (Val(txt_stock.Text - txt_qty.Text) < 0) = True Then
-                        MsgBox("Stok Barang Kurang", MsgBoxStyle.Information, "Error")
-                    Else
-                        Try
-                            Dim stck As Double
-                            baca_stock_1()
-                            stck = Val(stock_bahan - txt_qty.Text)
-                            sql = "UPDATE BAHAN SET BAHANSTOCK='" + stck.ToString + "' WHERE BAHANID='" + kode_bahan + "'"
-                            proses.ExecuteNonQuery(sql)
-                        Catch ex As Exception
-                            MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
-                        End Try
                         ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
-                        DG_ListBuatPesan.Rows.Add(kode_bahan, txt_bahan.Text, txt_stock.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
+                    DG_ListBuatPesan.Rows.Add(kode_bahan, txt_bahan.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
                         lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) + ord_total).ToString
                         txt_bahan.Clear()
                         txt_deskripsi.Clear()
                         txt_qty.Clear()
                         txt_harga.Clear()
-                        txt_stock.Clear()
-                        lbl_qty.Text = "Qty ()"
                     End If
                 End If
             End If
-        End If
     End Sub
 
 
@@ -207,23 +129,19 @@ Public Class FormPesanan
     End Sub
 
     Private Sub DG_ListBuatPesan_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles DG_ListBuatPesan.MouseDown
-        If e.Button = Windows.Forms.MouseButtons.Right Then
-            If Not DG_ListBuatPesan.SelectedCells(0).Value = "" Then
-                DG_ListBuatPesan.ContextMenuStrip = cms_editpesannow
+        Try
+            If e.Button = Windows.Forms.MouseButtons.Right Then
+                If Not DG_ListBuatPesan.SelectedCells(0).Value = "" Then
+                    DG_ListBuatPesan.ContextMenuStrip = cms_editpesannow
+                End If
             End If
-        End If
+        Catch ex As Exception
+
+        End Try
     End Sub
     Private Sub HapusPesananToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HapusPesananToolStripMenuItem.Click
         Dim row As DataGridViewRow
-        lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(6).Value).ToString
-        Try
-            baca_stock()
-            Dim stck = Val(stock_bahan + DG_ListBuatPesan.SelectedCells(4).Value.ToString)
-            sql = "UPDATE BAHAN SET BAHANSTOCK='" + stck.ToString + "' WHERE BAHANID='" + DG_ListBuatPesan.SelectedCells(0).Value.ToString + "'"
-            proses.ExecuteNonQuery(sql)
-        Catch ex As Exception
-            MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
-        End Try
+        lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(5).Value).ToString
         For Each row In DG_ListBuatPesan.SelectedRows
             DG_ListBuatPesan.Rows.Remove(row)
         Next
@@ -233,8 +151,6 @@ Public Class FormPesanan
     Private Sub UbahDaftarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UbahDaftarToolStripMenuItem.Click
         If txt_bahan.TextLength > 0 Then
             MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
-        ElseIf txt_stock.TextLength > 0 Then
-            MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
         ElseIf txt_deskripsi.TextLength > 0 Then
             MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
         ElseIf txt_qty.TextLength > 0 Then
@@ -242,20 +158,12 @@ Public Class FormPesanan
         ElseIf txt_harga.TextLength > 0 Then
             MsgBox("Selesaikan input pesanan terlebih dahulu", MsgBoxStyle.Critical, "Error")
         Else
-            lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(6).Value).ToString
+            lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) - DG_ListBuatPesan.SelectedCells(5).Value).ToString
             txt_bahan.Text = DG_ListBuatPesan.SelectedCells(1).Value
             kode_bahan = DG_ListBuatPesan.SelectedCells(0).Value
-            Try
-                baca_stock()
-                txt_stock.Text = Val(stock_bahan + DG_ListBuatPesan.SelectedCells(4).Value.ToString)
-                sql = "UPDATE BAHAN SET BAHANSTOCK='" + txt_stock.Text + "' WHERE BAHANID='" + DG_ListBuatPesan.SelectedCells(0).Value.ToString + "'"
-                proses.ExecuteNonQuery(sql)
-            Catch ex As Exception
-                MsgBox("Terjadi Kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Critical, "Error")
-            End Try
-            txt_deskripsi.Text = DG_ListBuatPesan.SelectedCells(3).Value
-            txt_qty.Text = DG_ListBuatPesan.SelectedCells(4).Value
-            txt_harga.Text = DG_ListBuatPesan.SelectedCells(5).Value
+            txt_deskripsi.Text = DG_ListBuatPesan.SelectedCells(2).Value
+            txt_qty.Text = DG_ListBuatPesan.SelectedCells(3).Value
+            txt_harga.Text = DG_ListBuatPesan.SelectedCells(4).Value
             Dim row As DataGridViewRow
             For Each row In DG_ListBuatPesan.SelectedRows
                 DG_ListBuatPesan.Rows.Remove(row)

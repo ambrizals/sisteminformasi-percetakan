@@ -107,12 +107,6 @@
     <Compile Include="FormAddGudang.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddstockGudang.Designer.vb">
-      <DependentUpon>FormAddstockGudang.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormAddstockGudang.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormEditbahanGudang.Designer.vb">
       <DependentUpon>FormEditbahanGudang.vb</DependentUpon>
     </Compile>
@@ -229,9 +223,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddGudang.resx">
       <DependentUpon>FormAddGudang.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAddstockGudang.resx">
-      <DependentUpon>FormAddstockGudang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditbahanGudang.resx">
       <DependentUpon>FormEditbahanGudang.vb</DependentUpon>

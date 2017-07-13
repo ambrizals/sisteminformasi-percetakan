@@ -28,7 +28,6 @@ Partial Class FormGudang
         Me.BtnCari = New System.Windows.Forms.Button()
         Me.txt_namabahan = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cb_condition = New System.Windows.Forms.ComboBox()
         Me.DG_Bahan = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnRefresh = New System.Windows.Forms.Button()
@@ -36,7 +35,6 @@ Partial Class FormGudang
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_bahancount = New System.Windows.Forms.Label()
         Me.cms_dgbahan = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.TambahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UbahToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -50,15 +48,13 @@ Partial Class FormGudang
         '
         'TableLayoutPanel1
         '
-        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.36893!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.63107!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 3, 0)
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cb_condition, 2, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 62)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -73,9 +69,9 @@ Partial Class FormGudang
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCari.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnCari.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnCari.Location = New System.Drawing.Point(562, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(558, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(157, 23)
+        Me.BtnCari.Size = New System.Drawing.Size(161, 23)
         Me.BtnCari.TabIndex = 4
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = False
@@ -85,9 +81,9 @@ Partial Class FormGudang
         Me.txt_namabahan.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txt_namabahan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_namabahan.Location = New System.Drawing.Point(119, 3)
+        Me.txt_namabahan.Location = New System.Drawing.Point(166, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
-        Me.txt_namabahan.Size = New System.Drawing.Size(272, 26)
+        Me.txt_namabahan.Size = New System.Drawing.Size(386, 26)
         Me.txt_namabahan.TabIndex = 0
         '
         'Label1
@@ -99,22 +95,10 @@ Partial Class FormGudang
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 29)
+        Me.Label1.Size = New System.Drawing.Size(157, 29)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Cari Bahan :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cb_condition
-        '
-        Me.cb_condition.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cb_condition.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cb_condition.FormattingEnabled = True
-        Me.cb_condition.Items.AddRange(New Object() {"Tersedia", "Tidak Tersedia"})
-        Me.cb_condition.Location = New System.Drawing.Point(397, 3)
-        Me.cb_condition.Name = "cb_condition"
-        Me.cb_condition.Size = New System.Drawing.Size(159, 26)
-        Me.cb_condition.TabIndex = 3
-        Me.cb_condition.Text = "<Pilih Ketersediaan>"
         '
         'DG_Bahan
         '
@@ -207,20 +191,14 @@ Partial Class FormGudang
         '
         'cms_dgbahan
         '
-        Me.cms_dgbahan.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TambahToolStripMenuItem, Me.UbahToolStripMenuItem})
+        Me.cms_dgbahan.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UbahToolStripMenuItem})
         Me.cms_dgbahan.Name = "ContextMenuStrip1"
-        Me.cms_dgbahan.Size = New System.Drawing.Size(150, 48)
-        '
-        'TambahToolStripMenuItem
-        '
-        Me.TambahToolStripMenuItem.Name = "TambahToolStripMenuItem"
-        Me.TambahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
-        Me.TambahToolStripMenuItem.Text = "Tambah Stock"
+        Me.cms_dgbahan.Size = New System.Drawing.Size(153, 48)
         '
         'UbahToolStripMenuItem
         '
         Me.UbahToolStripMenuItem.Name = "UbahToolStripMenuItem"
-        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.UbahToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UbahToolStripMenuItem.Text = "Ubah Item"
         '
         'Label3
@@ -295,9 +273,7 @@ Partial Class FormGudang
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents lbl_bahancount As System.Windows.Forms.Label
     Friend WithEvents BtnCari As System.Windows.Forms.Button
-    Friend WithEvents cb_condition As System.Windows.Forms.ComboBox
     Friend WithEvents cms_dgbahan As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents TambahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UbahToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label

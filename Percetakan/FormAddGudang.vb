@@ -7,7 +7,7 @@ Public Class FormAddGudang
     Sub load_adddata()
         proses.OpenConn()
         Dim myadapter As New MySqlDataAdapter
-        Dim sqlquery = "SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan' FROM bahan"
+        Dim sqlquery = "SELECT * FROM bahan"
         Dim mycommand As New MySqlCommand
         mycommand.Connection = proses.Cn
         mycommand.CommandText = sqlquery
@@ -29,7 +29,6 @@ Public Class FormAddGudang
     Sub Clear()
         txt_kodebahan.Clear()
         txt_namabahan.Clear()
-        nm_stock.Value = 0
         txt_harga.Clear()
     End Sub
 
@@ -39,7 +38,7 @@ Public Class FormAddGudang
 
     Private Sub BtnSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpan.Click
         Try
-            sql = "INSERT INTO bahan (BAHANID, BAHANNAME, BAHANSTOCK, BAHANHARGA) VALUES ('" + txt_kodebahan.Text + "', '" + txt_namabahan.Text + "', '" + nm_stock.Value.ToString + "', '" + txt_harga.Text + "')"
+            sql = "INSERT INTO bahan (BAHANID, BAHANNAME, BAHANHARGA) VALUES ('" + txt_kodebahan.Text + "', '" + txt_namabahan.Text + "', '" + txt_harga.Text + "')"
             proses.ExecuteNonQuery(sql)
             MsgBox("Data tersimpan", MsgBoxStyle.Information, "Sukses")
             sql = "INSERT INTO log_bahan (KARYAWANID, BAHANID, MEMASUKKANDATE, MEMASUKKANSTATUS) VALUES ('" + kry_id + "', '" + txt_kodebahan.Text + "', '" + tanggal + "', 'TAMBAH BAHAN')"

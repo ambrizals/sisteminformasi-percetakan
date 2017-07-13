@@ -19,7 +19,6 @@ Public Class FormEditbahanGudang
         If (mydata.HasRows) Then
             bahanid = mydata("BAHANID")
             bahanname = mydata("BAHANNAME")
-            bahanstock = mydata("BAHANSTOCK")
             bahanharga = mydata("BAHANHARGA")
         End If
         proses.CloseConn()
@@ -27,7 +26,6 @@ Public Class FormEditbahanGudang
     Sub clear()
         txt_kodebahan.Clear()
         txt_namabahan.Clear()
-        nm_stock.Value = 0
     End Sub
 
     Private Sub FormEditbahanGudang_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -35,7 +33,6 @@ Public Class FormEditbahanGudang
         Me.Text = "Ubah Data Bahan : " + bahanname
         txt_kodebahan.Text = bahanid
         txt_namabahan.Text = bahanname
-        nm_stock.Value = bahanstock
         txt_harga.Text = Val(bahanharga)
     End Sub
 

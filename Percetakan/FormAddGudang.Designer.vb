@@ -24,10 +24,8 @@ Partial Class FormAddGudang
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_kodebahan = New System.Windows.Forms.TextBox()
         Me.txt_namabahan = New System.Windows.Forms.TextBox()
-        Me.nm_stock = New System.Windows.Forms.NumericUpDown()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnSimpan = New System.Windows.Forms.Button()
         Me.BtnReset = New System.Windows.Forms.Button()
@@ -36,7 +34,6 @@ Partial Class FormAddGudang
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        CType(Me.nm_stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,15 +55,6 @@ Partial Class FormAddGudang
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nama Bahan :"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 144)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Stock Bahan :"
-        '
         'txt_kodebahan
         '
         Me.txt_kodebahan.Location = New System.Drawing.Point(96, 72)
@@ -81,13 +69,6 @@ Partial Class FormAddGudang
         Me.txt_namabahan.Name = "txt_namabahan"
         Me.txt_namabahan.Size = New System.Drawing.Size(225, 20)
         Me.txt_namabahan.TabIndex = 1
-        '
-        'nm_stock
-        '
-        Me.nm_stock.Location = New System.Drawing.Point(96, 142)
-        Me.nm_stock.Name = "nm_stock"
-        Me.nm_stock.Size = New System.Drawing.Size(225, 20)
-        Me.nm_stock.TabIndex = 2
         '
         'TableLayoutPanel1
         '
@@ -146,7 +127,7 @@ Partial Class FormAddGudang
         '
         'txt_harga
         '
-        Me.txt_harga.Location = New System.Drawing.Point(96, 177)
+        Me.txt_harga.Location = New System.Drawing.Point(96, 140)
         Me.txt_harga.Name = "txt_harga"
         Me.txt_harga.Size = New System.Drawing.Size(225, 20)
         Me.txt_harga.TabIndex = 4
@@ -154,7 +135,7 @@ Partial Class FormAddGudang
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 180)
+        Me.Label4.Location = New System.Drawing.Point(15, 143)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(76, 13)
         Me.Label4.TabIndex = 9
@@ -192,10 +173,8 @@ Partial Class FormAddGudang
         Me.Controls.Add(Me.txt_harga)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.nm_stock)
         Me.Controls.Add(Me.txt_namabahan)
         Me.Controls.Add(Me.txt_kodebahan)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -204,7 +183,6 @@ Partial Class FormAddGudang
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tambah Bahan"
-        CType(Me.nm_stock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -212,10 +190,8 @@ Partial Class FormAddGudang
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txt_kodebahan As System.Windows.Forms.TextBox
     Friend WithEvents txt_namabahan As System.Windows.Forms.TextBox
-    Friend WithEvents nm_stock As System.Windows.Forms.NumericUpDown
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents BtnSimpan As System.Windows.Forms.Button
     Friend WithEvents BtnReset As System.Windows.Forms.Button
