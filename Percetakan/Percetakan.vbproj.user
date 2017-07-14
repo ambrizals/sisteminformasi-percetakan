@@ -4,6 +4,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <PropertyGroup>
-    <ReferencePath>C:\Users\sabun\percetakan\include\mysql\</ReferencePath>
+    <ReferencePath>C:\Users\sabun\Desktop\percetakan\include\mysql\;C:\Users\sabun\Desktop\percetakan\include\MySqlBackup.NET.2.0.9.5\</ReferencePath>
+    <PublishUrlHistory />
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
 </Project>

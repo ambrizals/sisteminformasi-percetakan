@@ -56,7 +56,7 @@ Public Class FormGudang
 
     Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
         Kondisi_Pencarian()
-        search_q = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', concat('Rp.',bahan.BAHANHARGA) AS 'Harga Bahan' FROM bahan"
+        search_q = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', concat('Rp.',bahan.BAHANHARGA) AS 'Harga Bahan' FROM bahan where bahan.bahanname like '%" + txt_namabahan.Text + "%'"
         list_bahan = proses.ExecuteQuery(search_q)
         DG_Bahan.DataSource = list_bahan
         DG_Bahan.Columns(0).Width = 100

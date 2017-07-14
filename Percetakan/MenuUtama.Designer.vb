@@ -381,7 +381,7 @@ Partial Class MenuUtama
         Me.BtnGudang.Name = "BtnGudang"
         Me.BtnGudang.Size = New System.Drawing.Size(307, 79)
         Me.BtnGudang.TabIndex = 0
-        Me.BtnGudang.Text = "Gudang"
+        Me.BtnGudang.Text = "Daftar Bahan"
         Me.BtnGudang.UseVisualStyleBackColor = False
         '
         'Sidebar_Kanan

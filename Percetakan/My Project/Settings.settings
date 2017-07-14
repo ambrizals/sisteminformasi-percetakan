@@ -26,5 +26,8 @@
     <Setting Name="opte_passsave" Type="System.String" Scope="User">
       <Value Profile="(Default)">radiohead4403</Value>
     </Setting>
+    <Setting Name="app_firstrun" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

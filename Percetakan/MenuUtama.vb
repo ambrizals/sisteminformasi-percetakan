@@ -37,14 +37,14 @@
     End Sub
 
     Sub Privilage_User()
-        If kry_lvl = "JBT-002" Then
+        If kry_lvl = "OPERATOR" Then
             BtnPesanan.Enabled = False
             BtnKaryawan.Enabled = False
             BtnAbsensi.Enabled = False
             BtnSimpanPengumuman.Enabled = False
             BtnSimpanPengumuman.Visible = False
             rtf_pengumuman.ReadOnly = True
-        ElseIf kry_lvl = "JBT-003" Then
+        ElseIf kry_lvl = "KASIR" Then
             BtnKaryawan.Enabled = False
             BtnGudang.Enabled = False
             BtnSimpanPengumuman.Enabled = False

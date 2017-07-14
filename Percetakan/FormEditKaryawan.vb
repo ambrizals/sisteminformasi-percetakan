@@ -26,7 +26,7 @@ Public Class FormEditKaryawan
         mydata.Read()
         If (mydata.HasRows) Then
             kode_karyawan = mydata("KARYAWANID")
-            jabatan_karyawan = mydata("LEVELID")
+            jabatan_karyawan = mydata("KARYAWANLEVEL")
             nama_karyawan = mydata("KARYAWANNAME")
             user_karyawan = mydata("KARYAWANUSERNAME")
             password_karyawan = mydata("KARYAWANPASSWORD")
@@ -96,18 +96,18 @@ Public Class FormEditKaryawan
     Private Sub cb_jabatan_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cb_jabatan.SelectedIndexChanged
         If cb_jabatan.SelectedIndex = 0 Then
             rtf_deskripsi.Text = "Admin memiliki seluruh kontrol terhadap aplikasi ini"
-            jabatan = "JBT-001"
+            jabatan = "ADMIN"
         ElseIf cb_jabatan.SelectedIndex = 1 Then
             rtf_deskripsi.Text = "Operator hanya dapat mengontrol Job List dan Gudang. Silahkan hubungi admin atau kasir jika ingin mengubah data yang di cekal"
-            jabatan = "JBT-002"
+            jabatan = "OPERATOR"
         ElseIf cb_jabatan.SelectedIndex = 2 Then
             rtf_deskripsi.Text = "Kasir hanya dapat mengontrol pesanan, job list, dan laporan. Silahkan hubungi admin atau operator jika ingin mengubah data yang di cekal"
-            jabatan = "JBT-003"
+            jabatan = "KASIR"
         End If
     End Sub
     Private Sub BtnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSave.Click
         Try
-            sql = "UPDATE karyawan SET LEVELID = '" + jabatan + "' , KARYAWANNAME = '" + txt_namakaryawan.Text + "' , KARYAWANUSERNAME = '" + txt_userkaryawan.Text + "' , KARYAWANPASSWORD = '" + txt_passwordkaryawan.Text + "' , KARYAWANALAMAT = '" + rtf_alamat.Text + "' , KARYAWANTELP = '" + txt_telepon.Text + "' WHERE KARYAWANID = '" + kode_karyawan + "'"
+            sql = "UPDATE karyawan SET KARYAWANLEVEL = '" + jabatan + "' , KARYAWANNAME = '" + txt_namakaryawan.Text + "' , KARYAWANUSERNAME = '" + txt_userkaryawan.Text + "' , KARYAWANPASSWORD = '" + txt_passwordkaryawan.Text + "' , KARYAWANALAMAT = '" + rtf_alamat.Text + "' , KARYAWANTELP = '" + txt_telepon.Text + "' WHERE KARYAWANID = '" + kode_karyawan + "'"
             proses.ExecuteNonQuery(sql)
             MsgBox("Data tersimpan", MsgBoxStyle.Information, "Sukses")
             FormKaryawan.Load_DataKaryawan()

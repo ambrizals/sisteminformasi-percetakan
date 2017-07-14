@@ -148,14 +148,12 @@ C:\Users\Nita\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.Login.resou
 C:\Users\Nita\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
 C:\Users\Nita\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
 C:\Users\Nita\Desktop\Percetakan\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
+C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\percetakan_db.sql
 C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\Percetakan.exe.config
-C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.exe
-C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.xml
-C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.pdb
 C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\Percetakan.exe
 C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\Percetakan.pdb
 C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\Percetakan.xml
-C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
+C:\Users\sabun\Desktop\percetakan\Percetakan\bin\Debug\MySqlBackup.dll
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormPesananDetail.resources
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormAbsenTambahcuti.resources
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.FormBayarPesanan.resources
@@ -176,3 +174,6 @@ C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.Login.reso
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
 C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
+C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.exe
+C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.xml
+C:\Users\sabun\Desktop\percetakan\Percetakan\obj\x86\Debug\Percetakan.pdb

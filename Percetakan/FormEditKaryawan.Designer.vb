@@ -103,7 +103,7 @@ Partial Class FormEditKaryawan
         'cb_jabatan
         '
         Me.cb_jabatan.FormattingEnabled = True
-        Me.cb_jabatan.Items.AddRange(New Object() {"Admin", "Operator", "Kasir"})
+        Me.cb_jabatan.Items.AddRange(New Object() {"ADMIN", "OPERATOR", "KASIR"})
         Me.cb_jabatan.Location = New System.Drawing.Point(116, 25)
         Me.cb_jabatan.Name = "cb_jabatan"
         Me.cb_jabatan.Size = New System.Drawing.Size(169, 21)
@@ -280,7 +280,7 @@ Partial Class FormEditKaryawan
         Me.FORM.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.FORM.Location = New System.Drawing.Point(268, 12)
         Me.FORM.Name = "FORM"
-        Me.FORM.Size = New System.Drawing.Size(212, 29)
+        Me.FORM.Size = New System.Drawing.Size(206, 29)
         Me.FORM.TabIndex = 39
         Me.FORM.Text = "FORM KARYAWAN"
         '
