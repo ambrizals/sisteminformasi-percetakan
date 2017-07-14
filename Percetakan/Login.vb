@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.IO
+Imports System
+Imports MySql.Data.MySqlClient
 Public Class Login
     Dim proses As New ClsKoneksi
     Dim opt_us, opt_ps As Integer
@@ -68,7 +70,6 @@ Public Class Login
             BtnLogin.Focus()
         End If
     End Sub
-
     Private Sub BtnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLogin.Click
         Try
             If str_status > 0 Then
@@ -92,7 +93,7 @@ Public Class Login
                     Else
                         proses.read.Read()
                         kry_id = proses.read("KARYAWANID")
-                        kry_lvl = proses.read("KARYAWANLEVEL")
+                        kry_lvl = proses.read("LEVELID")
                         kry_name = proses.read("KARYAWANNAME")
                         kry_username = proses.read("KARYAWANUSERNAME")
                         kry_password = proses.read("KARYAWANPASSWORD")
@@ -126,21 +127,16 @@ Public Class Login
             End If
 
         Catch ex As Exception
-            MsgBox("Gagal terhubung ke server" + vbCr + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
             Connect()
         End Try
     End Sub
 
     Private Sub Login_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If My.Settings.app_firstrun = 0 Then
-            BtnBackup.Enabled = False
-            BtnBackup.Text = "Database telah terpasang"
-        Else
-            BtnBackup.Enabled = True
-        End If
         lvl_versi.Text = InfoAplikasi.Default.Versi.ToString
         get_saveoption()
         Connect()
+
     End Sub
 
     Private Sub BtnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReset.Click
@@ -164,21 +160,5 @@ Public Class Login
 
     Private Sub BtnConfig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnConfig.Click
         FormConfig.ShowDialog()
-    End Sub
-
-    Private Sub BtnBackup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBackup.Click
-        Dim con As String = "server=" + Server_Host + ";user=" + Server_User + ";pwd=" + Server_Password + ";database=" + Server_Database + ";"
-        Dim file As String = App_Path() + "percetakan_db.sql"
-        Dim conn As MySqlConnection = New MySqlConnection(con)
-        Dim cmd As MySqlCommand = New MySqlCommand()
-        Dim mb As MySqlBackup = New MySqlBackup(cmd)
-        cmd.Connection = conn
-        conn.Open()
-        mb.ImportFromFile(file)
-        MsgBox("Data telah di import!" + vbCr + "Harap langsung melakukan login dengan" + vbCr + "Username : Administrator & Password : admin", MsgBoxStyle.Information, "Info")
-        System.IO.File.Delete(App_Path() + "percetakan_db.sql")
-        My.Settings.app_firstrun = 0
-        BtnBackup.Enabled = False
-        conn.Close()
     End Sub
 End Class

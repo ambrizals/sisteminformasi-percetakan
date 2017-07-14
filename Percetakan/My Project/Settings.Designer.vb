@@ -149,18 +149,6 @@ Namespace My
                 Me("opte_passsave") = value
             End Set
         End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
-        Public Property app_firstrun() As String
-            Get
-                Return CType(Me("app_firstrun"),String)
-            End Get
-            Set
-                Me("app_firstrun") = value
-            End Set
-        End Property
     End Class
 End Namespace
 

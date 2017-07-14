@@ -66,15 +66,15 @@ Partial Class MenuUtama
         Me.LaporanPenguranganStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanPesananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPesananBelumLunasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPesananCancelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LaporanPesananBelumLunasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaporanPesananCancelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.BtnMin = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
+        Me.BtnMin = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -243,8 +243,8 @@ Partial Class MenuUtama
         Me.Sidebar_Row.Location = New System.Drawing.Point(0, 0)
         Me.Sidebar_Row.Name = "Sidebar_Row"
         Me.Sidebar_Row.RowCount = 2
-        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.54923!))
-        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.45077!))
+        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.77419!))
+        Me.Sidebar_Row.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.22581!))
         Me.Sidebar_Row.Size = New System.Drawing.Size(325, 457)
         Me.Sidebar_Row.TabIndex = 0
         '
@@ -254,7 +254,7 @@ Partial Class MenuUtama
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(319, 256)
+        Me.GroupBox1.Size = New System.Drawing.Size(319, 253)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Administrasi"
@@ -273,7 +273,7 @@ Partial Class MenuUtama
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(313, 237)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(313, 234)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'BtnKaryawan
@@ -287,7 +287,7 @@ Partial Class MenuUtama
         Me.BtnKaryawan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnKaryawan.Location = New System.Drawing.Point(3, 3)
         Me.BtnKaryawan.Name = "BtnKaryawan"
-        Me.BtnKaryawan.Size = New System.Drawing.Size(307, 73)
+        Me.BtnKaryawan.Size = New System.Drawing.Size(307, 72)
         Me.BtnKaryawan.TabIndex = 0
         Me.BtnKaryawan.Text = "Karyawan"
         Me.BtnKaryawan.UseVisualStyleBackColor = False
@@ -302,9 +302,9 @@ Partial Class MenuUtama
         Me.BtnJobList.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnJobList.Image = CType(resources.GetObject("BtnJobList.Image"), System.Drawing.Image)
         Me.BtnJobList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnJobList.Location = New System.Drawing.Point(3, 82)
+        Me.BtnJobList.Location = New System.Drawing.Point(3, 81)
         Me.BtnJobList.Name = "BtnJobList"
-        Me.BtnJobList.Size = New System.Drawing.Size(307, 73)
+        Me.BtnJobList.Size = New System.Drawing.Size(307, 72)
         Me.BtnJobList.TabIndex = 1
         Me.BtnJobList.Text = "Job List"
         Me.BtnJobList.UseVisualStyleBackColor = False
@@ -318,9 +318,9 @@ Partial Class MenuUtama
         Me.BtnAbsensi.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnAbsensi.Image = CType(resources.GetObject("BtnAbsensi.Image"), System.Drawing.Image)
         Me.BtnAbsensi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAbsensi.Location = New System.Drawing.Point(3, 161)
+        Me.BtnAbsensi.Location = New System.Drawing.Point(3, 159)
         Me.BtnAbsensi.Name = "BtnAbsensi"
-        Me.BtnAbsensi.Size = New System.Drawing.Size(307, 73)
+        Me.BtnAbsensi.Size = New System.Drawing.Size(307, 72)
         Me.BtnAbsensi.TabIndex = 2
         Me.BtnAbsensi.Text = "Absensi"
         Me.BtnAbsensi.UseVisualStyleBackColor = False
@@ -330,9 +330,9 @@ Partial Class MenuUtama
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel4)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(3, 265)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 262)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(319, 189)
+        Me.GroupBox2.Size = New System.Drawing.Size(319, 192)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Transaction"
@@ -340,16 +340,16 @@ Partial Class MenuUtama
         'TableLayoutPanel4
         '
         Me.TableLayoutPanel4.ColumnCount = 1
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.BtnPesanan, 0, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.BtnGudang, 0, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 16)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 2
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(313, 170)
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(313, 173)
         Me.TableLayoutPanel4.TabIndex = 0
         '
         'BtnPesanan
@@ -361,10 +361,10 @@ Partial Class MenuUtama
         Me.BtnPesanan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnPesanan.Image = CType(resources.GetObject("BtnPesanan.Image"), System.Drawing.Image)
         Me.BtnPesanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnPesanan.Location = New System.Drawing.Point(3, 88)
+        Me.BtnPesanan.Location = New System.Drawing.Point(3, 89)
         Me.BtnPesanan.Name = "BtnPesanan"
-        Me.BtnPesanan.Size = New System.Drawing.Size(307, 79)
-        Me.BtnPesanan.TabIndex = 2
+        Me.BtnPesanan.Size = New System.Drawing.Size(307, 81)
+        Me.BtnPesanan.TabIndex = 1
         Me.BtnPesanan.Text = "Pesanan"
         Me.BtnPesanan.UseVisualStyleBackColor = False
         '
@@ -379,9 +379,9 @@ Partial Class MenuUtama
         Me.BtnGudang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnGudang.Location = New System.Drawing.Point(3, 3)
         Me.BtnGudang.Name = "BtnGudang"
-        Me.BtnGudang.Size = New System.Drawing.Size(307, 79)
+        Me.BtnGudang.Size = New System.Drawing.Size(307, 80)
         Me.BtnGudang.TabIndex = 0
-        Me.BtnGudang.Text = "Daftar Bahan"
+        Me.BtnGudang.Text = "Gudang"
         Me.BtnGudang.UseVisualStyleBackColor = False
         '
         'Sidebar_Kanan
@@ -489,7 +489,7 @@ Partial Class MenuUtama
         '
         Me.KaryawanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarKaryawanToolStripMenuItem, Me.DaftarHadirKaryawanToolStripMenuItem, Me.LaporanCutiKaryawanToolStripMenuItem})
         Me.KaryawanToolStripMenuItem.Name = "KaryawanToolStripMenuItem"
-        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.KaryawanToolStripMenuItem.Text = "Karyawan"
         '
         'DaftarKaryawanToolStripMenuItem
@@ -514,7 +514,7 @@ Partial Class MenuUtama
         '
         Me.JobListToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanJobListSelesaiToolStripMenuItem, Me.LaporanJobListCancelToolStripMenuItem})
         Me.JobListToolStripMenuItem.Name = "JobListToolStripMenuItem"
-        Me.JobListToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.JobListToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.JobListToolStripMenuItem.Text = "Job List"
         '
         'LaporanJobListSelesaiToolStripMenuItem
@@ -533,7 +533,7 @@ Partial Class MenuUtama
         '
         Me.GudangToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanPenambahanStockToolStripMenuItem, Me.LaporanPenambahanBarangBaruToolStripMenuItem, Me.LaporanPenguranganStockToolStripMenuItem})
         Me.GudangToolStripMenuItem.Name = "GudangToolStripMenuItem"
-        Me.GudangToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.GudangToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GudangToolStripMenuItem.Text = "Gudang"
         '
         'LaporanPenambahanStockToolStripMenuItem
@@ -558,7 +558,7 @@ Partial Class MenuUtama
         '
         Me.PesananToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanPesananToolStripMenuItem, Me.LaporanPesananBelumLunasToolStripMenuItem, Me.LaporanPesananCancelToolStripMenuItem})
         Me.PesananToolStripMenuItem.Name = "PesananToolStripMenuItem"
-        Me.PesananToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.PesananToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PesananToolStripMenuItem.Text = "Pesanan"
         '
         'LaporanPesananToolStripMenuItem
@@ -566,18 +566,6 @@ Partial Class MenuUtama
         Me.LaporanPesananToolStripMenuItem.Name = "LaporanPesananToolStripMenuItem"
         Me.LaporanPesananToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
         Me.LaporanPesananToolStripMenuItem.Text = "Laporan Pesanan (Selesai)"
-        '
-        'LaporanPesananBelumLunasToolStripMenuItem
-        '
-        Me.LaporanPesananBelumLunasToolStripMenuItem.Name = "LaporanPesananBelumLunasToolStripMenuItem"
-        Me.LaporanPesananBelumLunasToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
-        Me.LaporanPesananBelumLunasToolStripMenuItem.Text = "Laporan Pesanan (Belum Lunas)"
-        '
-        'LaporanPesananCancelToolStripMenuItem
-        '
-        Me.LaporanPesananCancelToolStripMenuItem.Name = "LaporanPesananCancelToolStripMenuItem"
-        Me.LaporanPesananCancelToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
-        Me.LaporanPesananCancelToolStripMenuItem.Text = "Laporan Pesanan (Cancel)"
         '
         'AboutToolStripMenuItem
         '
@@ -599,7 +587,7 @@ Partial Class MenuUtama
         Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
         Me.TableLayoutPanel9.RowCount = 1
         Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48.0!))
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel9.Size = New System.Drawing.Size(801, 48)
         Me.TableLayoutPanel9.TabIndex = 4
         '
@@ -624,6 +612,18 @@ Partial Class MenuUtama
         Me.Panel2.Size = New System.Drawing.Size(200, 42)
         Me.Panel2.TabIndex = 0
         '
+        'LaporanPesananBelumLunasToolStripMenuItem
+        '
+        Me.LaporanPesananBelumLunasToolStripMenuItem.Name = "LaporanPesananBelumLunasToolStripMenuItem"
+        Me.LaporanPesananBelumLunasToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.LaporanPesananBelumLunasToolStripMenuItem.Text = "Laporan Pesanan (Belum Lunas)"
+        '
+        'LaporanPesananCancelToolStripMenuItem
+        '
+        Me.LaporanPesananCancelToolStripMenuItem.Name = "LaporanPesananCancelToolStripMenuItem"
+        Me.LaporanPesananCancelToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
+        Me.LaporanPesananCancelToolStripMenuItem.Text = "Laporan Pesanan (Cancel)"
+        '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.BtnMin)
@@ -634,24 +634,11 @@ Partial Class MenuUtama
         Me.Panel4.Size = New System.Drawing.Size(261, 42)
         Me.Panel4.TabIndex = 4
         '
-        'BtnMin
-        '
-        Me.BtnMin.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMin.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.BtnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMin.Location = New System.Drawing.Point(194, 9)
-        Me.BtnMin.Name = "BtnMin"
-        Me.BtnMin.Size = New System.Drawing.Size(28, 23)
-        Me.BtnMin.TabIndex = 1
-        Me.BtnMin.Text = "-"
-        Me.BtnMin.UseVisualStyleBackColor = False
-        '
         'BtnClose
         '
         Me.BtnClose.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnClose.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.BtnClose.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnClose.Location = New System.Drawing.Point(228, 9)
         Me.BtnClose.Name = "BtnClose"
@@ -659,6 +646,19 @@ Partial Class MenuUtama
         Me.BtnClose.TabIndex = 0
         Me.BtnClose.Text = "X"
         Me.BtnClose.UseVisualStyleBackColor = False
+        '
+        'BtnMin
+        '
+        Me.BtnMin.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMin.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.BtnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMin.Location = New System.Drawing.Point(194, 9)
+        Me.BtnMin.Name = "BtnMin"
+        Me.BtnMin.Size = New System.Drawing.Size(28, 23)
+        Me.BtnMin.TabIndex = 1
+        Me.BtnMin.Text = "-"
+        Me.BtnMin.UseVisualStyleBackColor = False
         '
         'MenuUtama
         '
@@ -713,6 +713,7 @@ Partial Class MenuUtama
     Friend WithEvents Sidebar_Row As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents TableLayoutPanel4 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents BtnPesanan As System.Windows.Forms.Button
     Friend WithEvents BtnGudang As System.Windows.Forms.Button
     Friend WithEvents TableLayoutPanel5 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
@@ -751,5 +752,4 @@ Partial Class MenuUtama
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents BtnClose As System.Windows.Forms.Button
     Friend WithEvents BtnMin As System.Windows.Forms.Button
-    Friend WithEvents BtnPesanan As System.Windows.Forms.Button
 End Class

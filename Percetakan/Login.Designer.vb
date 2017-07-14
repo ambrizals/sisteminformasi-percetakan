@@ -38,7 +38,6 @@ Partial Class Login
         Me.lvl_versi = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnBackup = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -174,7 +173,7 @@ Partial Class Login
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.lbl_constatus)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Panel1.Location = New System.Drawing.Point(0, 357)
+        Me.Panel1.Location = New System.Drawing.Point(0, 313)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(293, 49)
         Me.Panel1.TabIndex = 12
@@ -211,25 +210,12 @@ Partial Class Login
         Me.Label4.Text = "LOGIN"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'BtnBackup
-        '
-        Me.BtnBackup.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.BtnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnBackup.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.BtnBackup.Location = New System.Drawing.Point(12, 306)
-        Me.BtnBackup.Name = "BtnBackup"
-        Me.BtnBackup.Size = New System.Drawing.Size(256, 40)
-        Me.BtnBackup.TabIndex = 14
-        Me.BtnBackup.Text = "Install Database"
-        Me.BtnBackup.UseVisualStyleBackColor = False
-        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(289, 404)
-        Me.Controls.Add(Me.BtnBackup)
+        Me.ClientSize = New System.Drawing.Size(289, 360)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnConfig)
@@ -268,6 +254,5 @@ Partial Class Login
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents lvl_versi As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents BtnBackup As System.Windows.Forms.Button
 
 End Class

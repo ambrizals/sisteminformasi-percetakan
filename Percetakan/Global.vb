@@ -1,6 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Module Globals
-
     'Iniate App Path
     Public Function App_Path() As String
         Return System.AppDomain.CurrentDomain.BaseDirectory

@@ -52,6 +52,7 @@ Partial Class FormPesananDetail
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DG_DaftarJob = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.PesananSelesaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesananDibatalkanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -413,15 +414,21 @@ Partial Class FormPesananDetail
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PesananDibatalkanToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PesananSelesaiToolStripMenuItem, Me.PesananDibatalkanToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(167, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(178, 48)
+        '
+        'PesananSelesaiToolStripMenuItem
+        '
+        Me.PesananSelesaiToolStripMenuItem.Name = "PesananSelesaiToolStripMenuItem"
+        Me.PesananSelesaiToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PesananSelesaiToolStripMenuItem.Text = "Pesanan Selesai"
         '
         'PesananDibatalkanToolStripMenuItem
         '
         Me.PesananDibatalkanToolStripMenuItem.Name = "PesananDibatalkanToolStripMenuItem"
-        Me.PesananDibatalkanToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
-        Me.PesananDibatalkanToolStripMenuItem.Text = "Batalkan Pesanan"
+        Me.PesananDibatalkanToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PesananDibatalkanToolStripMenuItem.Text = "Pesanan Dibatalkan"
         '
         'FormPesananDetail
         '
@@ -478,5 +485,6 @@ Partial Class FormPesananDetail
     Friend WithEvents BtnBack As System.Windows.Forms.Button
     Friend WithEvents BtnCancel As System.Windows.Forms.Button
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents PesananSelesaiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PesananDibatalkanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

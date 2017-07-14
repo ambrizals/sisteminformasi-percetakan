@@ -11,7 +11,7 @@ Public Class FormKaryawan
     Public sql As String
 
     Sub Load_DataKaryawan()
-        list_karyawan = proses.ExecuteQuery("SELECT karyawan.karyawanid AS 'ID Karyawan',karyawan.karyawanlevel as 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan")
+        list_karyawan = proses.ExecuteQuery("SELECT karyawan.karyawanid AS 'ID Karyawan',jabatan.levelname AS 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan INNER JOIN jabatan ON (karyawan.levelid = jabatan.levelid)")
         DG_ListKaryawan.DataSource = list_karyawan
         DG_ListKaryawan.Columns(0).Width = 120
         DG_ListKaryawan.Columns(1).Width = 100
@@ -21,7 +21,7 @@ Public Class FormKaryawan
         proses.OpenConn()
 
         Dim myadapter As New MySqlDataAdapter
-        Dim sqlquery = "SELECT karyawan.karyawanid AS 'ID Karyawan',karyawan.karyawanlevel as 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan"
+        Dim sqlquery = "SELECT karyawan.karyawanid AS 'ID Karyawan',jabatan.levelname AS 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan INNER JOIN jabatan ON (karyawan.levelid = jabatan.levelid)"
         Dim mycommand As New MySqlCommand
         mycommand.Connection = proses.Cn
         mycommand.CommandText = sqlquery
@@ -42,7 +42,7 @@ Public Class FormKaryawan
         proses.CloseConn()
     End Sub
     Sub Search_Karyawan()
-        list_karyawan = proses.ExecuteQuery("SELECT karyawan.karyawanid AS 'ID Karyawan',karyawan.karyawanlevel as 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan WHERE karyawan.karyawanname LIKE '%" + txt_carikaryawan.Text + "%'")
+        list_karyawan = proses.ExecuteQuery("SELECT karyawan.karyawanid AS 'ID Karyawan',jabatan.levelname AS 'Jabatan',karyawan.karyawanname AS 'Nama Karyawan', karyawan.karyawanusername AS 'Username' FROM karyawan INNER JOIN jabatan ON (karyawan.levelid = jabatan.levelid) WHERE karyawan.karyawanname LIKE '%" + txt_carikaryawan.Text + "%'")
         DG_ListKaryawan.DataSource = list_karyawan
         DG_ListKaryawan.Columns(0).Width = 120
         DG_ListKaryawan.Columns(1).Width = 100
@@ -100,13 +100,13 @@ Public Class FormKaryawan
     Private Sub cb_jabatan_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cb_jabatan.SelectedIndexChanged
         If cb_jabatan.SelectedIndex = 0 Then
             rtf_deskripsi.Text = "Admin memiliki seluruh kontrol terhadap aplikasi ini"
-            jabatan = "ADMIN"
+            jabatan = "JBT-001"
         ElseIf cb_jabatan.SelectedIndex = 1 Then
             rtf_deskripsi.Text = "Operator hanya dapat mengontrol Job List dan Gudang. Silahkan hubungi admin atau kasir jika ingin mengubah data yang di cekal"
-            jabatan = "OPERATOR"
+            jabatan = "JBT-002"
         ElseIf cb_jabatan.SelectedIndex = 2 Then
             rtf_deskripsi.Text = "Kasir hanya dapat mengontrol pesanan, job list, dan laporan. Silahkan hubungi admin atau operator jika ingin mengubah data yang di cekal"
-            jabatan = "KASIR"
+            jabatan = "JBT-003"
         End If
     End Sub
 
@@ -132,7 +132,7 @@ Public Class FormKaryawan
     Private Sub BtnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSave.Click
         If str_status > 0 Then
             Try
-                sql = "INSERT INTO karyawan (KARYAWANID, KARYAWANLEVEL, KARYAWANNAME, KARYAWANUSERNAME, KARYAWANPASSWORD, KARYAWANALAMAT, KARYAWANTELP) VALUES ('" + txt_idkaryawan.Text + "', '" + jabatan + "', '" + txt_namakaryawan.Text + "', '" + txt_userkaryawan.Text + "', '" + txt_passwordkaryawan.Text + "', '" + rtf_alamat.Text + "', '" + txt_telepon.Text + "')"
+                sql = "INSERT INTO karyawan (KARYAWANID, LEVELID, KARYAWANNAME, KARYAWANUSERNAME, KARYAWANPASSWORD, KARYAWANALAMAT, KARYAWANTELP) VALUES ('" + txt_idkaryawan.Text + "', '" + jabatan + "', '" + txt_namakaryawan.Text + "', '" + txt_userkaryawan.Text + "', '" + txt_passwordkaryawan.Text + "', '" + rtf_alamat.Text + "', '" + txt_telepon.Text + "')"
                 proses.ExecuteNonQuery(sql)
                 MsgBox("Data tersimpan", MsgBoxStyle.Information, "Sukses")
                 reset()

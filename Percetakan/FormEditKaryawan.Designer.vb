@@ -47,7 +47,6 @@ Partial Class FormEditKaryawan
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.FORM = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BtnCancel = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -103,7 +102,7 @@ Partial Class FormEditKaryawan
         'cb_jabatan
         '
         Me.cb_jabatan.FormattingEnabled = True
-        Me.cb_jabatan.Items.AddRange(New Object() {"ADMIN", "OPERATOR", "KASIR"})
+        Me.cb_jabatan.Items.AddRange(New Object() {"Admin", "Operator", "Kasir"})
         Me.cb_jabatan.Location = New System.Drawing.Point(116, 25)
         Me.cb_jabatan.Name = "cb_jabatan"
         Me.cb_jabatan.Size = New System.Drawing.Size(169, 21)
@@ -123,9 +122,9 @@ Partial Class FormEditKaryawan
         '
         Me.BtnReset.BackColor = System.Drawing.SystemColors.Control
         Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnReset.Location = New System.Drawing.Point(472, 371)
+        Me.BtnReset.Location = New System.Drawing.Point(522, 371)
         Me.BtnReset.Name = "BtnReset"
-        Me.BtnReset.Size = New System.Drawing.Size(98, 23)
+        Me.BtnReset.Size = New System.Drawing.Size(150, 23)
         Me.BtnReset.TabIndex = 33
         Me.BtnReset.Text = "Reset"
         Me.BtnReset.UseVisualStyleBackColor = False
@@ -268,7 +267,7 @@ Partial Class FormEditKaryawan
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnSave.Location = New System.Drawing.Point(374, 371)
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(93, 23)
+        Me.BtnSave.Size = New System.Drawing.Size(141, 23)
         Me.BtnSave.TabIndex = 36
         Me.BtnSave.Text = "Save"
         Me.BtnSave.UseVisualStyleBackColor = False
@@ -280,7 +279,7 @@ Partial Class FormEditKaryawan
         Me.FORM.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.FORM.Location = New System.Drawing.Point(268, 12)
         Me.FORM.Name = "FORM"
-        Me.FORM.Size = New System.Drawing.Size(206, 29)
+        Me.FORM.Size = New System.Drawing.Size(212, 29)
         Me.FORM.TabIndex = 39
         Me.FORM.Text = "FORM KARYAWAN"
         '
@@ -293,24 +292,12 @@ Partial Class FormEditKaryawan
         Me.PictureBox1.TabIndex = 40
         Me.PictureBox1.TabStop = False
         '
-        'BtnCancel
-        '
-        Me.BtnCancel.BackColor = System.Drawing.SystemColors.Control
-        Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnCancel.Location = New System.Drawing.Point(574, 371)
-        Me.BtnCancel.Name = "BtnCancel"
-        Me.BtnCancel.Size = New System.Drawing.Size(98, 23)
-        Me.BtnCancel.TabIndex = 41
-        Me.BtnCancel.Text = "Cancel"
-        Me.BtnCancel.UseVisualStyleBackColor = False
-        '
         'FormEditKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.ClientSize = New System.Drawing.Size(683, 412)
-        Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.FORM)
         Me.Controls.Add(Me.GroupBox4)
@@ -363,5 +350,4 @@ Partial Class FormEditKaryawan
     Friend WithEvents BtnSave As System.Windows.Forms.Button
     Friend WithEvents FORM As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents BtnCancel As System.Windows.Forms.Button
 End Class

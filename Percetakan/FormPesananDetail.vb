@@ -4,13 +4,12 @@ Imports System.Data
 
 Public Class FormPesananDetail
     Dim proses As New ClsKoneksi
-    Dim kode_order, sql, bahan_name As String
+    Dim kode_order, sql As String
     Dim list_job As DataTable
-    Dim hitung_stock As Integer
 
     Private Sub ambil_data()
         kode_order = FormPesanan.DG_ListPesanan.SelectedCells(0).Value.ToString
-        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskprice as 'Harga', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where orderid = '" + kode_order + "' "
+        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where orderid = '" + kode_order + "' "
         list_job = proses.ExecuteQuery(sql)
         DG_DaftarJob.DataSource = list_job
         DG_DaftarJob.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
@@ -20,7 +19,6 @@ Public Class FormPesananDetail
         DG_DaftarJob.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DG_DaftarJob.Columns(3).Width = 100
         DG_DaftarJob.Columns(4).Width = 100
-        DG_DaftarJob.Columns(5).Width = 100
     End Sub
 
     Private Sub ambil_info_pesanan()
@@ -48,6 +46,7 @@ Public Class FormPesananDetail
         End If
         proses.CloseConn()
     End Sub
+
     Private Sub FormProsesjobPanel_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ambil_data()
         ambil_info_pesanan()
@@ -62,16 +61,15 @@ Public Class FormPesananDetail
         Else
             If MsgBox("Pastikan customer telah mengkonfirmasi pembatalan pesanan ini, ingin membatalkan pesanan ?", MsgBoxStyle.Information + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
                 For loncat = 0 To DG_DaftarJob.Rows.Count - 1
-                    itemstatus = 0
                     If DG_DaftarJob.Rows(loncat).Cells(4).Value.ToString = "FINISH" Then
                         itemstatus = itemstatus
-                    ElseIf DG_DaftarJob.Rows(loncat).Cells(4).Value.ToString = "PROSES" Then
+                    ElseIf DG_DaftarJob.Rows(loncat).Cells(4).Value.ToString = "Pending" Then
                         itemstatus = itemstatus
                     Else
-                        itemstatus = itemstatus + 1
+                        itemstatus = itemstatus
                     End If
                 Next
-                If itemstatus = DG_DaftarJob.Rows.Count Then
+                If itemstatus = DG_DaftarJob.Rows.Count - 1 Then
                     For loncat = 0 To DG_DaftarJob.Rows.Count - 1
                         sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID='" + DG_DaftarJob.Rows(loncat).Cells(0).Value.ToString + "'"
                         proses.ExecuteNonQuery(sql)
@@ -87,28 +85,6 @@ Public Class FormPesananDetail
             Else
                 MsgBox("Aksi dibatalkan", MsgBoxStyle.Information, "Info")
             End If
-        End If
-    End Sub
-
-
-    Private Sub PesananDibatalkanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PesananDibatalkanToolStripMenuItem.Click
-        If MsgBox("Ingin membatalkan item dari pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkOnly, "Konfirmasi") = MsgBoxResult.Ok Then
-            If DG_DaftarJob.SelectedCells(5).Value.ToString = "CANCEL" Then
-                MsgBox("Pesanan telah dibatalkan", MsgBoxStyle.Information, "Info")
-            ElseIf DG_DaftarJob.SelectedCells(5).Value.ToString = "FINISH" Then
-                MsgBox("Pesanan telah diselesaikan", MsgBoxStyle.Information, "Info")
-            ElseIf DG_DaftarJob.SelectedCells(5).Value.ToString = "PROSES" Then
-                MsgBox("Pesanan sedang diproses, harap hubungi operator untuk melakukan mengubah status ke pending.", MsgBoxStyle.Information, "Info")
-            ElseIf DG_DaftarJob.SelectedCells(5).Value.ToString = "PENDING" Then
-                sql = "UPDATE TASKLIST SET TASKSTATUS = 'CANCEL' WHERE TASKID = '" + DG_DaftarJob.SelectedCells(0).Value.ToString + "'"
-                proses.ExecuteNonQuery(sql)
-                MsgBox("Pesanan telah dibatalkan", MsgBoxStyle.Information, "Info")
-                ambil_data()
-            Else
-                MsgBox("Terjadi kesalahan, harap hubungi administrator", MsgBoxStyle.Information, "Error")
-            End If
-        Else
-            MsgBox("Aksi dibatalkan", MsgBoxStyle.Information, "Info")
         End If
     End Sub
 End Class

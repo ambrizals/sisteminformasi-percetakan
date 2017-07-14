@@ -37,14 +37,14 @@
     End Sub
 
     Sub Privilage_User()
-        If kry_lvl = "OPERATOR" Then
+        If kry_lvl = "JBT-002" Then
             BtnPesanan.Enabled = False
             BtnKaryawan.Enabled = False
             BtnAbsensi.Enabled = False
             BtnSimpanPengumuman.Enabled = False
             BtnSimpanPengumuman.Visible = False
             rtf_pengumuman.ReadOnly = True
-        ElseIf kry_lvl = "KASIR" Then
+        ElseIf kry_lvl = "JBT-003" Then
             BtnKaryawan.Enabled = False
             BtnGudang.Enabled = False
             BtnSimpanPengumuman.Enabled = False
@@ -152,21 +152,6 @@
         'Connect()
         'End Try
     End Sub
-    Private Sub BtnPesanan_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click
-        'Try
-        If str_status > 0 Then
-            proses.OpenConn()
-            FormPesanan.ShowDialog()
-            proses.CloseConn()
-        Else
-            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-            str_status = 0
-        End If
-        'Catch ex As Exception
-        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
-        'Connect()
-        'End Try
-    End Sub
     Private Sub BtnJobList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnJobList.Click
         'Try
         If str_status > 0 Then
@@ -183,38 +168,52 @@
         'End Try
     End Sub
     Private Sub BtnAbsensi_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAbsensi.Click
-        'Try
-        If str_status > 0 Then
-            proses.OpenConn()
-            FormAbsensi.ShowDialog()
-            proses.CloseConn()
-        Else
-            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
-            str_status = 0
-        End If
-        'Catch ex As Exception
-        ' MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
-        'Connect()
-        'End Try
+        Try
+            If str_status > 0 Then
+                proses.OpenConn()
+                FormAbsensi.ShowDialog()
+                proses.CloseConn()
+            Else
+                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+                str_status = 0
+            End If
+        Catch ex As Exception
+            MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+            Connect()
+        End Try
     End Sub
 
     Private Sub BtnGudang_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnGudang.Click
+        Try
+            If str_status > 0 Then
+                proses.OpenConn()
+                FormGudang.ShowDialog()
+                proses.CloseConn()
+            Else
+                MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+                str_status = 0
+            End If
+        Catch ex As Exception
+            MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut " + vbCr + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+            Connect()
+        End Try
+    End Sub
+
+    Private Sub BtnPesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPesanan.Click
         'Try
         If str_status > 0 Then
             proses.OpenConn()
-            FormGudang.ShowDialog()
+            FormPesanan.ShowDialog()
             proses.CloseConn()
         Else
             MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
             str_status = 0
         End If
         'Catch ex As Exception
-        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut " + vbCr + ex.Message, MsgBoxStyle.Critical, "Connection Error")
+        'MsgBox("Terjadi kesalahan, hubungi administrator untuk info lebih lanjut" + ex.Message, MsgBoxStyle.Critical, "Connection Error")
         'Connect()
         'End Try
     End Sub
-
-
     Private Sub BtnSimpanPengumuman_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpanPengumuman.Click
         Try
             query = "UPDATE pengaturan SET pengaturanIsi = '" + rtf_pengumuman.Text + "' WHERE pengaturanName = 'pengumuman'"
@@ -236,6 +235,4 @@
     Private Sub BtnMin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnMin.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
-
-
 End Class
