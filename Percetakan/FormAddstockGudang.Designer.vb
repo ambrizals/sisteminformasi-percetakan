@@ -31,7 +31,6 @@ Partial Class FormAddstockGudang
         Me.txt_stoksekarang = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lbl_unit1 = New System.Windows.Forms.Label()
-        Me.lbl_unit2 = New System.Windows.Forms.Label()
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnCancel = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -43,7 +42,7 @@ Partial Class FormAddstockGudang
         '
         Me.nm_stock.Location = New System.Drawing.Point(108, 162)
         Me.nm_stock.Name = "nm_stock"
-        Me.nm_stock.Size = New System.Drawing.Size(125, 20)
+        Me.nm_stock.Size = New System.Drawing.Size(203, 20)
         Me.nm_stock.TabIndex = 13
         '
         'txt_namabahan
@@ -94,7 +93,7 @@ Partial Class FormAddstockGudang
         Me.txt_stoksekarang.Location = New System.Drawing.Point(108, 126)
         Me.txt_stoksekarang.Name = "txt_stoksekarang"
         Me.txt_stoksekarang.ReadOnly = True
-        Me.txt_stoksekarang.Size = New System.Drawing.Size(125, 20)
+        Me.txt_stoksekarang.Size = New System.Drawing.Size(207, 20)
         Me.txt_stoksekarang.TabIndex = 15
         '
         'Label4
@@ -111,18 +110,8 @@ Partial Class FormAddstockGudang
         Me.lbl_unit1.AutoSize = True
         Me.lbl_unit1.Location = New System.Drawing.Point(240, 130)
         Me.lbl_unit1.Name = "lbl_unit1"
-        Me.lbl_unit1.Size = New System.Drawing.Size(55, 13)
+        Me.lbl_unit1.Size = New System.Drawing.Size(0, 13)
         Me.lbl_unit1.TabIndex = 16
-        Me.lbl_unit1.Text = "/ Null Unit"
-        '
-        'lbl_unit2
-        '
-        Me.lbl_unit2.AutoSize = True
-        Me.lbl_unit2.Location = New System.Drawing.Point(241, 166)
-        Me.lbl_unit2.Name = "lbl_unit2"
-        Me.lbl_unit2.Size = New System.Drawing.Size(55, 13)
-        Me.lbl_unit2.TabIndex = 17
-        Me.lbl_unit2.Text = "/ Null Unit"
         '
         'BtnTambah
         '
@@ -154,7 +143,7 @@ Partial Class FormAddstockGudang
         Me.Label5.Font = New System.Drawing.Font("Trebuchet MS", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(43, 18)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(248, 29)
+        Me.Label5.Size = New System.Drawing.Size(247, 29)
         Me.Label5.TabIndex = 20
         Me.Label5.Text = "INPUT STOK GUDANG"
         '
@@ -177,7 +166,6 @@ Partial Class FormAddstockGudang
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.BtnTambah)
-        Me.Controls.Add(Me.lbl_unit2)
         Me.Controls.Add(Me.lbl_unit1)
         Me.Controls.Add(Me.txt_stoksekarang)
         Me.Controls.Add(Me.Label4)
@@ -209,7 +197,6 @@ Partial Class FormAddstockGudang
     Friend WithEvents txt_stoksekarang As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents lbl_unit1 As System.Windows.Forms.Label
-    Friend WithEvents lbl_unit2 As System.Windows.Forms.Label
     Friend WithEvents BtnTambah As System.Windows.Forms.Button
     Friend WithEvents BtnCancel As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label

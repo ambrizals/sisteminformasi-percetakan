@@ -16,6 +16,21 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -50,9 +65,21 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySqlBackup">
+      <HintPath>..\include\MySqlBackup.NET.2.0.9.5\lib\net40\MySqlBackup.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -77,6 +104,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
+    <Compile Include="Faktur_Penjualan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Faktur_Penjualan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormPelunasanPesanan.Designer.vb">
+      <DependentUpon>FormPelunasanPesanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPelunasanPesanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormPesananDetail.Designer.vb">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </Compile>
@@ -105,12 +144,6 @@
       <DependentUpon>FormAddGudang.vb</DependentUpon>
     </Compile>
     <Compile Include="FormAddGudang.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAddstockGudang.Designer.vb">
-      <DependentUpon>FormAddstockGudang.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormAddstockGudang.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEditbahanGudang.Designer.vb">
@@ -180,6 +213,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global.vb" />
+    <Compile Include="Laporan_Pesanan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Laporan_Pesanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan_ProsesPekerjaan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Laporan_ProsesPekerjaan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lembar_DataKaryawan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lembar_DataKaryawan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +266,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Faktur_Penjualan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Faktur_Penjualan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPelunasanPesanan.resx">
+      <DependentUpon>FormPelunasanPesanan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPesananDetail.resx">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -229,9 +287,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddGudang.resx">
       <DependentUpon>FormAddGudang.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAddstockGudang.resx">
-      <DependentUpon>FormAddstockGudang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditbahanGudang.resx">
       <DependentUpon>FormEditbahanGudang.vb</DependentUpon>
@@ -266,6 +321,18 @@
     <EmbeddedResource Include="FormProsesjobPanel.resx">
       <DependentUpon>FormProsesjobPanel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_Pesanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Laporan_Pesanan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_ProsesPekerjaan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Laporan_ProsesPekerjaan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lembar_DataKaryawan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Lembar_DataKaryawan.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +348,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -294,6 +362,37 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>InfoAplikasi.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="percetakan_db.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

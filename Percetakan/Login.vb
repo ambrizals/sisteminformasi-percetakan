@@ -1,6 +1,4 @@
-﻿Imports System.IO
-Imports System
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 Public Class Login
     Dim proses As New ClsKoneksi
     Dim opt_us, opt_ps As Integer
@@ -70,6 +68,7 @@ Public Class Login
             BtnLogin.Focus()
         End If
     End Sub
+
     Private Sub BtnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnLogin.Click
         Try
             If str_status > 0 Then
@@ -93,7 +92,7 @@ Public Class Login
                     Else
                         proses.read.Read()
                         kry_id = proses.read("KARYAWANID")
-                        kry_lvl = proses.read("LEVELID")
+                        kry_lvl = proses.read("KARYAWANLEVEL")
                         kry_name = proses.read("KARYAWANNAME")
                         kry_username = proses.read("KARYAWANUSERNAME")
                         kry_password = proses.read("KARYAWANPASSWORD")
@@ -127,7 +126,7 @@ Public Class Login
             End If
 
         Catch ex As Exception
-            MsgBox("Gagal terhubung ke server", MsgBoxStyle.Critical, "Connection Error")
+            MsgBox("Gagal terhubung ke server" + vbCr + ex.Message, MsgBoxStyle.Critical, "Connection Error")
             Connect()
         End Try
     End Sub
@@ -136,7 +135,6 @@ Public Class Login
         lvl_versi.Text = InfoAplikasi.Default.Versi.ToString
         get_saveoption()
         Connect()
-
     End Sub
 
     Private Sub BtnReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnReset.Click

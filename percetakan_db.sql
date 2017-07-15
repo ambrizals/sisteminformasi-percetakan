@@ -128,10 +128,6 @@ CREATE TABLE `pengaturan` (
   PRIMARY KEY (`pengaturanName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/* INPUT DEFAULT DATA PENGATURAN */
-/* Pengaturan pengumuman */ INSERT INTO pengaturan (`pengaturanName`, `pengaturanIsi`) VALUES ('pengumuman', 'Default Notice'); 
-/* Pengaturan DB_Versi */ INSERT INTO pengaturan (`pengaturanName`, `pengaturanIsi`) VALUES ('db_versi', '0.3'); 
-
 /*Table structure for table `pesanan` */
 
 DROP TABLE IF EXISTS `pesanan`;

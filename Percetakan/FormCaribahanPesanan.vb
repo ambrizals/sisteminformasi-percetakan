@@ -8,18 +8,16 @@ Public Class FormCaribahanPesanan
     Dim proses As New ClsKoneksi
     Dim list_bahan As DataTable
     Sub Load_DataBahan()
-        list_bahan = proses.ExecuteQuery("SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan where bahanstock > 0")
+        list_bahan = proses.ExecuteQuery("SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan")
         DG_Bahan.DataSource = list_bahan
         DG_Bahan.Columns(0).Width = 60
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         DG_Bahan.Columns(2).Width = 120
-        DG_Bahan.Columns(3).Width = 120
-        DG_Bahan.Columns(4).Width = 100
 
         proses.OpenConn()
 
         Dim myadapter As New MySqlDataAdapter
-        Dim sqlquery = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.bahanstock AS 'Stok Bahan', bahan.bahanunit AS 'Satuan Unit', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan where bahanstock > 0"
+        Dim sqlquery = "SELECT bahan.bahanid AS 'Kode Bahan', bahan.bahanname AS 'Nama Bahan', bahan.BAHANHARGA AS 'Harga Bahan' FROM bahan"
         Dim mycommand As New MySqlCommand
         mycommand.Connection = proses.Cn
         mycommand.CommandText = sqlquery
@@ -50,21 +48,17 @@ Public Class FormCaribahanPesanan
 
     Public Sub DG_Bahan_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_Bahan.DoubleClick
         FormPesanan.txt_bahan.Text = DG_Bahan.SelectedCells(1).Value
-        FormPesanan.txt_harga.Text = DG_Bahan.SelectedCells(4).Value
+        FormPesanan.txt_harga.Text = DG_Bahan.SelectedCells(2).Value
         FormPesanan.kode_bahan = DG_Bahan.SelectedCells(0).Value
-        FormPesanan.txt_stock.Text = DG_Bahan.SelectedCells(2).Value
-        FormPesanan.lbl_qty.Text = "Qty (" + DG_Bahan.SelectedCells(3).Value + ")"
         Me.Close()
     End Sub
 
     Private Sub BtnCari_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCari.Click
         Kondisi_Pencarian()
-        list_bahan = proses.ExecuteQuery("SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', bahanstock AS 'Stok Bahan', bahanunit AS 'Satuan Unit' FROM bahan where " + search_name + "")
+        list_bahan = proses.ExecuteQuery("SELECT bahanid AS 'Kode Bahan', bahanname AS 'Nama Bahan', FROM bahan where " + search_name + "")
         DG_Bahan.DataSource = list_bahan
         DG_Bahan.Columns(0).Width = 100
         DG_Bahan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        DG_Bahan.Columns(2).Width = 150
-        DG_Bahan.Columns(3).Width = 150
     End Sub
 
     Private Sub BtnRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnRefresh.Click

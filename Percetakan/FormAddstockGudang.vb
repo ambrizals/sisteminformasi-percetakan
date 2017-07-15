@@ -22,7 +22,6 @@ Public Class FormAddstockGudang
             bahanid = mydata("BAHANID")
             bahanname = mydata("BAHANNAME")
             bahanstock = mydata("BAHANSTOCK")
-            bahanunit = mydata("BAHANUNIT")
         End If
         proses.CloseConn()
     End Sub
@@ -30,8 +29,6 @@ Public Class FormAddstockGudang
         txt_kodebahan.Clear()
         txt_namabahan.Clear()
         txt_stoksekarang.Clear
-        lbl_unit1.Text = bahanunit
-        lbl_unit2.Text = bahanunit
         nm_stock.Value = 0
     End Sub
 
@@ -40,8 +37,6 @@ Public Class FormAddstockGudang
         txt_kodebahan.Text = bahanid
         txt_namabahan.Text = bahanname
         txt_stoksekarang.Text = Val(bahanstock)
-        lbl_unit1.Text = bahanunit
-        lbl_unit2.Text = bahanunit
     End Sub
 
     Private Sub BtnTambah_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnTambah.Click

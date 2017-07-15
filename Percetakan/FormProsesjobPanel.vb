@@ -4,11 +4,14 @@ Imports System.Data
 
 Public Class FormProsesjobPanel
     Dim proses As New ClsKoneksi
-    Dim kode_order, sql As String
+    Dim kode_order, sql, kode_bahan As String
     Dim list_job As DataTable
+    Dim hitung_stock As Integer
     Private Sub ambil_data()
         kode_order = FormJobList.DG_Proses.SelectedCells(0).Value.ToString
-        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where orderid = '" + kode_order + "' "
+        'Error
+        sql = "select tasklist.taskid as 'ID Job', bahan.bahanname as 'Bahan', tasklist.taskname as 'Deskripsi', tasklist.taskqty as 'Qty', tasklist.taskstatus as 'Status' from tasklist inner join bahan on (tasklist.bahanid = bahan.bahanid) where (orderid = '" + kode_order + "') & (NOT(taskstatus = 'CANCEL')) "
+        'Error
         list_job = proses.ExecuteQuery(sql)
         DG_DaftarJob.DataSource = list_job
         DG_DaftarJob.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True
@@ -63,6 +66,8 @@ Public Class FormProsesjobPanel
                 Try
                     sql = "UPDATE TASKLIST SET TASKSTATUS = 'FINISH' WHERE TASKID = '" + DG_DaftarJob.SelectedCells(0).Value.ToString + "' "
                     proses.ExecuteNonQuery(sql)
+                    sql = "INSERT INTO `log_joblist` (`KARYAWANID`, `TASKID`, `PROSESDATE`, `PROSESSTATUS`) VALUES ('" + kry_id + "', '" + DG_DaftarJob.SelectedCells(0).Value.ToString + "', '" + tanggal + "', 'ITEM PESANAN DISELESAIKAN')"
+                    proses.ExecuteNonQuery(sql)
                     MsgBox("Job telah selesai", MsgBoxStyle.Information, "Info")
                     ambil_data()
                 Catch ex As Exception
@@ -92,6 +97,8 @@ Public Class FormProsesjobPanel
                     Try
                         sql = "UPDATE pesanan SET ORDERSTATUS='FINISH' WHERE ORDERID='" + kode_order + "'"
                         proses.ExecuteNonQuery(sql)
+                        sql = "INSERT INTO `log_pesanan` (`karyawanID`, `orderID`, `logDate`, `logStatus`) VALUES ('" + kry_id + "', '" + lbl_nomorpesanan.Text + "', '" + tanggal + "', 'PESANAN DISELESAIKAN')"
+                        proses.ExecuteNonQuery(sql)
                         MsgBox("Pesanan telah diselesaikan, harap hubungi costumer untuk pengambilan barang", MsgBoxStyle.Information, "Info")
                         FormJobList.load_tabel()
                         Me.Close()
@@ -104,6 +111,31 @@ Public Class FormProsesjobPanel
             Catch ex As Exception
                 MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
             End Try
+        End If
+    End Sub
+
+    Private Sub BtnPending_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPending.Click
+        Dim loncat As Integer
+        If MsgBox("Ingin melakukan pending pada pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
+            For loncat = 0 To DG_DaftarJob.Rows.Count - 1
+                If DG_DaftarJob.Rows(loncat).Cells(4).Value.ToString = "PROSES" Then
+                    Try
+                        sql = "UPDATE TASKLIST SET TASKSTATUS = 'PENDING' WHERE TASKID = '" + DG_DaftarJob.Rows(loncat).Cells(0).Value.ToString + "'"
+                        proses.ExecuteNonQuery(sql)
+                        sql = "INSERT INTO `log_joblist` (`KARYAWANID`, `TASKID`, `PROSESDATE`, `PROSESSTATUS`) VALUES ('" + kry_id + "', '" + DG_DaftarJob.Rows(loncat).Cells(0).Value.ToString + "', '" + tanggal + "', 'ITEM PESANAN DIPENDING')"
+                        proses.ExecuteNonQuery(sql)
+                    Catch ex As Exception
+                        MsgBox("Terjadi kesalahan : " + vbCr + ex.Message, MsgBoxStyle.Exclamation, "Error")
+                    End Try
+                End If
+            Next
+            sql = "UPDATE PESANAN SET ORDERSTATUS = 'PENDING' WHERE ORDERID = '" + lbl_nomorpesanan.Text + "'"
+            proses.ExecuteNonQuery(sql)
+            sql = "INSERT INTO `log_pesanan` (`karyawanID`, `orderID`, `logDate`, `logStatus`) VALUES ('" + kry_id + "', '" + lbl_nomorpesanan.Text + "', '" + tanggal + "', 'PESANAN DIPENDING')"
+            proses.ExecuteNonQuery(sql)
+            MsgBox("Pesanan telah dipending", MsgBoxStyle.Information, "info")
+            FormJobList.load_tabel()
+            Me.Close()
         End If
     End Sub
 End Class

@@ -184,7 +184,7 @@ Partial Class FormKaryawan
         'cb_jabatan
         '
         Me.cb_jabatan.FormattingEnabled = True
-        Me.cb_jabatan.Items.AddRange(New Object() {"Admin", "Operator", "Kasir"})
+        Me.cb_jabatan.Items.AddRange(New Object() {"ADMIN", "OPERATOR", "KASIR"})
         Me.cb_jabatan.Location = New System.Drawing.Point(116, 25)
         Me.cb_jabatan.Name = "cb_jabatan"
         Me.cb_jabatan.Size = New System.Drawing.Size(169, 21)
@@ -407,7 +407,7 @@ Partial Class FormKaryawan
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.98148!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.01852!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txt_carikaryawan, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btn_carikaryawan, 2, 0)
@@ -435,15 +435,15 @@ Partial Class FormKaryawan
         Me.txt_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txt_carikaryawan.Location = New System.Drawing.Point(101, 3)
         Me.txt_carikaryawan.Name = "txt_carikaryawan"
-        Me.txt_carikaryawan.Size = New System.Drawing.Size(414, 20)
+        Me.txt_carikaryawan.Size = New System.Drawing.Size(412, 20)
         Me.txt_carikaryawan.TabIndex = 1
         '
         'btn_carikaryawan
         '
         Me.btn_carikaryawan.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btn_carikaryawan.Location = New System.Drawing.Point(521, 3)
+        Me.btn_carikaryawan.Location = New System.Drawing.Point(519, 3)
         Me.btn_carikaryawan.Name = "btn_carikaryawan"
-        Me.btn_carikaryawan.Size = New System.Drawing.Size(145, 21)
+        Me.btn_carikaryawan.Size = New System.Drawing.Size(147, 21)
         Me.btn_carikaryawan.TabIndex = 2
         Me.btn_carikaryawan.Text = "Cari"
         Me.btn_carikaryawan.UseVisualStyleBackColor = True
@@ -484,7 +484,7 @@ Partial Class FormKaryawan
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label3.Location = New System.Drawing.Point(305, 21)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(176, 40)
+        Me.Label3.Size = New System.Drawing.Size(165, 40)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "KARYAWAN"
         '
@@ -523,6 +523,7 @@ Partial Class FormKaryawan
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.BtnExit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormKaryawan"

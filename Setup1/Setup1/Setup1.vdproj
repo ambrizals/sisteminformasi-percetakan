@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Setup1"
+"ProjectName" = "8:Setup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -15,158 +15,236 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_157E74A53DD44583B5C8C5E78DA7AE3A"
+        "MsmKey" = "8:_070B21ED3B1D4960BD5A649A195931D3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1743E5B22DBF62E4647B02271FDB710A"
-        "OwnerKey" = "8:_C3AF95EEFEFC4C2095C764D949CAF5FC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5A3D0C1E9CDE4400B5C42793580366F0"
+        "MsmKey" = "8:_08D7B27AACD541C8AF4C372C4715A0CF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5C74CEE839EB4837BD86212A5C597E79"
+        "MsmKey" = "8:_0B9A6754403249039F156DE1FA5D8071"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_73A4D2105F1A4F46BB2F558F2D800FA6"
+        "MsmKey" = "8:_1EEF3EDC22C34DFC8E7CC92974F8D8FB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7CAF75CE0A964FA1A00F43AA1BBDA837"
+        "MsmKey" = "8:_339B093299D54ED4ACB1CC2D487E6AEE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9AAA9682F3B54C3CABF1C8E1B265FF38"
+        "MsmKey" = "8:_4C7DC791641948929907C17DDA98FFD5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9CD70DB6B49B4A6ABFA74FC9F56BE0CD"
+        "MsmKey" = "8:_4E5B0434B015419CA8F38536903BD888"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9E5EE127023E4BF2806523BE85643FD6"
+        "MsmKey" = "8:_5BF5D57C0D0A4D20A0C5C420C1C5BDE6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A3A12963488448C19B7AB04AED77462B"
+        "MsmKey" = "8:_60E59DFB82FA4388B7D861CE02A604FE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B1ADA89DA3AD4444BD9086B818C7A679"
+        "MsmKey" = "8:_8D5C2F86CDA740069D9EAF5925D7CF0C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BC2F9B6E3F9F4E35870BC24575F03E64"
+        "MsmKey" = "8:_97E4F660E9AE722BBE984A071AC7505D"
+        "OwnerKey" = "8:_D61CA3A1E6B84970BE287409E2D2051B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A783671FCBE55A1FE194775BC72C3E06"
+        "OwnerKey" = "8:_AE40376FC9FD40C1940EE80895C5A0F8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A783671FCBE55A1FE194775BC72C3E06"
+        "OwnerKey" = "8:_E67B556F7061494C8E4300DFC17E068A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_ACEAD7D3C608468F812F2C8DB8D6291F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C3AF95EEFEFC4C2095C764D949CAF5FC"
+        "MsmKey" = "8:_AE40376FC9FD40C1940EE80895C5A0F8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C53FFDAE44C4275E713F445F2E33A97B"
-        "OwnerKey" = "8:_B1ADA89DA3AD4444BD9086B818C7A679"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C53FFDAE44C4275E713F445F2E33A97B"
-        "OwnerKey" = "8:_1743E5B22DBF62E4647B02271FDB710A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C53FFDAE44C4275E713F445F2E33A97B"
-        "OwnerKey" = "8:_C3AF95EEFEFC4C2095C764D949CAF5FC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D8B6069620EC4932A44778932865F6F0"
+        "MsmKey" = "8:_B8318AB309D54FB78ED52FF8E33B31D4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_DF255C9275C8DB5B24A20E82FFBD554B"
-        "OwnerKey" = "8:_BC2F9B6E3F9F4E35870BC24575F03E64"
+        "MsmKey" = "8:_BF82180B35F6467694AE2E9D9FEDE004"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_ED8B1DC7822E45D180CF8C256706252C"
+        "MsmKey" = "8:_BFEF0CEDCD2348F293A1061478250561"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C490956684BC46B78261B00004FF500C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CA0B72AB48FF468A953D53C3A122D618"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D61CA3A1E6B84970BE287409E2D2051B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E67B556F7061494C8E4300DFC17E068A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E6BAD3150ED046E7A16E940EEDBEB412"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F107221B34543078562691980B2B80A5"
+        "OwnerKey" = "8:_08D7B27AACD541C8AF4C372C4715A0CF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F107221B34543078562691980B2B80A5"
+        "OwnerKey" = "8:_60E59DFB82FA4388B7D861CE02A604FE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F107221B34543078562691980B2B80A5"
+        "OwnerKey" = "8:_B8318AB309D54FB78ED52FF8E33B31D4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F107221B34543078562691980B2B80A5"
+        "OwnerKey" = "8:_D61CA3A1E6B84970BE287409E2D2051B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F107221B34543078562691980B2B80A5"
+        "OwnerKey" = "8:_97E4F660E9AE722BBE984A071AC7505D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD9F41A8917C472EB7FF08ACD2F88D66"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FFC6B322B621413A9011022E5E9FA41C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9CD70DB6B49B4A6ABFA74FC9F56BE0CD"
+        "OwnerKey" = "8:_F107221B34543078562691980B2B80A5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BC2F9B6E3F9F4E35870BC24575F03E64"
+        "OwnerKey" = "8:_E67B556F7061494C8E4300DFC17E068A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DF255C9275C8DB5B24A20E82FFBD554B"
+        "OwnerKey" = "8:_60E59DFB82FA4388B7D861CE02A604FE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C3AF95EEFEFC4C2095C764D949CAF5FC"
+        "OwnerKey" = "8:_B8318AB309D54FB78ED52FF8E33B31D4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1743E5B22DBF62E4647B02271FDB710A"
+        "OwnerKey" = "8:_AE40376FC9FD40C1940EE80895C5A0F8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B1ADA89DA3AD4444BD9086B818C7A679"
+        "OwnerKey" = "8:_A783671FCBE55A1FE194775BC72C3E06"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C53FFDAE44C4275E713F445F2E33A97B"
+        "OwnerKey" = "8:_D61CA3A1E6B84970BE287409E2D2051B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_97E4F660E9AE722BBE984A071AC7505D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_08D7B27AACD541C8AF4C372C4715A0CF"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -194,6 +272,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -218,6 +309,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -240,7 +344,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.0"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=131000"
                 }
@@ -248,12 +352,12 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_157E74A53DD44583B5C8C5E78DA7AE3A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_070B21ED3B1D4960BD5A649A195931D3"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.application"
-            "TargetName" = "8:Percetakan.application"
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\percetakan_db.sql"
+            "TargetName" = "8:percetakan_db.sql"
             "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -268,14 +372,216 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1743E5B22DBF62E4647B02271FDB710A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_08D7B27AACD541C8AF4C372C4715A0CF"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1743E5B22DBF62E4647B02271FDB710A"
+                    "_08D7B27AACD541C8AF4C372C4715A0CF"
+                    {
+                    "Name" = "8:MySqlBackup.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\MySqlBackup.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0B9A6754403249039F156DE1FA5D8071"
+            {
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\Percetakan.pdb"
+            "TargetName" = "8:Percetakan.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1EEF3EDC22C34DFC8E7CC92974F8D8FB"
+            {
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\percetakan_db_plusdata.sql"
+            "TargetName" = "8:percetakan_db_plusdata.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_339B093299D54ED4ACB1CC2D487E6AEE"
+            {
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\Percetakan.xml"
+            "TargetName" = "8:Percetakan.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C7DC791641948929907C17DDA98FFD5"
+            {
+            "SourcePath" = "8:client.ico"
+            "TargetName" = "8:client.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E5B0434B015419CA8F38536903BD888"
+            {
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\Percetakan Server.exe.config"
+            "TargetName" = "8:Percetakan Server.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5BF5D57C0D0A4D20A0C5C420C1C5BDE6"
+            {
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\Percetakan Server.pdb"
+            "TargetName" = "8:Percetakan Server.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_60E59DFB82FA4388B7D861CE02A604FE"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Percetakan, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_60E59DFB82FA4388B7D861CE02A604FE"
+                    {
+                    "Name" = "8:Percetakan.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\Percetakan.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8D5C2F86CDA740069D9EAF5925D7CF0C"
+            {
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\Percetakan.vshost.exe.manifest"
+            "TargetName" = "8:Percetakan.vshost.exe.manifest"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_97E4F660E9AE722BBE984A071AC7505D"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_97E4F660E9AE722BBE984A071AC7505D"
                     {
                     "Name" = "8:MySqlBackup.DLL"
                     "Attributes" = "3:512"
@@ -284,7 +590,7 @@
             "SourcePath" = "8:MySqlBackup.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -299,329 +605,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5A3D0C1E9CDE4400B5C42793580366F0"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.exe.manifest"
-            "TargetName" = "8:Percetakan.exe.manifest"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5C74CEE839EB4837BD86212A5C597E79"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.vshost.application"
-            "TargetName" = "8:Percetakan.vshost.application"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_73A4D2105F1A4F46BB2F558F2D800FA6"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\percetakan_db.sql"
-            "TargetName" = "8:percetakan_db.sql"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7CAF75CE0A964FA1A00F43AA1BBDA837"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\MySql.Data.xml"
-            "TargetName" = "8:MySql.Data.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9AAA9682F3B54C3CABF1C8E1B265FF38"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.xml"
-            "TargetName" = "8:Percetakan.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9CD70DB6B49B4A6ABFA74FC9F56BE0CD"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9CD70DB6B49B4A6ABFA74FC9F56BE0CD"
-                    {
-                    "Name" = "8:MySql.Data.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\MySql.Data.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E5EE127023E4BF2806523BE85643FD6"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.exe.config"
-            "TargetName" = "8:Percetakan.exe.config"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3A12963488448C19B7AB04AED77462B"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.pdb"
-            "TargetName" = "8:Percetakan.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B1ADA89DA3AD4444BD9086B818C7A679"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_B1ADA89DA3AD4444BD9086B818C7A679"
-                    {
-                    "Name" = "8:MySqlBackup.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\MySqlBackup.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BC2F9B6E3F9F4E35870BC24575F03E64"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:vshost32, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_BC2F9B6E3F9F4E35870BC24575F03E64"
-                    {
-                    "Name" = "8:Percetakan.vshost.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.vshost.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C3AF95EEFEFC4C2095C764D949CAF5FC"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Percetakan, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_C3AF95EEFEFC4C2095C764D949CAF5FC"
-                    {
-                    "Name" = "8:Percetakan.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C53FFDAE44C4275E713F445F2E33A97B"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_C53FFDAE44C4275E713F445F2E33A97B"
-                    {
-                    "Name" = "8:MySql.Data.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:MySql.Data.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8B6069620EC4932A44778932865F6F0"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.vshost.exe.manifest"
-            "TargetName" = "8:Percetakan.vshost.exe.manifest"
-            "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DF255C9275C8DB5B24A20E82FFBD554B"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A783671FCBE55A1FE194775BC72C3E06"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:TRUE"
             "AssemblyAsmDisplayName" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DF255C9275C8DB5B24A20E82FFBD554B"
+                    "_A783671FCBE55A1FE194775BC72C3E06"
                     {
                     "Name" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
                     "Attributes" = "3:512"
@@ -630,7 +621,7 @@
             "SourcePath" = "8:Microsoft.VisualStudio.HostingProcess.Utilities.Sync.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -645,12 +636,307 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ED8B1DC7822E45D180CF8C256706252C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ACEAD7D3C608468F812F2C8DB8D6291F"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\percetakan\\Percetakan\\bin\\Release\\Percetakan.vshost.exe.config"
-            "TargetName" = "8:Percetakan.vshost.exe.config"
+            "SourcePath" = "8:server.ico"
+            "TargetName" = "8:server.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AE40376FC9FD40C1940EE80895C5A0F8"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:vshost32, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_AE40376FC9FD40C1940EE80895C5A0F8"
+                    {
+                    "Name" = "8:Percetakan Server.vshost.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\Percetakan Server.vshost.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B8318AB309D54FB78ED52FF8E33B31D4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B8318AB309D54FB78ED52FF8E33B31D4"
+                    {
+                    "Name" = "8:MySqlBackup.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\MySqlBackup.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BF82180B35F6467694AE2E9D9FEDE004"
+            {
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\Percetakan Server.vshost.exe.config"
+            "TargetName" = "8:Percetakan Server.vshost.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BFEF0CEDCD2348F293A1061478250561"
+            {
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\Percetakan Server.xml"
+            "TargetName" = "8:Percetakan Server.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C490956684BC46B78261B00004FF500C"
+            {
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\Percetakan Server.vshost.exe.manifest"
+            "TargetName" = "8:Percetakan Server.vshost.exe.manifest"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CA0B72AB48FF468A953D53C3A122D618"
+            {
+            "SourcePath" = "8:readme.rtf"
+            "TargetName" = "8:readme.rtf"
             "Tag" = "8:"
             "Folder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D61CA3A1E6B84970BE287409E2D2051B"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Percetakan Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_D61CA3A1E6B84970BE287409E2D2051B"
+                    {
+                    "Name" = "8:Percetakan Server.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\Server\\Percetakan Server\\Percetakan Server\\bin\\Release\\Percetakan Server.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E67B556F7061494C8E4300DFC17E068A"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:vshost32, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_E67B556F7061494C8E4300DFC17E068A"
+                    {
+                    "Name" = "8:Percetakan.vshost.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\Percetakan.vshost.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6BAD3150ED046E7A16E940EEDBEB412"
+            {
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\Percetakan.vshost.exe.config"
+            "TargetName" = "8:Percetakan.vshost.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F107221B34543078562691980B2B80A5"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:TRUE"
+            "AssemblyAsmDisplayName" = "8:MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_F107221B34543078562691980B2B80A5"
+                    {
+                    "Name" = "8:MySql.Data.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:MySql.Data.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD9F41A8917C472EB7FF08ACD2F88D66"
+            {
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\Percetakan.exe.config"
+            "TargetName" = "8:Percetakan.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FFC6B322B621413A9011022E5E9FA41C"
+            {
+            "SourcePath" = "8:..\\..\\Percetakan\\bin\\Release\\percetakan_db.sql"
+            "TargetName" = "8:percetakan_db.sql"
+            "Tag" = "8:"
+            "Folder" = "8:_552DE5EAE4AA46F29559420E58E28011"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -691,6 +977,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0A13509F6F294B1FBB34BA24BB11CFFD"
+                    {
+                    "Name" = "8:Sistem Informasi Percetakan"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_8C1FFA28A3F34977983006E0CDD98BE8"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_FEEFACDB74C04FE7AA45338A5D1A2D28"
@@ -703,6 +1000,39 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E2D7C359FFAA41AEB731D0220CFA923D"
+                    {
+                    "Name" = "8:SI.Percetakan"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_C6CB52846C104221A52EC831C1BF419D"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_552DE5EAE4AA46F29559420E58E28011"
+                            {
+                            "Name" = "8:Client"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_A0A1923FF5B14363A629DD8787E032C7"
+                                "Folders"
+                                {
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D219D9910D204D7184F8B3DE405DB048"
+                            {
+                            "Name" = "8:Server"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_BC94239D390C48C5A5E72AA70A84840F"
+                                "Folders"
+                                {
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -721,24 +1051,24 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SI. Percetakan"
-        "ProductCode" = "8:{36544220-27F3-4CEC-A885-1A366589A6C4}"
-        "PackageCode" = "8:{15AFFE4D-152C-451D-8B08-28F2709B1370}"
+        "ProductCode" = "8:{985F27A8-2E53-4C3C-B90C-D4BAA5EF7C29}"
+        "PackageCode" = "8:{B2FF40CF-4B81-46B5-B9E6-22FB97750B40}"
         "UpgradeCode" = "8:{757CD4AB-3C3E-40D3-84F9-3E296C7B5CBC}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:0.3"
         "Manufacturer" = "8:Libscode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Sistem Informasi Percetakan"
-        "Subject" = "8:"
+        "Subject" = "8:Sistem Informasi Percetakan"
         "ARPCONTACT" = "8:libscode"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Sistem Informasi Percetakan V 0.3"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:http://www.libscode.com"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -842,32 +1172,60 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0785EDB11E61444B8C3DCC281CA2EB25"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_32B7F2FB853B43DFBF05CD2E35711C28"
             {
-            "Name" = "8:Percetakan.exe"
+            "Name" = "8:Percetakan Client"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_C3AF95EEFEFC4C2095C764D949CAF5FC"
-            "Folder" = "8:_EB529A18075A46938EA29DDDBD2FF3AF"
-            "WorkingFolder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Icon" = "8:"
+            "Target" = "8:_60E59DFB82FA4388B7D861CE02A604FE"
+            "Folder" = "8:_0A13509F6F294B1FBB34BA24BB11CFFD"
+            "WorkingFolder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Icon" = "8:_4C7DC791641948929907C17DDA98FFD5"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3A729C856E624D36BD0CF19CA632C638"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7B8C1E393D234E4683C0A013F7866105"
             {
-            "Name" = "8:Percetakan.exe"
+            "Name" = "8:Percetakan Server"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_C3AF95EEFEFC4C2095C764D949CAF5FC"
+            "Target" = "8:_D61CA3A1E6B84970BE287409E2D2051B"
             "Folder" = "8:_CC6A6B9027B8432B99AC2A9CFDF57A6A"
-            "WorkingFolder" = "8:_FEEFACDB74C04FE7AA45338A5D1A2D28"
-            "Icon" = "8:"
+            "WorkingFolder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Icon" = "8:_ACEAD7D3C608468F812F2C8DB8D6291F"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8C518147D5884DFABB896A56D12CE5F9"
+            {
+            "Name" = "8:Percetakan Client"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_60E59DFB82FA4388B7D861CE02A604FE"
+            "Folder" = "8:_CC6A6B9027B8432B99AC2A9CFDF57A6A"
+            "WorkingFolder" = "8:_552DE5EAE4AA46F29559420E58E28011"
+            "Icon" = "8:_4C7DC791641948929907C17DDA98FFD5"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_960CFB99A0E442D9924C0E96D39BB6CE"
+            {
+            "Name" = "8:Percetakan Server"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_D61CA3A1E6B84970BE287409E2D2051B"
+            "Folder" = "8:_0A13509F6F294B1FBB34BA24BB11CFFD"
+            "WorkingFolder" = "8:_D219D9910D204D7184F8B3DE405DB048"
+            "Icon" = "8:_ACEAD7D3C608468F812F2C8DB8D6291F"
             "Feature" = "8:"
             }
         }
@@ -882,7 +1240,7 @@
                 {
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_1DF5108D339F46C6A6A03FDFBCF163F2"
                     {
-                    "Sequence" = "3:200"
+                    "Sequence" = "3:300"
                     "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -917,7 +1275,7 @@
                     }
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_5378954484674EBA92C25E7EA4CD2D57"
                     {
-                    "Sequence" = "3:300"
+                    "Sequence" = "3:400"
                     "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -933,6 +1291,53 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:1"
+                            "UsePlugInResources" = "11:TRUE"
+                            }
+                        }
+                    }
+                    "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_8966740EB9074E54AC92FAFC1656DFF3"
+                    {
+                    "Sequence" = "3:200"
+                    "DisplayName" = "8:Read Me"
+                    "UseDynamicProperties" = "11:TRUE"
+                    "IsDependency" = "11:FALSE"
+                    "SourcePath" = "8:<VsdDialogDir>\\VsdReadmeDlg.wid"
+                        "Properties"
+                        {
+                            "BannerBitmap"
+                            {
+                            "Name" = "8:BannerBitmap"
+                            "DisplayName" = "8:#1001"
+                            "Description" = "8:#1101"
+                            "Type" = "3:8"
+                            "ContextData" = "8:Bitmap"
+                            "Attributes" = "3:4"
+                            "Setting" = "3:1"
+                            "UsePlugInResources" = "11:TRUE"
+                            }
+                            "ReadmeText"
+                            {
+                            "Name" = "8:ReadmeText"
+                            "DisplayName" = "8:#1010"
+                            "Description" = "8:#1110"
+                            "Type" = "3:6"
+                            "ContextData" = "8:"
+                            "Attributes" = "3:0"
+                            "Setting" = "3:2"
+                            "Value" = "8:_CA0B72AB48FF468A953D53C3A122D618"
+                            "UsePlugInResources" = "11:TRUE"
+                            }
+                            "Sunken"
+                            {
+                            "Name" = "8:Sunken"
+                            "DisplayName" = "8:#1007"
+                            "Description" = "8:#1107"
+                            "Type" = "3:5"
+                            "ContextData" = "8:4;True=4;False=0"
+                            "Attributes" = "3:0"
+                            "Setting" = "3:0"
+                            "Value" = "3:4"
+                            "DefaultValue" = "3:4"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }

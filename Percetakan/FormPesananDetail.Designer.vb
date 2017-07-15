@@ -23,11 +23,13 @@ Partial Class FormPesananDetail
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPesananDetail))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.BtnBack = New System.Windows.Forms.Button()
         Me.BtnCancel = New System.Windows.Forms.Button()
+        Me.BtnAmbil = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -52,7 +54,6 @@ Partial Class FormPesananDetail
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DG_DaftarJob = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.PesananSelesaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesananDibatalkanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -85,25 +86,28 @@ Partial Class FormPesananDetail
         '
         'TableLayoutPanel3
         '
-        Me.TableLayoutPanel3.ColumnCount = 2
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34445!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34445!))
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnBack, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnCancel, 0, 0)
+        Me.TableLayoutPanel3.ColumnCount = 3
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnBack, 2, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnCancel, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnAmbil, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(396, 0)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(312, 0)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(328, 49)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(412, 49)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'BtnBack
         '
         Me.BtnBack.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnBack.Location = New System.Drawing.Point(167, 3)
+        Me.BtnBack.Location = New System.Drawing.Point(277, 3)
         Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(158, 43)
+        Me.BtnBack.Size = New System.Drawing.Size(132, 43)
         Me.BtnBack.TabIndex = 1
         Me.BtnBack.Text = "Kembali"
         Me.BtnBack.UseVisualStyleBackColor = True
@@ -111,12 +115,22 @@ Partial Class FormPesananDetail
         'BtnCancel
         '
         Me.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnCancel.Location = New System.Drawing.Point(3, 3)
+        Me.BtnCancel.Location = New System.Drawing.Point(140, 3)
         Me.BtnCancel.Name = "BtnCancel"
-        Me.BtnCancel.Size = New System.Drawing.Size(158, 43)
+        Me.BtnCancel.Size = New System.Drawing.Size(131, 43)
         Me.BtnCancel.TabIndex = 0
         Me.BtnCancel.Text = "Batalkan Pesanan"
         Me.BtnCancel.UseVisualStyleBackColor = True
+        '
+        'BtnAmbil
+        '
+        Me.BtnAmbil.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BtnAmbil.Location = New System.Drawing.Point(3, 3)
+        Me.BtnAmbil.Name = "BtnAmbil"
+        Me.BtnAmbil.Size = New System.Drawing.Size(131, 43)
+        Me.BtnAmbil.TabIndex = 2
+        Me.BtnAmbil.Text = "Ambil Pesanan"
+        Me.BtnAmbil.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel1
         '
@@ -414,21 +428,15 @@ Partial Class FormPesananDetail
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PesananSelesaiToolStripMenuItem, Me.PesananDibatalkanToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PesananDibatalkanToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(178, 48)
-        '
-        'PesananSelesaiToolStripMenuItem
-        '
-        Me.PesananSelesaiToolStripMenuItem.Name = "PesananSelesaiToolStripMenuItem"
-        Me.PesananSelesaiToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.PesananSelesaiToolStripMenuItem.Text = "Pesanan Selesai"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(167, 26)
         '
         'PesananDibatalkanToolStripMenuItem
         '
         Me.PesananDibatalkanToolStripMenuItem.Name = "PesananDibatalkanToolStripMenuItem"
-        Me.PesananDibatalkanToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.PesananDibatalkanToolStripMenuItem.Text = "Pesanan Dibatalkan"
+        Me.PesananDibatalkanToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.PesananDibatalkanToolStripMenuItem.Text = "Batalkan Pesanan"
         '
         'FormPesananDetail
         '
@@ -438,7 +446,9 @@ Partial Class FormPesananDetail
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormPesananDetail"
+        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pesanan :"
         Me.Panel2.ResumeLayout(False)
@@ -485,6 +495,6 @@ Partial Class FormPesananDetail
     Friend WithEvents BtnBack As System.Windows.Forms.Button
     Friend WithEvents BtnCancel As System.Windows.Forms.Button
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents PesananSelesaiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PesananDibatalkanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BtnAmbil As System.Windows.Forms.Button
 End Class
