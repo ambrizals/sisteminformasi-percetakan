@@ -1,0 +1,24 @@
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\bin\Debug\Percetakan Server.exe
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\bin\Debug\Percetakan Server.pdb
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\bin\Debug\Percetakan Server.xml
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\bin\Debug\MySqlBackup.dll
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.vbprojResolveAssemblyReference.cache
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan_Server.MainForm.resources
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan_Server.Resources.resources
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.vbproj.GenerateResource.Cache
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.exe
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.xml
+C:\Users\sabun\Desktop\percetakan\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.pdb
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Debug\percetakan_db.sql
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Debug\percetakan_db_plusdata.sql
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Debug\Percetakan Server.exe.config
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Debug\Percetakan Server.exe
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Debug\Percetakan Server.pdb
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Debug\Percetakan Server.xml
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Debug\MySqlBackup.dll
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan_Server.MainForm.resources
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan_Server.Resources.resources
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.vbproj.GenerateResource.Cache
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.exe
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.xml
+C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Debug\Percetakan Server.pdb
