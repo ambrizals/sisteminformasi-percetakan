@@ -62,4 +62,7 @@ C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.e
 C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.xml
 C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.pdb
 C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.FormPelunasanPesanan.resources
-C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.vbprojResolveAssemblyReference.cache
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Percetakan\bin\Release\Percetakan.exe.config
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.exe
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.xml
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Percetakan\obj\x86\Release\Percetakan.pdb

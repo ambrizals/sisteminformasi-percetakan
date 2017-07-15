@@ -110,12 +110,6 @@
       <DependentUpon>Faktur_Penjualan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FormPelunasanPesanan.Designer.vb">
-      <DependentUpon>FormPelunasanPesanan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormPelunasanPesanan.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormPesananDetail.Designer.vb">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </Compile>
@@ -269,9 +263,6 @@
     <EmbeddedResource Include="Faktur_Penjualan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Faktur_Penjualan.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPelunasanPesanan.resx">
-      <DependentUpon>FormPelunasanPesanan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesananDetail.resx">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>

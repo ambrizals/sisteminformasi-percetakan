@@ -280,7 +280,7 @@ Partial Class FormEditKaryawan
         Me.FORM.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.FORM.Location = New System.Drawing.Point(268, 12)
         Me.FORM.Name = "FORM"
-        Me.FORM.Size = New System.Drawing.Size(206, 29)
+        Me.FORM.Size = New System.Drawing.Size(212, 29)
         Me.FORM.TabIndex = 39
         Me.FORM.Text = "FORM KARYAWAN"
         '
@@ -308,7 +308,7 @@ Partial Class FormEditKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(683, 412)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.PictureBox1)

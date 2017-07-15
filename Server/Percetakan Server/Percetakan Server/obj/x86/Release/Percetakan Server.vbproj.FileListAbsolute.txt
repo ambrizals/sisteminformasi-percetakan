@@ -12,3 +12,7 @@ C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Ser
 C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Release\Percetakan Server.exe
 C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Release\Percetakan Server.xml
 C:\Users\sabun\Desktop\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Release\Percetakan Server.pdb
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Server\Percetakan Server\Percetakan Server\bin\Release\Percetakan Server.exe.config
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Release\Percetakan Server.exe
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Release\Percetakan Server.xml
+C:\Users\Nita\Desktop\percetakan-stable\percetakan-stable\Server\Percetakan Server\Percetakan Server\obj\x86\Release\Percetakan Server.pdb

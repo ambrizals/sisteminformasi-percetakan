@@ -122,6 +122,10 @@ Public Class MainForm
             check_koneksi()
         End If
     End Sub
+
+    Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
+        Me.Close()
+    End Sub
 End Class
 
 Public Class ClsKoneksi

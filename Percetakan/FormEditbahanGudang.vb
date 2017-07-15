@@ -50,4 +50,8 @@ Public Class FormEditbahanGudang
             MsgBox("Terjadi Kesalahan, silahkan periksa koneksi atau hubungi administrator" + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
+        Me.Close()
+    End Sub
 End Class

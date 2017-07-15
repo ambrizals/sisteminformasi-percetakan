@@ -24,4 +24,12 @@
             MsgBox("Terjadi kesalahan : " + vbCr + "Error Info : " + ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label6.Click
+        Me.Close()
+    End Sub
 End Class

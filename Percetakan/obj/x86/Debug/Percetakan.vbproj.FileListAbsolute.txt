@@ -237,4 +237,33 @@ C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Debug\Percetakan.vbp
 C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Debug\Percetakan.exe
 C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Debug\Percetakan.xml
 C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Debug\Percetakan.pdb
-C:\Users\sabun\Desktop\percetakan-stable\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
+E:\projek baru\Percetakan\bin\Debug\Percetakan.exe.config
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.exe
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.xml
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.pdb
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
+E:\projek baru\Percetakan\bin\Debug\percetakan_db.sql
+E:\projek baru\Percetakan\bin\Debug\Percetakan.exe
+E:\projek baru\Percetakan\bin\Debug\Percetakan.pdb
+E:\projek baru\Percetakan\bin\Debug\Percetakan.xml
+E:\projek baru\Percetakan\bin\Debug\MySqlBackup.dll
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormPesananDetail.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormAbsenTambahcuti.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormBayarPesanan.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormCaribahanPesanan.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormAddGudang.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormEditbahanGudang.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormEditKaryawan.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormAbout.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormConfig.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormGudang.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormJobList.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormJobpendingPanel.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormKaryawan.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormAbsensi.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormPesanan.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.FormProsesjobPanel.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.Login.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
+E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
