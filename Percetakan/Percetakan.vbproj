@@ -104,12 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
-    <Compile Include="Faktur_Penjualan.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Faktur_Penjualan.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="FormPesananDetail.Designer.vb">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </Compile>
@@ -207,22 +201,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global.vb" />
-    <Compile Include="Laporan_Pesanan.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Laporan_Pesanan.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Laporan_ProsesPekerjaan.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Laporan_ProsesPekerjaan.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Lembar_DataKaryawan.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Lembar_DataKaryawan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -258,12 +240,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>InfoAplikasi.settings</DependentUpon>
     </Compile>
+    <Compile Include="Struk_Pesanan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Struk_Pesanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Faktur_Penjualan.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Faktur_Penjualan.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPesananDetail.resx">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -312,17 +296,9 @@
     <EmbeddedResource Include="FormProsesjobPanel.resx">
       <DependentUpon>FormProsesjobPanel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan_Pesanan.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Laporan_Pesanan.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Laporan_ProsesPekerjaan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Laporan_ProsesPekerjaan.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lembar_DataKaryawan.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Lembar_DataKaryawan.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -335,6 +311,10 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Struk_Pesanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Struk_Pesanan.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

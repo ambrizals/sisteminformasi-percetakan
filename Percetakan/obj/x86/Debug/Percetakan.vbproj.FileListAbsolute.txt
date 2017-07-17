@@ -267,3 +267,34 @@ E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.Login.resources
 E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
 E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
 E:\projek baru\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\bin\Debug\Percetakan.exe.config
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.exe
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.xml
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.pdb
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\bin\Debug\percetakan_db.sql
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\bin\Debug\Percetakan.exe
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\bin\Debug\Percetakan.pdb
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\bin\Debug\Percetakan.xml
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\bin\Debug\MySqlBackup.dll
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\bin\Debug\MySql.Data.xml
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.vbprojResolveAssemblyReference.cache
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormPesananDetail.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormAbsenTambahcuti.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormBayarPesanan.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormCaribahanPesanan.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormAddGudang.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormEditbahanGudang.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormEditKaryawan.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormAbout.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormConfig.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormGudang.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormJobList.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormJobpendingPanel.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormKaryawan.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormAbsensi.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormPesanan.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.FormProsesjobPanel.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.Login.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.MenuUtama.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.Resources.resources
+C:\Users\sabun\Desktop\percetakan-stable-master\Percetakan\obj\x86\Debug\Percetakan.vbproj.GenerateResource.Cache
