@@ -75,6 +75,8 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="MySqlBackup">
@@ -84,6 +86,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -104,6 +108,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsKoneksi.vb" />
+    <Compile Include="FormDataKaryawan.Designer.vb">
+      <DependentUpon>FormDataKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataKaryawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanKaryawan.Designer.vb">
+      <DependentUpon>FormLaporanKaryawan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanKaryawan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLaporanProsesPekerjaan.Designer.vb">
+      <DependentUpon>FormLaporanProsesPekerjaan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanProsesPekerjaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormPesananDetail.Designer.vb">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </Compile>
@@ -200,7 +222,31 @@
     <Compile Include="FormProsesjobPanel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormStruk.Designer.vb">
+      <DependentUpon>FormStruk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormStruk.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Global.vb" />
+    <Compile Include="LaporanKehadiran.Designer.vb">
+      <DependentUpon>LaporanKehadiran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LaporanKehadiran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaporanKehadiranKaryawan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanKehadiranKaryawan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan_DataKaryawan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Laporan_DataKaryawan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Laporan_ProsesPekerjaan.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -248,6 +294,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormDataKaryawan.resx">
+      <DependentUpon>FormDataKaryawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanKaryawan.resx">
+      <DependentUpon>FormLaporanKaryawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanProsesPekerjaan.resx">
+      <DependentUpon>FormLaporanProsesPekerjaan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPesananDetail.resx">
       <DependentUpon>FormPesananDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +350,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProsesjobPanel.resx">
       <DependentUpon>FormProsesjobPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStruk.resx">
+      <DependentUpon>FormStruk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanKehadiran.resx">
+      <DependentUpon>LaporanKehadiran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanKehadiranKaryawan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanKehadiranKaryawan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan_DataKaryawan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Laporan_DataKaryawan.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan_ProsesPekerjaan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

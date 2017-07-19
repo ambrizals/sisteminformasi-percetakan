@@ -45,6 +45,7 @@ Partial Class Login
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Location = New System.Drawing.Point(9, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 13)
@@ -54,6 +55,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label2.Location = New System.Drawing.Point(9, 128)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 13)
@@ -77,10 +79,10 @@ Partial Class Login
         '
         'BtnLogin
         '
-        Me.BtnLogin.BackColor = System.Drawing.SystemColors.Menu
+        Me.BtnLogin.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnLogin.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnLogin.Location = New System.Drawing.Point(12, 194)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(256, 60)
@@ -90,9 +92,9 @@ Partial Class Login
         '
         'BtnReset
         '
-        Me.BtnReset.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnReset.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnReset.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnReset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnReset.Location = New System.Drawing.Point(12, 260)
         Me.BtnReset.Name = "BtnReset"
         Me.BtnReset.Size = New System.Drawing.Size(123, 40)
@@ -102,7 +104,7 @@ Partial Class Login
         '
         'BtnCancel
         '
-        Me.BtnCancel.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnCancel.BackColor = System.Drawing.Color.DarkCyan
         Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -116,6 +118,7 @@ Partial Class Login
         'cb_saveuser
         '
         Me.cb_saveuser.AutoSize = True
+        Me.cb_saveuser.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.cb_saveuser.Location = New System.Drawing.Point(12, 150)
         Me.cb_saveuser.Name = "cb_saveuser"
         Me.cb_saveuser.Size = New System.Drawing.Size(112, 17)
@@ -127,6 +130,7 @@ Partial Class Login
         '
         Me.cb_saveuserpass.AutoSize = True
         Me.cb_saveuserpass.Enabled = False
+        Me.cb_saveuserpass.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.cb_saveuserpass.Location = New System.Drawing.Point(12, 171)
         Me.cb_saveuserpass.Name = "cb_saveuserpass"
         Me.cb_saveuserpass.Size = New System.Drawing.Size(110, 17)
@@ -155,9 +159,9 @@ Partial Class Login
         '
         'BtnConfig
         '
-        Me.BtnConfig.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnConfig.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnConfig.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BtnConfig.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnConfig.Location = New System.Drawing.Point(141, 260)
         Me.BtnConfig.Name = "BtnConfig"
         Me.BtnConfig.Size = New System.Drawing.Size(127, 40)
@@ -168,7 +172,7 @@ Partial Class Login
         'Panel1
         '
         Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel1.BackColor = System.Drawing.Color.Teal
         Me.Panel1.Controls.Add(Me.lvl_versi)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -203,6 +207,7 @@ Partial Class Login
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Label4.Location = New System.Drawing.Point(94, 33)
         Me.Label4.Name = "Label4"
@@ -215,7 +220,7 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(289, 357)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel1)

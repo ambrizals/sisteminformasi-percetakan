@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class Faktur_Pesanan
+Public Class Laporan_DataKaryawan
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class Faktur_Pesanan
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "Faktur_Pesanan.rpt"
+            Return "Laporan_DataKaryawan.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class Faktur_Pesanan
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "Percetakan.Faktur_Pesanan.rpt"
+            Return "Percetakan.Laporan_DataKaryawan.rpt"
         End Get
         Set
             'Do nothing
@@ -62,7 +62,7 @@ Public Class Faktur_Pesanan
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property ReportHeaderSection2() As CrystalDecisions.CrystalReports.Engine.Section
+    Public ReadOnly Property Section2() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(1)
         End Get
@@ -70,7 +70,7 @@ Public Class Faktur_Pesanan
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Section2() As CrystalDecisions.CrystalReports.Engine.Section
+    Public ReadOnly Property GroupHeaderSection1() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(2)
         End Get
@@ -86,7 +86,7 @@ Public Class Faktur_Pesanan
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Section4() As CrystalDecisions.CrystalReports.Engine.Section
+    Public ReadOnly Property GroupFooterSection1() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(4)
         End Get
@@ -94,15 +94,23 @@ Public Class Faktur_Pesanan
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Section5() As CrystalDecisions.CrystalReports.Engine.Section
+    Public ReadOnly Property Section4() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(5)
+        End Get
+    End Property
+    
+    <Browsable(false),  _
+     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
+    Public ReadOnly Property Section5() As CrystalDecisions.CrystalReports.Engine.Section
+        Get
+            Return Me.ReportDefinition.Sections(6)
         End Get
     End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedFaktur_Pesanan
+Public Class CachedLaporan_DataKaryawan
     Inherits Component
     Implements ICachedReport
     
@@ -144,7 +152,7 @@ Public Class CachedFaktur_Pesanan
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As Faktur_Pesanan = New Faktur_Pesanan()
+        Dim rpt As Laporan_DataKaryawan = New Laporan_DataKaryawan()
         rpt.Site = Me.Site
         Return rpt
     End Function

@@ -45,13 +45,4 @@ Module Globals
         kry_alamat = "null"
         kry_telp = "null"
     End Sub
-    Public tanggal, tanggal_now, time_now As String
-
-    Sub Tanggal_Load()
-        Dim tgl As Date = Today
-        Dim tm As Date = TimeOfDay
-        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
-        tanggal_now = Format(tgl, "yyyy-MM-dd").ToString
-        time_now = Format(tm, "HH:mm:ss").ToString
-    End Sub
 End Module

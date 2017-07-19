@@ -121,7 +121,7 @@ Partial Class FormEditKaryawan
         '
         'BtnReset
         '
-        Me.BtnReset.BackColor = System.Drawing.SystemColors.Control
+        Me.BtnReset.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnReset.Location = New System.Drawing.Point(472, 371)
         Me.BtnReset.Name = "BtnReset"
@@ -263,7 +263,7 @@ Partial Class FormEditKaryawan
         '
         'BtnSave
         '
-        Me.BtnSave.BackColor = System.Drawing.SystemColors.Control
+        Me.BtnSave.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnSave.Enabled = False
         Me.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnSave.Location = New System.Drawing.Point(374, 371)
@@ -295,7 +295,7 @@ Partial Class FormEditKaryawan
         '
         'BtnCancel
         '
-        Me.BtnCancel.BackColor = System.Drawing.SystemColors.Control
+        Me.BtnCancel.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnCancel.Location = New System.Drawing.Point(574, 371)
         Me.BtnCancel.Name = "BtnCancel"
@@ -308,7 +308,7 @@ Partial Class FormEditKaryawan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(683, 412)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.PictureBox1)

@@ -47,30 +47,39 @@ Public Class FormPesanan
     Sub proses_pesanan()
         Dim kd_tsk As String
         Dim loncat As Integer
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         Try
-            sql = "INSERT INTO pesanan (ORDERID, KARYAWANID, ORDERCONSUMER, ORDERCONSUMERTELP, ORDERSTATUS, ORDERTOTAL, ORDERBAYAR, ORDERTANGGAL) VALUES ('" + txt_kodepesanan.Text + "', '" + kry_id + "', '" + txt_namacustomer.Text + "', '" + txt_nomorteleponcust.Text + "', 'PENDING', '" + lbl_grandtotal.Text.Remove(0, 3) + "', '" + ord_bayar.ToString + "', '" + tanggal_now + "')"
+            sql = "INSERT INTO pesanan (ORDERID, ORDERCONSUMER, ORDERCONSUMERTELP, ORDERSTATUS, ORDERTOTAL, ORDERBAYAR) VALUES ('" + txt_kodepesanan.Text + "',  '" + txt_namacustomer.Text + "', '" + txt_nomorteleponcust.Text + "', 'PENDING', '" + lbl_grandtotal.Text.Remove(0, 3) + "', '" + ord_bayar.ToString + "')"
             proses.ExecuteNonQuery(sql)
             Try
                 sql = "insert into log_pesanan values ('" + kry_id + "','" + txt_kodepesanan.Text + "','" + tanggal + "','MEMBUAT PESANAN')"
                 proses.ExecuteNonQuery(sql)
+
             Catch ex As Exception
                 MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
             End Try
         Catch ex As Exception
             MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
         End Try
-        'Try
-        loncat = 0
-        For loncat = 0 To DG_ListBuatPesan.RowCount - 1
-            kd_tsk = txt_kodepesanan.Text + "-TLT-" + loncat.ToString
-            sql = "INSERT INTO tasklist (TASKID, BAHANID, ORDERID, TASKNAME, TASKQTY, TASKPRICE, TASKSTATUS) VALUES ('" + kd_tsk + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "', '" + txt_kodepesanan.Text + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(2).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(3).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(5).Value.ToString + "', 'PENDING')"
-            proses.ExecuteNonQuery(sql)
-            sql = "INSERT INTO `percetakan`.`log_joblist` (`KARYAWANID`, `TASKID`, `PROSESDATE`, `PROSESSTATUS`) VALUES ('" + kry_id + "', '" + kd_tsk + "', '" + tanggal + "', 'ITEM PESANAN DIBUAT')"
-            proses.ExecuteNonQuery(sql)
-        Next
-        'Catch ex As Exception
-        'MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
-        'End Try
+        Try
+            loncat = 0
+            For loncat = 0 To DG_ListBuatPesan.RowCount - 1
+                kd_tsk = txt_kodepesanan.Text + "-TLT-" + loncat.ToString
+                sql = "INSERT INTO tasklist (TASKID, BAHANID, ORDERID, TASKNAME, TASKQTY, TASKPRICE, TASKSTATUS) VALUES ('" + kd_tsk + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(0).Value.ToString + "', '" + txt_kodepesanan.Text + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(2).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(3).Value.ToString + "', '" + DG_ListBuatPesan.Rows(loncat).Cells(5).Value.ToString + "', 'PENDING')"
+                proses.ExecuteNonQuery(sql)
+                sql = "INSERT INTO `percetakan`.`log_joblist` (`KARYAWANID`, `TASKID`, `PROSESDATE`, `PROSESSTATUS`) VALUES ('" + kry_id + "', '" + kd_tsk + "', '" + tanggal + "', 'ITEM PESANAN DIBUAT')"
+                proses.ExecuteNonQuery(sql)
+            Next
+        Catch ex As Exception
+            MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+        End Try
+        MsgBox(txt_kodepesanan.Text)
+        FormStruk.CrystalReportViewer1.SelectionFormula = "{pesanan1.ORDERID} like '" + txt_kodepesanan.Text + "'"
+        FormStruk.CrystalReportViewer1.RefreshReport()
+        FormStruk.CrystalReportViewer1.PrintReport()
         MsgBox("Transaksi Sukses", MsgBoxStyle.Information, "Info")
         reset()
     End Sub
@@ -90,7 +99,7 @@ Public Class FormPesanan
         DG_ListBuatPesan.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         Ambil_Kode()
         lbl_karyawanname.Text = kry_name
-        lbl_tanggal.Text = tanggal_now
+        lbl_tanggal.Text = Today
         baca_pesanan()
 
     End Sub

@@ -47,7 +47,7 @@ Partial Class FormAbsensi
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel1.BackColor = System.Drawing.Color.DarkCyan
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -91,6 +91,7 @@ Partial Class FormAbsensi
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.DarkCyan
         Me.Panel2.Controls.Add(Me.BtnCuti)
         Me.Panel2.Controls.Add(Me.BtnRefresh)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom

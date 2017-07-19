@@ -54,6 +54,10 @@ Public Class FormPesananDetail
     End Sub
 
     Private Sub BtnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancel.Click
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         Dim loncat, itemstatus As Integer
         If lbl_pesananstatus.Text = "PESANAN DIBATALKAN" Then
             MsgBox("Pesanan sudah dibatalkan", MsgBoxStyle.Information, "Info")
@@ -117,31 +121,55 @@ Public Class FormPesananDetail
     End Sub
 
     Private Sub BtnAmbil_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAmbil.Click
-        If lbl_statusbayarpesanan.Text = "Down Payment" Then
-            MsgBox("Terdapat sisa pembayaran yang belum dibayarkan, apakah ingin melakukan pelunasan sebesar Rp." + Val(lbl_totalbayarpesanan.Text - lbl_terbayarpesanan.Text).ToString + " ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi")
-            sql = "UPDATE `percetakan`.`pesanan` SET `ORDERSTATUS` = 'TRANSAKSI DITUTUP' , `ORDERBAYAR` = '" + lbl_totalbayarpesanan.Text + "' WHERE `ORDERID` = '" + lbl_nomorpesanan.Text + "'"
-            proses.ExecuteNonQuery(sql)
-            sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','MENUTUP TRANSAKSI')"
-            proses.ExecuteNonQuery(sql)
-            MsgBox("Pesanan telah di selesaikan dan lunas", MsgBoxStyle.Information, "Info")
-            FormPesanan.baca_pesanan()
-            Me.Close()
-        ElseIf lbl_statusbayarpesanan.Text = "Cash" Then
-            sql = "UPDATE `percetakan`.`pesanan` SET `ORDERSTATUS` = 'TRANSAKSI DITUTUP' WHERE `ORDERID` = '" + lbl_nomorpesanan.Text + "'"
-            proses.ExecuteNonQuery(sql)
-            sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','MENUTUP TRANSAKSI')"
-            proses.ExecuteNonQuery(sql)
-            MsgBox("Pesanan telah di selesaikan", MsgBoxStyle.Information, "Info")
-            FormPesanan.baca_pesanan()
-            Me.Close()
-        ElseIf lbl_pesananstatus.Text = "TRANSAKSI DITUTUP" Then
-            MsgBox("Transaksi telah ditutup", MsgBoxStyle.Information, "Info")
-            FormPesanan.baca_pesanan()
-            Me.Close()
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        Dim loncat, index_status As Integer
+        index_status = 0
+        For loncat = 0 To DG_DaftarJob.RowCount - 1
+            If DG_DaftarJob.Rows(loncat).Cells(5).Value.ToString = "FINISH" Then
+                index_status = index_status + 1
+                MsgBox(index_status.ToString)
+            End If
+        Next
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
+        If index_status = DG_DaftarJob.RowCount Then
+            If lbl_statusbayarpesanan.Text = "Down Payment" Then
+                MsgBox("Terdapat sisa pembayaran yang belum dibayarkan, apakah ingin melakukan pelunasan sebesar Rp." + Val(lbl_totalbayarpesanan.Text - lbl_terbayarpesanan.Text).ToString + " ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi")
+                sql = "UPDATE `percetakan`.`pesanan` SET `ORDERSTATUS` = 'TRANSAKSI DITUTUP' , `ORDERBAYAR` = '" + lbl_totalbayarpesanan.Text + "' WHERE `ORDERID` = '" + lbl_nomorpesanan.Text + "'"
+                proses.ExecuteNonQuery(sql)
+                sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','MENUTUP TRANSAKSI')"
+                proses.ExecuteNonQuery(sql)
+                MsgBox("Pesanan telah di selesaikan dan lunas", MsgBoxStyle.Information, "Info")
+                FormPesanan.baca_pesanan()
+                Me.Close()
+            ElseIf lbl_statusbayarpesanan.Text = "Cash" Then
+                sql = "UPDATE `percetakan`.`pesanan` SET `ORDERSTATUS` = 'TRANSAKSI DITUTUP' WHERE `ORDERID` = '" + lbl_nomorpesanan.Text + "'"
+                proses.ExecuteNonQuery(sql)
+                sql = "insert into log_pesanan values ('" + kry_id + "','" + lbl_nomorpesanan.Text + "','" + tanggal + "','MENUTUP TRANSAKSI')"
+                proses.ExecuteNonQuery(sql)
+                MsgBox("Pesanan telah di selesaikan", MsgBoxStyle.Information, "Info")
+                FormPesanan.baca_pesanan()
+                Me.Close()
+            End If
+        ElseIf lbl_pesananstatus.Text = "PESANANAN DIBATALKAN" Or lbl_pesananstatus.Text = "TRANSAKSI DITUTUP" Then
+            MsgBox("Pesanan telah dibatalkan atau telah ditutup", MsgBoxStyle.Information, "Info")
+        Else
+            MsgBox("Pesanan sedang diproses", MsgBoxStyle.Information, "Info")
         End If
     End Sub
 
     Private Sub BtnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBack.Click
         Me.Close()
+    End Sub
+
+    Private Sub Btn_CetakStruk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_CetakStruk.Click
+        Try
+            FormStruk.CrystalReportViewer1.SelectionFormula = "{pesanan1.ORDERID} like '" + lbl_nomorpesanan.Text + "'"
+            FormStruk.CrystalReportViewer1.RefreshReport()
+            FormStruk.CrystalReportViewer1.PrintReport()
+        Catch ex As Exception
+            MsgBox("Terjadi Kesalahan" + vbCr + ex.Message, MsgBoxStyle.Information, "Error Message")
+        End Try
     End Sub
 End Class

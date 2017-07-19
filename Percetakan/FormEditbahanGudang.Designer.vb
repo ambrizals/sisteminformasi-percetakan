@@ -47,13 +47,13 @@ Partial Class FormEditbahanGudang
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(303, 28)
         Me.TableLayoutPanel1.TabIndex = 16
         '
         'BtnBatal
         '
-        Me.BtnBatal.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnBatal.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnBatal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnBatal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -66,7 +66,7 @@ Partial Class FormEditbahanGudang
         '
         'BtnSimpan
         '
-        Me.BtnSimpan.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSimpan.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnSimpan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSimpan.Location = New System.Drawing.Point(3, 3)
@@ -154,7 +154,7 @@ Partial Class FormEditbahanGudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(331, 202)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)

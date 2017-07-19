@@ -71,6 +71,10 @@
     End Sub
 
     Sub absensi()
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        Dim tanggal_now As String = Format(tgl, "yyyy-MM-dd").ToString
+        Dim time_now As String = Format(tm, "HH:mm:ss").ToString
         proses.OpenConn()
         Try
             query = ("SELECT * FROM cuti WHERE ((CURDATE() >= cutiMulai) & (CURDATE() <= cutiAkhir)) AND (karyawanID = '" + kry_id + "')")
@@ -129,11 +133,8 @@
     End Sub
 
     Private Sub MenuUtama_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Tanggal_Load()
         ambil_pengumuman()
         absensi()
-        lbl_tanggal.Text = tanggal
-        Tanggal_Load()
         Privilage_User()
         Connect()
     End Sub
@@ -237,5 +238,15 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
+    Private Sub JobListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles JobListToolStripMenuItem.Click
+        FormLaporanProsesPekerjaan.ShowDialog()
+    End Sub
 
+    Private Sub DaftarKaryawanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DaftarKaryawanToolStripMenuItem.Click
+        FormDataKaryawan.ShowDialog()
+    End Sub
+
+    Private Sub DaftarHadirKaryawanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DaftarHadirKaryawanToolStripMenuItem.Click
+        LaporanKehadiran.ShowDialog()
+    End Sub
 End Class

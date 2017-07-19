@@ -89,7 +89,7 @@ Partial Class FormAddGudang
         '
         'BtnSimpan
         '
-        Me.BtnSimpan.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnSimpan.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnSimpan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnSimpan.ForeColor = System.Drawing.SystemColors.ControlText
@@ -102,7 +102,7 @@ Partial Class FormAddGudang
         '
         'BtnReset
         '
-        Me.BtnReset.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnReset.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnReset.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnReset.ForeColor = System.Drawing.SystemColors.ControlText
@@ -115,7 +115,7 @@ Partial Class FormAddGudang
         '
         'BtnBatal
         '
-        Me.BtnBatal.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnBatal.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnBatal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BtnBatal.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnBatal.ForeColor = System.Drawing.SystemColors.ControlText
@@ -167,7 +167,7 @@ Partial Class FormAddGudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(341, 279)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)

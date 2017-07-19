@@ -55,6 +55,7 @@ Partial Class FormPesananDetail
         Me.DG_DaftarJob = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.PesananDibatalkanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Btn_CetakStruk = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -86,28 +87,29 @@ Partial Class FormPesananDetail
         '
         'TableLayoutPanel3
         '
-        Me.TableLayoutPanel3.ColumnCount = 3
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnBack, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnCancel, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.BtnAmbil, 0, 0)
+        Me.TableLayoutPanel3.ColumnCount = 4
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnBack, 3, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnCancel, 2, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.BtnAmbil, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Btn_CetakStruk, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(312, 0)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(234, 0)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(412, 49)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(490, 49)
         Me.TableLayoutPanel3.TabIndex = 0
         '
         'BtnBack
         '
         Me.BtnBack.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnBack.Location = New System.Drawing.Point(277, 3)
+        Me.BtnBack.Location = New System.Drawing.Point(369, 3)
         Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(132, 43)
+        Me.BtnBack.Size = New System.Drawing.Size(118, 43)
         Me.BtnBack.TabIndex = 1
         Me.BtnBack.Text = "Kembali"
         Me.BtnBack.UseVisualStyleBackColor = True
@@ -115,9 +117,9 @@ Partial Class FormPesananDetail
         'BtnCancel
         '
         Me.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnCancel.Location = New System.Drawing.Point(140, 3)
+        Me.BtnCancel.Location = New System.Drawing.Point(247, 3)
         Me.BtnCancel.Name = "BtnCancel"
-        Me.BtnCancel.Size = New System.Drawing.Size(131, 43)
+        Me.BtnCancel.Size = New System.Drawing.Size(116, 43)
         Me.BtnCancel.TabIndex = 0
         Me.BtnCancel.Text = "Batalkan Pesanan"
         Me.BtnCancel.UseVisualStyleBackColor = True
@@ -125,9 +127,9 @@ Partial Class FormPesananDetail
         'BtnAmbil
         '
         Me.BtnAmbil.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BtnAmbil.Location = New System.Drawing.Point(3, 3)
+        Me.BtnAmbil.Location = New System.Drawing.Point(125, 3)
         Me.BtnAmbil.Name = "BtnAmbil"
-        Me.BtnAmbil.Size = New System.Drawing.Size(131, 43)
+        Me.BtnAmbil.Size = New System.Drawing.Size(116, 43)
         Me.BtnAmbil.TabIndex = 2
         Me.BtnAmbil.Text = "Ambil Pesanan"
         Me.BtnAmbil.UseVisualStyleBackColor = True
@@ -438,6 +440,16 @@ Partial Class FormPesananDetail
         Me.PesananDibatalkanToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.PesananDibatalkanToolStripMenuItem.Text = "Batalkan Pesanan"
         '
+        'Btn_CetakStruk
+        '
+        Me.Btn_CetakStruk.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Btn_CetakStruk.Location = New System.Drawing.Point(3, 3)
+        Me.Btn_CetakStruk.Name = "Btn_CetakStruk"
+        Me.Btn_CetakStruk.Size = New System.Drawing.Size(116, 43)
+        Me.Btn_CetakStruk.TabIndex = 3
+        Me.Btn_CetakStruk.Text = "Cetak Struk"
+        Me.Btn_CetakStruk.UseVisualStyleBackColor = True
+        '
         'FormPesananDetail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -497,4 +509,5 @@ Partial Class FormPesananDetail
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents PesananDibatalkanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BtnAmbil As System.Windows.Forms.Button
+    Friend WithEvents Btn_CetakStruk As System.Windows.Forms.Button
 End Class

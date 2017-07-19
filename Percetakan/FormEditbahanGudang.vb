@@ -37,6 +37,10 @@ Public Class FormEditbahanGudang
     End Sub
 
     Private Sub BtnSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpan.Click
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         Try
             sql = "UPDATE bahan SET BAHANNAME='" + txt_namabahan.Text + "', BAHANHARGA = '" + txt_harga.Text + "' WHERE BAHANID='" + txt_kodebahan.Text + "'"
             proses.ExecuteNonQuery(sql)

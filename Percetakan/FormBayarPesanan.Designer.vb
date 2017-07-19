@@ -100,7 +100,7 @@ Partial Class FormBayarPesanan
         '
         'BtnBayar
         '
-        Me.BtnBayar.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnBayar.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnBayar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnBayar.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBayar.ForeColor = System.Drawing.SystemColors.ControlText
@@ -114,7 +114,7 @@ Partial Class FormBayarPesanan
         '
         'BtnKembali
         '
-        Me.BtnKembali.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BtnKembali.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnKembali.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnKembali.ForeColor = System.Drawing.SystemColors.ControlText
@@ -152,7 +152,7 @@ Partial Class FormBayarPesanan
         Me.Label5.Font = New System.Drawing.Font("Trebuchet MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(100, 20)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(201, 40)
+        Me.Label5.Size = New System.Drawing.Size(207, 40)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "PEMBAYARAN"
         '
@@ -170,7 +170,7 @@ Partial Class FormBayarPesanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(397, 362)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)

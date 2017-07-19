@@ -51,7 +51,7 @@ Partial Class FormGudang
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.36893!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.63107!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.BtnCari, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txt_namabahan, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
@@ -69,9 +69,9 @@ Partial Class FormGudang
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnCari.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnCari.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BtnCari.Location = New System.Drawing.Point(552, 3)
+        Me.BtnCari.Location = New System.Drawing.Point(551, 3)
         Me.BtnCari.Name = "BtnCari"
-        Me.BtnCari.Size = New System.Drawing.Size(167, 23)
+        Me.BtnCari.Size = New System.Drawing.Size(168, 23)
         Me.BtnCari.TabIndex = 4
         Me.BtnCari.Text = "Cari"
         Me.BtnCari.UseVisualStyleBackColor = False
@@ -83,7 +83,7 @@ Partial Class FormGudang
         Me.txt_namabahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_namabahan.Location = New System.Drawing.Point(164, 3)
         Me.txt_namabahan.Name = "txt_namabahan"
-        Me.txt_namabahan.Size = New System.Drawing.Size(382, 26)
+        Me.txt_namabahan.Size = New System.Drawing.Size(381, 26)
         Me.txt_namabahan.TabIndex = 0
         '
         'Label1
@@ -237,7 +237,7 @@ Partial Class FormGudang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(722, 540)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label4)

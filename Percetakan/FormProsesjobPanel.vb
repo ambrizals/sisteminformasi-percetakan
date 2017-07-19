@@ -59,6 +59,10 @@ Public Class FormProsesjobPanel
     End Sub
 
     Private Sub DG_DaftarJob_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DG_DaftarJob.DoubleClick
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         If DG_DaftarJob.SelectedCells(4).Value.ToString = "FINISH" Then
             MsgBox("Tidak dapat memproses job yang telah selesai", MsgBoxStyle.Information, "Info")
         Else
@@ -81,6 +85,10 @@ Public Class FormProsesjobPanel
 
 
     Private Sub BtnSelesai_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSelesai.Click
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         Dim loncat, maks_loncat, nilai_loncat As Integer
         If MsgBox("Apakah pesanan telah selesai ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
             Try
@@ -115,6 +123,10 @@ Public Class FormProsesjobPanel
     End Sub
 
     Private Sub BtnPending_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnPending.Click
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         Dim loncat As Integer
         If MsgBox("Ingin melakukan pending pada pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
             For loncat = 0 To DG_DaftarJob.Rows.Count - 1

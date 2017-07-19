@@ -57,6 +57,10 @@ Public Class FormJobpendingPanel
     End Sub
 
     Private Sub BtnProses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnProses.Click
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         If MsgBox("Apakah ingin memproses pesanan ini ?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "Konfirmasi") = MsgBoxResult.Ok Then
             ''Kode disini
             For Me.loncat = 0 To DG_DaftarJob.Rows.Count - 1

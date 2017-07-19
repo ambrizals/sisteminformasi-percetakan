@@ -37,6 +37,10 @@ Public Class FormAddGudang
     End Sub
 
     Private Sub BtnSimpan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSimpan.Click
+        Dim tanggal As String
+        Dim tgl As Date = Today
+        Dim tm As Date = TimeOfDay
+        tanggal = Format(tgl, "yyyy-MM-dd").ToString + " " + Format(tm, "HH:mm:ss").ToString
         Try
             sql = "INSERT INTO bahan (BAHANID, BAHANNAME, BAHANHARGA) VALUES ('" + txt_kodebahan.Text + "', '" + txt_namabahan.Text + "', '" + txt_harga.Text + "')"
             proses.ExecuteNonQuery(sql)

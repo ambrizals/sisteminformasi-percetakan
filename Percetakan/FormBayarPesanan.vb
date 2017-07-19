@@ -39,6 +39,7 @@
             Else
                 FormPesanan.ord_bayar = txt_jumlahbayar.Text
                 FormPesanan.proses_pesanan()
+
                 Me.Close()
                 ''Query taruh disini
             End If

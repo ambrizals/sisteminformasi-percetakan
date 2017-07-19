@@ -99,10 +99,6 @@ Public Class FormJobList
         load_tabel()
     End Sub
 
-    Private Sub DG_Pending_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DG_Pending.CellContentClick
-
-    End Sub
-
     Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
         Me.Close()
     End Sub

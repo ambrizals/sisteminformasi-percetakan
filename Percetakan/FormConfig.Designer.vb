@@ -109,7 +109,7 @@ Partial Class FormConfig
         '
         'BtnSimpan
         '
-        Me.BtnSimpan.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSimpan.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.BtnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSimpan.Location = New System.Drawing.Point(15, 185)
@@ -155,7 +155,7 @@ Partial Class FormConfig
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.DarkCyan
         Me.ClientSize = New System.Drawing.Size(284, 216)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label6)

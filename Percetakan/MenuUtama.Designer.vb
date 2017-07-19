@@ -47,7 +47,6 @@ Partial Class MenuUtama
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.rtf_pengumuman = New System.Windows.Forms.RichTextBox()
         Me.BtnSimpanPengumuman = New System.Windows.Forms.Button()
-        Me.lbl_tanggal = New System.Windows.Forms.Label()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PengaturanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,18 +55,8 @@ Partial Class MenuUtama
         Me.KaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarKaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DaftarHadirKaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanCutiKaryawanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JobListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanJobListSelesaiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanJobListCancelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GudangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPenambahanStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPenambahanBarangBaruToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPenguranganStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPesananToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPesananBelumLunasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanPesananCancelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -389,7 +378,6 @@ Partial Class MenuUtama
         Me.Sidebar_Kanan.ColumnCount = 1
         Me.Sidebar_Kanan.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.Sidebar_Kanan.Controls.Add(Me.GroupBox4, 0, 1)
-        Me.Sidebar_Kanan.Controls.Add(Me.lbl_tanggal, 0, 0)
         Me.Sidebar_Kanan.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Sidebar_Kanan.Location = New System.Drawing.Point(0, 0)
         Me.Sidebar_Kanan.Name = "Sidebar_Kanan"
@@ -429,15 +417,6 @@ Partial Class MenuUtama
         Me.BtnSimpanPengumuman.TabIndex = 1
         Me.BtnSimpanPengumuman.Text = "Simpan Pengumuman"
         Me.BtnSimpanPengumuman.UseVisualStyleBackColor = True
-        '
-        'lbl_tanggal
-        '
-        Me.lbl_tanggal.AutoSize = True
-        Me.lbl_tanggal.Location = New System.Drawing.Point(3, 0)
-        Me.lbl_tanggal.Name = "lbl_tanggal"
-        Me.lbl_tanggal.Size = New System.Drawing.Size(39, 13)
-        Me.lbl_tanggal.TabIndex = 1
-        Me.lbl_tanggal.Text = "Label4"
         '
         'TableLayoutPanel5
         '
@@ -480,23 +459,23 @@ Partial Class MenuUtama
         '
         'LaporanToolStripMenuItem
         '
-        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KaryawanToolStripMenuItem, Me.JobListToolStripMenuItem, Me.GudangToolStripMenuItem, Me.PesananToolStripMenuItem})
+        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.KaryawanToolStripMenuItem, Me.JobListToolStripMenuItem, Me.PesananToolStripMenuItem})
         Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
         Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 37)
         Me.LaporanToolStripMenuItem.Text = "Laporan"
         '
         'KaryawanToolStripMenuItem
         '
-        Me.KaryawanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarKaryawanToolStripMenuItem, Me.DaftarHadirKaryawanToolStripMenuItem, Me.LaporanCutiKaryawanToolStripMenuItem})
+        Me.KaryawanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DaftarKaryawanToolStripMenuItem, Me.DaftarHadirKaryawanToolStripMenuItem})
         Me.KaryawanToolStripMenuItem.Name = "KaryawanToolStripMenuItem"
-        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.KaryawanToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.KaryawanToolStripMenuItem.Text = "Karyawan"
         '
         'DaftarKaryawanToolStripMenuItem
         '
         Me.DaftarKaryawanToolStripMenuItem.Name = "DaftarKaryawanToolStripMenuItem"
         Me.DaftarKaryawanToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
-        Me.DaftarKaryawanToolStripMenuItem.Text = "Laporan Daftar Karyawan"
+        Me.DaftarKaryawanToolStripMenuItem.Text = "Laporan Data Karyawan"
         '
         'DaftarHadirKaryawanToolStripMenuItem
         '
@@ -504,80 +483,17 @@ Partial Class MenuUtama
         Me.DaftarHadirKaryawanToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.DaftarHadirKaryawanToolStripMenuItem.Text = "Laporan Kehadiran Karyawan"
         '
-        'LaporanCutiKaryawanToolStripMenuItem
-        '
-        Me.LaporanCutiKaryawanToolStripMenuItem.Name = "LaporanCutiKaryawanToolStripMenuItem"
-        Me.LaporanCutiKaryawanToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
-        Me.LaporanCutiKaryawanToolStripMenuItem.Text = "Laporan Cuti Karyawan"
-        '
         'JobListToolStripMenuItem
         '
-        Me.JobListToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanJobListSelesaiToolStripMenuItem, Me.LaporanJobListCancelToolStripMenuItem})
         Me.JobListToolStripMenuItem.Name = "JobListToolStripMenuItem"
-        Me.JobListToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.JobListToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.JobListToolStripMenuItem.Text = "Job List"
-        '
-        'LaporanJobListSelesaiToolStripMenuItem
-        '
-        Me.LaporanJobListSelesaiToolStripMenuItem.Name = "LaporanJobListSelesaiToolStripMenuItem"
-        Me.LaporanJobListSelesaiToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.LaporanJobListSelesaiToolStripMenuItem.Text = "Laporan Job List (Selesai)"
-        '
-        'LaporanJobListCancelToolStripMenuItem
-        '
-        Me.LaporanJobListCancelToolStripMenuItem.Name = "LaporanJobListCancelToolStripMenuItem"
-        Me.LaporanJobListCancelToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.LaporanJobListCancelToolStripMenuItem.Text = "Laporan Job List (Cancel)"
-        '
-        'GudangToolStripMenuItem
-        '
-        Me.GudangToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanPenambahanStockToolStripMenuItem, Me.LaporanPenambahanBarangBaruToolStripMenuItem, Me.LaporanPenguranganStockToolStripMenuItem})
-        Me.GudangToolStripMenuItem.Name = "GudangToolStripMenuItem"
-        Me.GudangToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.GudangToolStripMenuItem.Text = "Gudang"
-        '
-        'LaporanPenambahanStockToolStripMenuItem
-        '
-        Me.LaporanPenambahanStockToolStripMenuItem.Name = "LaporanPenambahanStockToolStripMenuItem"
-        Me.LaporanPenambahanStockToolStripMenuItem.Size = New System.Drawing.Size(257, 22)
-        Me.LaporanPenambahanStockToolStripMenuItem.Text = "Laporan Penambahan Stock"
-        '
-        'LaporanPenambahanBarangBaruToolStripMenuItem
-        '
-        Me.LaporanPenambahanBarangBaruToolStripMenuItem.Name = "LaporanPenambahanBarangBaruToolStripMenuItem"
-        Me.LaporanPenambahanBarangBaruToolStripMenuItem.Size = New System.Drawing.Size(257, 22)
-        Me.LaporanPenambahanBarangBaruToolStripMenuItem.Text = "Laporan Penambahan Barang Baru"
-        '
-        'LaporanPenguranganStockToolStripMenuItem
-        '
-        Me.LaporanPenguranganStockToolStripMenuItem.Name = "LaporanPenguranganStockToolStripMenuItem"
-        Me.LaporanPenguranganStockToolStripMenuItem.Size = New System.Drawing.Size(257, 22)
-        Me.LaporanPenguranganStockToolStripMenuItem.Text = "Laporan Pengurangan Stock"
         '
         'PesananToolStripMenuItem
         '
-        Me.PesananToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanPesananToolStripMenuItem, Me.LaporanPesananBelumLunasToolStripMenuItem, Me.LaporanPesananCancelToolStripMenuItem})
         Me.PesananToolStripMenuItem.Name = "PesananToolStripMenuItem"
-        Me.PesananToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.PesananToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PesananToolStripMenuItem.Text = "Pesanan"
-        '
-        'LaporanPesananToolStripMenuItem
-        '
-        Me.LaporanPesananToolStripMenuItem.Name = "LaporanPesananToolStripMenuItem"
-        Me.LaporanPesananToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
-        Me.LaporanPesananToolStripMenuItem.Text = "Laporan Pesanan (Selesai)"
-        '
-        'LaporanPesananBelumLunasToolStripMenuItem
-        '
-        Me.LaporanPesananBelumLunasToolStripMenuItem.Name = "LaporanPesananBelumLunasToolStripMenuItem"
-        Me.LaporanPesananBelumLunasToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
-        Me.LaporanPesananBelumLunasToolStripMenuItem.Text = "Laporan Pesanan (Belum Lunas)"
-        '
-        'LaporanPesananCancelToolStripMenuItem
-        '
-        Me.LaporanPesananCancelToolStripMenuItem.Name = "LaporanPesananCancelToolStripMenuItem"
-        Me.LaporanPesananCancelToolStripMenuItem.Size = New System.Drawing.Size(243, 22)
-        Me.LaporanPesananCancelToolStripMenuItem.Text = "Laporan Pesanan (Cancel)"
         '
         'AboutToolStripMenuItem
         '
@@ -689,7 +605,6 @@ Partial Class MenuUtama
         Me.GroupBox2.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.Sidebar_Kanan.ResumeLayout(False)
-        Me.Sidebar_Kanan.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.TableLayoutPanel5.PerformLayout()
@@ -729,7 +644,6 @@ Partial Class MenuUtama
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents BtnSimpanPengumuman As System.Windows.Forms.Button
     Friend WithEvents rtf_pengumuman As System.Windows.Forms.RichTextBox
-    Friend WithEvents lbl_tanggal As System.Windows.Forms.Label
     Friend WithEvents TableLayoutPanel9 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
@@ -737,18 +651,8 @@ Partial Class MenuUtama
     Friend WithEvents KaryawanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DaftarKaryawanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DaftarHadirKaryawanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanCutiKaryawanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents JobListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanJobListSelesaiToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanJobListCancelToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GudangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanPenambahanStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanPenambahanBarangBaruToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanPenguranganStockToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PesananToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanPesananToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanPesananBelumLunasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents LaporanPesananCancelToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents BtnClose As System.Windows.Forms.Button
     Friend WithEvents BtnMin As System.Windows.Forms.Button

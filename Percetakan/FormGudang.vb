@@ -41,7 +41,6 @@ Public Class FormGudang
     End Sub
 
     Private Sub FormGudang_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Tanggal_Load()
         Load_DataBahan()
     End Sub
 
