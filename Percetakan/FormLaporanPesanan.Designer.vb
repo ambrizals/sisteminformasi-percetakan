@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class LaporanKehadiran
+Partial Class FormLaporanPesanan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,9 +22,8 @@ Partial Class LaporanKehadiran
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.LaporanKehadiranKaryawan1 = New Percetakan.LaporanKehadiranKaryawan()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -33,43 +32,36 @@ Partial Class LaporanKehadiran
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dt_awal = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.LaporanPesanan1 = New Percetakan.LaporanPesanan()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
-        'CrystalReportViewer1
-        '
-        Me.CrystalReportViewer1.ActiveViewIndex = 0
-        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 92)
-        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.LaporanKehadiranKaryawan1
-        Me.CrystalReportViewer1.ShowCloseButton = False
-        Me.CrystalReportViewer1.ShowLogo = False
-        Me.CrystalReportViewer1.ShowParameterPanelButton = False
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(878, 425)
-        Me.CrystalReportViewer1.TabIndex = 0
-        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel2, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.13043!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.86956!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(878, 92)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(871, 92)
         Me.TableLayoutPanel1.TabIndex = 1
+        '
+        'Panel1
+        '
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(865, 53)
+        Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
@@ -79,7 +71,7 @@ Partial Class LaporanKehadiran
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(3, 62)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(872, 27)
+        Me.Panel2.Size = New System.Drawing.Size(865, 27)
         Me.Panel2.TabIndex = 1
         '
         'Label2
@@ -101,7 +93,7 @@ Partial Class LaporanKehadiran
         Me.Panel4.Controls.Add(Me.Btn_Filter)
         Me.Panel4.Controls.Add(Me.dt_akhir)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel4.Location = New System.Drawing.Point(435, 0)
+        Me.Panel4.Location = New System.Drawing.Point(428, 0)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(437, 27)
         Me.Panel4.TabIndex = 1
@@ -154,25 +146,33 @@ Partial Class LaporanKehadiran
         Me.Label1.Text = "Filter Pencarian :"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel1
+        'CrystalReportViewer1
         '
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 3)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(872, 53)
-        Me.Panel1.TabIndex = 0
+        Me.CrystalReportViewer1.ActiveViewIndex = 0
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 92)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ReportSource = Me.LaporanPesanan1
+        Me.CrystalReportViewer1.ShowCloseButton = False
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(871, 403)
+        Me.CrystalReportViewer1.TabIndex = 2
+        Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
-        'LaporanKehadiran
+        'FormLaporanPesanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(878, 517)
+        Me.ClientSize = New System.Drawing.Size(871, 495)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Name = "LaporanKehadiran"
+        Me.MaximizeBox = False
+        Me.Name = "FormLaporanPesanan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "LaporanKehadiran"
+        Me.Text = "Laporan Pesanan"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -182,8 +182,8 @@ Partial Class LaporanKehadiran
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
@@ -192,6 +192,6 @@ Partial Class LaporanKehadiran
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents dt_awal As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents LaporanKehadiranKaryawan1 As Percetakan.LaporanKehadiranKaryawan
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents LaporanPesanan1 As Percetakan.LaporanPesanan
 End Class

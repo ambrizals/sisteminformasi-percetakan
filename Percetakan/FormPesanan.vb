@@ -114,16 +114,16 @@ Public Class FormPesanan
                 If txt_qty.TextLength = 0 Then
                     MsgBox("Qty belum terisi", MsgBoxStyle.Information, "Error Missing Required Data")
                 Else
-                        ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
+                    ord_total = Val(txt_qty.Text) * Val(txt_harga.Text)
                     DG_ListBuatPesan.Rows.Add(kode_bahan, txt_bahan.Text, txt_deskripsi.Text, txt_qty.Text, txt_harga.Text, ord_total)
-                        lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) + ord_total).ToString
-                        txt_bahan.Clear()
-                        txt_deskripsi.Clear()
-                        txt_qty.Clear()
-                        txt_harga.Clear()
-                    End If
+                    lbl_grandtotal.Text = "Rp." + (Val(lbl_grandtotal.Text.Remove(0, 3)) + ord_total).ToString
+                    txt_bahan.Clear()
+                    txt_deskripsi.Clear()
+                    txt_qty.Clear()
+                    txt_harga.Clear()
                 End If
             End If
+        End If
     End Sub
 
 

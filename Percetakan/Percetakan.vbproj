@@ -120,6 +120,12 @@
     <Compile Include="FormLaporanKaryawan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormLaporanPesanan.Designer.vb">
+      <DependentUpon>FormLaporanPesanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLaporanPesanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLaporanProsesPekerjaan.Designer.vb">
       <DependentUpon>FormLaporanProsesPekerjaan.vb</DependentUpon>
     </Compile>
@@ -241,6 +247,12 @@
       <DependentUpon>LaporanKehadiranKaryawan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="LaporanPesanan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanPesanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Laporan_DataKaryawan.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -299,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLaporanKaryawan.resx">
       <DependentUpon>FormLaporanKaryawan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLaporanPesanan.resx">
+      <DependentUpon>FormLaporanPesanan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLaporanProsesPekerjaan.resx">
       <DependentUpon>FormLaporanProsesPekerjaan.vb</DependentUpon>
@@ -360,6 +375,10 @@
     <EmbeddedResource Include="LaporanKehadiranKaryawan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanKehadiranKaryawan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanPesanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanPesanan.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan_DataKaryawan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
